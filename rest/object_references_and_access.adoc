@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: rest/object_references_and_access.html 
+keywords: objects, access paths, uuid, uuidv4, collections, object collection 
+summary: Auf die über die ONTAP REST-API offengelegten Ressourceninstanzen oder Objekte kann auf unterschiedliche Weise zugegriffen werden. 
+---
+= Objektreferenzen und -Zugriff
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf die über die ONTAP REST-API offengelegten Ressourceninstanzen oder Objekte kann auf unterschiedliche Weise zugegriffen werden.
+
+
+
+== Objektzugriffspfade
+
+Auf hoher Ebene gibt es zwei Pfadtypen für den Zugriff auf ein Objekt:
+
+* Primär
++
+Das Objekt ist das primäre oder direkte Ziel des API-Aufrufs.
+
+* Im Ausland
++
+Das Objekt ist nicht die primäre Referenz des API-Aufrufs, sondern ist mit dem primären Objekt verknüpft. Es handelt sich daher um ein fremdes oder nachgeschalteter Objekt und wird durch ein Feld im primären Objekt referenziert.
+
+
+
+
+
+== Zugriff auf ein Objekt mithilfe der UUID
+
+Jedem Objekt wird eine eindeutige ID bei der Erstellung zugewiesen. Dies ist in den meisten Fällen eine 128-Bit-UUID. Die zugewiesenen UUID-Werte sind unveränderlich und werden innerhalb von ONTAP intern zum Zugriff und Management der Ressourcen verwendet. Aus diesem Grund bietet die UUID im Allgemeinen die schnellste und stabilste Art, auf Objekte zuzugreifen.
+
+Für viele Ressourcentypen kann ein UUID-Wert als Teil des Pfadschlüssels in der URL bereitgestellt werden, um auf ein bestimmtes Objekt zuzugreifen. Beispielsweise können Sie Folgendes verwenden, um auf eine Node-Instanz zuzugreifen: ``/cluster/nodes/{uuid}`
+
+
+
+== Zugriff auf ein Objekt mithilfe einer Objekteigenschaft
+
+Zusätzlich zu einer UUID können Sie auch mithilfe einer Objekteigenschaft auf ein Objekt zugreifen. In den meisten Fällen ist es bequem, die Namenseigenschaft zu verwenden. Sie können beispielsweise den folgenden Abfrageparameter in der URL-Zeichenfolge verwenden, um auf eine Node-Instanz mit ihrem Namen zuzugreifen: `/cluster/nodes?name=node_one`. Zusätzlich zu einem Abfrageparameter kann über eine Eigenschaft im primären Objekt auf ein fremdes Objekt zugegriffen werden.
+
+Während Sie den Namen oder eine andere Eigenschaft für den Zugriff auf ein Objekt anstelle der UUID verwenden können, gibt es einige mögliche Nachteile:
+
+* Das Namensfeld ist nicht unveränderlich und kann geändert werden. Wenn der Name eines Objekts vor dem Zugriff auf ein Objekt geändert wird, wird das falsche Objekt zurückgegeben oder ein Objektzugriffsfehler schlägt fehl.
++
+
+NOTE: Dieses Problem kann mit EINER POST- oder PATCH-Methode auf einem fremden Objekt oder mit EINER GET-Methode auf einem primären Objekt auftreten.
+
+* ONTAP muss das Namensfeld in die entsprechende UUID übersetzen. Diese Art von indirekten Zugriff kann zu einem Performance-Problem werden.
+
+
+Insbesondere kann eine Performance-Verschlechterung erzielt werden, wenn eine oder mehrere der folgenden zutrifft:
+
+* GET-Methode wird verwendet
+* Auf eine große Sammlung von Objekten wird zugegriffen
+* Es wird eine komplexe oder aufwändige Abfrage verwendet
+
+
+
+
+== Der Kontext zwischen Cluster und SVM
+
+Es gibt mehrere REST-Endpunkte, die sowohl ein Cluster als auch eine SVM unterstützen. Wenn Sie einen dieser Endpunkte verwenden, können Sie den Kontext des API-Aufrufs über das anzeigen `scope=[svm|cluster]` Wert: Beispiele für Endpunkte, die einen dualen Kontext unterstützen, sind IP-Schnittstellen und Sicherheitsrollen.
+
+
+NOTE: Der Scope-Wert hat einen Standardwert, der auf den Eigenschaften basiert, die für jeden API-Aufruf bereitgestellt werden.
+
+
+
+== VERWENDEN VON PATCHES und LÖSCHEN einer Sammlung von Objekten
+
+Jeder REST-Endpunkt, der PATCH oder LÖSCHUNG auf einer Ressourceninstanz unterstützt, unterstützt auch dieselbe Methode bei einer Objektsammlung. Die einzige Voraussetzung ist, dass mindestens ein Feld über einen Abfrageparameter im URL-String bereitgestellt werden muss. Bei der Ausgabe eines PATCHES oder BEIM LÖSCHEN einer Sammlung entspricht dies dem internen Verfahren:
+
+* Abfrage-basierte ABRUFEN, um die Sammlung abzurufen
+* Serielle Sequenz von PATCHES oder LÖSCHANRUFE für jedes Objekt in der Sammlung
+
+
+Die Zeitdauer für den Vorgang kann von eingestellt werden `return_timeout` Standardmäßig 15 Sekunden. Wenn die Antwort vor dem Timeout nicht abgeschlossen wurde, enthält sie einen Link zum nächsten Objekt. Sie müssen dieselbe HTTP-Methode über den nächsten Link erneut ausgeben, um den Vorgang fortzusetzen.

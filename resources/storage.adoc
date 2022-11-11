@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: resources/storage.html 
+keywords: storage resources 
+summary: Diese API-Aufrufe können Sie zum Management des physischen und logischen Storage verwenden. 
+---
+= Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese API-Aufrufe können Sie zum Management des physischen und logischen Storage verwenden.
+
+Sie können Verlaufsdaten für Metriken für ein bestimmtes Aggregat abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Eine physische Kopie des WAFL Storage innerhalb eines Aggregats. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Ein Aggregat besteht aus einer oder mehreren RAID-Gruppen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können die Brücken in einem Cluster abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.9 eingeführt.
+
+Die physischen Laufwerke im Cluster. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 und 9.8 aktualisiert.
+
+Mithilfe dieser Endpunkte können Dateiklone erstellt, der Split-Status abgerufen und Split-Lasten gemanagt werden. Die Endpunktressourcen für das Klonen von Dateien wurden erstmals mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 erweitert. Mit ONTAP 9.10 wurden sie wieder deutlich ausgebaut.
+
+Über diese REST-API-Endpunkte können Dateien zwischen zwei FlexVol Volumes oder innerhalb eines FlexGroup Volume verschoben werden. Nachdem die Anfrage angenommen wurde, können Sie den Fortschritt und den Status überwachen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
+
+FlexCache ist ein persistenter Cache eines Ursprungs-Volume. Dieser Ressourcentyp wurde ursprünglich mit ONTAP 9.6 eingeführt. Die Unterstützung wurde durch die ONTAP 9.9 REST API verbessert, um Änderungen über die HTTP-PATCH-Methode zu unterstützen.
+
+Sie können bestimmte Dateien für zusätzliche Überwachung festlegen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können einen gemeinsamen Speicherpool erstellen und die Speicherpools in einem Cluster abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Storage-Ports des Clusters. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.11.1 erweitert.
+
+Konfiguration von Richtlinien für die Servicequalität Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+EIN QOS-Workload ist ein Storage-Objekt, das DURCH QOS nachverfolgt wird. SIE können die QOS-Workflows abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Sie können diese API-Aufrufe zur Verwaltung von qtrees verwenden, einem Typ von logisch geteiltem Dateisystem. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Berichte über Quoten, eine Technik zur Einschränkung oder Verfolgung von Dateien oder Platznutzung. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Regeln, die zur Durchsetzung der Kontingente verwendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Shelfs im Cluster. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Snapshots werden basierend auf Richtlinien erstellt. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können die Snapshot-Zeitpläne steuern. Dieser Ressourcentyp wurde mit ONTAP 9.8 neu gestaltet.
+
+Sie können die Switches in einem Cluster abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.9 eingeführt.
+
+Sie können die Bandgeräte in einem Cluster abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.9 eingeführt.
+
+Mit den Endpunkten mit den obersten Kennzahlen können Sie Aktivitäten für ein Volumen bestimmen, das nach einer bestimmten Metrik gefiltert wird. Die Filterung kann auf der Grundlage von Clients, Verzeichnissen, Dateien und Benutzern erfolgen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Mit diesen API-Aufrufen können Sie die Effizienz konfigurieren, die auf ein gesamtes Volume angewendet wird. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Logische Container werden verwendet, um Clients Daten bereitzustellen. Dieser Ressourcentyp wurde ursprünglich mit der ONTAP 9.6 REST-API eingeführt. Viele der mit der API verwendeten Parameterwerte wurden mit ONTAP 9.9 deutlich erweitert, einschließlich der im Bereich Speicherplatzmanagement verwendeten.
+
+Sie können eine Liste von Dateien und Verzeichnissen für ein bestimmtes Verzeichnis auf einem Volume abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
+
+Snapshots für ein Volume. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

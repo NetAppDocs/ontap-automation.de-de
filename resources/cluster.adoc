@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: resources/cluster.html 
+keywords: cluster resources 
+summary: Sie können diese API-Aufrufe verwenden, um ONTAP-Cluster und die zugehörigen Ressourcen zu verwalten. 
+---
+= Cluster
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können diese API-Aufrufe verwenden, um ONTAP-Cluster und die zugehörigen Ressourcen zu verwalten.
+
+Mit dem Modell der Kapazitäts-Pools können Sie die Storage-Kapazität für jeden Cluster Node aus einem gemeinsam genutzten Pool lizenzieren. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Das Chassis ist das Hardware-Framework, das ein Cluster unterstützt. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Ein ONTAP Cluster enthält mindestens einen Knoten sowie die zugehörigen Konfigurationseinstellungen, die das Storage-System definieren. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Verschiedene statistische Informationen über ONTAP werden vom Zählermanager-Subsystem erfasst. Sie können auf diese Informationen zugreifen, um die Systemleistung zu bewerten. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
+
+Sie können einen Verlauf der Firmware-Aktualisierungsanforderungen abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Asynchrone REST-API-Anforderungen werden über eine Hintergrundaufgabe ausgeführt, die durch einen Job verankert ist. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Jede Lizenz kann als separates Paket gemanagt werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können Konfiguration und andere Informationen zu jeder Lizenz-Manager-Instanz, die einem ONTAP-Cluster zugeordnet ist, verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Die Lizenzen ermöglichen es Ihnen, spezifische ONTAP Funktionen und Features zu implementieren. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können den mit MetroCluster verknüpften Mediator verwalten, einschließlich Hinzufügen oder Entfernen der Mediatorinstanz. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können eine MetroCluster Implementierung erstellen und managen, einschließlich dem Ausführen von Switchover- oder Switchback-Vorgängen. Dieser Ressourcentyp ist neu in ONTAP 9.8 und aktualisiert mit 9.11.
+
+Sie können einen Diagnosevorgang bei einer MetroCluster-Bereitstellung durchführen und die Ergebnisse abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können Vorgänge für die MetroCluster DR-Gruppen durchführen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können den MetroCluster-Verbindungsstatus abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können den Status der einzelnen Nodes in einer MetroCluster-Bereitstellung abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können eine Liste der kürzlich ausgeführten Vorgänge einer MetroCluster-Konfiguration abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können Informationen zu allen SVM-Paaren in einer MetroCluster-Konfiguration abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+ONTAP Cluster bestehen aus einem oder mehreren Nodes. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
+
+Das Network Time Protocol (NTP) kann so konfiguriert werden, dass es freigegebene private Schlüssel zwischen ONTAP und vertrauenswürdigen externen NTP-Zeitservern verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
+
+Mit diesen API-Aufrufen können Sie die Einstellungen für das ONTAP-Netzwerkzeitprotokoll konfigurieren, einschließlich der externen NTP-Server und -Schlüssel. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
+
+Die Peer-Objekte repräsentieren Endpunkte und unterstützen die Cluster-Peering-Beziehungen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Frühere ONTAP-Releases haben statistische Informationen über die betrieblichen Eigenschaften des Systems erhalten. In der Version 9.11.1 wurden die Informationen verbessert und sind nun über DIE REST API verfügbar. Diese Funktion bringt das ONTAP REST API näher an Parität mit dem Data ONTAP API (ONTAPI oder ZAPI). Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Zeitpläne können zur Automatisierung der Aufgabenstellungen genutzt werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Über diese Endpunkte können Sie Details zu allen Umgebungssensoren der Plattform abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
+
+Ein ONTAP Cluster umfasst das Cluster-Softwareprofil, die Erfassung von Softwarepaketen und die Erfassung des Software-Verlaufs. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
+
+Sie können diese Endpunkte verwenden, um die Webservices-Konfigurationen zu aktualisieren und die aktuelle Konfiguration abzurufen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.

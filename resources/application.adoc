@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: resources/application.html 
+keywords: application resources 
+summary: Sie können diese API-Aufrufe zur Verwaltung der ONTAP-Anwendungsressourcen verwenden. 
+---
+= Applikation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können diese API-Aufrufe zur Verwaltung der ONTAP-Anwendungsressourcen verwenden.
+
+Applikationen unterstützen Snapshot Kopien, die jederzeit erstellt oder wiederhergestellt werden können. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die ONTAP-Applikationen werden nach Typ angeordnet. Diese umfassen Vorlagen, Applikationen, Komponenten und Snapshot Kopien. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Eine Konsistenzgruppe ist ein Satz von Volumes, die zusammen gruppiert werden, wenn bestimmte Vorgänge wie beispielsweise ein Snapshot durchgeführt werden. Diese Funktion erweitert dieselbe Crash-Konsistenz und Datenintegrität einschließlich Single-Volume-Vorgängen über einen Satz von Volumes hinweg. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt und mit 9.12 aktualisiert.
+
+Mit diesen Endpunkten können Snapshots für eine Konsistenzgruppe kopiert, erstellt, inventarisieren und wiederhergestellt werden. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.

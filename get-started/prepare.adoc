@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare.html 
+keywords: prepare, preparation 
+summary: Es gibt mehrere Schritte, die Sie zur Vorbereitung der Verwendung der ONTAP REST API durchführen sollten. 
+---
+= Bereiten Sie sich auf die Verwendung der ONTAP REST API vor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt mehrere Schritte, die Sie zur Vorbereitung der Verwendung der ONTAP REST API durchführen sollten.
+
+Sie sollten Erfahrung mit ONTAP 9 haben. Dazu gehören das Verstehen der grundlegenden Konzepte und der Terminologie sowie einige Erfahrungen mit der Systemadministration. Siehe https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-concepts/home.html["ONTAP 9-Konzepte"^] Und legen Sie los.
+
+Prüfen Sie die Daten link:../rest/rest_web_services_foundation.html["ONTAP REST API"] Hier finden Sie Informationen ZU REST-Konzepten und Details zur Entwicklung der ONTAP REST API.
+
+Es ist hilfreich, Erfahrungen mit Software-Entwicklungstechnologien und -Prozessen zu haben, einschließlich einer oder mehreren Programmiersprachen sowie gängigen Hilfsprogrammen wie Curl.
+
+Beachten Sie die zusätzlichen Informationsressourcen, wie in vorgeschlagen link:../additional/get_more_information.html["Weitere Informationen"].

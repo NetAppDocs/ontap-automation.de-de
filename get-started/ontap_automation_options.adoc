@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: get-started/ontap_automation_options.html 
+keywords: ontap automation, rest rest api, python client library, ansible 
+summary: Ab ONTAP 9.6 bietet ONTAP eine umfassende REST-API, die die Grundlage für die Automatisierung der Implementierung und Administration Ihrer Storage-Systeme bietet. Sie können direkt auf die REST API oder über die NetApp Python Client Library zugreifen. 
+---
+= ONTAP-Automatisierungsoptionen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab ONTAP 9.6 bietet ONTAP eine umfassende REST-API, die die Grundlage für die Automatisierung der Implementierung und Administration Ihrer Storage-Systeme bietet. Sie können direkt auf die REST API oder über die NetApp Python Client Library zugreifen. Darüber hinaus unterstützt NetApp die ONTAP-Automatisierung unter Verwendung von Ansible sowie andere abstrahierte Software-Abstraktionen.
+
+
+NOTE: Die ONTAPI API, die auch als Network Manageability SDK oder ZAPI bekannt ist, ist die ältere Technologie, mit der ONTAP Storage-Systeme programmgesteuert auf und verwaltet werden können. Die ONTAP REST API ist jetzt die strategische Technologie und sollte, wo möglich, ausgewählt werden.
+
+
+
+== Nativer Zugriff auf die ONTAP REST-API
+
+Sie können über jede Programmiersprache, die einen REST-Client unterstützt, direkt auf die ONTAP REST-API zugreifen. Beliebte Sprachen sind Python, PowerShell und Java. Zunächst sollten Sie sich die gesamte Dokumentation auf dieser Site anzeigen lassen.
+
+
+
+== Legacy ONTAPI-Code zur Verwendung VON REST anpassen
+
+Wenn Sie vorhandenen Code mit der ONTAPI API haben, bietet NetApp Unterstützung für die Konvertierung Ihres Codes in die neuere ONTAP REST API. Siehe https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI to REST API Mapping-Informationen"^] Informationen zum Zuordnen der ONTAPI-Aufrufe zu den entsprechenden REST-API-Aufrufen.
+
+
+
+== Mit der NetApp Python Client Library
+
+Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für den Zugriff auf die ONTAP REST-API verwendet werden kann. Es unterstützt mehrere zugrunde liegende Services, darunter Verbindungs-Management, asynchrone Anfragebearbeitung und Ausnahmebehandlung. Mithilfe der Python-Client-Bibliothek können Sie schnell robusten Code entwickeln, der Ihre ONTAP-Automatisierungsziele unterstützt. Sie sollten zunächst die Dokumentation auf dieser Site, einschließlich, überprüfen link:../python/overview_pcl.html["Python-Client-Bibliothek"].
+
+
+
+== Ansible Verwenden
+
+Ansible ist ein Open-Source-Software-Tool, das Bereitstellung, Konfigurationsmanagement und Applikationseinsatz unterstützt. Seit der Veröffentlichung und der anschließenden Akquisition durch RedHat hat sich diese Beliebtheit stetig weiter entwickelt. NetApp bietet Ansible-zertifizierte Module, mit denen Kunden die Administration ihrer ONTAP Storage-Systeme automatisieren können. Sie sollten zunächst die Dokumentation auf dieser Site, einschließlich, überprüfen link:../automate/ontap_ansible.html["Automatisierung mit ONTAP und Ansible"].

@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: resources/nas.html 
+keywords: nas resources 
+summary: Mithilfe dieser API-Aufrufe können Sie die CIFS- und NFS-Einstellungen für den Cluster und die SVMs verwalten. 
+---
+= NAS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe dieser API-Aufrufe können Sie die CIFS- und NFS-Einstellungen für den Cluster und die SVMs verwalten.
+
+Sie können die für ein ONTAP-Cluster definierten Active Directory-Konten verwalten. Dies umfasst das Erstellen neuer Konten sowie das Anzeigen, Aktualisieren und Löschen von Konten. Diese Unterstützung wurde in ONTAP 9.12 hinzugefügt.
+
+Bestimmte CIFS- und NFS-Ereignisse können für die SVMs protokolliert werden, um die Sicherheit zu verbessern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können NAS-Auditing-Ereignisse zu einer bestimmten SVM umleiten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können eine Liste der festgelegten CIFS-Verbindungen abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Auf Cluster- und SVM-Ebene mit verschiedenen Kategorien von Endpunkten wurde Unterstützung für CIFS-Domänen hinzugefügt. Sie können die Domänenkonfiguration abrufen sowie bevorzugte Domänen-Controller erstellen und entfernen. Dieser Ressourcentyp ist neu in ONTAP 9.10.
+
+Endpunkte wurden hinzugefügt, um die Erstellung und das Management von CIFS-Gruppenrichtlinien zu unterstützen. Die Konfigurationsinformationen sind verfügbar und über Gruppenrichtlinienobjekte verwaltet, die auf alle oder bestimmte SVMs angewendet werden. Diese Unterstützung wurde in ONTAP 9.12 hinzugefügt.
+
+Home Directories für SMB-Benutzer auf einem CIFS-Server können erstellt werden, ohne dass jeder Benutzer eine individuelle SMB-Freigabe erstellt. Der Suchpfad für das Home Directory ist eine Gruppe von absoluten Pfaden aus dem Root einer SVM. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Der CIFS-Server kann lokale Gruppen zur Autorisierung bei der Festlegung von Zugriffsrechten für Freigabe, Datei und Verzeichnis verwenden. Dieser Ressourcentyp wurde mit ONTAP 9.9 eingeführt und mit ONTAP 9.10 deutlich erweitert.
+
+Sie können Informationen zu den NetBIOS-Verbindungen für das Cluster anzeigen. Zu den Details gehören die IP-Adressen und registrierte NetBIOS-Namen. Diese Informationen können Ihnen bei der Behebung von Problemen mit der Namensauflösung helfen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Die Kernkonfiguration des CIFS-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Sie können eine Liste der offenen Dateien für die CIFS-Sitzungen auf Grundlage verschiedener Filteroptionen abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Mit dieser API können Sie detaillierte Informationen über eine CIFS-Sitzung abrufen. Dieser Ressourcentyp wurde mit der ONTAP 9.8 REST API eingeführt und mit ONTAP 9.9 erweitert.
+
+Microsoft Remote Volume Shadow Copy Services ist eine Erweiterung der vorhandenen Microsoft VSS-Funktionalität. VSS wird erweitert, um Schatten-Kopien von SMB-Freigaben zu unterstützen. Diese Funktion ist jetzt über die ONTAP REST API verfügbar. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Die SMB-Freigaben werden auf einem CIFS-Server definiert. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Zugriffssteuerungslisten (ACLs), die den Zugriff auf Ordner und Dateien auf den CIFS-Freigaben steuern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sowohl CIFS- als auch UNIX-Clients können auf denselben Datenspeicher zugreifen. Wenn UNIX-Clients symbolische Links erstellen, verweisen diese Zuordnungen auf eine andere Datei oder einen Ordner, um die CIFS-Clients zu unterstützen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können die neuen REST-API-Endpunkte verwenden, um einen Massenimport der lokalen CIFS-Benutzer, -Gruppen und -Gruppenmitglieddaten durchzuführen und den Status der Anforderung zu überwachen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Sie können diese API-Aufrufe verwenden, um den Zugriff auf bestimmte Dateien zu verfolgen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können diese API-Aufrufe verwenden, zeigt die effektiven Berechtigungen an, die Windows- oder Unix-Benutzer für eine bestimmte Datei oder einen bestimmten Ordner gewährt haben. Sie können auch NTFS-Dateisicherheitsrichtlinien und Audit-Richtlinien verwalten. Dieser Ressourcentyp wurde mit der ONTAP 9.8 REST API eingeführt und wurde mit ONTAP 9.9 deutlich verbessert.
+
+FPolicy ist ein Framework für Dateizugriffsbenachrichtigungen zur Überwachung und Verwaltung von Ereignissen, die Dateizugriffe auf den SVMs betreffen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Mit diesen Endpunkten können Sie Verbindungsinformationen für externe FPolicy-Server anzeigen und aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Die FPolicy-Engines ermöglichen es Ihnen, die externen Server zu identifizieren, die die Dateizugriffsbenachrichtigungen erhalten. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Konfiguration bestimmt, wie der Dateizugriff überwacht wird und welche Ereignisse generiert werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Ein Container für Elemente des FPolicy Framework, einschließlich FPolicy-Engines und Ereignissen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Ein Sperrmechanismus ist ein Synchronisierungsmechanismus zur Durchsetzung von Beschränkungen für gleichzeitigen Zugriff auf Dateien, bei denen viele Clients gleichzeitig auf dieselbe Datei zugreifen. Sie können diese Endpunkte zum Abrufen und Löschen von Sperren verwenden. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Die NFS-Map-Informationen für die verbundenen Clients stehen über den neuen Endpunkt zur Verfügung. Sie können Details zu dem Node, der SVM und der IP-Adresse abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+
+Sie können eine Liste der verbundenen Clients mit den Details ihrer Verbindung anzeigen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
+
+Richtlinien einschließlich Regeln, die die NFS-Exporte beschreiben Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Konfigurationseinstellungen für eine Schnittstelle zu Kerberos. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Konfigurationseinstellungen für Kerberos-Bereiche. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Kernkonfiguration des NFS-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Das Auditing von S3-Ereignissen ist eine Verbesserung der Sicherheit, die es ermöglicht, bestimmte S3-Ereignisse zu verfolgen und zu protokollieren. Ein S3-Audit-Ereigniswähler kann auf Bucket-Basis pro SVM festgelegt werden. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Eine Sicherheitsfunktion zum Schutz Ihrer Daten vor Viren und anderen schädlichen Codes. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Vscan-Richtlinien, mit denen Dateiobjekte aktiv gescannt werden können, wenn ein Client darauf zugreift. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Vscan-Richtlinien ermöglichen das sofortige Scannen von Dateiobjekten nach Bedarf oder nach einem festgelegten Zeitplan. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Eine Reihe von Attributen, mit denen die Verbindung zwischen ONTAP und einem externen Virus-Scan-Server verwaltet wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Der Status des externen Virus-Scan-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

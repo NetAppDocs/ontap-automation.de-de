@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: resources/object_store.html 
+keywords: object store resources 
+summary: Über diese API-Aufrufe können Sie auf S3-basierten Objekt-Storage zugreifen. 
+---
+= Objektspeicher
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über diese API-Aufrufe können Sie auf S3-basierten Objekt-Storage zugreifen.
+
+Ein Bucket ist ein Container von Objekten und ist unter Verwendung eines Objektnamens-Speicherplatzes strukturiert. Jeder S3-Objektserver kann über mehrere Buckets verfügen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
+
+Sie können die ONTAP S3-Konfiguration erstellen und managen, einschließlich Server- und Bucket-Konfigurationen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
+
+Ein Bucket ist ein Container von Objekten und ist unter Verwendung eines Objektnamens-Speicherplatzes strukturiert. Sie können die Buckets für einen bestimmten S3-Server managen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
+
+Sie können Gruppen von S3 Benutzern erstellen und die Zugriffssteuerung auf Gruppenebene managen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Sie können eine S3-Richtlinie erstellen und sie einer Ressource zuordnen, um verschiedene Berechtigungen zu definieren. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+
+Die S3-Benutzerkonten werden auf dem S3-Server verwaltet. Benutzerkonten basieren auf einem Schlüsselpaar und sind mit den von ihnen kontrollierter Buckets verknüpft. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.

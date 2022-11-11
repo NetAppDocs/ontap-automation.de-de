@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: workflows/prepare_workflows.html 
+keywords: workflows, preparation, prepare to use workflows 
+summary: Sie sollten sich vor der Nutzung der Workflow-Prozesse vorbereiten. 
+---
+= Die Nutzung der Workflows wird vorbereitet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie sollten sich vor der Nutzung der Workflow-Prozesse vorbereiten.
+
+
+
+=== Allgemeines zu den in den Workflows verwendeten API-Aufrufen
+
+Die Online-Dokumentationsseite der ONTAP API enthält die Details zu jedem REST-API-Aufruf. Anstatt diese Details hier zu wiederholen, enthält jeder API-Aufruf, der in den Workflow-Samples verwendet wird, nur die Informationen, die Sie benötigen, um den Anruf auf der Dokumentationsseite zu finden. Nach dem Auffinden eines bestimmten API-Aufrufs können Sie die vollständigen Details des Anrufs überprüfen, einschließlich der Eingabeparameter, Ausgabeformate, HTTP-Statuscodes und des Aufruftyps.
+
+Für jeden API-Aufruf in einem Workflow sind folgende Informationen enthalten, um den Anruf auf der Dokumentationsseite zu finden:
+
+* Kategorie
++
+Die API-Aufrufe sind auf der Dokumentationsseite in funktional bezogene Bereiche oder Kategorien unterteilt. Um einen bestimmten API-Aufruf zu finden, blättern Sie zum unteren Seitenrand und klicken Sie auf die entsprechende API-Kategorie.
+
+* HTTP-Methode
++
+Die HTTP-Methode identifiziert die Aktion, die für eine Ressource durchgeführt wird. Jeder API-Aufruf wird über eine einzige HTTP-Methode ausgeführt.
+
+* Pfad
++
+Der Pfad bestimmt die spezifische Ressource, auf die die Aktion im Rahmen der Durchführung eines Anrufs zutrifft. Der Pfadstring wird an die Core-URL angehängt, um die vollständige URL zur Identifizierung der Ressource zu bilden.
+
+
+
+
+
+=== Bauen einer URL für einen direkten Zugriff auf die REST-API
+
+Zusätzlich zur ONTAP-Dokumentationsseite können Sie über eine Programmiersprache wie Python auch direkt auf die Rest-API von ONTAP zugreifen. In diesem Fall unterscheidet sich die Core-URL etwas von der URL, die beim Zugriff auf die Seite mit der Online-Dokumentation verwendet wird. Wenn Sie direkt auf die API zugreifen, müssen Sie anhängen `/api` An Domäne und Port-String. Beispiel: `https://ontap.mycompany.com/api`
+
+.Weiterführende Links
+* link:../rest/access_rest_api.html["So erhalten Sie Zugriff auf die ONTAP-API"]
+* link:../resources/overview_categories.html["Zusammenfassung der REST-Ressourcen"]
+

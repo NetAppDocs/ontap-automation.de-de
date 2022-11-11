@@ -1,0 +1,10 @@
+---
+section: python
+title: Python-Client-Bibliothek
+entries:
+- title: Überblick
+  url: "/python/overview_pcl.html"
+- title: Vorbereiten der Verwendung der Python-Client-Bibliothek
+  url: "/python/prepare_pcl.html"
+- title: Skript zum Abrufen der Clusterkonfiguration
+  url: "/python/script_retrieve_cluster_configuration.html"

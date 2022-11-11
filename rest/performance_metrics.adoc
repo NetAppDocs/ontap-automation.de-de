@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: rest/performance_metrics.html 
+keywords: performance, performance metrics 
+summary: ONTAP sammelt Performance-Kennzahlen zu ausgewählten SVM-Storage-Objekten und -Protokollen und meldet diese Informationen über DIE REST-API. Sie können diese Daten für die Überwachung der Performance eines ONTAP Systems verwenden. 
+---
+= Performance-Metriken für Storage-Ressourcen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP sammelt Performance-Kennzahlen zu ausgewählten SVM-Storage-Objekten und -Protokollen und meldet diese Informationen über DIE REST-API. Sie können diese Daten für die Überwachung der Performance eines ONTAP Systems verwenden.
+
+Für ein Storage-Objekt oder ein bestimmtes Protokoll fallen die Performance-Daten in drei Kategorien:
+
+* IOPS
+* Latenz
+* Durchsatz
+
+
+Innerhalb jeder Kategorie steht ein oder mehrere der folgenden Datentypen zur Verfügung:
+
+* Lesen (R)
+* Schreiben (W)
+* Sonstiges (O)
+* Gesamt (T)
+
+
+Die folgende Tabelle fasst die Performance-Daten zusammen, die über die ONTAP REST API verfügbar sind, einschließlich des Release, sobald sie hinzugefügt wurde. Weitere Informationen finden Sie auf der REST-API-Online-Dokumentationsseite Ihres ONTAP Systems.
+
+|===
+| Storage-Objekt oder -Protokoll | IOPS | Latenz | Durchsatz | Version von ONTAP 
+
+
+| Ethernet-Anschluss | Keine Angabe | Keine Angabe | RWT | 9.8 
+
+
+| FC-Port | RWOT | RWOT | RWT | 9.8 
+
+
+| IP-Schnittstelle | Keine Angabe | Keine Angabe | RWT | 9.8 
+
+
+| FC-Schnittstelle | RWOT | RWOT | RWT | 9.8 
+
+
+| NVMe-Namespace | RWOT | RWOT | RWOT | 9.8 
+
+
+| Qtree-Statistiken | RAW-RWOT | Keine Angabe | RAW-RWOT | 9.8 
+
+
+| Volume FlexCache | RWOT | RWOT | RWT | 9.8 
+
+
+| Node – Prozessnutzung | Prozessnutzung als numerischer Wert | Prozessnutzung als numerischer Wert | Prozessnutzung als numerischer Wert | 9.8 
+
+
+| Cloud Volume | RWOT | RWOT | Nicht applierbar | 9.7 
+
+
+| LUN | RWOT | RWOT | RWOT | 9.7 
+
+
+| Aggregat | RWOT | RWOT | RWOT | 9.7 
+
+
+| NFS-Protokoll der SVM | RWOT | RWOT | RWT | 9.7 
+
+
+| CIFS-Protokoll für SVM | RWOT | RWOT | RWT | 9.7 
+
+
+| FCP-Protokoll der SVM | RWOT | RWOT | RWT | 9.7 
+
+
+| ISCSI-Protokoll der SVM | RWOT | RWOT | RWT | 9.7 
+
+
+| NVMe-Protokoll der SVM | RWOT | RWOT | RWT | 9.7 
+
+
+| Cluster | RWOT | RWOT | RWOT | 9.6 
+
+
+| Volumes | RWOT | RWOT | RWOT | 9.6 
+|===

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: get-started/hello_world.html 
+keywords: simple API call 
+summary: Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONTAP REST API zu verwenden und deren Verfügbarkeit zu bestätigen. 
+---
+= Hallo Welt
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONTAP REST API zu verwenden und deren Verfügbarkeit zu bestätigen.
+
+Das Curl-Dienstprogramm muss auf Ihrer Workstation verfügbar sein. Zusätzlich müssen Sie Folgendes haben:
+
+* IP-Adresse oder Host-Name der ONTAP Cluster-Management-LIF
+* Benutzername und Passwort für ein Konto mit Berechtigung für den Zugriff auf die ONTAP REST API (Cluster-Ressource).
+
+
+
+NOTE: Wenn Ihre Anmeldeinformationen Sonderzeichen enthalten, müssen Sie diese auf der Grundlage der verwendeten Shell so formatieren, dass sie für Curl akzeptabel sind. Sie können z. B. vor jedem Sonderzeichen einen umgekehrten Schrägstrich einfügen oder den gesamten Buchstaben umwickeln `username:password` Zeichenfolge in einzelnen Anführungszeichen.
+
+.Schritte
+. Rufen Sie an der Befehlszeilenschnittstelle Ihrer lokalen Workstation die Version der ONTAP-Software ab:
++
+`curl -X GET -u username:password -k "https://<ip_address>/api/cluster?fields=version"`
+
++
+*Beispiel*
+
++
+`curl -X GET -u admin:password -k "https://10.222.81.101/api/cluster?fields=version"`
+
+
+
+Die Informationen zur ONTAP-Version werden in einem JSON-Format angezeigt.

@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: rest/users_ontapi_api_ontap_cli.html 
+keywords: snapdiff, migrating to rest 
+summary: ONTAPI ist eine Reihe von API-Aufrufe, die über das Network Manageability SDK zur Administration von ONTAP Storage-Systemen bereitgestellt werden. Es gibt Unterschiede zwischen DEN REST API- und ONTAPI-Aufrufen sowie zwischen DER REST API und der ONTAP CLI. 
+---
+= Benutzer der ONTAPI API und ONTAP CLI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAPI ist eine Reihe von API-Aufrufe, die über das Network Manageability SDK zur Administration von ONTAP Storage-Systemen bereitgestellt werden. Es gibt Unterschiede zwischen DEN REST API- und ONTAPI-Aufrufen sowie zwischen DER REST API und der ONTAP CLI. Diese Unterschiede sollten Sie kennen, bevor Sie DIE REST-API in einer Produktionsumgebung verwenden.
+
+
+
+== Allgemeine Designunterschiede
+
+Die ONTAP REST API und die Befehlszeilenschnittstelle haben ein grundlegend anderes Design. Die CLI-Befehle und -Parameter werden den REST-API-Aufrufen nicht direkt zugeordnet. Und auch wenn es eine Ähnlichkeit geben könnte, können die Details der Eingabeparameter unterschiedlich sein. Beispielsweise können numerische Einheiten in Byte oder mit einem Suffix (z. B. KB) angegeben werden. Sie sollten es überprüfen link:input_variables.html["Eingabevariablen, die eine API-Anforderung steuern"] Sowie dem link:../reference/api_reference.html["API-Referenz"] Finden Sie weitere Informationen.
+
+
+
+== Data-SVMs werden über DIE REST-API offengelegt
+
+ONTAP unterstützt mehrere Arten von Storage Virtual Machines (SVMs). Allerdings sind nur die Daten-SVMs direkt über die ONTAP REST API zugänglich. Die Konfigurationsinformationen, die das Cluster und die Nodes beschreiben, sind über die REST-API verfügbar. Das Cluster und die Nodes werden jedoch nicht als separate SVMs behandelt.
+
+
+
+== Migration von ONTAPI zu REST
+
+DIE REST-API ist die primäre und strategische Wahl für die Automatisierung der ONTAP Systemadministration. Wenn Sie derzeit die ONTAPI API verwenden, sollten Sie eine Migration in die REST API in Erwägung ziehen. NetApp bietet Mapping-Dokumentation, um die Migration von ONTAPI zu REST zu unterstützen. Siehe link:../migrate/mapping.html["ONTAPI-to-REST-API-Zuordnung"] Finden Sie weitere Informationen.
+
+
+
+== Änderungen an der SnapDiff Availability in ONTAPI
+
+Ab ONTAP 9.10.1 können die ONTAPI Aufrufe von SnapDiff v1 und v2 nicht aufgerufen werden. Alle Anwendungen von Drittanbietern, die SnapDiff v1 oder v2 ONTAPI Aufrufe aufrufen, funktionieren nicht ab ONTAP 9.10.1. ONTAP Benutzer sollten vor einem Upgrade auf ONTAP 9.10.1 überprüfen, ob ihre Backup-Applikation die SNAPDIFF v3-REST-Aufrufe unterstützt.
+
+Die SnapDiff API-Verfügbarkeit aller ONTAP-Versionen ist wie folgt definiert:
+
+* ONTAP 9.7 und frühere Versionen: v1 und v2 (nur ONTAPI)
+* ONTAP 9.8 – 9.9.1: v1, v2 und v3 (sowohl ONTAPI als auch REST API)
+* ONTAP 9.10.1: Nur v3 (NUR REST API)
+
+
+Weitere Informationen finden Sie im link:../rn/whats_new.html["Versionshinweise zu ONTAP"].
+
+.Verwandte Informationen
+* link:../rest/input_variables.html["Eingabevariablen, die eine API-Anforderung steuern"]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI to REST API Mapping-Informationen"^]
+

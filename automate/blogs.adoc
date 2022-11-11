@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: automate/blogs.html 
+keywords: automation, automation blogs 
+summary: Es stehen mehrere Blog-Artikel zur Verfügung, um Ihnen ein besseres Verständnis der verschiedenen Technologien und Ansätze bei der Automatisierung einer ONTAP Implementierung zu vermitteln. 
+---
+= Blogs zu ONTAP-Automatisierung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es stehen mehrere Blog-Artikel zur Verfügung, um Ihnen ein besseres Verständnis der verschiedenen Technologien und Ansätze bei der Automatisierung einer ONTAP Implementierung zu vermitteln.
+
+Das CLI-Passthrough bietet eine Technik zum Ausführen von ONTAP-CLI-Befehlen unter Verwendung der REST-API.
+
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["netapp.io/2020/11/09/private-cli-Passthrough-ontap-Rest-API"^]
+
+Neu bei Ansible zur ONTAP-Automatisierung:
+
+https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["netapp.io/2018/10/08/Einstieg mit netapp und ansible installieren-ansible"^]

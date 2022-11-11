@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: rest/rbac_overview.html 
+keywords: rbac, rbac security, rbac overview, roles, scope, role mapping 
+summary: 'ONTAP verfügt über eine robuste und erweiterbare Funktion zur rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC). Sie können jedem Konto eine eigene Rolle zuweisen, um den Zugriff des Benutzers auf die Ressourcen zu kontrollieren, die über DIE REST-API und die Rest-CLI offengelegt werden. Die Rollen definieren für verschiedene ONTAP Benutzer verschiedene Zugriffsebenen.' 
+---
+= Überblick über die RBAC-Sicherheit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP verfügt über eine robuste und erweiterbare Funktion zur rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC). Sie können jedem Konto eine eigene Rolle zuweisen, um den Zugriff des Benutzers auf die Ressourcen zu kontrollieren, die über DIE REST-API und die Rest-CLI offengelegt werden. Die Rollen definieren für verschiedene ONTAP Benutzer verschiedene Zugriffsebenen.
+
+
+NOTE: Die RBAC-Funktion von ONTAP wurde kontinuierlich erweitert und in ONTAP 9.11.1 (und nachfolgenden Versionen) deutlich verbessert. Siehe link:../rest/rbac_overview.html#summary-of-rbac-evolution["Zusammenfassung der Entwicklung der RBAC"] Und link:../rn/whats_new.html["Was ist neu mit der ONTAP REST API und Automatisierung"] Finden Sie weitere Informationen.
+
+
+
+== ONTAP Rollen
+
+Eine Rolle ist eine Reihe von Berechtigungen, die kollektiv definieren, welche Aktionen der Benutzer ergreifen kann. Jede Berechtigung identifiziert einen bestimmten Zugriffspfad und die zugehörige Zugriffsebene. Rollen werden Benutzerkonten zugewiesen und von ONTAP bei Zugriffskontrollentscheidungen angewendet.
+
+
+
+=== Rollentypen
+
+Es gibt zwei Arten von Rollen. Sie wurden mit der Weiterentwicklung von ONTAP auf verschiedene Umgebungen eingeführt und angepasst.
+
+
+NOTE: Bei der Verwendung jeder Rollenart gibt es vor- und Nachteile. Siehe link:../rest/work_roles_users.html#comparing-the-role-types["Vergleichen der Rollentypen"] Finden Sie weitere Informationen.
+
+[cols="20,80"]
+|===
+| Typ | Beschreibung 
+
+
+| RUHE | DIE REST-Funktionen wurden mit ONTAP 9.6 eingeführt und werden in der Regel für Benutzer angewendet, die über DIE REST-API auf ONTAP zugreifen. Durch das Erstellen einer RUHEROLLE wird automatisch eine traditionelle _Mapping_-Rolle erzeugt. 
+
+
+| Traditionell | Hierbei handelt es sich um die älteren Rollen, die vor ONTAP 9.6 enthalten sind. Sie wurden für die ONTAP CLI Umgebung eingeführt und sind weiterhin von grundlegender Bedeutung für die RBAC-Sicherheit. 
+|===
+
+
+=== Umfang
+
+Jede Rolle hat einen Umfang oder Kontext, in dem sie definiert und angewendet wird. Der Umfang legt fest, wo und wie eine bestimmte Rolle verwendet wird.
+
+
+NOTE: ONTAP-Benutzerkonten haben einen ähnlichen Umfang und bestimmen, wie ein Benutzer definiert und verwendet wird.
+
+[cols="20,80"]
+|===
+| Umfang | Beschreibung 
+
+
+| Cluster | Rollen mit Clusterumfang werden auf ONTAP Cluster-Ebene definiert. Sie sind mit Benutzerkonten auf Cluster-Ebene verbunden. 
+
+
+| SVM | Rollen mit SVM-Umfang werden für eine bestimmte Daten-SVM definiert. Sie sind Benutzerkonten in derselben SVM zugewiesen. 
+|===
+
+
+=== Quelle der Rollendefinitionen
+
+Es gibt zwei Möglichkeiten, wie eine ONTAP-Rolle definiert werden kann.
+
+[cols="20,80"]
+|===
+| Rollenquelle | Beschreibung 
+
+
+| Individuell | Der ONTAP-Administrator kann benutzerdefinierte Rollen erstellen. Diese Rollen können an eine spezifische Umgebung und Sicherheitsanforderungen angepasst werden. 
+
+
+| Integriert | Während individuelle Rollen für mehr Flexibilität sorgen, gibt es auch eine Reihe integrierter Rollen, die sowohl auf Cluster- als auch auf SVM-Ebene verfügbar sind. Diese Rollen sind vordefiniert und können für viele allgemeine administrative Aufgaben verwendet werden. 
+|===
+
+
+== Rollenzuordnung und ONTAP-Verarbeitung
+
+Abhängig von der verwendeten ONTAP Version werden alle oder fast alle REST-API-Aufrufe einem oder mehreren CLI-Befehlen zugeordnet. Wenn Sie eine RUDERROLLE erstellen, wird auch eine traditionelle oder ältere Rolle erstellt. Diese traditionelle *Mapping* Rolle basiert auf den entsprechenden CLI Befehlen und kann nicht manipuliert oder verändert werden.
+
+
+NOTE: Reverse Role Mapping wird nicht unterstützt. Das heißt, die Schaffung einer traditionellen Rolle schafft keine entsprechende RUHEROLLE.
+
+
+
+== Zusammenfassung der Entwicklung der RBAC
+
+Die herkömmlichen Rollen sind bei allen Versionen von ONTAP 9 enthalten. DIE RESTLICHEN Rollen wurden später eingeführt und haben sich wie unten beschrieben weiterentwickelt.
+
+DIE REST API wurde mit ONTAP 9.6 eingeführt. IN dieser Version wurden auch die REST-Rollen enthalten. Wenn Sie eine RUSTROLLE anlegen, wird auch eine entsprechende traditionelle Rolle erzeugt.
+
+Jede ONTAP Version von 9.7 bis 9.10.1 enthält Verbesserungen an DER REST API. So wurden beispielsweise jeder Version weitere REST-Endpunkte hinzugefügt. Die Erstellung und Verwaltung der beiden Rollentypen blieb jedoch getrennt. Zudem wurde in ONTAP 9.10.1 DIE REST-RBAC-Unterstützung für den Rest-Endpunkt von Snapshots hinzugefügt `/api/storage/volumes/{vol.uuid}/snapshots` Bei diesem Punkt handelt es sich um einen ressourcenqualifizierten Endpunkt.
+
+Mit diesem Release wurde die Möglichkeit hinzugefügt, herkömmliche Rollen mit DER REST API zu konfigurieren und zu managen. Weitere Zugriffsebenen für DIE REST-Rollen wurden hinzugefügt.

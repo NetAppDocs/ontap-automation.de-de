@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: rest/rest_web_services_foundation.html 
+keywords: REST, web services 
+summary: 'Representational State Transfer (REST) ist ein Stil für die Erstellung von verteilten Web-Anwendungen. Die flexible Grundlage für die Administration von ONTAP Clustern bildet mit Mainstream-Protokollen und -Standards.' 
+---
+= REST-Web-Services-Grundlage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Representational State Transfer (REST) ist ein Stil für die Erstellung von verteilten Web-Anwendungen. Bei der Anwendung auf das Design einer Web-Services-API stellt sie eine Reihe von Technologien her, mit denen Server-basierte Ressourcen offengelegt und deren Status verwaltet werden können. Die flexible Grundlage für die Administration von ONTAP Clustern bildet mit Mainstream-Protokollen und -Standards.
+
+
+NOTE: IM RUHEZUSTAND werden einheitliche Technologien und Best Practices festgelegt, jedoch können die Details jeder API je nach den während der Entwicklung getroffenen Entscheidungen variieren. Vor der Verwendung mit einer Live-Implementierung sollten Sie sich mit den Designeigenschaften der ONTAP REST API bewusst sein.
+
+
+
+== Ressourcen- und Zustandsdarstellung
+
+Ressourcen sind die Grundkomponenten eines webbasierten Systems. Beim Erstellen einer ANWENDUNG FÜR REST-Webservices umfassen die frühen Designaufgaben Folgendes:
+
+* Identifizierung von System- oder serverbasierten Ressourcen
++
+Jedes System nutzt und verwaltet Ressourcen. Eine Ressource kann eine Datei-, Geschäftstransaktion-, Prozess- oder Verwaltungseinheit sein. Eine der ersten Aufgaben bei der Entwicklung einer auf REST-Webservices basierenden Applikation ist die Identifizierung der Ressourcen.
+
+* Definition von Ressourcenstatus und zugehörigen Statusoperationen
++
+Die Ressourcen befinden sich immer in einer endlichen Anzahl von Staaten. Die Zustände sowie die damit verbundenen Operationen, die zur Auswirkung der Statusänderungen verwendet werden, müssen klar definiert werden.
+
+
+
+
+
+== URI-Endpunkte
+
+Jede REST-Ressource muss definiert und über ein gut definiertes Adressierungssystem verfügbar gemacht werden. Die Endpunkte, in denen die Ressourcen gefunden und identifiziert werden, verwenden einen einheitlichen Resource Identifier (URI). Der URI bietet ein allgemeines Framework zum Erstellen eines eindeutigen Namens für jede Ressource im Netzwerk. Der Uniform Resource Locator (URL) ist ein URI-Typ, der mit Webservices zur Identifizierung und zum Zugriff von Ressourcen verwendet wird. Ressourcen werden in der Regel in einer hierarchischen Struktur ausgesetzt, die einem Dateiverzeichnis ähnelt.
+
+
+
+== HTTP-Meldungen
+
+Hypertext Transfer Protocol (HTTP) ist das Protokoll, das vom Webservice-Client und -Server zum Austausch von Anforderungs- und Antwortmeldungen zu den Ressourcen verwendet wird. Im Rahmen der Entwicklung einer Web-Services-Anwendung werden HTTP-Methoden den Ressourcen und entsprechenden Statusmanagement-Aktionen zugeordnet. HTTP ist statusfrei. Um im Rahmen einer Transaktion eine Reihe verwandter Anforderungen und Antworten zuzuordnen, müssen daher zusätzliche Informationen in die HTTP-Header enthalten sein, die mit den Anforderungs- und Antwortdatenströmen verwendet werden.
+
+
+
+== JSON-Formatierung
+
+Obwohl Informationen auf verschiedene Weise zwischen einem Webservice-Client und Server strukturiert und übertragen werden können, ist die beliebteste Option JavaScript Object Notation (JSON). JSON ist ein Branchenstandard für die Darstellung einfacher Datenstrukturen im Klartext und wird zur Übertragung von Zustandsdaten zur Beschreibung der Ressourcen verwendet. Die ONTAP REST API verwendet JSON, um die Daten zu formatieren, die im Körper jeder HTTP-Anfrage und Antwort verwendet werden.

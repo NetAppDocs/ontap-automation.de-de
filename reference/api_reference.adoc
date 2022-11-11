@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: reference/api_reference.html 
+keywords: reference, API reference, ONTAP API documentation 
+summary: Die API-Referenz enthält Details zu allen ONTAP REST-API-Aufrufen, einschließlich HTTP-Methoden, Eingabeparameter und Antworten. Diese vollständige Referenz ist hilfreich, wenn Automatisierungsapplikationen mithilfe der REST API entwickelt werden. 
+---
+= API-Referenz
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die API-Referenz enthält Details zu allen ONTAP REST-API-Aufrufen, einschließlich HTTP-Methoden, Eingabeparameter und Antworten. Diese vollständige Referenz ist hilfreich, wenn Automatisierungsapplikationen mithilfe der REST API entwickelt werden.
+
+
+NOTE: Die API-Referenzinhalte haben Zugriff auf den lokalen ONTAP-System oder auf eine statische Kopie der Dokumentation von NetApp.
+
+
+
+== Rufen Sie die Dokumentationsseite für die ONTAP-API auf
+
+[role="lead"]
+Die Online-Dokumentationsseite der ONTAP-API ist auf Ihrem lokalen ONTAP-System verfügbar.
+
+Sie müssen Folgendes haben:
+
+* IP-Adresse oder Host-Name der ONTAP Cluster-Management-LIF
+* Benutzername und Passwort für ein Konto mit Berechtigung für den Zugriff auf die ONTAP REST API
+
+
+.Schritte
+. Geben Sie die URL in Ihren Browser ein und drücken Sie *Enter*:
++
+`https://<ip_address>/docs/api`
+
+. Melden Sie sich über das ONTAP Konto an.
++
+Die Dokumentationsseite für die ONTAP-API wird angezeigt, auf der die API-Aufrufe unten in den Hauptressourcenkategorien organisiert sind.
+
+. Scrollen Sie als Beispiel für einen einzelnen API-Aufruf in die Kategorie *Cluster* und klicken Sie auf *GET /Cluster*.
+
+
+
+
+== Greifen Sie auf eine Kopie der Referenzdokumentation für die ONTAP REST-API zu
+
+[role="lead"]
+Sie können über die unten angegebenen Links auf eine Kopie der Referenzdokumentation für die ONTAP REST-API zugreifen. Die API-Referenzdokumentation wird von der ONTAP Version gepflegt.
+
+* https://library.netapp.com/ecmdocs/ECMLP2884821/html/["ONTAP 9.12.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2882307/html/["ONTAP 9.11.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2879871/html/["ONTAP 9.10.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2876964/html/["ONTAP 9.9.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2874708/html/["ONTAP 9.8"^]
+* https://library.netapp.com/ecmdocs/ECMLP2862544/html/["ONTAP 9.7"^]
+* https://library.netapp.com/ecmdocs/ECMLP2856304/html/["ONTAP 9.6"^]
+
+
+https://devnet.netapp.com/restapi.php["NetApp DevNet: ONTAP REST-APIs"^]

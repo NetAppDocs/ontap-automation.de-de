@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: rest/asynchronous_processing.html 
+keywords: asynchronous, asynchronous processing, job, job object 
+summary: Nachdem eine API-Anfrage ausgegeben wurde, die für die asynchrone Ausführung ausgelegt ist, wird immer ein Jobobjekt erstellt und an den Anrufer zurückgegeben. Der Job beschreibt und Anker eine Hintergrundaufgabe, die die Anforderung verarbeitet. 
+---
+= Asynchrone Verarbeitung mit dem Job-Objekt
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem eine API-Anfrage ausgegeben wurde, die für die asynchrone Ausführung ausgelegt ist, wird immer ein Jobobjekt erstellt und an den Anrufer zurückgegeben. Der Job beschreibt und Anker eine Hintergrundaufgabe, die die Anforderung verarbeitet. Abhängig vom HTTP-Statuscode müssen Sie den Status des Jobs abrufen, um festzustellen, ob die Anforderung erfolgreich war.
+
+Siehe link:../reference/api_reference.html["API-Referenz"] Ermitteln, welche API-Aufrufe asynchron ausgeführt werden sollen.
+
+
+
+== Kontrolle der Verarbeitung einer Anfrage
+
+Sie können das verwenden `return_timeout` Abfrageparameter zur Steuerung der Verarbeitung eines asynchronen API-Aufrufs. Bei Verwendung dieses Parameters sind zwei mögliche Ergebnisse möglich.
+
+Der Timer läuft ab, bevor der Antrag abgeschlossen ist:: Bei gültigen Anfragen gibt ONTAP zusammen mit dem Jobobjekt einen HTTP-Statuscode von 202 zurück. Sie müssen den Status des Jobs abrufen, um festzustellen, ob die Anforderung erfolgreich abgeschlossen wurde.
+Die Anforderung ist abgeschlossen, bevor der Timer abläuft:: Wenn die Anfrage gültig ist und erfolgreich abgeschlossen wird, bevor die Zeit abläuft, gibt ONTAP zusammen mit dem Jobobjekt einen HTTP-Statuscode 200 zurück. Da die Anforderung synchron abgeschlossen wird, wie vom 200 angegeben, müssen Sie den Job-Status nicht abrufen.
++
+--
+
+NOTE: Der Standardwert für das `return_timeout` Der Parameter beträgt null Sekunden. Wenn Sie den Parameter nicht angeben, wird der HTTP-Statuscode 202 immer für eine gültige Anfrage zurückgegeben.
+
+--
+
+
+
+
+== Abfragen des mit einer API-Anforderung verknüpften Jobobjekts
+
+Das in der HTTP-Antwort zurückgegebene Job-Objekt enthält mehrere Eigenschaften. Sie können die Statuseigenschaft in einem nachfolgenden API-Aufruf abfragen, um festzustellen, ob die Anforderung erfolgreich abgeschlossen wurde. Ein Job-Objekt befindet sich immer in einem der folgenden Zustände:
+
+Nicht-Terminal-Status::
++
+--
+* Warteschlange
+* Wird Ausgeführt
+* Angehalten
+
+
+--
+Terminalzustände::
++
+--
+* Erfolg
+* Ausfall
+
+
+--
+
+
+
+
+== Allgemeines Verfahren für die Ausgabe einer asynchronen Anfrage
+
+Sie können den folgenden grundlegenden Vorgang verwenden, um einen asynchronen API-Aufruf abzuschließen. In diesem Beispiel wird vorausgesetzt, dass die `return_timeout` Parameter wird nicht verwendet oder die Zeit läuft ab, bevor der Hintergrundjob abgeschlossen ist.
+
+. Geben Sie einen API-Aufruf aus, der asynchron ausgeführt wird.
+. Sie erhalten eine HTTP-Antwort 202, die auf die Annahme einer gültigen Anfrage hinweist.
+. Extrahieren Sie die Kennung für das Job-Objekt aus dem Antwortkörper.
+. Führen Sie in einem zeitlich festgelegten Regelkreis in jedem Zyklus folgende Schritte aus:
++
+.. Abrufen des aktuellen Status des Jobs.
+.. Wenn sich der Job nicht im Terminalzustand befindet, führen Sie die Schleife erneut aus.
+
+
+. Beenden Sie, wenn der Job einen Terminalstatus erreicht (Erfolg, Fehler).
+
+
+.Verwandte Informationen
+* link:../workflows/wf_1_update_cluster_contact.html["Workflow 1: Aktualisieren des Clusterkontakts und Prüfen des Jobstatus"]
+

@@ -1,0 +1,297 @@
+---
+sidebar: sidebar 
+permalink: migrate/performance-counters.html 
+keywords: performance, performance counters 
+summary: Der ONTAP Zählermanager erlaubt ONTAP-Benutzern, auf Informationen zur Performance zuzugreifen und viele verschiedene ONTAP-Performance-Zählermetriken zu exportieren. 
+---
+= Performance-Zähler
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der ONTAP Zählermanager erlaubt ONTAP-Benutzern, auf Informationen zur Performance zuzugreifen und viele verschiedene ONTAP-Performance-Zählermetriken zu exportieren.
+
+Vor ONTAP 9.11.1 ist der Zugriff auf alle ONTAP Counter Manager-Objekte auf die ONTAP-CLI- und ONTAPI-Schnittstellen beschränkt.
+
+Ab ONTAP 9.11.1 können ONTAP Benutzer mit der ONTAP REST API auf ein Segment von Zählermanager-Objekten zugreifen. Benutzer, die ihre Automatisierungsskripts von ONTAPI auf die ONTAP REST API migrieren, müssen die Unterschiede zwischen der Präsentation der Performance-Zählerdaten auf der ONTAPI und der Präsentation der Daten im REST-API verstehen.
+
+Siehe https://library.netapp.com/ecm/ecm_download_file/ECMLP2885053["ONTAP 9.12.1 ONTAPI-to-REST Counter Manager Zuordnung"^] Für Dokumentation über die Reihe der ONTAP-Zähler, die für DIE REST-API in ONTAP 9.11.1 verfügbar sind, sowie Informationen darüber, wie sich die Zähler zwischen ONTAPI und REST API Verbrauch unterscheiden.
+
+
+
+== Zugriff auf Performance-Zähler mithilfe von ONTAPI
+
+Wie bei ONTAPI verbraucht, werden Performance-Zählerdaten in Objekten gruppiert. In einem Node mit vier Festplatten werden beispielsweise Daten des Performance-Zähler für Festplatten als Objekt gruppiert. Jede physische Festplatte im System stellt eine Instanz dieses Objekts dar, und Sie können ONTAPI verwenden, um auf einzelne Performance-Zähler für eine einzelne Festplatteninstanz zuzugreifen.
+
+
+
+== Zugriff auf Performance-Zähler mithilfe der ONTAP REST API
+
+Mit der ONTAP REST API greifen Sie als Tabelle auf Zählermanager-Objekte zu (z. B. `disk`). Das bedeutet, dass jedes Zählermanager-Objekt als eigene Tabelle dargestellt wird, während Instanzen des Zählermanagers (z. B. einzelne Festplatten im System) jeweils als Zeile in dieser Tabelle aufgerufen werden. Jede Zeile enthält eine Reihe von einzelnen Performance-Zählern für diese Instanz. Sie können auf einen einzelnen Performance-Zähler für eine Instanz als Feld in dieser Tabellenzeile zugreifen.
+
+Im folgenden Beispiel wird der verwendet `host_adapter` Das Zählermanager-Objekt wird im Tabellenformat dargestellt, um zu veranschaulichen, wie Sie mithilfe der ONTAP REST-API auf jeden Performance-Zähler zugreifen können. Im System gibt es mehrere Host-Adapter, und jeder Host-Adapter hat seine eigenen Performance-Zähler:
+
+|===
+| Instanzname 6+| REST-Zähler 
+
+
+| Host_Adapter_1 | Total_read_OPS | Total_write_OPS | Byte_Lesen | Byte_geschrieben | max_Link_Data_Rate | rscn_count 
+
+
+| Host_Adapter_2 | Total_read_OPS | Total_write_OPS | Byte_Lesen | Byte_geschrieben | max_Link_Data_Rate | rscn_count 
+
+
+| Host_Adapter_3 | Total_read_OPS | Total_write_OPS | Byte_Lesen | Byte_geschrieben | max_Link_Data_Rate | rscn_count 
+|===
+
+
+== Allgemeines zur Struktur bei REST-API-Beispielen
+
+Verwenden Sie die folgenden REST-API-Beispiele, um die Struktur einer Zählermanager-Tabelle zu verstehen. In diesen Beispielen erfahren Sie außerdem, wie Sie mithilfe der REST-API erkennen, welche Endpunkte verfügbar sind, und wie Sie damit Einblicke in die Performance Ihres Systems erhalten. In diesen Beispielen wird das genauer untersucht `host_adapter` Zählermanager, das schrittweise detaillierte Informationen über das Objekt und die darin enthaltenen Zählerwerte enthält. Wenn Sie diese Beispiele in Ihrem System versuchen, stellen Sie sicher, dass Sie Ihre Werte für Informationen in Klammern <> angeben, wo angegeben.
+
+
+
+=== Ermitteln Sie die verfügbaren Tabellen für Performance-Zähler
+
+Sie können diesen REST-API-Aufruf verwenden, um alle Zählermanager-Tabellen zu entdecken, die Sie abfragen können:
+
+.Beispielanforderung:
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables'
+----
+.Beispiel für Antwort (gekürzt für Kürze):
+[source, json]
+----
+{
+  "records": [
+    {
+      "name": "copy_manager",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/copy_manager"
+        }
+      }
+    },
+    {
+      "name": "copy_manager:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/copy_manager%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "disk",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/disk"
+        }
+      }
+    },
+    {
+      "name": "host_adapter",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter"
+        }
+      }
+    }
+    ...
+  ],
+  "num_records": 68,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables"
+    }
+  }
+}
+----
+
+
+=== Abfrage einer einzelnen Leistungstabelle
+
+Sie können diesen REST-API-Aufruf verwenden, um die Beschreibung und Metadaten für eine bestimmte Tabelle (Zählermanager-Objekt) anzuzeigen. Die Ausgabe beschreibt den Zweck der Tabelle und beschreibt außerdem, welche Art von Informationen die einzelnen Performance-Zähler in den Tabellendatensätzen enthalten. In diesem Beispiel abfragen wir die `host_adapter` Tabelle:
+
+.Beispielanforderung:
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter'
+----
+.Beispielantwort:
+[source, json]
+----
+{
+  "name": "host_adapter",
+  "description": "The host_adapter table reports activity on the Fibre Channel, Serial Attached SCSI, and parallel SCSI Host Adapters the storage system uses to connect to disks and tape drives.",
+  "counter_schemas": [
+    {
+      "name": "bytes_read",
+      "description": "Bytes read via Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "bytes_written",
+      "description": "Bytes written via Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "max_link_data_rate",
+      "description": "Max link data rate in Kilobytes per second for Host Adapter",
+      "type": "raw",
+      "unit": "kb_per_sec"
+    },
+    {
+      "name": "node.name",
+      "description": "System node name",
+      "type": "string",
+      "unit": "none"
+    },
+    {
+      "name": "rscn_count",
+      "description": "Number of RSCN(s) received by the FC HBA",
+      "type": "raw",
+      "unit": "none"
+    },
+    {
+      "name": "total_read_ops",
+      "description": "Total number of reads on Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "total_write_ops",
+      "description": "Total number of writes on Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter"
+    }
+  }
+}
+----
+
+
+=== Sehen Sie sich die Zeilen in einer Leistungstabelle an
+
+Sie können diesen REST-API-Aufruf verwenden, um die Zeilen in einer Tabelle anzuzeigen, in denen angegeben wird, welche Instanzen des Zählermanagerobjekts vorhanden sind:
+
+.Beispielanforderung:
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows'
+----
+.Beispielantwort:
+[source, json]
+----
+{
+  "records": [
+    {
+      "id": "power-01:0b",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0b"
+        }
+      }
+    },
+    {
+      "id": "power-01:0c",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0c"
+        }
+      }
+    },
+    {
+      "id": "power-01:0d",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0d"
+        }
+      }
+    },
+    {
+      "id": "power-01:0e",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0e"
+        }
+      }
+    }
+  ],
+  "num_records": 4,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter/rows"
+    }
+  }
+}
+----
+
+
+=== Abfrage einer bestimmten Zählermanager-Instanz
+
+Mit diesem REST-API-Aufruf können Sie Performance-Zählerwerte für eine bestimmte Zählermanager-Instanz in der Tabelle anzeigen. In diesem Beispiel fordern wir Informationen zu Performance-Zählleistungen für eine der Netzteile im System an:
+
+.Beispielanforderung:
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows/power-01:0b'
+----
+.Beispielantwort:
+[source, json]
+----
+{
+  "counter_table": {
+    "name": "host_adapter"
+  },
+  "id": "power-01:0b",
+  "properties": [
+    {
+      "name": "node.name",
+      "value": "power-01"
+    }
+  ],
+  "counters": [
+    {
+      "name": "total_read_ops",
+      "value": 3600516
+    },
+    {
+      "name": "total_write_ops",
+      "value": 3591536
+    },
+    {
+      "name": "bytes_read",
+      "value": 86354320000
+    },
+    {
+      "name": "bytes_written",
+      "value": 480863081920
+    },
+    {
+      "name": "max_link_data_rate",
+      "value": 375000
+    },
+    {
+      "name": "rscn_count",
+      "value": 0
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter/rows/power-01:0b"
+    }
+  }
+}
+----

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: resources/san.html 
+keywords: san resources 
+summary: Sie können diese API-Aufrufe für das Management von SAN-Ressourcen verwenden. 
+---
+= San
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können diese API-Aufrufe für das Management von SAN-Ressourcen (Storage Area Networking) verwenden.
+
+Fibre Channel-Anmeldungen stellen Verbindungen dar, die von Fibre Channel-Initiatoren gebildet wurden, die bei ONTAP angemeldet sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Ein Fibre Channel Protocol (FCP)-Service definiert die Eigenschaften eines Fibre Channel-Ziels für eine SVM. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Ein der World Wide Port Name (WWPN) ist ein 64-bit-Wert, der einen Fibre Channel-Port eindeutig identifiziert. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Eine Initiatorgruppe ist eine Sammlung von Fibre Channel-WWPNs (World Wide Port Names) und iSCSI IQNs (qualifizierte Namen) und iSCSI EUIs (Extended Unique Identifier), die Host-Initiatoren identifizieren. Dieser Ressourcentyp wurde ursprünglich mit ONTAP 9.6 eingeführt.
+
+Geschachtelte Initiatorgruppen ist eine neue Funktion von ONTAP 9.9. Zudem wurde die REST-API unterstützt. Dieser REST-Ressourcentyp wurde mit ONTAP 9.9 eingeführt.
+
+Das iSCSI-Anmeldeinformationen-Objekt enthält Authentifizierungsdaten, die von einem Initiator und ONTAP verwendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Ein iSCSI-Service definiert die Eigenschaften des iSCSI-Ziels für eine SVM. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Eine iSCSI-Sitzung ist eine oder mehrere TCP-Verbindungen, die einen iSCSI-Initiator mit einem iSCSI-Ziel verbinden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+LUN-Attribute sind aufruferdefinierte Name-/Wertpaare, die optional mit einer LUN gespeichert werden können. Diese Attribute können zur Speicherung kleiner Mengen applikationsspezifischer Metadaten verwendet und werden nicht von ONTAP interpretiert. Mit den Endpunkten können Sie Attribute für eine LUN erstellen, aktualisieren, löschen und erkennen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Eine LUN-Zuordnung ist eine Zuordnung zwischen einer LUN und einer Initiatorgruppe. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Die Knoten zur Berichterstellung sind die Cluster Nodes, von denen Netzwerkpfade zu einer zugeordneten LUN mithilfe der SAN-Protokolle als Teil der Selective LUN Map (SLM)-Funktion von ONTAP angekündigt werden. Mit den neuen Endpunkten können die Reporting-Nodes einer LUN-Zuordnung hinzugefügt, entfernt und ermittelt werden. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+Eine LUN ist die logische Darstellung des Storage in einem Storage Area Network (SAN). Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+
+Ein Portsatz ist eine Sammlung von Fibre Channel- oder iSCSI-Netzwerkschnittstellen, die der Storage VM „_portset_“ zugeordnet sind. Während diese Funktion für frühere Versionen von ONTAP vorhanden war, wurde jetzt auch der REST API Support hinzugefügt. Dieser REST-Ressourcentyp wurde mit ONTAP 9.9 eingeführt.
+
+Ein VMware Virtual Volume (vVol) Bindung ist eine Verknüpfung zwischen einer LUN der Klasse `protocol_endpoint` Und eine LUN der Klasse `vvol`. Mit der vVol Binding REST API können Sie vVol Bindungen erstellen, löschen und entdecken. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.

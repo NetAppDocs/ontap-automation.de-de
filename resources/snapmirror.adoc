@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: resources/snapmirror.html 
+keywords: snapmirror resources 
+summary: Mit diesen API-Aufrufen können Sie die SnapMirror Datensicherungstechnologie managen. 
+---
+= SnapMirror
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit diesen API-Aufrufen können Sie die SnapMirror Datensicherungstechnologie managen.
+
+Die SnapMirror Richtlinien werden auf Beziehungen angewendet und steuern die Konfigurationsattribute und das Verhalten der einzelnen Beziehungen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sowohl asynchrone als auch synchrone Beziehungen legen die Konnektivität fest, die Sie für die Datenübertragung benötigen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+Sie können SnapMirror Transfers über vorhandene SnapMirror Beziehungen verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

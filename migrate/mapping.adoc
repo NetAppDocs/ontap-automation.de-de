@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: migrate/mapping.html 
+keywords: ONTAPI, REST API, mapping, mapping documentation 
+summary: NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu äquivalenten REST-API-Aufrufen beschreibt. 
+---
+= ONTAPI-to-REST-API-Zuordnung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die ONTAP REST API umfasst Funktionen, die in den meisten Bereichen ONTAPI entsprechen. NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu äquivalenten REST-API-Aufrufen beschreibt.
+
+Die Dokumentation für die API-Zuordnung ist abhängig von der ONTAP Version:
+
+* https://docs.netapp.com/us-en/ontap-restmap-9121["ONTAP 9.12.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9111["ONTAP 9.11.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9101["ONTAP 9.10.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-991["ONTAP 9.9.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-98["ONTAP 9.8"^]
+

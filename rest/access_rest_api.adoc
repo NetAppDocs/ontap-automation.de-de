@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: rest/access_rest_api.html 
+keywords: accessing the rest api, lif 
+summary: Sie können auf die ONTAP REST API auf unterschiedliche Weise zugreifen. 
+---
+= So erhalten Sie Zugriff auf die ONTAP REST API
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf die ONTAP REST API auf unterschiedliche Weise zugreifen.
+
+
+
+== Netzwerküberlegungen
+
+Sie können über folgende Schnittstellen eine Verbindung zur REST API herstellen:
+
+* Cluster-Management-LIF
+* Node Management-LIF
+* SVM-Management-LIF
+
+
+Die logische Schnittstelle, die Sie verwenden möchten, muss zur Unterstützung des HTTPS-Managementprotokolls konfiguriert sein. Außerdem muss die Firewall-Konfiguration in Ihrem Netzwerk den HTTPS-Datenverkehr ermöglichen.
+
+
+TIP: Sie sollten immer die Cluster-Management-LIF verwenden. Dadurch werden die API-Anforderungen gleichmäßig auf alle Nodes verteilt und Nodes, die offline sind oder Konnektivitätsprobleme auftreten, werden vermieden.
+
+
+
+== Online-Dokumentationsseite der ONTAP API
+
+Die Online-Dokumentationsseite der ONTAP-API bietet einen Zugriffspunkt bei Verwendung eines Webbrowsers. Die Seite bietet nicht nur die Möglichkeit, einzelne API-Aufrufe direkt auszuführen, sondern enthält auch eine detaillierte Beschreibung der API, einschließlich Eingabeparameter und anderer Optionen für jeden Aufruf. Die API-Aufrufe sind in funktionale Kategorien unterteilt. Siehe link:../resources/overview_categories.html["Zusammenfassung der REST-Ressourcen"] Finden Sie weitere Informationen.
+
+Das Format der URL, die zum Zugriff auf die Dokumentationsseite der neuesten Version der API verwendet wird, lautet:
+
+`https://<cluster_mgmt_ip_address>/docs/api`
+
+
+
+== Benutzerdefinierte Software und Tools
+
+Sie können auf die ONTAP-API über eine von mehreren verschiedenen Programmiersprachen und Tools zugreifen. Beliebte Optionen sind Python, Java, Curl und PowerShell. Ein Programm, Skript oder Tool, das die API verwendet, fungiert als REST-Web-Services-Client. Die Verwendung einer Programmiersprache ermöglicht ein tieferes Verständnis der API und bietet die Möglichkeit, die ONTAP-Administration zu automatisieren.
+
+Das Format der Basis-URL, die für den direkten Zugriff auf die neueste Version der API verwendet wird, lautet:
+
+`https://<cluster_mgmt_ip_address>/api`
+
+Um auf eine bestimmte API-Version zuzugreifen, in der mehrere Versionen unterstützt werden, lautet das Format der URL:
+
+`https://<cluster_mgmt_ip_address>/api/v1`

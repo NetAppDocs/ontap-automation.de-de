@@ -1,0 +1,12 @@
+---
+section: migrate
+title: Migration zur REST-API
+entries:
+- title: Überblick
+  url: "/migrate/overview.html"
+- title: ONTAPI für REST-Zuordnung
+  url: "/migrate/mapping.html"
+- title: Performance-Zähler
+  url: "/migrate/performance-counters.html"
+- title: Blogs
+  url: "/migrate/blogs.html"

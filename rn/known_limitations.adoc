@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: rn/known_limitations.html 
+keywords: limitations, known limitations 
+summary: Die ONTAP REST-API verfügt über bestimmte Einschränkungen oder Einschränkungen, die sich auf die Verwendung der API und die Entwicklung des Automatisierungscodes auswirken können. 
+---
+= Bekannte Einschränkungen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die ONTAP REST-API verfügt über bestimmte Einschränkungen oder Einschränkungen, die sich auf die Verwendung der API und die Entwicklung des Automatisierungscodes auswirken können. Diese Einschränkungen werden im Folgenden beschrieben. Im Allgemeinen gilt jedes für alle unterstützten ONTAP-Versionen, in denen DIE REST-API verfügbar ist. Weitere Informationen finden Sie im Feld „_ONTAP Releases_“.
+
+
+NOTE: DIE REST API ist erstmals mit ONTAP 9.6 verfügbar.
+
+_ONTAP Releases: Alle unterstützten_
+
+Jede REST-API-Client-Anforderung wird von ONTAP empfangen und vor der Verarbeitung in eine Eingabewarteschlange platziert. In Zeiten extrem hoher Ankunftsraten kann die Eingangswarteschlange, in der diese API-Anfragen gehalten werden, vorübergehend ausgebucht sein. In diesem Fall wird jede weitere Überlaufanforderung abgelehnt. In folgenden Situationen:
+
+* ONTAP erkennt, dass die eingehende Verbindung die Warteliste überschreitet und protokolliert eine Meldung, dass die Verbindung nicht hergestellt wurde.
+* DER REST-Client beobachtet die fehlgeschlagene Verbindung, obwohl das genaue Verhalten vom Client abhängen kann. Beispielsweise wird mit einem NMSDK Client die Meldung „Verbindung zu SSL nicht hergestellt“ angezeigt.
+
+
+Das Ausfüllen der REST-API-Eingabewarteschlange ist ein seltenes Ereignis. Aber die Ablehnung der Überschussanforderungen bietet Schutz vor DOS-Angriffen.
