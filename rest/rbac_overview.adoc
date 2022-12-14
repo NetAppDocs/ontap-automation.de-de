@@ -94,8 +94,11 @@ NOTE: Reverse Role Mapping wird nicht unterstützt. Das heißt, die Schaffung ei
 
 Die herkömmlichen Rollen sind bei allen Versionen von ONTAP 9 enthalten. DIE RESTLICHEN Rollen wurden später eingeführt und haben sich wie unten beschrieben weiterentwickelt.
 
+.ONTAP 9.6
 DIE REST API wurde mit ONTAP 9.6 eingeführt. IN dieser Version wurden auch die REST-Rollen enthalten. Wenn Sie eine RUSTROLLE anlegen, wird auch eine entsprechende traditionelle Rolle erzeugt.
 
+.ONTAP 9.7 bis 9.10.1
 Jede ONTAP Version von 9.7 bis 9.10.1 enthält Verbesserungen an DER REST API. So wurden beispielsweise jeder Version weitere REST-Endpunkte hinzugefügt. Die Erstellung und Verwaltung der beiden Rollentypen blieb jedoch getrennt. Zudem wurde in ONTAP 9.10.1 DIE REST-RBAC-Unterstützung für den Rest-Endpunkt von Snapshots hinzugefügt `/api/storage/volumes/{vol.uuid}/snapshots` Bei diesem Punkt handelt es sich um einen ressourcenqualifizierten Endpunkt.
 
+.ONTAP 9.11.1
 Mit diesem Release wurde die Möglichkeit hinzugefügt, herkömmliche Rollen mit DER REST API zu konfigurieren und zu managen. Weitere Zugriffsebenen für DIE REST-Rollen wurden hinzugefügt.

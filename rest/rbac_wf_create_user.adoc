@@ -22,16 +22,22 @@ Sie können den unten beschriebenen Workflow verwenden, um einen Benutzer mit ei
 
 Bevor Sie eine Rolle erstellen und einem ONTAP-Benutzerkonto zuordnen, sollten Sie sich zunächst mit den wichtigsten Sicherheitsanforderungen und -Optionen vorbereiten.
 
+.Welche ONTAP Version verwenden Sie?
 Die ONTAP Version legt fest, welche REST-Endpunkte und RBAC-Funktionen verfügbar sind.
 
+.Ermittlung der geschützten Ressourcen und des Umfangs
 Sie müssen die zu sichernden Ressourcen oder Befehle und den Umfang (Cluster oder SVM) festlegen.
 
+.Welchen Zugriff sollte der Benutzer haben?
 Nachdem Sie die Ressourcen und den Umfang ermittelt haben, müssen Sie die zuzugeteilte Zugriffsebene festlegen.
 
+.Wie greifen die Benutzer auf ONTAP zu?
 Der Benutzer kann über die REST-API oder über die CLI oder beide auf ONTAP zugreifen.
 
+.Ist eine der integrierten Rollen ausreichend oder wird eine benutzerdefinierte Rolle benötigt?
 Es ist bequemer, eine vorhandene integrierte Rolle zu verwenden, aber Sie können bei Bedarf eine neue benutzerdefinierte Rolle erstellen.
 
+.Welche Art von Rolle ist erforderlich?
 Basierend auf den Sicherheitsanforderungen und dem ONTAP-Zugriff müssen Sie entscheiden, ob eine REST- oder eine herkömmliche Rolle erstellt werden soll.
 
 
@@ -61,6 +67,7 @@ Führen Sie den folgenden REST-API-Aufruf durch, um die SVMs im Cluster aufzulis
 ----
 curl --location -i --request GET 'https://10.222.81.101/api/svm/svms?order_by=name' -u admin:password -k --header 'Accept: */*'
 ----
+.Nachdem Sie fertig sind
 Wählen Sie die gewünschte SVM aus der Liste aus, in der Sie den neuen Benutzer und die neue Rolle erstellen möchten.
 
 
@@ -81,6 +88,7 @@ Führen Sie den folgenden REST-API-Aufruf durch, um die in der ausgewählten SVM
 ----
 curl --location -i --request GET 'https://10.222.81.101/api/security/accounts/?owner.name=dmp' -u admin:password -k --header 'Accept: */*'
 ----
+.Nachdem Sie fertig sind
 Wählen Sie basierend auf den bereits in der SVM definierten Benutzern einen eindeutigen Namen für den neuen Benutzer aus.
 
 
@@ -101,6 +109,7 @@ Führen Sie den folgenden REST-API-Aufruf durch, um die in der ausgewählten SVM
 ----
 curl --location -i --request GET 'https://10.222.81.101/api/security/roles/?owner.name=dmp' -u admin:password -k --header 'Accept: */*'
 ----
+.Nachdem Sie fertig sind
 Wählen Sie basierend auf den in der SVM bereits definierten Rollen einen eindeutigen Namen für die neue Rolle aus.
 
 
@@ -135,6 +144,7 @@ Führen Sie den folgenden REST-API-Aufruf zur Erstellung einer benutzerdefiniert
 ----
 curl --location -i --request POST 'https://10.222.81.101/api/security/roles' --data @JSONinput -u admin:password -k --header 'Accept: */*'
 ----
+.Nachdem Sie fertig sind
 Führen Sie optional Schritt 3 erneut aus, um die neue Rolle anzuzeigen. Sie können die Rollen auch in der ONTAP-CLI anzeigen.
 
 
@@ -162,6 +172,7 @@ Führen Sie den folgenden REST-API-Aufruf durch, um die Rolle zu ändern, indem 
 ----
 curl --location -i --request POST 'https://10.222.81.101/api/security/roles/752d96be-f17c-11ec-9d19-005056bbad91/dprole1/privileges' --data @JSONinput -u admin:password -k --header 'Accept: */*'
 ----
+.Nachdem Sie fertig sind
 Führen Sie optional Schritt 3 erneut aus, um die neue Rolle anzuzeigen. Sie können die Rollen auch in der ONTAP-CLI anzeigen.
 
 
@@ -200,4 +211,5 @@ TIP: Sie können den Benutzer auch ohne Rolle einbeziehen. In diesem Fall müsse
 ----
 curl --location -i --request POST 'https://10.222.81.101/api/security/accounts' --data @JSONinput -u admin:password -k --header 'Accept: */*'
 ----
+.Nachdem Sie fertig sind
 Sie können sich mit den Anmeldedaten für den neuen Benutzer bei der SVM-Managementoberfläche anmelden.

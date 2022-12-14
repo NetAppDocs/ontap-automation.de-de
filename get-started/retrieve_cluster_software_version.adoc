@@ -18,6 +18,7 @@ Jede API-Transaktion besteht aus einer HTTP-Anfrage und der zugehörigen Antwort
 
 image:rest_call_01.png["Darstellung eines einfachen REST-API-Anrufs"]
 
+.HTTP-Anforderung
 Die vom Client an den Server gesendete Anforderung besteht aus folgenden Komponenten:
 
 * Verb
@@ -26,6 +27,7 @@ Die vom Client an den Server gesendete Anforderung besteht aus folgenden Kompone
 * Kopfzeilen für Anfragen, einschließlich Autorisierung
 
 
+.HTTP-Antwort
 Die Antwort, die vom Server an den Client gesendet wird, besteht aus folgenden Komponenten:
 
 * Statuscode 200

@@ -16,24 +16,35 @@ summary: Sie können diese API-Aufrufe verwenden, um die von ONTAP unterstützte
 [role="lead"]
 Sie können diese API-Aufrufe verwenden, um die von ONTAP unterstützten Namensdienste zu verwalten.
 
+.Cache
 ONTAP Name Services unterstützt Caching zur Verbesserung von Performance und Resiliency. Die Konfiguration des Cache für Namensdienste kann nun über die REST-API abgerufen werden. Die Einstellungen können auf mehreren Ebenen angewendet werden, darunter Hosts, unix-Benutzer, unix-Gruppen und Netgroups. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
 
+.DDNS
 Sie können die DDNS-Informationen (Dynamic DNS) anzeigen und das DDNS-Subsystem verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
+.DNS
 DNS unterstützt die Integration des ONTAP-Clusters in Ihr Netzwerk. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Host-Datensatz
 Mit diesen Endpunkten können Sie die IP-Adresse eines angegebenen Host-Namens sowie den Hostnamen für eine IP-Adresse anzeigen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
 
+.LDAP
 LDAP-Server können zur Verwaltung von Benutzerinformationen verwendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.LDAP-Schemata
 Sie können die von ONTAP verwendeten LDAP-Schemata erstellen, ändern und auflisten. Es sind vier Standardschemata enthalten. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
 
+.Lokale Hosts
 Mithilfe dieser Endpunkte können Sie die lokalen Zuordnungen für Hostnamen anzeigen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
 
+.Namenszuordnungen
 Namenszuordnungen ermöglichen es Ihnen, Identitäten von einer Namensdomäne zu einer anderen zuzuordnen. Sie können beispielsweise Identitäten von CIFS zu UNIX, Kerberos zu UNIX und UNIX zu CIFS zuordnen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Netzwerkgruppendateien
 Sie können die Details zu den Netzwerkgruppen abrufen und eine Datei für eine SVM löschen. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
 
+.NIS
 NIS-Server können zur Authentifizierung von Benutzern und Client-Workstations verwendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.UNIX-Benutzer und -Gruppen
 Lokale UNIX-Benutzer und -Gruppen waren bereits Teil früherer ONTAP Versionen. Jetzt wurde der REST-API jedoch Unterstützung hinzugefügt, mit der Sie die Benutzer und Gruppen anzeigen und verwalten können. Diese REST-Ressourcentypen wurden mit ONTAP 9.9 eingeführt und in ONTAP 9.10 deutlich verbessert.

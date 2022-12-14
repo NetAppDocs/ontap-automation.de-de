@@ -16,17 +16,23 @@ summary: Sie können diese API-Aufrufe zur Verwaltung der SnapLock-Funktion verw
 [role="lead"]
 SnapLock ist eine Storage-basierte Implementierung der herkömmlichen optischen WORM-Lösung (Write Once, Read Many) und bietet die langfristige Aufbewahrung von Daten. Sie können diese API-Aufrufe zur Verwaltung der SnapLock-Funktion verwenden.
 
+.Protokoll
 Die SnapLock-Protokollstruktur basiert auf Verzeichnissen und Dateien auf einem bestimmten Volume, das die Protokolldatensätze enthält. Log-Dateien werden entsprechend der maximalen Protokollgröße gefüllt und archiviert. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Compliance-Uhr
 Die Compliance-Uhr bestimmt die Ablaufzeit der SnapLock-Objekte. Die Uhr muss außerhalb der REST-API initialisiert werden und kann nicht geändert werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Aufbewahrung von Ereignissen
 Mit der Funktion „SnapLock Event Based Retention“ (EBR) können Sie festlegen, wie lange eine Datei nach dem Auftreten eines Ereignisses aufbewahrt wird. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Aufbewahrung von Dateien und privilegiertes Löschen
 Sie können die Aufbewahrungszeit einer Datei verwalten, die von SnapLock erstellt wurde. Bei Bedarf können Sie AUCH noch nicht abgelaufene WORM-Dateien auf einem SnapLock Enterprise Volume löschen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
 
 NOTE: Die einzige integrierte Rolle mit Berechtigung, den Löschvorgang auszuführen, ist vsadmin-snaplock.
 
+.Fingerabdruck für Dateien
 Sie können die wesentlichen Informationen, die Dateien und Volumes beschreiben, anzeigen und managen, z. B. Typ und Ablaufdatum. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Gesetzliche Aufbewahrungspflichten
 Sie können diese API-Aufrufe verwenden, um Dateien zu verwalten, die Teil eines Prozesses sind. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.

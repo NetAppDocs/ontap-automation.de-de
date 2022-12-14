@@ -78,13 +78,16 @@ Die entsprechenden ONTAP CLI Befehle werden im Folgenden beschrieben. Auf alle B
 
 DIE REST- und traditionellen Rollen werden durch eine Reihe von Attributen definiert.
 
+.Eigentümer und Umfang
 Eine Rolle kann im Besitz des ONTAP Clusters oder einer spezifischen Daten-SVM innerhalb des Clusters sein. Der Eigentümer bestimmt auch implizit den Umfang der Rolle.
 
+.Eindeutiger Name
 Jede Rolle muss einen eindeutigen Namen in ihrem Geltungsbereich haben. Der Name einer Cluster-Rolle muss auf ONTAP Cluster-Ebene eindeutig sein, während die SVM-Rollen innerhalb der spezifischen SVM eindeutig sein müssen.
 
 
 NOTE: Der Name einer neuen REST-Rolle muss sowohl unter DEN REST-Rollen als auch den traditionellen Rollen eindeutig sein. Das liegt daran, dass die Schaffung einer RUHEROLLE auch zu einer neuen traditionellen _Mapping_ Rolle mit dem gleichen Namen führt.
 
+.Satz von Berechtigungen
 Jede Rolle enthält einen Satz von mindestens einer Berechtigung. Jede Berechtigung identifiziert eine bestimmte Ressource oder einen bestimmten Befehl und die zugehörige Zugriffsebene.
 
 
@@ -99,8 +102,10 @@ Eine Rolle kann eine oder mehrere Berechtigungen enthalten. Jede Berechtigungsde
 
 Der Ressourcenpfad wird entweder als REST-Endpunkt oder als CLI-Befehl-/Befehlsverzeichnispfad identifiziert.
 
+.REST-Endpunkt
 Ein API-Endpunkt hat die Zielressource für eine REST-Rolle identifiziert.
 
+.CLI-Befehl
 Ein CLI-Befehl gibt das Ziel für eine herkömmliche Rolle an. Es kann auch ein Befehlsverzeichnis angegeben werden, das dann alle nachgelagerten Befehle in die ONTAP-CLI-Hierarchie enthält.
 
 

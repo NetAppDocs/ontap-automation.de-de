@@ -16,12 +16,17 @@ summary: Sie können diese API-Aufrufe zur Verwaltung der NDMP-Services verwende
 [role="lead"]
 Das Network Data Management Protocol bietet einen Standard für die Sicherung von NAS-Geräten. Sie können diese API-Aufrufe zur Verwaltung der NDMP-Services verwenden.
 
+.NDMP-Modus
 Der NDMP-Betriebsmodus kann vom Umfang der SVM oder vom Node festgelegt werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.NDMP-Knoten
 Sie können die NDMP-Konfiguration der Nodes verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.NDMP-Sitzungen
 Sie können NDMP-Sitzungsdetails für eine bestimmte SVM oder einen bestimmten Node abrufen und löschen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.NDMP SVMs
 Sie können die NDMP-Konfiguration der SVMs managen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Passwörter für NDMP SVM
 Sie können innerhalb der SVM-Inhalte Passwörter für einen bestimmten NDMP-Benutzer generieren und abrufen. Dieser Ressourcentyp wurde mit der ONTAP 9.8 REST API eingeführt und mit ONTAP 9.9 erweitert.

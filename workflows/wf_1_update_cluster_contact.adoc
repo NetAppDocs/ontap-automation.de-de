@@ -28,6 +28,7 @@ Sie können einen API-Anruf ausstellen, um die Kontaktinformationen zu aktualisi
 
 | Cluster | PATCH | /Cluster 
 |===
+.Verarbeitungsart
 Asynchron
 
 .Curl
@@ -38,6 +39,7 @@ curl -X PATCH -H 'Content-Type: application/json' -u admin:password -k -d @step0
   "contact": "support@company-demo.com"
 }
 ----
+.JSON-Ausgabe
 Ein Job-Objekt mit der zugeordneten ID wird zurückgegeben.
 
 [source, json]
@@ -64,6 +66,7 @@ Sie müssen den Status des Jobs abrufen, um festzustellen, ob die asynchrone Anf
 
 | Cluster | GET | /Cluster/Jobs/{UUID} 
 |===
+.Verarbeitungsart
 Synchron
 
 .Curl
@@ -71,6 +74,7 @@ Synchron
 ----
 curl -X GET -H 'Content-Type: application/json' -u admin:password -k 'https:// 10.222.81.101/api/cluster/jobs/*uuid*'
 ----
+.Ausgabe
 Ein Job-Objekt mit dem Status und anderen Feldern wird zurückgegeben.
 
 [source, json]

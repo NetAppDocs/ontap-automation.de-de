@@ -16,48 +16,70 @@ summary:
 [role="lead"]
 Diese API-Aufrufe können zum Management der Sicherheitseinstellungen für Cluster und SVM verwendet werden.
 
+.Konten
 Es gibt eine Sammlung von Benutzerkonten für das Cluster und SVMs. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Kontobezeichnung
 Konfiguration für ein Scoped-Benutzerkonto. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Active Directory-Proxy
 Sie können die SVM-Kontoinformationen auf dem Active Directory-Server verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Ransomware schützen
 ONTAP erkennt Dateien, die möglicherweise eine Ransomware-Bedrohung enthalten. Es gibt mehrere Endgeräte-Kategorien. Sie können eine Liste dieser verdächtigen Dateien abrufen oder von einem Volume entfernen. Dieser Ressourcentyp wurde mit ONTAP 9.10.1 eingeführt.
 
+.Prüfung
 Die Einstellungen, die bestimmen, was in den Audit-Log-Dateien protokolliert wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Audit-Ziele
 Diese Einstellungen steuern, wie Audit-Log-Informationen an Remote-Systeme oder splunk Server übermittelt werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Audit-Meldungen
 Sie können die Meldungen des Prüfprotokolls abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.AWS KMS
 Amazon Web Services umfasst einen Verschlüsselungsmanagement-Service, der sicheren Storage für Schlüssel und andere Geheimnisse bietet. Sie können über die REST-API auf diesen Service zugreifen, sodass ONTAP seine Schlüssel sicher in der Cloud speichern kann. Darüber hinaus können Sie die mit NetApp Storage Encryption verwendeten Authentifizierungsschlüssel erstellen und auflisten. Diese Unterstützung ist in ONTAP 9.12 neu.
 
+.Azure Key Vault
 Bei diesem Satz von API-Aufrufen können Sie Azure Schlüsselspeicher verwenden, um die ONTAP-Verschlüsselungsschlüssel zu speichern. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
+.Zertifikate
 Mit den API-Aufrufen können von ONTAP verwendete Zertifikate installiert, angezeigt und gelöscht werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Cluster-Sicherheit
 Sie können Details zur Cluster-weiten Sicherheit abrufen und bestimmte Parameter aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.GCP-KMS
 Mit diesem Satz von API-Aufrufen können Sie den Google Cloud Platform Key Management Service zum Speichern und Verwalten der ONTAP-Verschlüsselungsschlüssel verwenden. Dieser Ressourcentyp wurde zunächst mit der ONTAP 9.8 REST-API eingeführt. Diese Funktion wurde jedoch neu gestaltet und gilt bei neuen Ressourcentypen in ONTAP 9.9 als neu.
 
+.IPsec
 Internet Protocol Security (IPSec) ist eine Protokollsuite, die Sicherheit zwischen zwei Endpunkten über ein zugrunde liegendes IP-Netzwerk bietet. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
+.IPsec CA-Zertifikate
 Sie können IPSec-CA-Zertifikate hinzufügen, entfernen und abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.10.
 
+.IPsec-Richtlinien
 Mit diesem Satz von API-Aufrufen können Sie die für eine IPSec-Bereitstellung geltenden Richtlinien verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
+.IPsec-Sicherheitszuordnungen
 Sie können diesen Satz von API-Aufrufen verwenden, um die für eine IPSec-Bereitstellung relevanten Sicherheitszuordnungen zu verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
+.Konfiguration für Schlüsselmanager
 Mit diesen Endpunkten können Sie die Konfigurationen für Schlüsselmanager abrufen und aktualisieren. Dieser Ressourcentyp ist neu in ONTAP 9.10.
 
+.Schlüsselmanager
 Ein Schlüsselmanager erlaubt Client-Modulen innerhalb von ONTAP, sicher gespeicherte Schlüssel zu speichern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und für ONTAP 9.7 aktualisiert. Ein weiteres Update mit ONTAP 9.12 zur Unterstützung der Authentifizierungsschlüssel war vorhanden.
 
+.Schlüsselspeicher
 Ein Schlüsselspeicher beschreibt den Typ eines Schlüsselmanagers. Dieser Ressourcentyp ist neu in ONTAP 9.10.
 
+.LDAP-Authentifizierung
 Diese API-Aufrufe werden zum Abrufen und Verwalten der Cluster-LDAP-Serverkonfiguration verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Anmeldungsmeldungen
 Wird zum Anzeigen und Verwalten der von ONTAP verwendeten Login-Meldungen verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Verifizierung mehrerer Administratoren
 Die Überprüfungsfunktion für mehrere Administratoren stellt ein flexibles Autorisierungs-Framework zum Schutz des Zugriffs auf ONTAP-Befehle oder -Vorgänge bereit. Es gibt 17 neue Endpunkte, die das Definieren, anfordern und Genehmigen von Zugriff in den folgenden Bereichen unterstützen:
 
 * Regeln
@@ -67,20 +89,29 @@ Die Überprüfungsfunktion für mehrere Administratoren stellt ein flexibles Aut
 
 Wenn mehrere Administratoren Zugriff genehmigen können, lässt sich die Sicherheit Ihrer ONTAP- und IT-Umgebungen verbessern. Diese Ressourcentypen wurden mit ONTAP 9.11 eingeführt.
 
+.NIS-Authentifizierung
 Diese Einstellungen werden zum Abrufen und Verwalten der NIS-Serverkonfiguration des Clusters verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Passwortrauthentifizierung
 Dazu gehört auch der API-Aufruf, der zum Ändern des Kennworts eines Benutzerkontos verwendet wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Berechtigungen für eine Rolleninstanz
 Verwalten Sie die Berechtigungen für eine bestimmte Rolle. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Authentifizierung über öffentlichen Schlüssel
 Sie können diese API-Aufrufe verwenden, um die öffentlichen Schlüssel für Benutzerkonten zu konfigurieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Rollen
 Die Rollen bieten eine Möglichkeit, Benutzerkonten Berechtigungen zuzuweisen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Instanz Rollen
 Spezifische Instanz einer Rolle. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.SAML-Service-Provider
 Sie können die Konfiguration für den SAML-Dienstanbieter anzeigen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.SSH
 Mit diesen Aufrufen können Sie die SSH-Konfiguration festlegen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.SSH SVMs
 Mit diesen Endpunkten können Sie die SSH-Sicherheitskonfiguration für alle SVMs abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.

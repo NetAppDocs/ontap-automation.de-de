@@ -16,4 +16,5 @@ summary: Diese API-Aufrufe können zum Managen von Verbindungen zu Objekt-Storag
 [role="lead"]
 Diese API-Aufrufe können zum Managen von Verbindungen zu Objekt-Storage-Ressourcen in der Cloud verwendet werden.
 
+.Ziele
 Ein Ziel repräsentiert eine Objekt-Storage-Ressource in der Cloud. Jedes Ziel umfasst Konfigurationsinformationen, die für die Verbindung zur Storage-Ressource erforderlich sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

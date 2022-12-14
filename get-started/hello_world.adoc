@@ -16,6 +16,7 @@ summary: Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONT
 [role="lead"]
 Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONTAP REST API zu verwenden und deren Verfügbarkeit zu bestätigen.
 
+.Bevor Sie beginnen
 Das Curl-Dienstprogramm muss auf Ihrer Workstation verfügbar sein. Zusätzlich müssen Sie Folgendes haben:
 
 * IP-Adresse oder Host-Name der ONTAP Cluster-Management-LIF
@@ -38,4 +39,5 @@ NOTE: Wenn Ihre Anmeldeinformationen Sonderzeichen enthalten, müssen Sie diese 
 
 
 
+.Nachdem Sie fertig sind
 Die Informationen zur ONTAP-Version werden in einem JSON-Format angezeigt.

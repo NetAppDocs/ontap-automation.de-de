@@ -16,30 +16,44 @@ summary: Mithilfe dieser API-Aufrufe können Sie die physischen und logischen Ne
 [role="lead"]
 Mithilfe dieser API-Aufrufe können Sie die physischen und logischen Netzwerkressourcen verwalten, die mit dem Cluster verwendet werden.
 
+.BGP-Peer-Gruppen
 Sie können Peer-Gruppen für das Border Gateway Protocol erstellen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Ethernet Broadcast-Domänen
 Eine Ethernet Broadcast-Domäne ist ein Satz physischer Ports, die als Teil desselben physischen Netzwerks angezeigt werden. Alle Ports empfangen ein Paket, wenn sie von einem der Ports in der Domäne gesendet werden. Jede Broadcast-Domäne ist Teil eines IPspaces. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Ethernet-Ports
 Ein Ethernet-Port ist ein physischer oder virtueller Netzwerkendpunkt. Die Ports können in einer Link Aggregate Group (LAG) oder mit einem Virtual LAN (VLAN) getrennt werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.Ethernet-Switch-Ports
 Sie können die Portinformationen für einen Ethernet-Switch abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
+.Ethernet-Switches
 Sie können die Konfiguration für Ethernet-Switches abrufen oder ändern, die für das ONTAP-Cluster oder das Storage-Netzwerk verwendet werden. Dieser Ressourcentyp ist neu in ONTAP 9.8 und aktualisiert mit 9.11.
 
+.Fibre Channel Fabrics
 Informationen über das FC-Netzwerk können über die REST-API-Endpunkte der Fibre Channel (FC)-Fabric abgerufen werden. Dazu gehören auch die Verbindungen zwischen dem ONTAP-Cluster und der FC-Fabric, die Switches aus der Fabric und die Zonen des aktiven zoneset. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
 
+.Fibre Channel-Schnittstellen
 Eine Fibre-Channel-Schnittstelle ist ein logischer Endpunkt einer SVM. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.Fibre-Channel-Ports
 Ein Fibre Channel-Port ist ein physischer Adapter auf einem ONTAP-Node, der zur Verbindung mit dem Fibre Channel-Netzwerk verwendet wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.HTTP-Proxy
 Sie können einen HTTP-Proxy für eine SVM oder einen Cluster-IPSpace konfigurieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.IP-Schnittstellen
 Eine logische Schnittstelle (LIF) ist eine IP-Adresse mit zusätzlichen Konfigurationsattributen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.IP-Routen
 Eine Routing-Tabelle ist eine Sammlung von IP-Routen, die zur Weiterleitung des Datenverkehrs an sein Ziel verwendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.IP-Service-Richtlinien
 Die IP-Service-Richtlinien definieren die Services, die in einem bestimmten LIF verfügbar sind. Service-Richtlinien können im Kontext einer SVM oder eines IPspace konfiguriert werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.IP-Subnetze
 Die ONTAP-Netzwerkfunktion wurde erweitert und unterstützt IP-Subnetze. Die REST-API bietet Zugriff auf die Konfiguration und das Management der IP-Subnetze innerhalb eines ONTAP-Clusters. Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
 
+.IPspaces
 Ein IPspace erstellt einen Netzwerkbereich, der eine oder mehrere SVMs unterstützt. Die IPspaces können voneinander isoliert werden, wodurch Sicherheit und Datenschutz gewährleistet sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

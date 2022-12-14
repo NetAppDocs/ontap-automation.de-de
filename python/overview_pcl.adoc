@@ -19,4 +19,5 @@ Die NetApp ONTAP Python Client Library ist ein Paket, mit dem Sie Skripts instal
 
 NOTE: NetApp unterhält ein GitHub Repository, in dem Codebeispiele und andere hilfreiche Informationen enthalten sind. Sie können zum Ordner _examples_ navigieren, um mithilfe der Python-Client-Bibliothek auf Samples zuzugreifen.
 
+.Weiterführende Links
 https://github.com/NetApp/ontap-rest-python["ONTAP REST Python GitHub-Repository"^]

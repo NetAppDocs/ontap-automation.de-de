@@ -19,6 +19,7 @@ Die ONTAP REST-API verfügt über bestimmte Einschränkungen oder Einschränkung
 
 NOTE: DIE REST API ist erstmals mit ONTAP 9.6 verfügbar.
 
+.REST-API-Anforderungen werden abgelehnt, wenn die Eingabewarteschlange voll ist
 _ONTAP Releases: Alle unterstützten_
 
 Jede REST-API-Client-Anforderung wird von ONTAP empfangen und vor der Verarbeitung in eine Eingabewarteschlange platziert. In Zeiten extrem hoher Ankunftsraten kann die Eingangswarteschlange, in der diese API-Anfragen gehalten werden, vorübergehend ausgebucht sein. In diesem Fall wird jede weitere Überlaufanforderung abgelehnt. In folgenden Situationen:

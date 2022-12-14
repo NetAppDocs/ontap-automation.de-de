@@ -28,4 +28,5 @@ Der grundlegende Ressourcenpfad für CLI-Zugriff ist `/private/cli`. Information
 
 NOTE: NetApp unterhält ein GitHub Repository, in dem Codebeispiele und andere hilfreiche Informationen enthalten sind. Sie können auf das Repository zugreifen, um Beispiele für die Verwendung der CLI-Passthrough-Einrichtung zu erhalten.
 
+.Weiterführende Links
 https://github.com/NetApp/ontap-rest-python/tree/master/examples/rest_api/cli_passthrough_samples["ONTAP REST Python GitHub-Repository - CLI-Passthrough-Samples"^]

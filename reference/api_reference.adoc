@@ -26,6 +26,7 @@ NOTE: Die API-Referenzinhalte haben Zugriff auf den lokalen ONTAP-System oder au
 [role="lead"]
 Die Online-Dokumentationsseite der ONTAP-API ist auf Ihrem lokalen ONTAP-System verfügbar.
 
+.Bevor Sie beginnen
 Sie müssen Folgendes haben:
 
 * IP-Adresse oder Host-Name der ONTAP Cluster-Management-LIF
@@ -60,4 +61,5 @@ Sie können über die unten angegebenen Links auf eine Kopie der Referenzdokumen
 * https://library.netapp.com/ecmdocs/ECMLP2856304/html/["ONTAP 9.6"^]
 
 
+.Verwandte Informationen
 https://devnet.netapp.com/restapi.php["NetApp DevNet: ONTAP REST-APIs"^]

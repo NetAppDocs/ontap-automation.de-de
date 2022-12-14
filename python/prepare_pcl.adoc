@@ -16,6 +16,7 @@ summary: Sie sollten die lokale Laufzeitumgebung vorbereiten, bevor Sie die Pyth
 [role="lead"]
 Sie sollten die lokale Laufzeitumgebung vorbereiten, bevor Sie die Python-Client-Bibliothek verwenden.
 
+.Grundvoraussetzungen
 Sie müssen Python 3.5 oder höher verwenden. Zusätzlich sind folgende Pakete erforderlich:
 
 * Anforderungen 2.22.1 oder höher
@@ -23,10 +24,13 @@ Sie müssen Python 3.5 oder höher verwenden. Zusätzlich sind folgende Pakete e
 * marshmallow 3.2.1 oder höher
 
 
+.Paketname und -Version
 Der Name des Python Client Library-Pakets ist *netapp-ontap*. Die dem Paket zugeordnete Version ist eine Kombination aus den ONTAP-Major- und Minor-Versionsnummern, aus denen die Bibliothek erstellt wurde, sowie einer Minor-Version für den Client innerhalb der ONTAP-Version. Gültige Versionsnummern sind beispielsweise 9.6.1, 9.6 und 9.7.1.
 
+.Installation
 Sie müssen pip verwenden, um das netapp_ontap Paket von der Python Package Index (PyPi) Website zu installieren.
 
+.Dokumentation und weitere Ressourcen
 Links zur Dokumentation und zu anderen Ressourcen finden Sie im _NetApp Developer Network_.
 
 .Verwandte Informationen

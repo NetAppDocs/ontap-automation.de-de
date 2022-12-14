@@ -16,44 +16,65 @@ summary: Sie können diese API-Aufrufe verwenden, um die ONTAP-Funktionen zu ver
 [role="lead"]
 Sie können diese API-Aufrufe verwenden, um die ONTAP-Funktionen zu verwalten, die zur Unterstützung eines Clusters verwendet werden.
 
+.Applikationsprotokoll
 Eine eigenständige Anwendung kann EMS-Ereignisse und optional generierte AutoSupport-Pakete bei einem ONTAP-System durch Ausgabe einer POST-Anfrage aufzeichnen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt
 
+.Automatische Aktualisierung
 Mit der automatischen Aktualisierungsfunktion bleiben Ihre ONTAP-Systeme auf dem Laufenden, indem Sie die neuesten Software-Updates herunterladen und anwenden. Es gibt verschiedene Endpunktkategorien zur Unterstützung der Funktion, einschließlich Status, Konfiguration und Updates. Diese Ressourcentypen wurden mit ONTAP 9.10 eingeführt.
 
+.AutoSupport
 AutoSupport sammelt Konfigurations- und Statusdetails sowie Fehler und meldet die Informationen an NetApp. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.AutoSupport Nachrichten
 Jeder Node behält AutoSupport Meldungen, die generiert und abgerufen werden können. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Konfigurations-Backup
 Mit diesen APIs können Sie die aktuellen Backup-Einstellungen abrufen und aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Backup-Vorgänge der Konfiguration
 Sie können Backup-Dateien der Konfiguration erstellen, abrufen und löschen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Core Dump
 Mithilfe dieser Endpunkte können Sie die von einem Cluster oder Node generierten Memory Core Dumps abrufen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
 
+.EMS
 Das Event Management System (EMS) sammelt Ereignisse und sendet Benachrichtigungen an ein oder mehrere Ziele. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.EMS-Ziele
 Die EMS-Ziele bestimmen, wie und wo Benachrichtigungen gesendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Instanz für EMS-Ziele
 Eine EMS-Zielinstanz ist nach Typ und Standort definiert. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.EMS-Events
 Dies ist eine Live-Sammlung von Systemereignissen für den Cluster. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.EMS-Filter
 Die EMS-Filter identifizieren gemeinsam die Ereignisse, die eine zusätzliche Bearbeitung erfordern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Instanz für EMS-Filter
 Eine EMS-Filterinstanz ist eine Sammlung von Regeln, die auf die Ereignisse angewendet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.EMS-Nachrichten
 Bietet Zugriff auf den EMS-Ereigniskatalog. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.EMS-Regeln für Filterinstanz
 Für eine bestimmte Instanz eines EMS-Filters kann eine Liste von Regeln verwaltet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Beispiel für EMS-Regeln für Filterinstanz
 Eine einzelne Regel für eine bestimmte Instanz eines EMS-Filters. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.SNMP
 Sie können SNMP- und Trap-Vorgänge für das Cluster aktivieren und deaktivieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.SNMP-Trap-Host
 Ein SNMP-Trap-Host ist ein System, das für den Empfang von SNMP-Traps von ONTAP konfiguriert ist. Sie können die Hosts abrufen und definieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.SNMP-Trap-Host-Instanz
 Sie können bestimmte SNMP-Trap-Hosts verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.SNMP-Benutzer
 Sie können SNMP-Benutzer definieren und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Instanz für SNMP-Benutzer
 Sie können einen bestimmten SNMP-Benutzer verwalten, wobei die Engine-ID der administrativen SVM oder der Daten-SVM zugeordnet ist. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
