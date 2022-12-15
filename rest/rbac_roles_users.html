@@ -1347,7 +1347,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-14 20:17:07 +0000">11/14/2022</time>
+    <time datetime="2022-12-14 18:16:43 +0000">12/14/2022</time>
     
   
 
@@ -1467,9 +1467,11 @@ Sie können online auf das ONTAP zugreifen <a href="../reference/api_reference.h
 <p>DIE REST- und traditionellen Rollen werden durch eine Reihe von Attributen definiert.</p>
 </div>
 <div class="paragraph">
+<div class="title">Eigentümer und Umfang</div>
 <p>Eine Rolle kann im Besitz des ONTAP Clusters oder einer spezifischen Daten-SVM innerhalb des Clusters sein. Der Eigentümer bestimmt auch implizit den Umfang der Rolle.</p>
 </div>
 <div class="paragraph">
+<div class="title">Eindeutiger Name</div>
 <p>Jede Rolle muss einen eindeutigen Namen in ihrem Geltungsbereich haben. Der Name einer Cluster-Rolle muss auf ONTAP Cluster-Ebene eindeutig sein, während die SVM-Rollen innerhalb der spezifischen SVM eindeutig sein müssen.</p>
 </div>
 <div class="admonitionblock note">
@@ -1485,6 +1487,7 @@ Der Name einer neuen REST-Rolle muss sowohl unter DEN REST-Rollen als auch den t
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Satz von Berechtigungen</div>
 <p>Jede Rolle enthält einen Satz von mindestens einer Berechtigung. Jede Berechtigung identifiziert eine bestimmte Ressource oder einen bestimmten Befehl und die zugehörige Zugriffsebene.</p>
 </div>
 </div>
@@ -1501,9 +1504,11 @@ Der Name einer neuen REST-Rolle muss sowohl unter DEN REST-Rollen als auch den t
 <p>Der Ressourcenpfad wird entweder als REST-Endpunkt oder als CLI-Befehl-/Befehlsverzeichnispfad identifiziert.</p>
 </div>
 <div class="paragraph">
+<div class="title">REST-Endpunkt</div>
 <p>Ein API-Endpunkt hat die Zielressource für eine REST-Rolle identifiziert.</p>
 </div>
 <div class="paragraph">
+<div class="title">CLI-Befehl</div>
 <p>Ein CLI-Befehl gibt das Ziel für eine herkömmliche Rolle an. Es kann auch ein Befehlsverzeichnis angegeben werden, das dann alle nachgelagerten Befehle in die ONTAP-CLI-Hierarchie enthält.</p>
 </div>
 </div>

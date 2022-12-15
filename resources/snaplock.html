@@ -1347,7 +1347,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-14 20:17:07 +0000">11/14/2022</time>
+    <time datetime="2022-12-14 18:16:43 +0000">12/14/2022</time>
     
   
 
@@ -1361,15 +1361,19 @@
 <p>SnapLock ist eine Storage-basierte Implementierung der herkömmlichen optischen WORM-Lösung (Write Once, Read Many) und bietet die langfristige Aufbewahrung von Daten. Sie können diese API-Aufrufe zur Verwaltung der SnapLock-Funktion verwenden.</p>
 </div>
 <div class="paragraph">
+<div class="title">Protokoll</div>
 <p>Die SnapLock-Protokollstruktur basiert auf Verzeichnissen und Dateien auf einem bestimmten Volume, das die Protokolldatensätze enthält. Log-Dateien werden entsprechend der maximalen Protokollgröße gefüllt und archiviert. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</p>
 </div>
 <div class="paragraph">
+<div class="title">Compliance-Uhr</div>
 <p>Die Compliance-Uhr bestimmt die Ablaufzeit der SnapLock-Objekte. Die Uhr muss außerhalb der REST-API initialisiert werden und kann nicht geändert werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</p>
 </div>
 <div class="paragraph">
+<div class="title">Aufbewahrung von Ereignissen</div>
 <p>Mit der Funktion „SnapLock Event Based Retention“ (EBR) können Sie festlegen, wie lange eine Datei nach dem Auftreten eines Ereignisses aufbewahrt wird. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</p>
 </div>
 <div class="paragraph">
+<div class="title">Aufbewahrung von Dateien und privilegiertes Löschen</div>
 <p>Sie können die Aufbewahrungszeit einer Datei verwalten, die von SnapLock erstellt wurde. Bei Bedarf können Sie AUCH noch nicht abgelaufene WORM-Dateien auf einem SnapLock Enterprise Volume löschen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</p>
 </div>
 <div class="admonitionblock note">
@@ -1385,9 +1389,11 @@ Die einzige integrierte Rolle mit Berechtigung, den Löschvorgang auszuführen, 
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Fingerabdruck für Dateien</div>
 <p>Sie können die wesentlichen Informationen, die Dateien und Volumes beschreiben, anzeigen und managen, z. B. Typ und Ablaufdatum. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</p>
 </div>
 <div class="paragraph">
+<div class="title">Gesetzliche Aufbewahrungspflichten</div>
 <p>Sie können diese API-Aufrufe verwenden, um Dateien zu verwalten, die Teil eines Prozesses sind. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</p>
 </div>
 
