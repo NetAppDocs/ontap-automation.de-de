@@ -90,6 +90,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/de-de/ontap-automation/get-started/first_call.html</loc>
+      
+      <lastmod>2023-01-02T21:16:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/de-de/ontap-automation/additional/get_more_information.html</loc>
       
       <lastmod>2022-11-14T20:17:07+00:00</lastmod>
@@ -100,13 +107,6 @@
       <loc>https://docs.netapp.com/de-de/ontap-automation/getting_started_with_the_rest_api.html</loc>
       
       <lastmod>2022-11-14T20:17:07+00:00</lastmod>
-      
-    </url>
-  
-    <url>
-      <loc>https://docs.netapp.com/de-de/ontap-automation/get-started/hello_world.html</loc>
-      
-      <lastmod>2022-12-14T18:16:43+00:00</lastmod>
       
     </url>
   
@@ -344,7 +344,7 @@
     <url>
       <loc>https://docs.netapp.com/de-de/ontap-automation//search.html</loc>
       
-      <lastmod>2022-12-15T12:14:14+00:00</lastmod>
+      <lastmod>2023-01-02T21:17:04+00:00</lastmod>
       
     </url>
   
