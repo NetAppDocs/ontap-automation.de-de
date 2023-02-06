@@ -953,7 +953,6 @@
   <block id="571a9281dc7d54056134d0ae9cebe097" category="list-text"><block ref="571a9281dc7d54056134d0ae9cebe097" category="inline-link-rx"></block></block>
   <block id="3eef15c3ebe6737054ec7fdccee59ef8" category="summary">Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="doc">Überblick</block>
-  <block id="a4b91b72885f9acc20754bbfdf70a0ba" category="paragraph">Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen. In diesem Abschnitt werden die verfügbaren Ressourcen beschrieben und nützliche Funktionen und Tools für Ihre Migration vorgestellt.</block>
   <block id="b3a25dcbc5dbce2ff68dbfa04004bcf8" category="admonition">Mit ONTAP 9.6 hat NetApp erstmals DIE REST API eingeführt. Seitdem hat sich die API weiterentwickelt und weiterentwickelt. Sie bietet jetzt eine bevorzugte und strategische Alternative zu ONTAPI, wenn Sie die Verwaltung Ihrer ONTAP-Implementierungen automatisieren.</block>
   <block id="67aba80d01179bffdadcdf811b49cc44" category="summary">Der ONTAP Zählermanager erlaubt ONTAP-Benutzern, auf Informationen zur Performance zuzugreifen und viele verschiedene ONTAP-Performance-Zählermetriken zu exportieren.</block>
   <block id="d2fe6ca70e862256ec5db4361e09d5b1" category="paragraph">Vor ONTAP 9.11.1 ist der Zugriff auf alle ONTAP Counter Manager-Objekte auf die ONTAP-CLI- und ONTAPI-Schnittstellen beschränkt.</block>
@@ -1225,8 +1224,6 @@
   <block id="b6fc3f4cebfd4495ccd03b001112b524" category="paragraph">Sie können einen bestimmten SNMP-Benutzer verwalten, wobei die Engine-ID der administrativen SVM oder der Daten-SVM zugeordnet ist. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="1559c80340a3552e982d5443b26cb658" category="summary">Die über die ONTAP REST API verfügbaren Ressourcen sind nach Kategorien sortiert, die auf der Dokumentationsseite der ONTAP-API angezeigt werden.</block>
   <block id="4e04bad1fd3bbdb3c69e856ffc49ff73" category="doc">Übersicht der Ressourcenkategorien</block>
-  <block id="b2169c6a3a0ae080710868637b995ad7" category="paragraph">Die über die ONTAP REST API verfügbaren Ressourcen sind nach Kategorien sortiert, die auf der Dokumentationsseite der ONTAP-API angezeigt werden. Nachfolgend finden Sie eine kurze Beschreibung der einzelnen Ressourcen mit den grundlegenden Ressourcenpfaden sowie weitere Nutzungsüberlegungen.</block>
-  <block id="1d1927ef8ecb65f8a47a28bdaad73c8d" category="paragraph">In diesem Abschnitt werden DIE REST-Ressourcen für die neueste Version des Produkts beschrieben. Wenn Sie die Änderungen verstehen müssen, die aus der vorherigen Version vorgenommen wurden, lesen Sie die „_Release Notes_“.</block>
   <block id="d828aac2af8d57c06b48e251182e288b" category="admonition">Für viele DER REST-Endpunkte können Sie einen UUID-Schlüssel als Teil der Pfadzeichenfolge für den Zugriff auf eine bestimmte Objektinstanz enthalten. Sie können jedoch auch über einen Eigenschaftswert auf einen Abfrageparameter auf Objekte zugreifen.</block>
   <block id="35ddd64ed03dd1579ce39e6e82ff721f" category="inline-link-macro">Zusätzliche ÜBERLEGUNGEN ZU AUSRUHEN</block>
   <block id="84cd295cbbbd691b40d7d06df51912a3" category="list-text"><block ref="84cd295cbbbd691b40d7d06df51912a3" category="inline-link-macro-rx"></block></block>
@@ -1534,4 +1531,8 @@
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">Wechsel von ONTAPI mithilfe des ONTAPI Usage Reporting Tools</block>
   <block id="21aec37d095265f9895a6901a6c9b4be" category="paragraph-title">REST-API-Anforderungen werden abgelehnt, wenn die Eingabewarteschlange voll ist</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">Ihr erster API-Aufruf</block>
+  <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">Die über die ONTAP REST API verfügbaren Ressourcen sind in Kategorien eingeteilt, wie sie in der Online-Dokumentation der ONTAP-API angezeigt werden. Eine kurze Beschreibung der einzelnen Ressourcen sowie ggf. zusätzliche Nutzungsüberlegungen;</block>
+  <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">Neuerungen bei der ONTAP REST API</block>
+  <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">DIE IN dieser Zusammenfassung beschriebenen REST-Ressourcen basieren auf der neuesten Version des Produkts. Informationen zum Verständnis der Änderungen aus vorherigen Versionen finden Sie unter <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> Sowie dem<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
+  <block id="4acb4d74fe00ae1c12d51ed7033cfe13" category="paragraph">Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen. Zur Unterstützung der Migration stehen zahlreiche hilfreiche Ressourcen und Tools zur Verfügung.</block>
 </blocks>
