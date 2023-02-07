@@ -1535,4 +1535,7 @@
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">Neuerungen bei der ONTAP REST API</block>
   <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">DIE IN dieser Zusammenfassung beschriebenen REST-Ressourcen basieren auf der neuesten Version des Produkts. Informationen zum Verständnis der Änderungen aus vorherigen Versionen finden Sie unter <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> Sowie dem<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
   <block id="4acb4d74fe00ae1c12d51ed7033cfe13" category="paragraph">Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen. Zur Unterstützung der Migration stehen zahlreiche hilfreiche Ressourcen und Tools zur Verfügung.</block>
+  <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">Damit CLI- und ONTAP-Benutzer die Transition auf die ONTAP REST API erleichtern, bietet ONTAP einen privaten REST-API-Endpunkt, über den auf jeden CLI-Befehl zugegriffen werden kann.</block>
+  <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
+  <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
 </blocks>

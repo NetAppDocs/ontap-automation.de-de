@@ -26,6 +26,11 @@ Es stehen verschiedene Technologien zur Verfügung, mit denen Sie Ihre ONTAP-Aut
 
 https://www.netapp.com/blog/transform-automation-ontap-rest-api/["www.netapp.com/blog/transform-automation-ontap-rest-api"^]
 
+.Verwenden des privaten CLI-Passthrough mit der ONTAP REST API
+Damit CLI- und ONTAP-Benutzer die Transition auf die ONTAP REST API erleichtern, bietet ONTAP einen privaten REST-API-Endpunkt, über den auf jeden CLI-Befehl zugegriffen werden kann.
+
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api"^]
+
 .Wechsel von ONTAPI mithilfe des ONTAPI Usage Reporting Tools
 NetApp bietet ein Tool, das Kunden und Partner beim Wechsel zur ONTAP REST API unterstützt.
 
