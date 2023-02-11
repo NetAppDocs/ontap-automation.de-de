@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/performance-counters.html 
-keywords: performance, performance counters 
-summary: Der ONTAP Zählermanager erlaubt ONTAP-Benutzern, auf Informationen zur Performance zuzugreifen und viele verschiedene ONTAP-Performance-Zählermetriken zu exportieren. 
+keywords: performance, performance counters, mapping 
+summary: Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes ONTAP Systems. Es exportiert diese Daten als Performance-Zähler, mit denen Sie die Performance Ihres ONTAP Systems bewerten und Ihre Performance-Ziele erreichen können. 
 ---
 = Performance-Zähler
 :hardbreaks:
@@ -14,58 +14,140 @@ summary: Der ONTAP Zählermanager erlaubt ONTAP-Benutzern, auf Informationen zur
 
 
 [role="lead"]
-Der ONTAP Zählermanager erlaubt ONTAP-Benutzern, auf Informationen zur Performance zuzugreifen und viele verschiedene ONTAP-Performance-Zählermetriken zu exportieren.
-
-Vor ONTAP 9.11.1 ist der Zugriff auf alle ONTAP Counter Manager-Objekte auf die ONTAP-CLI- und ONTAPI-Schnittstellen beschränkt.
-
-Ab ONTAP 9.11.1 können ONTAP Benutzer mit der ONTAP REST API auf ein Segment von Zählermanager-Objekten zugreifen. Benutzer, die ihre Automatisierungsskripts von ONTAPI auf die ONTAP REST API migrieren, müssen die Unterschiede zwischen der Präsentation der Performance-Zählerdaten auf der ONTAPI und der Präsentation der Daten im REST-API verstehen.
-
-Siehe https://library.netapp.com/ecm/ecm_download_file/ECMLP2885053["ONTAP 9.12.1 ONTAPI-to-REST Counter Manager Zuordnung"^] Für Dokumentation über die Reihe der ONTAP-Zähler, die für DIE REST-API in ONTAP 9.11.1 verfügbar sind, sowie Informationen darüber, wie sich die Zähler zwischen ONTAPI und REST API Verbrauch unterscheiden.
+Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes ONTAP Systems. Diese Daten werden als Reihe von _Performance-Zählern_ exportiert, mit denen Sie die Performance Ihres ONTAP Systems einschätzen und Ihre Performance-Ziele erreichen können.
 
 
 
-== Zugriff auf Performance-Zähler mithilfe von ONTAPI
+== Greifen Sie auf die ONTAP-Leistungszähler zu
 
-Wie bei ONTAPI verbraucht, werden Performance-Zählerdaten in Objekten gruppiert. In einem Node mit vier Festplatten werden beispielsweise Daten des Performance-Zähler für Festplatten als Objekt gruppiert. Jede physische Festplatte im System stellt eine Instanz dieses Objekts dar, und Sie können ONTAPI verwenden, um auf einzelne Performance-Zähler für eine einzelne Festplatteninstanz zuzugreifen.
+Sie können über zwei verschiedene APIs sowie über die ONTAP-Befehlszeilenschnittstelle auf die ONTAP-Leistungszähler zugreifen.
+
+
+NOTE: Die ONTAP REST-API ist die bevorzugte und strategische Option für die Automatisierung der Administration Ihrer ONTAP Implementierungen.
 
 
 
-== Zugriff auf Performance-Zähler mithilfe der ONTAP REST API
+=== ONTAPI API
 
-Mit der ONTAP REST API greifen Sie als Tabelle auf Zählermanager-Objekte zu (z. B. `disk`). Das bedeutet, dass jedes Zählermanager-Objekt als eigene Tabelle dargestellt wird, während Instanzen des Zählermanagers (z. B. einzelne Festplatten im System) jeweils als Zeile in dieser Tabelle aufgerufen werden. Jede Zeile enthält eine Reihe von einzelnen Performance-Zählern für diese Instanz. Sie können auf einen einzelnen Performance-Zähler für eine Instanz als Feld in dieser Tabellenzeile zugreifen.
+Die ONTAPI ist mit dem NetApp Network Manageability SDK verfügbar. Bei Verwendung von ONTAPI werden die Leistungsindikatoren in einer Sammlung von Objekten definiert. Jedes Objekt entspricht einer physischen oder virtuellen Komponente des Systems. Basierend auf der Systemkonfiguration kann ein oder mehrere Instanzen jedes Objekts vorhanden sein.
 
-Im folgenden Beispiel wird der verwendet `host_adapter` Das Zählermanager-Objekt wird im Tabellenformat dargestellt, um zu veranschaulichen, wie Sie mithilfe der ONTAP REST-API auf jeden Performance-Zähler zugreifen können. Im System gibt es mehrere Host-Adapter, und jeder Host-Adapter hat seine eigenen Performance-Zähler:
+Wenn Ihr ONTAP-System beispielsweise vier physische Festplatten hat, gibt es vier Instanzen von `disk` Objekt mit jeweils einem eigenen Satz an Performance-Zählern. Über ONTAPI können Sie auf die einzelnen Zähler für jede Festplatteninstanz zugreifen.
+
+
+
+=== ONTAP REST API
+
+Ab ONTAP 9.11.1 können Sie auch über DIE REST-API auf die Performance-Daten zugreifen. In diesem Fall sind die Leistungszähler in Tabellen organisiert, die den ONTAPI-Objekten entsprechen. Jede Tabellenzeile entspricht einer Instanz eines ONTAPI-Objekts.
+
+Wenn Ihr ONTAP-System beispielsweise vier physische Festplatten hat, wird der angezeigt `disk` Die Tabelle enthält vier Zeilen. Jede Zeile kann einzeln aufgerufen werden und enthält eine eigene Reihe von Leistungsindikatoren, die als Felder oder Spalten in der Zeile verfügbar sind.
+
+
+
+== Die Verwendung der REST-API wird vorbereitet
+
+Sie sollten sich vor der Verwendung der ONTAP REST API vorbereiten, um auf die Performance-Zähler zuzugreifen.
+
+
+
+=== Leistungszähler sind in Tabellen organisiert
+
+Eine Untergruppe der ONTAPI Objekte ist über die ONTAP REST API verfügbar und als Tabellen dargestellt. Zum Beispiel wird das ONTAPI *hostadapter*-Objekt über DIE REST-API als *Host_adpater*-Tabelle dargestellt. Jeder Host Adapter im System ist eine Reihe mit eigenen Performance-Zählern.
 
 |===
-| Instanzname 6+| REST-Zähler 
+| Instanzname 6+| Performance-Zähler 
 
 
-| Host_Adapter_1 | Total_read_OPS | Total_write_OPS | Byte_Lesen | Byte_geschrieben | max_Link_Data_Rate | rscn_count 
+| Host_Adapter_1 | Total_read_OPS_1 | Total_write_OPS_1 | Bytes_read_1 | Bytes_written_1 | max_Link_Data_Rate_1 | rscn_count_1 
 
 
-| Host_Adapter_2 | Total_read_OPS | Total_write_OPS | Byte_Lesen | Byte_geschrieben | max_Link_Data_Rate | rscn_count 
+| Host_Adapter_2 | Total_read_OPS_2 | Total_write_OPS_2 | Bytes_read_2 | Bytes_written_2 | max_Link_Data_Rate_2 | rscn_count_2 
 
 
-| Host_Adapter_3 | Total_read_OPS | Total_write_OPS | Byte_Lesen | Byte_geschrieben | max_Link_Data_Rate | rscn_count 
+| Host_Adapter_3 | Total_read_OPS_3 | Total_write_OPS_3 | Byte_Read_3 | Bytes_written_3 | max_Link_Data_Rate_3 | rscn_count_3 
 |===
 
 
-== Allgemeines zur Struktur bei REST-API-Beispielen
+=== Zusammenfassung der REST-Endpunkte
 
-Verwenden Sie die folgenden REST-API-Beispiele, um die Struktur einer Zählermanager-Tabelle zu verstehen. In diesen Beispielen erfahren Sie außerdem, wie Sie mithilfe der REST-API erkennen, welche Endpunkte verfügbar sind, und wie Sie damit Einblicke in die Performance Ihres Systems erhalten. In diesen Beispielen wird das genauer untersucht `host_adapter` Zählermanager, das schrittweise detaillierte Informationen über das Objekt und die darin enthaltenen Zählerwerte enthält. Wenn Sie diese Beispiele in Ihrem System versuchen, stellen Sie sicher, dass Sie Ihre Werte für Informationen in Klammern <> angeben, wo angegeben.
+Für den Zugriff auf die ONTAP-Leistungszähler und zugehörige Tabellen stehen vier Hauptendpunkte zur Verfügung.
+
+
+NOTE: Jeder REST-Endpunkt bietet schreibgeschützten Zugriff und unterstützt nur die HTTP-Methode *GET*. Siehe link:../reference/api_reference.html["API-Referenz"] Finden Sie weitere Informationen.
+
+* */Cluster/Zähler/Tabellen*
++
+Gibt eine Sammlung von Zählertabellen und deren Schemadefinitionen zurück.
+
+* */Cluster/Zähler/Tabellen/{Name}*
++
+Gibt Informationen über eine einzelne angegebene Zählertabelle zurück.
+
+* */Cluster/counter/tables/{counter_Name}/rows*
++
+Gibt eine Sammlung von Zeilen aus einer benannten Zählertabelle zurück.
+
+* */Cluster/Zähler/Tabellen/{counter_Name}/rows/{id}*
++
+Gibt eine bestimmte Zeile aus einer benannten Zählertabelle zurück.
 
 
 
-=== Ermitteln Sie die verfügbaren Tabellen für Performance-Zähler
 
-Sie können diesen REST-API-Aufruf verwenden, um alle Zählermanager-Tabellen zu entdecken, die Sie abfragen können:
 
-.Beispielanforderung:
+=== Migration von ONTAPI zu REST API
+
+NetApp bietet umfassenden Support für die Migration Ihres Automatisierungscodes von ONTAPI auf die ONTAP REST API. Dazu gehört auch die Zuordnungsdokumentation zur Identifikation der äquivalenten Leistungstabelle, die in DER REST-API für ein bestimmtes ONTAPI-Objekt verfügbar ist.
+
+Finden Sie in der entsprechenden Dokumentation für die Zuordnung auf der Grundlage der ONTAP Version, die Sie verwenden:
+
+* https://docs.netapp.com/us-en/ontap-pcmap-9121/["ONTAP 9.12.1 Zählerzuordnung der Performance"^]
+* https://docs.netapp.com/us-en/ontap-pcmap-9111/["ONTAP 9.11.1 Zählerzuordnung der Performance"^]
+
+
+
+
+== Erste Schritte mit der ONTAP REST API
+
+Die folgenden Beispiele veranschaulichen die Verwendung DER REST-API für den Zugriff auf die ONTAP-Performance-Zähler. Dazu gehört das Abrufen einer Liste der verfügbaren Tabellen und das Erforschen der Tabellenstruktur.
+
+
+
+=== Bevor Sie beginnen
+
+Lesen Sie die folgenden Informationen durch, bevor Sie die Beispiele verwenden.
+
+.ONTAP Referenzen
+Sie benötigen ein ONTAP-Administratorkonto mit dem Kennwort.
+
+.Cluster-Management-IP
+Sie benötigen die für Ihr ONTAP System konfigurierte Cluster-Management-IP-Adresse.
+
+.Alle API-Aufrufe verwenden die GET-Methode
+Alle unten aufgeführten Beispiele können nur verwendet werden, um Informationen mit der HTTP GET-Methode abzurufen.
+
+.Variablenersatz
+Jedes Curl-Beispiel enthält eine oder mehrere Variablen, wie sie mit Kapitalien und Text in Klammern angegeben sind. Stellen Sie sicher, dass diese Variablen durch tatsächliche Werte ersetzt werden, die für Ihre Umgebung geeignet sind.
+
+.Beispiele stimmen mit den Endpunkten überein
+Die nachfolgende Beispielsequenz zeigt, wie die RESTLICHEN Endpunkte zum Abrufen der Leistungszähler verwendet werden. Siehe <<eps,Zusammenfassung der REST-Endpunkte>> Finden Sie weitere Informationen.
+
+
+
+=== Beispiel 1: Alle Performance-Zählertabellen
+
+Sie können diesen REST-API-Aufruf verwenden, um alle verfügbaren Zählermanager-Tabellen zu ermitteln.
+
+.Beispiel für die Wellung
+[%collapsible%open]
+====
 [source, curl]
 ----
-curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables'
+curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables'
 ----
-.Beispiel für Antwort (gekürzt für Kürze):
+====
+.Beispiel für eine JSON-Ausgabe
+[%collapsible]
+====
 [source, json]
 ----
 {
@@ -95,16 +177,551 @@ curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/count
       }
     },
     {
+      "name": "disk:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/disk%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "disk:raid_group",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/disk%3Araid_group"
+        }
+      }
+    },
+    {
+      "name": "external_cache",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/external_cache"
+        }
+      }
+    },
+    {
+      "name": "fcp",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcp"
+        }
+      }
+    },
+    {
+      "name": "fcp:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcp%3Anode"
+        }
+      }
+    },
+    {
+      "name": "fcp_lif",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcp_lif"
+        }
+      }
+    },
+    {
+      "name": "fcp_lif:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcp_lif%3Anode"
+        }
+      }
+    },
+    {
+      "name": "fcp_lif:port",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcp_lif%3Aport"
+        }
+      }
+    },
+    {
+      "name": "fcp_lif:svm",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcp_lif%3Asvm"
+        }
+      }
+    },
+    {
+      "name": "fcvi",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/fcvi"
+        }
+      }
+    },
+    {
+      "name": "headroom_aggregate",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/headroom_aggregate"
+        }
+      }
+    },
+    {
+      "name": "headroom_cpu",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/headroom_cpu"
+        }
+      }
+    },
+    {
       "name": "host_adapter",
       "_links": {
         "self": {
           "href": "/api/cluster/counter/tables/host_adapter"
         }
       }
+    },
+    {
+      "name": "iscsi_lif",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/iscsi_lif"
+        }
+      }
+    },
+    {
+      "name": "iscsi_lif:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/iscsi_lif%3Anode"
+        }
+      }
+    },
+    {
+      "name": "iscsi_lif:svm",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/iscsi_lif%3Asvm"
+        }
+      }
+    },
+    {
+      "name": "lif",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/lif"
+        }
+      }
+    },
+    {
+      "name": "lif:svm",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/lif%3Asvm"
+        }
+      }
+    },
+    {
+      "name": "lun",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/lun"
+        }
+      }
+    },
+    {
+      "name": "lun:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/lun%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "lun:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/lun%3Anode"
+        }
+      }
+    },
+    {
+      "name": "namespace",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/namespace"
+        }
+      }
+    },
+    {
+      "name": "namespace:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/namespace%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "nfs_v4_diag",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/nfs_v4_diag"
+        }
+      }
+    },
+    {
+      "name": "nic_common",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/nic_common"
+        }
+      }
+    },
+    {
+      "name": "nvmf_lif",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/nvmf_lif"
+        }
+      }
+    },
+    {
+      "name": "nvmf_lif:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/nvmf_lif%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "nvmf_lif:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/nvmf_lif%3Anode"
+        }
+      }
+    },
+    {
+      "name": "nvmf_lif:port",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/nvmf_lif%3Aport"
+        }
+      }
+    },
+    {
+      "name": "object_store_client_op",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/object_store_client_op"
+        }
+      }
+    },
+    {
+      "name": "path",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/path"
+        }
+      }
+    },
+    {
+      "name": "processor",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/processor"
+        }
+      }
+    },
+    {
+      "name": "processor:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/processor%3Anode"
+        }
+      }
+    },
+    {
+      "name": "qos",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos"
+        }
+      }
+    },
+    {
+      "name": "qos:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "qos:policy_group",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos%3Apolicy_group"
+        }
+      }
+    },
+    {
+      "name": "qos_detail",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos_detail"
+        }
+      }
+    },
+    {
+      "name": "qos_detail_volume",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos_detail_volume"
+        }
+      }
+    },
+    {
+      "name": "qos_volume",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos_volume"
+        }
+      }
+    },
+    {
+      "name": "qos_volume:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qos_volume%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "qtree",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qtree"
+        }
+      }
+    },
+    {
+      "name": "qtree:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/qtree%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "svm_cifs",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_cifs"
+        }
+      }
+    },
+    {
+      "name": "svm_cifs:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_cifs%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "svm_cifs:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_cifs%3Anode"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v3",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v3"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v3:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v3%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v3:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v3%3Anode"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v4",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v4"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v41",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v41"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v41:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v41%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v41:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v41%3Anode"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v42",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v42"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v42:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v42%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v42:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v42%3Anode"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v4:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v4%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "svm_nfs_v4:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/svm_nfs_v4%3Anode"
+        }
+      }
+    },
+    {
+      "name": "system",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/system"
+        }
+      }
+    },
+    {
+      "name": "system:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/system%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "system:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/system%3Anode"
+        }
+      }
+    },
+    {
+      "name": "token_manager",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/token_manager"
+        }
+      }
+    },
+    {
+      "name": "volume",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/volume"
+        }
+      }
+    },
+    {
+      "name": "volume:node",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/volume%3Anode"
+        }
+      }
+    },
+    {
+      "name": "volume:svm",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/volume%3Asvm"
+        }
+      }
+    },
+    {
+      "name": "wafl",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/wafl"
+        }
+      }
+    },
+    {
+      "name": "wafl_comp_aggr_vol_bin",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/wafl_comp_aggr_vol_bin"
+        }
+      }
+    },
+    {
+      "name": "wafl_hya_per_aggregate",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/wafl_hya_per_aggregate"
+        }
+      }
+    },
+    {
+      "name": "wafl_hya_sizer",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/wafl_hya_sizer"
+        }
+      }
     }
-    ...
   ],
-  "num_records": 68,
+  "num_records": 71,
   "_links": {
     "self": {
       "href": "/api/cluster/counter/tables"
@@ -112,39 +729,45 @@ curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/count
   }
 }
 ----
+====
 
 
-=== Abfrage einer einzelnen Leistungstabelle
+=== Beispiel 2: Allgemeine Informationen zu einer bestimmten Tabelle
 
-Sie können diesen REST-API-Aufruf verwenden, um die Beschreibung und Metadaten für eine bestimmte Tabelle (Zählermanager-Objekt) anzuzeigen. Die Ausgabe beschreibt den Zweck der Tabelle und beschreibt außerdem, welche Art von Informationen die einzelnen Performance-Zähler in den Tabellendatensätzen enthalten. In diesem Beispiel abfragen wir die `host_adapter` Tabelle:
+Sie können diesen REST-API-Aufruf verwenden, um die Beschreibung und Metadaten für eine bestimmte Tabelle anzuzeigen. Die Ausgabe enthält den Zweck der Tabelle und welche Art von Daten jeder Performance-Zähler enthält. In diesem Beispiel wird die Tabelle *Host_Adapter* verwendet.
 
-.Beispielanforderung:
+.Beispiel für die Wellung
+[%collapsible%open]
+====
 [source, curl]
 ----
-curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter'
+curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter'
 ----
-.Beispielantwort:
+====
+.Beispiel für eine JSON-Ausgabe
+[%collapsible]
+====
 [source, json]
 ----
 {
   "name": "host_adapter",
-  "description": "The host_adapter table reports activity on the Fibre Channel, Serial Attached SCSI, and parallel SCSI Host Adapters the storage system uses to connect to disks and tape drives.",
+  "description": "The host_adapter table reports activity on the Fibre Channel, Serial Attached SCSI, and parallel SCSI host adapters the storage system uses to connect to disks and tape drives.",
   "counter_schemas": [
     {
       "name": "bytes_read",
-      "description": "Bytes read via Host Adapter",
+      "description": "Bytes read through a host adapter",
       "type": "rate",
       "unit": "per_sec"
     },
     {
       "name": "bytes_written",
-      "description": "Bytes written via Host Adapter",
+      "description": "Bytes written through a host adapter",
       "type": "rate",
       "unit": "per_sec"
     },
     {
       "name": "max_link_data_rate",
-      "description": "Max link data rate in Kilobytes per second for Host Adapter",
+      "description": "Max link data rate in Kilobytes per second for a host adapter",
       "type": "raw",
       "unit": "kb_per_sec"
     },
@@ -162,13 +785,13 @@ curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/count
     },
     {
       "name": "total_read_ops",
-      "description": "Total number of reads on Host Adapter",
+      "description": "Total number of reads on a host adapter",
       "type": "rate",
       "unit": "per_sec"
     },
     {
       "name": "total_write_ops",
-      "description": "Total number of writes on Host Adapter",
+      "description": "Total number of writes on a host adapter",
       "type": "rate",
       "unit": "per_sec"
     }
@@ -180,56 +803,46 @@ curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/count
   }
 }
 ----
+====
 
 
-=== Sehen Sie sich die Zeilen in einer Leistungstabelle an
+=== Beispiel 3: Alle Zeilen in einer bestimmten Tabelle
 
-Sie können diesen REST-API-Aufruf verwenden, um die Zeilen in einer Tabelle anzuzeigen, in denen angegeben wird, welche Instanzen des Zählermanagerobjekts vorhanden sind:
+Mit diesem REST-API-Aufruf können Sie alle Zeilen in einer Tabelle anzeigen. Dies gibt an, welche Instanzen der Counter Manager-Objekte vorhanden sind.
 
-.Beispielanforderung:
+.Beispiel für die Wellung
+[%collapsible%open]
+====
 [source, curl]
 ----
-curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows'
+curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows'
 ----
-.Beispielantwort:
+====
+.Beispiel für eine JSON-Ausgabe
+[%collapsible]
+====
 [source, json]
 ----
 {
   "records": [
     {
-      "id": "power-01:0b",
+      "id": "dmp-adapter-01",
       "_links": {
         "self": {
-          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0b"
+          "href": "/api/cluster/counter/tables/host_adapter/rows/dmp-adapter-01"
         }
       }
     },
     {
-      "id": "power-01:0c",
+      "id": "dmp-adapter-02",
       "_links": {
         "self": {
-          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0c"
-        }
-      }
-    },
-    {
-      "id": "power-01:0d",
-      "_links": {
-        "self": {
-          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0d"
-        }
-      }
-    },
-    {
-      "id": "power-01:0e",
-      "_links": {
-        "self": {
-          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0e"
+          "href": "/api/cluster/counter/tables/host_adapter/rows/dmp-adapter-02"
         }
       }
     }
   ],
-  "num_records": 4,
+  "num_records": 2,
   "_links": {
     "self": {
       "href": "/api/cluster/counter/tables/host_adapter/rows"
@@ -237,51 +850,57 @@ curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/count
   }
 }
 ----
+====
 
 
-=== Abfrage einer bestimmten Zählermanager-Instanz
+=== Beispiel 4: Einzelne Zeile in einer bestimmten Tabelle
 
-Mit diesem REST-API-Aufruf können Sie Performance-Zählerwerte für eine bestimmte Zählermanager-Instanz in der Tabelle anzeigen. In diesem Beispiel fordern wir Informationen zu Performance-Zählleistungen für eine der Netzteile im System an:
+Mit diesem REST-API-Aufruf können Sie Performance-Zählerwerte für eine bestimmte Zählermanager-Instanz in der Tabelle anzeigen. In diesem Beispiel werden die Performance-Daten für einen der Host-Adapter angefordert.
 
-.Beispielanforderung:
+.Beispiel für die Wellung
+[%collapsible%open]
+====
 [source, curl]
 ----
-curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows/power-01:0b'
+curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows/dmp-adapter-01'
 ----
-.Beispielantwort:
+====
+.Beispiel für eine JSON-Ausgabe
+[%collapsible]
+====
 [source, json]
 ----
 {
   "counter_table": {
     "name": "host_adapter"
   },
-  "id": "power-01:0b",
+  "id": "dmp-adapter-01",
   "properties": [
     {
       "name": "node.name",
-      "value": "power-01"
+      "value": "dmp-node-01"
     }
   ],
   "counters": [
     {
       "name": "total_read_ops",
-      "value": 3600516
+      "value": 25098
     },
     {
       "name": "total_write_ops",
-      "value": 3591536
+      "value": 48925
     },
     {
       "name": "bytes_read",
-      "value": 86354320000
+      "value": 1003799680
     },
     {
       "name": "bytes_written",
-      "value": 480863081920
+      "value": 6900961600
     },
     {
       "name": "max_link_data_rate",
-      "value": 375000
+      "value": 0
     },
     {
       "name": "rscn_count",
@@ -290,8 +909,9 @@ curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/count
   ],
   "_links": {
     "self": {
-      "href": "/api/cluster/counter/tables/host_adapter/rows/power-01:0b"
+      "href": "/api/cluster/counter/tables/host_adapter/rows/dmp-adapter-01"
     }
   }
 }
 ----
+====
