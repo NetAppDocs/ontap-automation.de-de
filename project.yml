@@ -53,6 +53,16 @@ homepage:
       url: "/automate/ontap_ansible.html"
     - title: Blogs zur Automatisierung
       url: "/automate/blogs.html"
+  - title: Migration zur REST-API
+    links:
+    - title: ONTAPI Deaktivierung
+      url: "/migrate/overview.html"
+    - title: ONTAPI für REST-Zuordnung
+      url: "/migrate/mapping.html"
+    - title: Performance-Zähler
+      url: "/migrate/performance-counters.html"
+    - title: Blog-Artikel
+      url: "/migrate/blogs.html"
   - title: Mehr Ressourcen
     links:
     - title: Weitere Informationen

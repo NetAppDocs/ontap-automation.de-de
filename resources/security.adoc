@@ -68,7 +68,7 @@ Sie können diesen Satz von API-Aufrufen verwenden, um die für eine IPSec-Berei
 Mit diesen Endpunkten können Sie die Konfigurationen für Schlüsselmanager abrufen und aktualisieren. Dieser Ressourcentyp ist neu in ONTAP 9.10.
 
 .Schlüsselmanager
-Ein Schlüsselmanager erlaubt Client-Modulen innerhalb von ONTAP, sicher gespeicherte Schlüssel zu speichern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und für ONTAP 9.7 aktualisiert. Ein weiteres Update mit ONTAP 9.12 zur Unterstützung der Authentifizierungsschlüssel war vorhanden.
+Ein Schlüsselmanager erlaubt Client-Modulen innerhalb von ONTAP, sicher gespeicherte Schlüssel zu speichern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und für ONTAP 9.7 aktualisiert. Ein weiteres Update mit ONTAP 9.12 zur Unterstützung der Authentifizierungsschlüssel war vorhanden. In ONTAP 9.13 wurde eine Wiederherstellungsfunktion hinzugefügt.
 
 .Schlüsselspeicher
 Ein Schlüsselspeicher beschreibt den Typ eines Schlüsselmanagers. Dieser Ressourcentyp ist neu in ONTAP 9.10.
@@ -115,3 +115,6 @@ Mit diesen Aufrufen können Sie die SSH-Konfiguration festlegen. Dieser Ressourc
 
 .SSH SVMs
 Mit diesen Endpunkten können Sie die SSH-Sicherheitskonfiguration für alle SVMs abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
+
+.TOTPS
+Sie können die REST-API verwenden, um zeitbasierte TOTP-Profile (One-Time Password) für Konten zu konfigurieren, die sich über SSH anmelden und auf ONTAP zugreifen. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.

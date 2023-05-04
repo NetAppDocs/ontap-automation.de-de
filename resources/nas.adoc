@@ -29,7 +29,7 @@ Sie können NAS-Auditing-Ereignisse zu einer bestimmten SVM umleiten. Dieser Res
 Sie können eine Liste der festgelegten CIFS-Verbindungen abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
 
 .CIFS-Domänen
-Auf Cluster- und SVM-Ebene mit verschiedenen Kategorien von Endpunkten wurde Unterstützung für CIFS-Domänen hinzugefügt. Sie können die Domänenkonfiguration abrufen sowie bevorzugte Domänen-Controller erstellen und entfernen. Dieser Ressourcentyp ist neu in ONTAP 9.10.
+Auf Cluster- und SVM-Ebene mit verschiedenen Kategorien von Endpunkten wurde Unterstützung für CIFS-Domänen hinzugefügt. Sie können die Domänenkonfiguration abrufen sowie bevorzugte Domänen-Controller erstellen und entfernen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt und mit ONTAP 9.13 erweitert.
 
 .CIFS-Gruppenrichtlinien
 Endpunkte wurden hinzugefügt, um die Erstellung und das Management von CIFS-Gruppenrichtlinien zu unterstützen. Die Konfigurationsinformationen sind verfügbar und über Gruppenrichtlinienobjekte verwaltet, die auf alle oder bestimmte SVMs angewendet werden. Diese Unterstützung wurde in ONTAP 9.12 hinzugefügt.

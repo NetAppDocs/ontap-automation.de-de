@@ -34,7 +34,7 @@ Sie müssen pip verwenden, um das netapp_ontap Paket von der Python Package Inde
 Links zur Dokumentation und zu anderen Ressourcen finden Sie im _NetApp Developer Network_.
 
 .Verwandte Informationen
-* https://pypi.org/project/netapp-ontap["PyPI: NetApp ONTAP 9.10.1"^]
-* https://library.netapp.com/ecmdocs/ECMLP2879970/html/index.html["NetApp PCL-Dokumentation für 9.10.1"^]
+* https://pypi.org/project/netapp-ontap["PyPI: NetApp ONTAP 9.13.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP2885777/html/index.html["NetApp PCL-Dokumentation für 9.13.1"^]
 * https://devnet.netapp.com/restapi.php["NetApp Entwicklernetzwerk: ONTAP RESTful API"^]
 

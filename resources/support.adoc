@@ -58,6 +58,9 @@ Eine EMS-Filterinstanz ist eine Sammlung von Regeln, die auf die Ereignisse ange
 .EMS-Nachrichten
 Bietet Zugriff auf den EMS-Ereigniskatalog. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.EMS-Rollenkonfiguration
+Die EMS-Support-Funktion ermöglicht die Verwaltung von Rollen und die Konfiguration der Zugriffssteuerung, die den Rollen zugewiesen ist. Dies bietet die Möglichkeit, die Ereignisse und Meldungen basierend auf der Rollenkonfiguration zu begrenzen oder zu filtern. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.
+
 .EMS-Regeln für Filterinstanz
 Für eine bestimmte Instanz eines EMS-Filters kann eine Liste von Regeln verwaltet werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 

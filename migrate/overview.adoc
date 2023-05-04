@@ -4,7 +4,7 @@ permalink: migrate/overview.html
 keywords: ONTAPI, migrate, migrate to REST API 
 summary: Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen. 
 ---
-= Überblick
+= ONTAPI Deaktivierung
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,11 @@ summary: Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ON
 
 
 [role="lead"]
-Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen. Zur Unterstützung der Migration stehen zahlreiche hilfreiche Ressourcen und Tools zur Verfügung.
+Die ONTAPI (ZAPI) ist die ursprüngliche Gruppe proprietärer Aufrufe der NetApp ONTAP Software, um die Automatisierung von Storage-Administrations- und Managementaufgaben zu unterstützen. Die ONTAPI Schnittstelle wird in zukünftigen Versionen von ONTAP deaktiviert. Wenn Sie ONTAPI verwenden, sollten Sie die Migration zur ONTAP REST-API planen.
 
+Mit ONTAP 9.6 hat NetApp erstmals DIE REST API eingeführt. Seitdem hat sich die REST-API weiter erweitert und weiterentwickelt. Sie bietet jetzt die bevorzugte und strategische Option zur Automatisierung der Administration Ihrer ONTAP-Implementierungen. Zur Unterstützung der Migration stehen zahlreiche hilfreiche Ressourcen und Tools zur Verfügung.
 
-NOTE: Mit ONTAP 9.6 hat NetApp erstmals DIE REST API eingeführt. Seitdem hat sich die API weiterentwickelt und weiterentwickelt. Sie bietet jetzt eine bevorzugte und strategische Alternative zu ONTAPI, wenn Sie die Verwaltung Ihrer ONTAP-Implementierungen automatisieren.
+.Verwandte Informationen
+* https://mysupport.netapp.com/info/communications/ECMLP2880232.html["Einstellung des Angebots für CPC-00410: ONTAPI"^]
+* https://devnet.netapp.com/restapi.php["NetApp DevNet: ONTAP REST-API"^]
+

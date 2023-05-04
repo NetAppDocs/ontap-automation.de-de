@@ -100,6 +100,7 @@ NetApp bietet umfassenden Support für die Migration Ihres Automatisierungscodes
 
 Finden Sie in der entsprechenden Dokumentation für die Zuordnung auf der Grundlage der ONTAP Version, die Sie verwenden:
 
+* https://docs.netapp.com/us-en/ontap-pcmap-9131/["ONTAP 9.13.1 Performance Counter Mapping"^]
 * https://docs.netapp.com/us-en/ontap-pcmap-9121/["ONTAP 9.12.1 Zählerzuordnung der Performance"^]
 * https://docs.netapp.com/us-en/ontap-pcmap-9111/["ONTAP 9.11.1 Zählerzuordnung der Performance"^]
 

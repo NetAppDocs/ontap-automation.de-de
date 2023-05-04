@@ -25,6 +25,9 @@ Sie können die ONTAP S3-Konfiguration erstellen und managen, einschließlich Se
 .Service-Buckets
 Ein Bucket ist ein Container von Objekten und ist unter Verwendung eines Objektnamens-Speicherplatzes strukturiert. Sie können die Buckets für einen bestimmten S3-Server managen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.S3-Bucket-Regeln
+Die S3-Buckets können eine Regeldefinition enthalten. Jede Regel ist ein Listenobjekt und definiert die Aktionen, die für ein Objekt innerhalb des Buckets ausgeführt werden sollen. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.
+
 .S3-Gruppen
 Sie können Gruppen von S3 Benutzern erstellen und die Zugriffssteuerung auf Gruppenebene managen. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 

@@ -80,7 +80,10 @@ Mit diesen API-Aufrufen können Sie die Einstellungen für das ONTAP-Netzwerkzei
 Die Peer-Objekte repräsentieren Endpunkte und unterstützen die Cluster-Peering-Beziehungen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
 .Performance-Zähler
-Frühere ONTAP-Releases haben statistische Informationen über die betrieblichen Eigenschaften des Systems erhalten. In der Version 9.11.1 wurden die Informationen verbessert und sind nun über DIE REST API verfügbar. Diese Funktion bringt das ONTAP REST API näher an Parität mit dem Data ONTAP API (ONTAPI oder ZAPI). Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
+Frühere ONTAP-Releases haben statistische Informationen über die betrieblichen Eigenschaften des Systems erhalten. In der Version 9.11.1 wurden die Informationen verbessert und sind nun über DIE REST API verfügbar. Diese Funktion bringt das ONTAP REST API näher an Parität mit dem Data ONTAP API (ONTAPI oder ZAPI). Dieser Ressourcentyp wurde mit ONTAP 9.11 eingeführt.
+
+.Ressourcen-Tags
+Sie können Tags verwenden, um REST-API-Ressourcen zu gruppieren. Auf diese Weise können Sie verwandte Ressourcen innerhalb eines bestimmten Projekts oder einer bestimmten Organisationsgruppe zuordnen. Mithilfe von Tags können Sie Ressourcen effektiver organisieren und verfolgen. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.
 
 .Zeitpläne
 Zeitpläne können zur Automatisierung der Aufgabenstellungen genutzt werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

@@ -32,7 +32,7 @@ Eine Rolle ist eine Reihe von Berechtigungen, die kollektiv definieren, welche A
 Es gibt zwei Arten von Rollen. Sie wurden mit der Weiterentwicklung von ONTAP auf verschiedene Umgebungen eingeführt und angepasst.
 
 
-NOTE: Bei der Verwendung jeder Rollenart gibt es vor- und Nachteile. Siehe link:../rest/work_roles_users.html#comparing-the-role-types["Vergleichen der Rollentypen"] Finden Sie weitere Informationen.
+NOTE: Bei der Verwendung jeder Rollenart gibt es vor- und Nachteile. Siehe link:../rest/rbac_roles_users.html#comparing-the-role-types["Vergleichen der Rollentypen"] Finden Sie weitere Informationen.
 
 [cols="20,80"]
 |===

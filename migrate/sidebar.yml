@@ -2,11 +2,13 @@
 section: migrate
 title: Migration zur REST-API
 entries:
-- title: Überblick
+- title: ONTAPI Deaktivierung
   url: "/migrate/overview.html"
 - title: ONTAPI für REST-Zuordnung
   url: "/migrate/mapping.html"
 - title: Performance-Zähler
   url: "/migrate/performance-counters.html"
-- title: Blogs
+- title: Tools und Software von NetApp
+  url: "/migrate/software.html"
+- title: Blog-Artikel
   url: "/migrate/blogs.html"

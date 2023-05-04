@@ -23,7 +23,7 @@ ONTAP Name Services unterstützt Caching zur Verbesserung von Performance und Re
 Sie können die DDNS-Informationen (Dynamic DNS) anzeigen und das DDNS-Subsystem verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
 
 .DNS
-DNS unterstützt die Integration des ONTAP-Clusters in Ihr Netzwerk. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+DNS unterstützt die Integration des ONTAP-Clusters in Ihr Netzwerk. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.13 erweitert.
 
 .Host-Datensatz
 Mit diesen Endpunkten können Sie die IP-Adresse eines angegebenen Host-Namens sowie den Hostnamen für eine IP-Adresse anzeigen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.

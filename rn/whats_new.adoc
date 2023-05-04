@@ -18,6 +18,21 @@ NetApp aktualisiert regelmäßig das ONTAP REST API, um Ihnen neue Funktionen, V
 
 
 
+== ONTAP 9.13.1
+
+Mit mehr als zwei Dutzend neuer API-Aufrufe erweitert ONTAP 9.13.1 weiterhin die Funktionen der ONTAP-REST-API. Diese Endpunkte unterstützen neue ONTAP-Funktionen sowie Verbesserungen vorhandener Funktionen. Dieser Release konzentriert sich auf Verbesserungen bei Sicherheit, Ressourcenmanagement, erweiterte SVM-Konfigurationsoptionen und Performance-Kennzahlen.
+
+Ressourcen-Tagging:: Sie können Tags verwenden, um REST-API-Ressourcen zu gruppieren. Auf diese Weise können Sie verwandte Ressourcen innerhalb eines bestimmten Projekts oder einer bestimmten Organisationsgruppe zuordnen. Mithilfe von Tags können Sie Ressourcen effektiver organisieren und verfolgen.
+Konsistenzgruppen:: ONTAP 9.13.1 erweitert weiterhin die Verfügbarkeit von Leistungszählerdaten. Sie können nun auf diese Art von statistischen Informationen zugreifen, um die historische Leistung und Kapazität von Consistency Groups zu verfolgen. Darüber hinaus wurden Verbesserungen integriert, die es ermöglichen, die Beziehungen zwischen übergeordneten und untergeordneten Gruppen zwischen Konsistenzgruppen zu konfigurieren und zu verwalten.
+DNS-Konfiguration pro SVM:: Die vorhandenen DNS-Endpunkte wurden erweitert, um die Ausführung einer DNS-Domänen- und Serverkonfiguration für einzelne SVMs zu ermöglichen.
+EMS-Rollenkonfiguration:: Die bestehende EMS-Support-Funktion wurde erweitert, um die Verwaltung von Rollen und die den Rollen zugewiesene Zugangskontrollkonfiguration zu ermöglichen. Dies bietet die Möglichkeit, die Ereignisse und Meldungen basierend auf der Rollenkonfiguration zu begrenzen oder zu filtern.
+Sicherheit:: Sie können die REST-API verwenden, um die zeitbasierten TOTP-Profile (One-Time Password) für Konten zu konfigurieren, die sich über SSH anmelden und auf ONTAP zugreifen. Darüber hinaus wurden die Schlüsselmanager-Endpunkte erweitert, um eine Wiederherstellung von einem bestimmten Schlüsselmanagementserver aus zu ermöglichen.
+CIFS-Konfiguration pro SVM:: Die vorhandenen CIFS-Endpunkte wurden erweitert, um eine Aktualisierung der Konfiguration einer spezifischen SVM zu ermöglichen.
+S3-Bucket-Regeln:: Die bestehenden S3-Bucket-Endpunkte wurden erweitert und um eine Regeldefinition erweitert. Jede Regel ist ein Listenobjekt und definiert die Aktionen, die für ein Objekt innerhalb des Buckets ausgeführt werden sollen. Gemeinsam ermöglichen diese Regeln ein besseres Management des Lebenszyklus von S3 Buckets.
+
+
+
+
 == ONTAP 9.12.1
 
 ONTAP 9.12.1 erweitert mit über vierzig neuen API-Aufrufen kontinuierlich die Funktionen der ONTAP REST-API. Diese Endpunkte unterstützen neue ONTAP-Funktionen sowie Verbesserungen vorhandener Funktionen. In dieser Version stehen Verbesserungen bei den Sicherheits- und NAS-Funktionen im Mittelpunkt.
