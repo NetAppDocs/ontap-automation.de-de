@@ -525,7 +525,6 @@
   <block id="e2578ec54f85b5b6333c94364b756a1c" category="list-text">Node Management-LIF</block>
   <block id="a954bd55e944d7b65a02512356ab0177" category="list-text">SVM-Management-LIF</block>
   <block id="3869128f90019baba527314ae533f075" category="paragraph">Die logische Schnittstelle, die Sie verwenden möchten, muss zur Unterstützung des HTTPS-Managementprotokolls konfiguriert sein. Außerdem muss die Firewall-Konfiguration in Ihrem Netzwerk den HTTPS-Datenverkehr ermöglichen.</block>
-  <block id="45959e4341735c410aac6dadf11dd966" category="admonition">Sie sollten immer die Cluster-Management-LIF verwenden. Dadurch werden die API-Anforderungen gleichmäßig auf alle Nodes verteilt und Nodes, die offline sind oder Konnektivitätsprobleme auftreten, werden vermieden.</block>
   <block id="649819179ab6bae8f5294207b4462523" category="section-title">Online-Dokumentationsseite der ONTAP API</block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">Zusammenfassung der REST-Ressourcen</block>
   <block id="424fc80aa929edad9729b9b006049584" category="paragraph">Die Online-Dokumentationsseite der ONTAP-API bietet einen Zugriffspunkt bei Verwendung eines Webbrowsers. Die Seite bietet nicht nur die Möglichkeit, einzelne API-Aufrufe direkt auszuführen, sondern enthält auch eine detaillierte Beschreibung der API, einschließlich Eingabeparameter und anderer Optionen für jeden Aufruf. Die API-Aufrufe sind in funktionale Kategorien unterteilt. Siehe <block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
@@ -1629,4 +1628,5 @@
   <block id="f9f9079f4f63047ab8997287078e8b41" category="admonition">Bei der Verwendung jeder Rollenart gibt es vor- und Nachteile. Siehe <block ref="35c80ca1076cc300bab74e8699286675" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="6b6a02ad27b147c17d7a65dc825f0954" category="list-text"><block ref="6b6a02ad27b147c17d7a65dc825f0954" category="inline-link-rx"></block></block>
   <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">Blog-Artikel</block>
+  <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">Sie sollten immer eine Cluster-Management-LIF verwenden. Dadurch werden die API-Anforderungen über alle Nodes verteilt und Knoten, die offline sind oder Konnektivitätsprobleme haben, werden vermieden. Wenn Sie mehrere Cluster-Management-LIFs konfiguriert haben, entsprechen diese alle dem Zugriff auf die REST-API.</block>
 </blocks>

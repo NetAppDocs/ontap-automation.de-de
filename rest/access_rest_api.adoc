@@ -30,7 +30,7 @@ Sie können über folgende Schnittstellen eine Verbindung zur REST API herstelle
 Die logische Schnittstelle, die Sie verwenden möchten, muss zur Unterstützung des HTTPS-Managementprotokolls konfiguriert sein. Außerdem muss die Firewall-Konfiguration in Ihrem Netzwerk den HTTPS-Datenverkehr ermöglichen.
 
 
-TIP: Sie sollten immer die Cluster-Management-LIF verwenden. Dadurch werden die API-Anforderungen gleichmäßig auf alle Nodes verteilt und Nodes, die offline sind oder Konnektivitätsprobleme auftreten, werden vermieden.
+TIP: Sie sollten immer eine Cluster-Management-LIF verwenden. Dadurch werden die API-Anforderungen über alle Nodes verteilt und Knoten, die offline sind oder Konnektivitätsprobleme haben, werden vermieden. Wenn Sie mehrere Cluster-Management-LIFs konfiguriert haben, entsprechen diese alle dem Zugriff auf die REST-API.
 
 
 
