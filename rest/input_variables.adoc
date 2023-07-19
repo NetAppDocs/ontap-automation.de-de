@@ -91,7 +91,7 @@ Neben einer genauen Übereinstimmung stehen auch andere Operatoren zur Verfügun
 | > | Größer als 
 
 
-| <= | Kleiner oder gleich 
+| \<= | Kleiner oder gleich 
 
 
 | >= | Größer oder gleich 
@@ -180,7 +180,7 @@ Die Anzahl der tatsächlich zurückgegebenen Objekte kann aufgrund der damit ver
 Verengung des Ergebnisset:: Bei Bedarf können Sie diese beiden Parameter mit zusätzlichen Abfrageparametern kombinieren, um den Ergebnissatz einzugrenzen. Im Folgenden werden z. B. bis zu 10 ems-Ereignisse zurückgegeben, die nach der angegebenen Zeit generiert wurden:
 +
 --
-`time=> 2018-04-04T15:41:29.140265Z&max_records=10`
+`time\=> 2018-04-04T15:41:29.140265Z&max_records=10`
 
 Sie können mehrere Anfragen zur Seite durch die Objekte ausgeben. Jeder nachfolgende API-Aufruf sollte einen neuen Zeitwert verwenden, der auf dem letzten Ereignis des letzten Ergebnisset basiert.
 
