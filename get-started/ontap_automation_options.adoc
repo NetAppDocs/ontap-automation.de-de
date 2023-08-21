@@ -42,3 +42,9 @@ Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für
 == Ansible Verwenden
 
 Ansible ist ein Open-Source-Software-Tool, das Bereitstellung, Konfigurationsmanagement und Applikationseinsatz unterstützt. Seit der Veröffentlichung und der anschließenden Akquisition durch RedHat hat sich diese Beliebtheit stetig weiter entwickelt. NetApp bietet Ansible-zertifizierte Module, mit denen Kunden die Administration ihrer ONTAP Storage-Systeme automatisieren können. Sie sollten zunächst die Dokumentation auf dieser Site, einschließlich, überprüfen link:../automate/ontap_ansible.html["Automatisierung mit ONTAP und Ansible"].
+
+
+
+== BlueXP Automatisierungskatalog
+
+Das NetApp https://console.bluexp.netapp.com/automationCatalog/["BlueXP Automatisierungskatalog"^] Ist über die BlueXP Web-Benutzeroberfläche verfügbar. Der Katalog bietet Zugang zu Lösungen, die Sie bei der automatisierten Implementierung und Integration von ONTAP- und anderen NetApp-Produkten unterstützen. Siehe https://docs.netapp.com/us-en/netapp-automation/["NetApp-Automatisierung"^] Dokumentation für eine Beschreibung der Automatisierungslösungen.
