@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: get-started/prepare.html 
+permalink: get-started/prepare_rest.html 
 keywords: prepare, preparation 
 summary: Es gibt mehrere Schritte, die Sie zur Vorbereitung der Verwendung der ONTAP REST API durchführen sollten. 
 ---

@@ -2,8 +2,13 @@
 section: workflows
 title: Workflows
 entries:
-- title: Die Nutzung der Workflows wird vorbereitet
-  url: "/workflows/prepare_workflows.html"
-- title: 'Workflow 1: Aktualisieren Sie den Cluster-Kontakt, und überprüfen Sie den
-    Status'
-  url: "/workflows/wf_1_update_cluster_contact.html"
+- title: Cluster
+  entries:
+  - title: Get Cluster-Konfiguration
+    url: "/workflows/wf_get_cluster.html"
+  - title: Cluster-Kontakt aktualisieren
+    url: "/workflows/wf_update_cluster_contact.html"
+- title: SVM
+  entries:
+  - title: Liste der SVMs
+    url: "/workflows/wf_list_svms.html"

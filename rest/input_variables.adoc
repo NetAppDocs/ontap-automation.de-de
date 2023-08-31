@@ -49,13 +49,24 @@ NOTE: Nicht alle HTTP-Methoden sind an jedem REST-Endpunkt verfügbar. AUSSERDEM
 |===
 
 
+== Pfadvariablen
+
+Der bei jedem REST-API-Aufruf verwendete Endpunktpfad kann verschiedene Kennungen enthalten. Jede ID entspricht einer bestimmten Ressourceninstanz. Beispiele sind Cluster-IDs und SVM-IDs.
+
+
+
 == Anfragekopfzeilen
 
 Sie müssen mehrere Header in die HTTP-Anfrage aufnehmen.
 
 Inhaltstyp:: Wenn der Anforderungsentext JSON enthält, muss dieser Header auf festgelegt werden `application/json`.
 Akzeptieren:: Diese Kopfzeile sollte auf gesetzt werden `application/hal+json`. Wenn sie stattdessen auf eingestellt ist `application/json` Keiner der HAL-Links wird zurückgegeben, außer ein Link, der zum Abrufen des nächsten Stapels von Datensätzen benötigt wird. Wenn der Header etwas anderes außer diesen beiden Werten ist, ist der Standardwert des `content-type` Die Kopfzeile in der Antwort ist `application/hal+json`.
-Autorisierung:: Die grundlegende Authentifizierung muss mit dem Benutzernamen und dem Passwort als base64-Zeichenfolge codiert sein.
+Autorisierung:: Die grundlegende Authentifizierung muss mit dem Benutzernamen und dem Passwort als base64-Zeichenfolge codiert sein. Beispiel:
++
+--
+`Authorization: Basic YWRtaW46cGV0ZXJzb24=`.
+
+--
 
 
 

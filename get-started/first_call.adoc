@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/first_call.html 
-keywords: simple API call 
-summary: Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONTAP REST API zu verwenden und deren Verfügbarkeit zu bestätigen. 
+keywords: first REST API call, test REST API 
+summary: Sie können einen Curl-Befehl ausgeben, um die ONTAP REST-API zu verwenden und die Verfügbarkeit zu bestätigen. 
 ---
 = Ihr erster API-Aufruf
 :hardbreaks:
@@ -14,28 +14,32 @@ summary: Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONT
 
 
 [role="lead"]
-Sie können einen einfachen Curl-Befehl an der CLI ausgeben, um die ONTAP REST API zu verwenden und deren Verfügbarkeit zu bestätigen.
+Sie können einen Curl-Befehl ausgeben, um die ONTAP REST-API zu verwenden und die Verfügbarkeit zu bestätigen.
 
 .Bevor Sie beginnen
-Das Curl-Dienstprogramm muss auf Ihrer Workstation verfügbar sein. Zusätzlich müssen Sie Folgendes haben:
+Neben der Verfügbarkeit des Curl-Dienstprogramms auf Ihrer Workstation benötigen Sie Folgendes:
 
-* IP-Adresse oder Host-Name der ONTAP Cluster-Management-LIF
-* Benutzername und Passwort für ein Konto mit Berechtigung für den Zugriff auf die ONTAP REST API (Cluster-Ressource).
+* IP-Adresse oder FQDN der ONTAP Cluster-Management-LIF
+* ONTAP-Anmeldedaten für ein Konto mit einer Berechtigung für den Zugriff auf die ONTAP-REST-API
 
 
 
-NOTE: Wenn Ihre Anmeldeinformationen Sonderzeichen enthalten, müssen Sie diese auf der Grundlage der verwendeten Shell so formatieren, dass sie für Curl akzeptabel sind. Sie können z. B. vor jedem Sonderzeichen einen umgekehrten Schrägstrich einfügen oder den gesamten Buchstaben umwickeln `username:password` Zeichenfolge in einzelnen Anführungszeichen.
+NOTE: Wenn Ihre Anmeldeinformationen Sonderzeichen enthalten, müssen Sie sie entsprechend der verwendeten Shell formatieren. Sie können beispielsweise vor jedem Sonderzeichen einen umgekehrten Schrägstrich einfügen oder die gesamte Zeichenfolge der Anmeldeinformationen in doppelte Anführungszeichen umbrechen.
 
 .Schritte
-. Rufen Sie an der Befehlszeilenschnittstelle Ihrer lokalen Workstation die Version der ONTAP-Software ab:
+. Geben Sie an der Befehlszeilenschnittstelle Ihrer lokalen Arbeitsstation den folgenden Befehl ein:
 +
-`curl -X GET -u username:password -k "https://<ip_address>/api/cluster?fields=version"`
-
+[source, curl]
+----
+curl --request GET \
+--user username:password \
+"https://$FQDN_IP/api/cluster?fields=version"
+----
 +
 *Beispiel*
 
 +
-`curl -X GET -u admin:password -k "https://10.222.81.101/api/cluster?fields=version"`
+`curl --request GET --user admin:david123 "https://10.222.81.101/api/cluster?fields=version"`
 
 
 

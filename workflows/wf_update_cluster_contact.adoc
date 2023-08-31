@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_update_cluster_contact.html 
+keywords: workflow, update cluster, cluster contact, job, job state 
+summary: In diesem Workflow werden die Kontaktinformationen für das Cluster aktualisiert. Da die Anfrage asynchron verarbeitet wird, wird auch veranschaulicht, wie der Hintergrundjob erfolgreich abgeschlossen werden kann. 
+---
+= Aktualisieren Sie den Cluster-Kontakt und bestätigen Sie den Jobstatus
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+In diesem Workflow werden die Kontaktinformationen für das Cluster aktualisiert. Da die Anforderung asynchron verarbeitet wird, wird auch erläutert, wie Sie feststellen können, ob der zugehörige Hintergrundjob erfolgreich abgeschlossen wurde.
+
+
+
+== Schritt: Aktualisieren Sie die Kontaktinformationen des Clusters
+
+Sie können einen API-Anruf ausstellen, um die Kontaktinformationen zu aktualisieren.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| PATCH | /Cluster 
+|===
+.Verarbeitungsart
+Asynchron
+
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --location --include \
+--request PATCH "https://$FQDN_IP/api/cluster" \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON-Eingabebeispiel
+[source, json]
+----
+{
+  "contact": "support@company-demo.com"
+}
+----
+.Beispiel für eine JSON-Ausgabe
+Die Kennung für das Jobobjekt wird zurückgegeben. Sie sollten den ID-Wert speichern, um ihn im nächsten Schritt als Variable „JOB_ID“ zu verwenden.
+
+[source, json]
+----
+{ "job": {
+    "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+    "_links": {
+      "self": {
+        "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+      }
+    }
+  }
+}
+----
+
+
+== Schritt 2: Rufen Sie den Status des Jobs ab
+
+Sie sollten den Status des Jobs abrufen, um festzustellen, ob die asynchrone Anforderung erfolgreich abgeschlossen wurde.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| GET | /Cluster/Jobs/{UUID} 
+|===
+.Verarbeitungsart
+Synchron
+
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --location --include \
+--request GET "https://$FQDN_IP/api/cluster/$JOB_ID" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Beispiel für eine JSON-Ausgabe
+Der Statuswert und andere Felder werden in das zurückgegebene Jobobjekt aufgenommen.
+
+[listing]
+----
+{
+  "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+  "description": "PATCH /api/cluster",
+  "state": "success",
+  "message": "success",
+  "code": 0,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+    }
+  }
+}
+----
