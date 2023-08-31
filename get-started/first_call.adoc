@@ -14,7 +14,7 @@ summary: Sie können einen Curl-Befehl ausgeben, um die ONTAP REST-API zu verwen
 
 
 [role="lead"]
-Sie können einen Curl-Befehl ausgeben, um die ONTAP REST-API zu verwenden und die Verfügbarkeit zu bestätigen.
+Sie können einen einfachen Curl-Befehl ausgeben, um die ONTAP REST-API zu verwenden und die Verfügbarkeit zu bestätigen.
 
 .Bevor Sie beginnen
 Neben der Verfügbarkeit des Curl-Dienstprogramms auf Ihrer Workstation benötigen Sie Folgendes:

@@ -92,6 +92,18 @@ Hier sind einige der häufigsten Variablen Schlüsselwörter. Diese Liste ist ni
 |===
 
 
+=== Beispiele für JSON-Eingaben
+
+Einige REST-API-Aufrufe, z. B. die, die POST oder PATCH verwenden, erfordern JSON-Eingaben für den Text der Anforderung. Zur Übersichtlichkeit werden die JSON-Eingabebeispiele getrennt von den Curl-Beispielen dargestellt. Sie können die JSON-Eingabebeispiele mit einer der unten beschriebenen Techniken verwenden.
+
+.In lokale Datei speichern
+Sie können das JSON-Beispiel in eine Datei kopieren und lokal speichern. Der Curl-Befehl bezieht sich auf die Datei, die den verwendet `--data` Parameter mit dem Wert, der den Dateinamen mit einem angibt `@` Präfix.
+
+.Fügen Sie sie nach dem Beispiel in die Klemme ein
+Zuerst müssen Sie das Beispiel für die Wellung kopieren und in die Klemmenschale einfügen. Bearbeiten Sie dann das Beispiel, um den vollständig zu entfernen `--data` Am Ende des Parameters und ersetzen Sie ihn durch `--data-raw` Parameter. Kopieren Sie anschließend das JSON-Beispiel, sodass es dem Befehl Curl und dem aktualisierten Parameter folgt.
+
+
+
 == Authentifizierungsoptionen
 
 Die primäre Authentifizierungsmethode, die über ONTAP 9.13.1 für die REST-API verfügbar ist, ist die grundlegende Authentifizierung.
@@ -130,7 +142,7 @@ Sie müssen die entsprechenden Anmeldedaten für Ihre Umgebung ersetzen. Wenn Si
 
 
 
-== Verwenden von Curl-Beispielen mit der Bash Shell
+== Verwenden der Beispiele mit Bash
 
 Wenn Sie die Workflow-Curl-Beispiele direkt verwenden, müssen Sie die darin enthaltenen Variablen mit Werten aktualisieren, die für Ihre Umgebung geeignet sind. Sie können die Beispiele manuell bearbeiten oder sich darauf verlassen, dass die Bash-Shell die Ersetzung für Sie wie unten beschrieben durchsetzt.
 

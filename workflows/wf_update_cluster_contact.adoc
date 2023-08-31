@@ -20,7 +20,7 @@ In diesem Workflow werden die Kontaktinformationen für das Cluster aktualisiert
 
 == Schritt: Aktualisieren Sie die Kontaktinformationen des Clusters
 
-Sie können einen API-Anruf ausstellen, um die Kontaktinformationen zu aktualisieren.
+Sie können einen API-Aufruf ausgeben, um die Kontaktinformationen des Clusters zu aktualisieren.
 
 .HTTP-Methode und -Endpunkt
 Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
@@ -53,9 +53,9 @@ curl --location --include \
 }
 ----
 .Beispiel für eine JSON-Ausgabe
-Die Kennung für das Jobobjekt wird zurückgegeben. Sie sollten den ID-Wert speichern, um ihn im nächsten Schritt als Variable „JOB_ID“ zu verwenden.
+Das Jobobjekt wird zurückgegeben. Sie sollten die Jobkennung speichern, um sie im nächsten Schritt als Variable „JOB_ID“ zu verwenden.
 
-[source, json]
+[listing]
 ----
 { "job": {
     "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",

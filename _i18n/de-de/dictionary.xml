@@ -1663,7 +1663,6 @@
   <block id="fe675d9d322274e9cc5a016dc13952d0" category="paragraph">Eine weitere Option bei der Verwendung von Curl ist, den Autorisierungskopf zu entfernen und stattdessen den Curl *user*-Parameter zu verwenden. Beispiel:</block>
   <block id="2ce89c4ab048c9d719169c11cda31579" category="paragraph"><block ref="784832b5a8f97e143e4744b38ce2ea72" prefix="" category="inline-code"></block></block>
   <block id="64f444a853187a8c5bb3d8507d2ba64f" category="paragraph">Sie müssen die entsprechenden Anmeldedaten für Ihre Umgebung ersetzen. Wenn Sie den Befehl curl mit diesem Parameter ausführen, wird der Autorisierungskopf für Sie generiert.</block>
-  <block id="76b8f173097880ead5a0f4cfd6e0618c" category="section-title">Verwenden von Curl-Beispielen mit der Bash Shell</block>
   <block id="70ce4cad9d30893dd103460ed8538167" category="paragraph">Wenn Sie die Workflow-Curl-Beispiele direkt verwenden, müssen Sie die darin enthaltenen Variablen mit Werten aktualisieren, die für Ihre Umgebung geeignet sind. Sie können die Beispiele manuell bearbeiten oder sich darauf verlassen, dass die Bash-Shell die Ersetzung für Sie wie unten beschrieben durchsetzt.</block>
   <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">Ein Vorteil der Verwendung von Bash ist, dass Sie die Variablenwerte einmal in einer Shell-Sitzung anstatt einmal pro Curl-Befehl einstellen können.</block>
   <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">Öffnen Sie die Bash Shell, die mit Linux oder einem ähnlichen Betriebssystem geliefert wird.</block>
@@ -1676,10 +1675,8 @@
   <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">Aktualisieren Sie den Cluster-Kontakt und bestätigen Sie den Jobstatus</block>
   <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">In diesem Workflow werden die Kontaktinformationen für das Cluster aktualisiert. Da die Anforderung asynchron verarbeitet wird, wird auch erläutert, wie Sie feststellen können, ob der zugehörige Hintergrundjob erfolgreich abgeschlossen wurde.</block>
   <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">Schritt: Aktualisieren Sie die Kontaktinformationen des Clusters</block>
-  <block id="5b65398d9afd1a14a452f4645c7fb774" category="paragraph">Sie können einen API-Anruf ausstellen, um die Kontaktinformationen zu aktualisieren.</block>
   <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">HTTP-Methode und -Endpunkt</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.</block>
-  <block id="75e17ff813d0ed4dba4fcb32abc673e6" category="paragraph">Die Kennung für das Jobobjekt wird zurückgegeben. Sie sollten den ID-Wert speichern, um ihn im nächsten Schritt als Variable „JOB_ID“ zu verwenden.</block>
   <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">Schritt 2: Rufen Sie den Status des Jobs ab</block>
   <block id="be81401da9da70cf197e1449ca61043d" category="paragraph">Sie sollten den Status des Jobs abrufen, um festzustellen, ob die asynchrone Anforderung erfolgreich abgeschlossen wurde.</block>
   <block id="4044a674901deb07947f235775f9654d" category="paragraph">Der Statuswert und andere Felder werden in das zurückgegebene Jobobjekt aufgenommen.</block>
@@ -1696,7 +1693,6 @@
   <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">Abfrage</block>
   <block id="a734854ee8bdd547b3a1a8eeee4f56a8" category="cell">Wählen Sie die Werte aus, die zurückgegeben werden sollen. Beispiele<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block> Und<block ref="2af72f100c356273d46284f6fd1dfc08" prefix=" " category="inline-code"></block>.</block>
   <block id="d68c817e523bebfd3bb5d6e6aed3c2f7" category="paragraph-title">Curl Beispiel: Rufen Sie die Kontaktinformationen des Clusters ab</block>
-  <block id="defb04d386d33eda3cf981695c9da0e8" category="paragraph">Dieses Beispiel zeigt, wie ein einzelnes Feld abgerufen wird. Um die gesamte Cluster-Konfiguration abrufen zu können, müssen Sie den entfernen<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> Abfrageparameter.</block>
   <block id="361f902ffbf6412778b4224d2f0f31a2" category="section-title">Pfadvariablen</block>
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">Der bei jedem REST-API-Aufruf verwendete Endpunktpfad kann verschiedene Kennungen enthalten. Jede ID entspricht einer bestimmten Ressourceninstanz. Beispiele sind Cluster-IDs und SVM-IDs.</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">Die grundlegende Authentifizierung muss mit dem Benutzernamen und dem Passwort als base64-Zeichenfolge codiert sein. Beispiel:</block>
@@ -1706,4 +1702,15 @@
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">Get Cluster-Konfiguration</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">Cluster-Kontakt aktualisieren</block>
   <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">Liste der SVMs</block>
+  <block id="c17ef84c021b2307b064e8e24b8013a6" category="paragraph">Sie können einen einfachen Curl-Befehl ausgeben, um die ONTAP REST-API zu verwenden und die Verfügbarkeit zu bestätigen.</block>
+  <block id="a98b00db4ce1fec40c21222810430c05" category="section-title">Beispiele für JSON-Eingaben</block>
+  <block id="09e5af60e7e961d326ecb94915481554" category="paragraph">Einige REST-API-Aufrufe, z. B. die, die POST oder PATCH verwenden, erfordern JSON-Eingaben für den Text der Anforderung. Zur Übersichtlichkeit werden die JSON-Eingabebeispiele getrennt von den Curl-Beispielen dargestellt. Sie können die JSON-Eingabebeispiele mit einer der unten beschriebenen Techniken verwenden.</block>
+  <block id="4d8521855bcfebae2c0518f634b5dcbd" category="paragraph-title">In lokale Datei speichern</block>
+  <block id="399feb8e89d476ceeca1f9a576fb97ef" category="paragraph">Sie können das JSON-Beispiel in eine Datei kopieren und lokal speichern. Der Curl-Befehl bezieht sich auf die Datei, die den verwendet<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> Parameter mit dem Wert, der den Dateinamen mit einem angibt<block ref="518ed29525738cebdac49c49e60ea9d3" prefix=" " category="inline-code"></block> Präfix.</block>
+  <block id="4ee40cd4d378b7de61905cb45f1009f5" category="paragraph-title">Fügen Sie sie nach dem Beispiel in die Klemme ein</block>
+  <block id="d44e4ebc435b8a720eca9d2dce5b7c87" category="paragraph">Zuerst müssen Sie das Beispiel für die Wellung kopieren und in die Klemmenschale einfügen. Bearbeiten Sie dann das Beispiel, um den vollständig zu entfernen<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> Am Ende des Parameters und ersetzen Sie ihn durch<block ref="3165aa3b2ee77197f8cfd2cc80c7278f" prefix=" " category="inline-code"></block> Parameter. Kopieren Sie anschließend das JSON-Beispiel, sodass es dem Befehl Curl und dem aktualisierten Parameter folgt.</block>
+  <block id="12c6401fb02cab85d072b4b981f50e87" category="section-title">Verwenden der Beispiele mit Bash</block>
+  <block id="b5cda5e8b7bc8b7e8457fef21d91230b" category="paragraph">Sie können einen API-Aufruf ausgeben, um die Kontaktinformationen des Clusters zu aktualisieren.</block>
+  <block id="a8a1e002536d347b924b548b0ac40eaa" category="paragraph">Das Jobobjekt wird zurückgegeben. Sie sollten die Jobkennung speichern, um sie im nächsten Schritt als Variable „JOB_ID“ zu verwenden.</block>
+  <block id="8c95ed01afcec406b4d0570ec3d3ff18" category="paragraph">Dieses Beispiel zeigt, wie ein einzelnes Feld abgerufen wird. Um das gesamte Cluster-Objekt und die Konfiguration anzuzeigen, müssen Sie den entfernen<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> Abfrageparameter.</block>
 </blocks>

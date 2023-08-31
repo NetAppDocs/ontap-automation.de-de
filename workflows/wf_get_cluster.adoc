@@ -37,7 +37,7 @@ Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schr
 | Felder | Abfrage | Nein | Wählen Sie die Werte aus, die zurückgegeben werden sollen. Beispiele `contact` Und `version`. 
 |===
 .Curl Beispiel: Rufen Sie die Kontaktinformationen des Clusters ab
-Dieses Beispiel zeigt, wie ein einzelnes Feld abgerufen wird. Um die gesamte Cluster-Konfiguration abrufen zu können, müssen Sie den entfernen `fields` Abfrageparameter.
+Dieses Beispiel zeigt, wie ein einzelnes Feld abgerufen wird. Um das gesamte Cluster-Objekt und die Konfiguration anzuzeigen, müssen Sie den entfernen `fields` Abfrageparameter.
 
 [source, curl]
 ----
