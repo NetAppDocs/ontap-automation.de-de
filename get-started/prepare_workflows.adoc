@@ -14,7 +14,7 @@ summary: Sie sollten sich mit der Struktur und dem Format der ONTAP Workflows ve
 
 
 [role="lead"]
-Sie sollten sich mit der Struktur und dem Format der ONTAP Workflows vertraut machen, bevor Sie sie für eine Live-Implementierung verwenden.
+Sie sollten sich mit der Struktur und dem Format der Workflows vertraut machen, bevor Sie sie bei einer Live-ONTAP-Implementierung verwenden.
 
 
 
@@ -34,7 +34,7 @@ Jeder Schritt in einem ONTAP Workflow besteht aus einem der folgenden Typen:
 Die meisten Workflow-Schritte sind REST-API-Aufrufe. Bei diesen Schritten wird ein gängiges Format verwendet, das ein Beispiel für eine Wellung und andere Informationen enthält. Siehe link:../reference/api_reference.html["API-Referenz"] Weitere Informationen zu den REST-API-Aufrufen.
 
 .Workflows in einem Schritt
-Ein Workflow kann nur einen Schritt enthalten. Diese _einstufigen Workflows_ werden leicht anders formatiert als Workflows, die mehrere Schritte enthalten. Beispielsweise wird der explizite Schrittname entfernt. Die Workflow-Aktion sollte anhand des Titels eindeutig sein.
+Ein Workflow kann nur einen Schritt enthalten. Diese _einstufigen Workflows_ werden leicht anders formatiert als Workflows, die mehrere Schritte enthalten. Beispielsweise wird der explizite Schrittname entfernt. Die Aktion oder der Vorgang sollte aufgrund des Workflow-Titels eindeutig sein.
 
 
 
@@ -46,13 +46,13 @@ Die Workflows sind so allgemein wie möglich ausgelegt, sodass sie in jeder ONTA
 
 === Basis-URL-Format
 
-Sie können direkt über Curl oder eine Programmiersprache wie Python auf die ONTAP-REST-API zugreifen. In diesem Fall unterscheidet sich die Basis-URL von der URL, die Sie für den Zugriff auf die ONTAP Online-Dokumentation oder den System Manager verwenden.
+Sie können die ONTAP-REST-API direkt über Curl oder eine Programmiersprache aufrufen. In diesem Fall unterscheidet sich die Basis-URL von der URL, die Sie für den Zugriff auf die ONTAP Online-Dokumentation oder den System Manager verwenden.
 
 Wenn Sie direkt auf die API zugreifen, müssen Sie *API* an die Domain oder IP-Adresse anhängen. Beispiel:
 
 `https://ontap.demo-example.com/api`
 
-Siehe link:../rest/access_rest_api.html["So erhalten Sie Zugriff auf die ONTAP-API"] Weitere Informationen zum Zugriff auf die ONTAP REST-API
+Siehe link:../rest/access_rest_api.html["So erhalten Sie Zugriff auf die ONTAP REST API"] Finden Sie weitere Informationen.
 
 
 
@@ -60,13 +60,13 @@ Siehe link:../rest/access_rest_api.html["So erhalten Sie Zugriff auf die ONTAP-A
 
 Es gibt mehrere Eingabeparameter, die häufig bei den meisten REST-API-Aufrufen verwendet werden. Diese Parameter werden in der Regel nicht in den einzelnen Workflows beschrieben. Sie sollten mit den Parametern vertraut sein. Siehe link:../rest/input_variables.html["Eingabevariablen, die eine API-Anforderung steuern"] Finden Sie weitere Informationen.
 
-Werden für ein bestimmtes Curl-Beispiel zusätzliche Parameter benötigt, so sind diese im Abschnitt *zusätzliche Eingabeparameter für das Curl-Beispiel* für jeden Workflow enthalten.
+Wenn für einen bestimmten REST API-Aufruf zusätzliche Parameter benötigt werden, sind diese im Abschnitt *zusätzliche Eingabeparameter für das Curl-Beispiel* für jeden Workflow enthalten.
 
 
 
 === Variablenformat
 
-Die ID-Werte und andere Variablen, die in den Beispielen für Workflows verwendet werden, sind nicht transparent und können mit jedem ONTAP Cluster variieren. Um die Lesbarkeit der Beispiele zu verbessern, werden keine Istwerte verwendet. Variablen werden stattdessen verwendet. Dieser Ansatz basiert auf einem konsistenten Format und einem Satz von reservierten Namen und hat mehrere Vorteile:
+Die ID-Werte und andere Variablen, die mit den Workflow-Beispielen verwendet werden, sind undurchsichtig und können mit jedem ONTAP-Cluster variieren. Um die Lesbarkeit der Beispiele zu verbessern, werden keine Istwerte verwendet. Variablen werden stattdessen verwendet. Dieser Ansatz basiert auf einem konsistenten Format und einem Satz reservierter Namen und bietet mehrere Vorteile, darunter:
 
 * Die Locken- und JSON-Proben sind besser lesbar und leichter zu verstehen.
 * Da alle Schlüsselwörter das gleiche Format verwenden, können Sie sie schnell identifizieren.
@@ -75,14 +75,14 @@ Die ID-Werte und andere Variablen, die in den Beispielen für Workflows verwende
 
 Die Variablen sind so formatiert, dass sie in einer Bash Shell-Umgebung verwendet werden. Jede Variable beginnt mit einem Dollarzeichen und ist bei Bedarf in doppelte Anführungszeichen eingeschlossen. Dies macht sie für Bash erkennbar. Für die Namen wird immer Großbuchstaben verwendet.
 
-Hier sind einige der häufigsten Variablen Schlüsselwörter. Diese Liste ist nicht vollständig und weitere Schlüsselwörter werden bei Bedarf verwendet. Ihre Bedeutung sollte auf der Grundlage des Kontexts offensichtlich sein.
+Hier sind einige der häufigsten Variablen Schlüsselwörter. Diese Liste ist nicht erschöpfend und es werden bei Bedarf zusätzliche Variablen verwendet. Ihre Bedeutung sollte auf der Grundlage des Kontexts offensichtlich sein.
 
 [cols="25,15,60"]
 |===
 | Stichwort | Typ | Beschreibung 
 
 
-| FQDN_IP-DOLLAR | URL | Der vollständig qualifizierte Domain-Name oder die IP-Adresse der ONTAP-Cluster-Management-LIF. 
+| FQDN_IP-DOLLAR | URL | Der vollständig qualifizierte Domain-Name oder die IP-Adresse der ONTAP Management LIF. 
 
 
 | „CLUSTER_ID“ | Pfad | Der UUIDv4-Wert, der den ONTAP-Cluster identifiziert, auf dem die API-Vorgänge ausgeführt werden. 
@@ -94,13 +94,13 @@ Hier sind einige der häufigsten Variablen Schlüsselwörter. Diese Liste ist ni
 
 === Beispiele für JSON-Eingaben
 
-Einige REST-API-Aufrufe, z. B. die, die POST oder PATCH verwenden, erfordern JSON-Eingaben für den Text der Anforderung. Zur Übersichtlichkeit werden die JSON-Eingabebeispiele getrennt von den Curl-Beispielen dargestellt. Sie können die JSON-Eingabebeispiele mit einer der unten beschriebenen Techniken verwenden.
+Einige REST-API-Aufrufe, z. B. die, die POST oder PATCH verwenden, erfordern JSON-Eingaben im Körper der Anforderung. Zur Übersichtlichkeit werden die JSON-Eingabebeispiele getrennt von den Curl-Beispielen dargestellt. Sie können die JSON-Eingabebeispiele mit einer der unten beschriebenen Techniken verwenden.
 
 .In lokale Datei speichern
-Sie können das JSON-Beispiel in eine Datei kopieren und lokal speichern. Der Curl-Befehl bezieht sich auf die Datei, die den verwendet `--data` Parameter mit dem Wert, der den Dateinamen mit einem angibt `@` Präfix.
+Sie können das JSON-Eingabebeispiel in eine Datei kopieren und lokal speichern. Der Curl-Befehl bezieht sich auf die Datei, die den verwendet `--data` Parameter mit dem Wert, der den Dateinamen mit einem angibt `@` Präfix.
 
 .Fügen Sie sie nach dem Beispiel in die Klemme ein
-Zuerst müssen Sie das Beispiel für die Wellung kopieren und in die Klemmenschale einfügen. Bearbeiten Sie dann das Beispiel, um den vollständig zu entfernen `--data` Am Ende des Parameters und ersetzen Sie ihn durch `--data-raw` Parameter. Kopieren Sie anschließend das JSON-Beispiel, sodass es dem Befehl Curl und dem aktualisierten Parameter folgt.
+Zuerst müssen Sie das Beispiel für die Wellung kopieren und in eine Klemmenschale einfügen. Bearbeiten Sie dann das Beispiel, um den vollständig zu entfernen `--data` Am Ende des Parameters und ersetzen Sie ihn durch `--data-raw` Parameter. Kopieren Sie schließlich das JSON-Beispiel, und fügen Sie es ein, so dass es dem Curl-Befehl mit dem aktualisierten Parameter folgt. Sie sollten einfache Anführungszeichen verwenden, um das JSON-Eingabebeispiel zu umschließen.
 
 
 
@@ -115,7 +115,7 @@ Die primäre Authentifizierungsmethode, die über ONTAP 9.13.1 für die REST-API
 Bei der Verwendung der grundlegenden Authentifizierung müssen die Benutzeranmeldeinformationen in jede HTTP-Anforderung einbezogen werden. Es gibt zwei Optionen zum Senden der Anmeldeinformationen.
 
 .Erstellen Sie den HTTP-Anforderungsheader
-Sie können den Autorisierungskopf manuell erstellen und in die HTTP-Anforderungen einbeziehen. Dies ist möglich, wenn Sie einen Curl-Befehl in der CLI oder eine Programmiersprache mit Ihrem Automatisierungscode verwenden. Zu den Schritten auf hoher Ebene gehören:
+Sie können den Autorisierungskopf manuell erstellen und in die HTTP-Anforderungen einbeziehen. Dies ist möglich, wenn Sie einen Curl-Befehl in der CLI oder eine Programmiersprache mit Ihrem Automatisierungscode verwenden. Zu den grundlegenden Schritten gehören:
 
 . Verketten Sie die Benutzer- und Kennwortwerte mit einem Doppelpunkt:
 +
@@ -138,7 +138,7 @@ Eine weitere Option bei der Verwendung von Curl ist, den Autorisierungskopf zu e
 
 `--user username:password`
 
-Sie müssen die entsprechenden Anmeldedaten für Ihre Umgebung ersetzen. Wenn Sie den Befehl curl mit diesem Parameter ausführen, wird der Autorisierungskopf für Sie generiert.
+Sie müssen die entsprechenden Anmeldedaten für Ihre Umgebung ersetzen. Die Anmeldeinformationen sind in base64 nicht kodiert. Wenn Sie den Befehl curl mit diesem Parameter ausführen, wird der String codiert und der Autorisierungskopf für Sie generiert.
 
 
 
@@ -151,7 +151,7 @@ NOTE: Ein Vorteil der Verwendung von Bash ist, dass Sie die Variablenwerte einma
 
 .Schritte
 . Öffnen Sie die Bash Shell, die mit Linux oder einem ähnlichen Betriebssystem geliefert wird.
-. Legen Sie die Variablenwerte fest, die in dem Beispiel Curl enthalten sind, das Sie ausführen möchten. Beispiel:
+. Legen Sie die Variablenwerte fest, die in dem zu laufenden Curl-Beispiel enthalten sind. Beispiel:
 +
 `CLUSTER_ID=ce559b75-4145-11ee-b51a-005056aee9fb`
 

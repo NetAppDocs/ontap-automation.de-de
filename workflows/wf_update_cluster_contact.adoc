@@ -38,8 +38,9 @@ Asynchron
 .Beispiel für die Wellung
 [source, curl]
 ----
-curl --location --include \
---request PATCH "https://$FQDN_IP/api/cluster" \
+curl --request PATCH \
+--location "https://$FQDN_IP/api/cluster" \
+--include \
 --header "Content-Type: application/json" \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
@@ -89,8 +90,9 @@ Synchron
 .Beispiel für die Wellung
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/cluster/$JOB_ID" \
+curl --request GET \
+--location "https://$FQDN_IP/api/cluster/jobs/$JOB_ID" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -112,3 +114,8 @@ Der Statuswert und andere Felder werden in das zurückgegebene Jobobjekt aufgeno
   }
 }
 ----
+
+
+== Schritt 3: Bestätigen Sie die Kontaktinformationen zum Cluster
+
+Führen Sie den Workflow aus link:../workflows/wf_get_cluster.html["Rufen Sie die Cluster-Konfiguration ab"]. Sie sollten die einstellen `fields` Abfrageparameter an `contact`.

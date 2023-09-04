@@ -29,8 +29,9 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 .Beispiel für die Wellung
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/svm/svms" \
+curl --request GET \
+--location "https://$FQDN_IP/api/svm/svms" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
