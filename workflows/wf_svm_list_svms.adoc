@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: workflows/wf_list_svms.html 
+permalink: workflows/wf_svm_list_svms.html 
 keywords: workflow, list SVMs 
 summary: 'Sie können die in einem ONTAP Cluster definierten Storage Virtual Machines (SVMs) auflisten. Dies könnte dazu führen, dass Sie die Kennung für eine bestimmte SVM finden oder die Einmaligkeit des Namens sicherstellen, bevor Sie eine neue SVM erstellen.' 
 ---

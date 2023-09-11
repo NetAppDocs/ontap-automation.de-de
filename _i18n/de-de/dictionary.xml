@@ -770,7 +770,6 @@
   <block id="5528d45d676e7b5e4b5f82591b52d795" category="inline-link">NetApp Bibliothek mit technischen Berichten und Whitepapers</block>
   <block id="8d4056bb7e1987655b2aad3e78b46bc4" category="list-text"><block ref="8d4056bb7e1987655b2aad3e78b46bc4" category="inline-link-rx"></block></block>
   <block id="e996b4c3d79a1e2689fba6ba27c0372f" category="paragraph">Hier erhalten Sie technische Berichte, Whitepapers und weitere Dokumente.</block>
-  <block id="7de269085c4e23e4ff26c31b7122144d" category="summary">In diesem Workflow werden die Kontaktinformationen für das Cluster aktualisiert. Da die Anfrage asynchron verarbeitet wird, wird auch veranschaulicht, wie der Hintergrundjob erfolgreich abgeschlossen werden kann.</block>
   <block id="e95402dceacd5260b74e758bf2e748ef" category="cell">/Cluster</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">Asynchron</block>
   <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/Cluster/Jobs/{UUID}</block>
@@ -1660,8 +1659,6 @@
   <block id="1eaec3fd5985d760443b0386d2ee593a" category="list-text">Drücken Sie *ENTER*, um Folgendes zu tun:</block>
   <block id="198b3154f73c4a62a05f7a0089ea4f3a" category="list-text">Ersetzen Sie die von Ihnen festgelegten Variablenwerte</block>
   <block id="9a6c9ba6963e8edb0564d74a05262568" category="list-text">Führen Sie den Befehl curl aus</block>
-  <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">Aktualisieren Sie den Cluster-Kontakt und bestätigen Sie den Jobstatus</block>
-  <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">In diesem Workflow werden die Kontaktinformationen für das Cluster aktualisiert. Da die Anforderung asynchron verarbeitet wird, wird auch erläutert, wie Sie feststellen können, ob der zugehörige Hintergrundjob erfolgreich abgeschlossen wurde.</block>
   <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">Schritt: Aktualisieren Sie die Kontaktinformationen des Clusters</block>
   <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">HTTP-Methode und -Endpunkt</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.</block>
@@ -1685,7 +1682,6 @@
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">Der bei jedem REST-API-Aufruf verwendete Endpunktpfad kann verschiedene Kennungen enthalten. Jede ID entspricht einer bestimmten Ressourceninstanz. Beispiele sind Cluster-IDs und SVM-IDs.</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">Die grundlegende Authentifizierung muss mit dem Benutzernamen und dem Passwort als base64-Zeichenfolge codiert sein. Beispiel:</block>
   <block id="d4a75631c199e30063c5b55330d690dc" category="paragraph"><block ref="20e17731e08bc5284461439422e12e1a" prefix="" category="inline-code"></block>.</block>
-  <block id="8e69453af156d83ee85c0320efa52ea2" category="list-text"><block ref="8e69453af156d83ee85c0320efa52ea2" category="inline-link-macro-rx"></block></block>
   <block id="29ca978338507bc932aabe7888d4b362" category="list-text">ONTAP 9.6 bis ONTAP 9.13.1</block>
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">Get Cluster-Konfiguration</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">Cluster-Kontakt aktualisieren</block>
@@ -1715,4 +1711,8 @@
   <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">Legen Sie die Variablenwerte fest, die in dem zu laufenden Curl-Beispiel enthalten sind. Beispiel:</block>
   <block id="88c3404621959196699b6d5e21481f01" category="section-title">Schritt 3: Bestätigen Sie die Kontaktinformationen zum Cluster</block>
   <block id="d6e97a74db077b800b27092e142ea420" category="paragraph">Führen Sie den Workflow aus <block ref="7fc6abcb7d64eb85778fdfad2da4ab1a" category="inline-link-macro-rx"></block>. Sie sollten die einstellen<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> Abfrageparameter an<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>.</block>
+  <block id="3522d2e743ab2fd440e2280ea09b6946" category="inline-link-macro">Aktualisieren Sie den Cluster-Kontakt und bestätigen Sie den Jobstatus</block>
+  <block id="3c2bc619ddaef1bedada529634c6826d" category="list-text"><block ref="3c2bc619ddaef1bedada529634c6826d" category="inline-link-macro-rx"></block></block>
+  <block id="1adca2e27b8e8a9864351adf6119bafb" category="summary">Sie können die Kontaktinformationen für ein Cluster aktualisieren. Da die Anforderung asynchron verarbeitet wird, zeigt dieser Workflow auch, wie Sie feststellen können, ob der zugehörige Hintergrundjob erfolgreich abgeschlossen wurde.</block>
+  <block id="3a434b661b7a5e9113a6b4de74efe1a0" category="sidebar">Zusammenfassung der REST-Ressourcen</block>
 </blocks>
