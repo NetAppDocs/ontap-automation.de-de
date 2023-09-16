@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: additional/get_more_information.html 
+permalink: additional/resources.html 
 keywords: more information, additional resources 
 summary: Zudem stehen Ihnen mehrere weitere Ressourcen zur Verfügung, die Ihnen helfen. Dort erhalten Sie weitere Informationen zur Automatisierung der Implementierung und Administration Ihrer ONTAP Storage-Systeme. 
 ---
-= Weitere Informationen
+= Weitere Ressourcen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,6 +23,10 @@ Zudem stehen Ihnen mehrere weitere Ressourcen zur Verfügung, die Ihnen helfen. 
 * https://docs.netapp.com/us-en/ontap-family/["Produktdokumentation zu ONTAP 9"^]
 +
 Enthält Dokumentation für die ONTAP 9 Produktfamilie.
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^]
++
+Versionshinweise zu ONTAP 9 mit Informationen zum aktuellen Release.
 
 * https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["ONTAP- und ONTAP System Manager-Ressourcen"^]
 +
