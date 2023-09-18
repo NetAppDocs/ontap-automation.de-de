@@ -6,10 +6,6 @@ entries:
   entries:
   - title: REST-Web-Services-Grundlage
     url: "/rest/rest_web_services_foundation.html"
-  - title: ONTAP REST API-VERSIONIERUNG
-    url: "/rest/rest_api_versioning.html"
-  - title: So erhalten Sie Zugriff auf die REST API
-    url: "/rest/access_rest_api.html"
   - title: Grundlegende betriebliche Eigenschaften
     url: "/rest/operational_characteristics.html"
   - title: Eingabevariablen

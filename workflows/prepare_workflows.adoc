@@ -52,7 +52,7 @@ Wenn Sie direkt auf die API zugreifen, müssen Sie *API* an die Domain oder IP-A
 
 `https://ontap.demo-example.com/api`
 
-Siehe link:../rest/access_rest_api.html["So erhalten Sie Zugriff auf die ONTAP REST API"] Finden Sie weitere Informationen.
+Siehe link:../get-started/access_rest_api.html["So erhalten Sie Zugriff auf die ONTAP REST API"] Finden Sie weitere Informationen.
 
 
 
