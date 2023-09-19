@@ -1,0 +1,245 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_user_role.html 
+keywords:  
+summary: Sie können diesen Workflow verwenden, um einen Benutzer mit einer zugeordneten REST-Rolle zu erstellen. 
+---
+= Erstellen Sie einen Benutzer mit einer Rolle
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können diesen Workflow verwenden, um einen Benutzer mit einer zugeordneten REST-Rolle zu erstellen.
+
+.Informationen zu diesem Workflow
+Dieser Workflow enthält die typischen Schritte, die zum Erstellen einer benutzerdefinierten REST-Rolle und ihrer Zuordnung zu einem neuen Benutzerkonto erforderlich sind. Sowohl der Benutzer als auch die Rolle haben einen Umfang der SVM und sind einer spezifischen Daten-SVM zugeordnet. Einige der Schritte können optional sein oder müssen je nach Umgebung geändert werden.
+
+
+
+== Schritt: Listen Sie die Daten-SVMs im Cluster auf
+
+Führen Sie den folgenden REST-API-Aufruf durch, um die SVMs im Cluster aufzulisten. Die UUID und der Name jeder SVM werden in der Ausgabe angegeben.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| GET | /API/svm/svms 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/svm/svms?order_by=name" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Nachdem Sie fertig sind
+Wählen Sie die gewünschte SVM aus der Liste aus, in der Sie den neuen Benutzer und die neue Rolle erstellen möchten.
+
+
+
+== Schritt 2: Auflisten der Benutzer, die für die SVM definiert wurden
+
+Führen Sie den folgenden REST-API-Aufruf durch, um die in der ausgewählten SVM definierten Benutzer aufzulisten. Sie können die SVM über den Eigner-Parameter angeben.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| GET | /API/Sicherheit/Konten 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/security/accounts?owner.name=dmp" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Nachdem Sie fertig sind
+Wählen Sie basierend auf den bereits in der SVM definierten Benutzern einen eindeutigen Namen für den neuen Benutzer aus.
+
+
+
+== Schritt 3: Listen Sie die REST-Rollen auf, die für die SVM definiert sind
+
+Führen Sie den folgenden REST-API-Aufruf durch, um die in der ausgewählten SVM definierten Rollen aufzulisten. Sie können die SVM über den Eigner-Parameter angeben.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| GET | /API/Sicherheit/Funktionen 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/security/roles?owner.name=dmp" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Nachdem Sie fertig sind
+Wählen Sie basierend auf den in der SVM bereits definierten Rollen einen eindeutigen Namen für die neue Rolle aus.
+
+
+
+== Schritt 4: Erstellen Sie eine benutzerdefinierte REST-Rolle
+
+Führen Sie den folgenden REST-API-Aufruf zur Erstellung einer benutzerdefinierten REST-Rolle in der SVM aus. Die Rolle hat zunächst nur eine Berechtigung, die einen Standardzugriff von *none* schafft, so dass der Zugriff verweigert wird.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| POST | /API/Sicherheit/Funktionen 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON-Eingabebeispiel
+[source, curl]
+----
+{
+  "name": "dprole1",
+  "owner": {
+    "name": "dmp",
+    "uuid": "752d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      {"path": "/api", "access": "none"},
+  ]
+}
+----
+.Nachdem Sie fertig sind
+Führen Sie optional Schritt 3 erneut aus, um die neue Rolle anzuzeigen. Sie können die Rollen auch in der ONTAP-CLI anzeigen.
+
+
+
+== Schritt 5: Aktualisieren Sie die Rolle, indem Sie weitere Berechtigungen hinzufügen
+
+Führen Sie den folgenden REST-API-Aufruf durch, um die Rolle zu ändern, indem Sie nach Bedarf Berechtigungen hinzufügen.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| POST | /API/Sicherheit/Rollen/{owner.UUID}/{Name}/Privileges 
+|===
+.Zusätzliche Eingabeparameter für Curl-Beispiele
+Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schritt auch die folgenden Parameter im Curl-Beispiel verwendet.
+
+[cols="25,10,10,55"]
+|===
+| Parameter | Typ | Erforderlich | Beschreibung 
+
+
+| SVM_ID USD | Pfad | Ja. | Die UUID der SVM, die die Rollendefinition enthält. 
+
+
+| „ROLE_NAME“ IN US-DOLLAR | Pfad | Ja. | Der Name der Rolle in der zu aktualisierenden SVM 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON-Eingabebeispiel
+[source, curl]
+----
+{
+  "path": "/api/storage/volumes",
+  "access": "readonly"
+}
+----
+.Nachdem Sie fertig sind
+Führen Sie optional Schritt 3 erneut aus, um die neue Rolle anzuzeigen. Sie können die Rollen auch in der ONTAP-CLI anzeigen.
+
+
+
+== Schritt 6: Erstellen Sie einen Benutzer
+
+Führen Sie den folgenden REST-API-Aufruf zu einem Benutzerkonto erstellen aus. Die oben erstellte Rolle *dprole1* ist mit dem neuen Benutzer verknüpft.
+
+
+TIP: Sie können den Benutzer auch ohne Rolle einbeziehen. In diesem Fall müssen Sie den Benutzer ändern, um eine Rolle zuzuweisen.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| POST | /API/Sicherheit/Konten 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/accounts" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON-Eingabebeispiel
+[source, curl]
+----
+{
+  "owner": {"uuid":"daf84055-248f-11ed-a23d-005056ac4fe6"},
+  "name": "david",
+  "applications": [
+      {"application":"ssh",
+       "authentication_methods":["password"],
+       "second_authentication_method":"none"}
+  ],
+  "role":"dprole1",
+  "password":"netapp123"
+}
+----
+.Nachdem Sie fertig sind
+Sie können sich mit den Anmeldedaten für den neuen Benutzer bei der SVM-Managementoberfläche anmelden.

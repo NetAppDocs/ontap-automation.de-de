@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_prepare.html 
+keywords:  
+summary: Xxx 
+---
+= Bereiten Sie die Verwendung von RBAC vor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Je nach Umgebung können Sie die RBAC-Funktion von ONTAP auf unterschiedliche Weise nutzen. In diesem Abschnitt werden einige gängige Szenarien als Workflows dargestellt. In jedem Fall liegt der Fokus auf einem spezifischen Sicherheits- und Verwaltungsziel.
+
+Bevor Sie Rollen erstellen und einem ONTAP-Benutzerkonto eine Rolle zuweisen, sollten Sie die folgenden wichtigen Sicherheitsanforderungen und Optionen prüfen. Überprüfen Sie auch die allgemeinen Workflow-Konzepte unter link:../workflows/prepare_workflows.html["Die Nutzung der Workflows wird vorbereitet"].
+
+.Welche ONTAP Version verwenden Sie?
+Die ONTAP Version legt fest, welche REST-Endpunkte und RBAC-Funktionen verfügbar sind.
+
+.Ermittlung der geschützten Ressourcen und des Umfangs
+Sie müssen die zu sichernden Ressourcen oder Befehle und den Umfang (Cluster oder SVM) festlegen.
+
+.Welchen Zugriff sollte der Benutzer haben?
+Nachdem Sie die Ressourcen und den Umfang ermittelt haben, müssen Sie die zuzugeteilte Zugriffsebene festlegen.
+
+.Wie greifen die Benutzer auf ONTAP zu?
+Der Benutzer kann über die REST-API oder über die CLI oder beide auf ONTAP zugreifen.
+
+.Ist eine der integrierten Rollen ausreichend oder wird eine benutzerdefinierte Rolle benötigt?
+Es ist bequemer, eine vorhandene integrierte Rolle zu verwenden, aber Sie können bei Bedarf eine neue benutzerdefinierte Rolle erstellen.
+
+.Welche Art von Rolle ist erforderlich?
+Basierend auf den Sicherheitsanforderungen und dem ONTAP-Zugriff müssen Sie entscheiden, ob eine REST- oder eine herkömmliche Rolle erstellt werden soll.

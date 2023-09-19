@@ -21,10 +21,10 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 
 [cols="25,75"]
 |===
-| HTTP-Methode | GET 
+| HTTP-Methode | Pfad 
 
 
-| GET | /Cluster 
+| GET | /API/Cluster 
 |===
 .Zusätzliche Eingabeparameter für Curl-Beispiele
 Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schritt auch die folgenden Parameter im Curl-Beispiel verwendet.

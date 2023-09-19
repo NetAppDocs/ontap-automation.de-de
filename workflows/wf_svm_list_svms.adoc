@@ -21,10 +21,10 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 
 [cols="25,75"]
 |===
-| HTTP-Methode | GET 
+| HTTP-Methode | Pfad 
 
 
-| GET | /svm/svms 
+| GET | /API/svm/svms 
 |===
 .Beispiel für die Wellung
 [source, curl]

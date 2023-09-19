@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_limit_svm.html 
+keywords:  
+summary: Sie können eine Rolle definieren, um die Storage-Volume-Administration innerhalb einer SVM zu beschränken. 
+---
+= Beschränkung des Zugriffs auf SVM-Volume-Vorgänge
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können eine Rolle definieren, um die Storage-Volume-Administration innerhalb einer SVM zu beschränken.
+
+.Informationen zu diesem Workflow
+Eine herkömmliche Rolle wird zuerst erstellt, um zunächst den Zugriff auf alle wichtigen Volume-Administrationsfunktionen außer dem Klonen zu ermöglichen. Die Rolle wird mit folgenden Merkmalen definiert:
+
+* Alle CRUD Volume-Vorgänge einschließlich get, create, modify und delete
+* Volume-Klon kann nicht erstellt werden
+
+
+Sie können dann optional die Rolle nach Bedarf aktualisieren. In diesem Workflow wird die Rolle im zweiten Schritt geändert, damit der Benutzer einen Volume-Klon erstellen kann.
+
+
+
+== Schritt 1: Erstellen Sie die Rolle
+
+Sie können einen API-Aufruf ausgeben, um die RBAC-Rolle zu erstellen.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| POST | /API/Sicherheit/Funktionen 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON-Eingabebeispiel
+[source, curl]
+----
+{
+  "name": "role1",
+  "owner": {
+    "name": "cluster-1",
+    "uuid": "852d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      { "path": "volume create", "access": "all" },
+      { "path": "volume delete", "access": "all" }
+    ]
+}
+----
+
+
+== Schritt 2: Aktualisieren Sie die Rolle
+
+Sie können einen API-Aufruf ausgeben, um die vorhandene Rolle zu aktualisieren.
+
+.HTTP-Methode und -Endpunkt
+Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
+
+[cols="25,75"]
+|===
+| HTTP-Methode | Pfad 
+
+
+| POST | /API/Sicherheit/Funktionen 
+|===
+.Zusätzliche Eingabeparameter für Curl-Beispiele
+Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schritt auch die folgenden Parameter im Curl-Beispiel verwendet.
+
+[cols="25,10,10,55"]
+|===
+| Parameter | Typ | Erforderlich | Beschreibung 
+
+
+| SVM_ID USD | Pfad | Ja. | Dies ist die UUID der SVM, die die Rollendefinition enthält. 
+
+
+| „ROLE_NAME“ IN US-DOLLAR | Pfad | Ja. | Dies ist der Name der Rolle innerhalb der zu aktualisierenden SVM. 
+|===
+.Beispiel für die Wellung
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.JSON-Eingabebeispiel
+[source, curl]
+----
+{
+  "path": "volume clone",
+  "access": "all"
+}
+----

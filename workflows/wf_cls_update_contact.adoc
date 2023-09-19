@@ -30,7 +30,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 | HTTP-Methode | Pfad 
 
 
-| PATCH | /Cluster 
+| PATCH | /API/Cluster 
 |===
 .Verarbeitungsart
 Asynchron
@@ -82,7 +82,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 | HTTP-Methode | Pfad 
 
 
-| GET | /Cluster/Jobs/{UUID} 
+| GET | /API/Cluster/Jobs/{uUID} 
 |===
 .Verarbeitungsart
 Synchron

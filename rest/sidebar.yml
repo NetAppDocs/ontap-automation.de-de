@@ -30,8 +30,4 @@ entries:
     url: "/rest/rbac_overview.html"
   - title: Arbeiten Sie mit Rollen und Benutzern
     url: "/rest/rbac_roles_users.html"
-  - title: BeispielRollendefinitionen
-    url: "/rest/rbac_sample_roles.html"
-  - title: Benutzer mit einer Rolle erstellen
-    url: "/rest/rbac_wf_create_user.html"
 - section: resources
