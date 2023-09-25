@@ -40,7 +40,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/svm/svms?order_by=name" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -68,7 +68,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/security/accounts?owner.name=dmp" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -96,7 +96,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/security/roles?owner.name=dmp" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -125,7 +125,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/roles" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -180,8 +180,8 @@ Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schr
 [source, curl]
 ----
 curl --request POST \
---location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
--- include \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/privileges" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -204,7 +204,7 @@ Führen Sie optional Schritt 3 erneut aus, um die neue Rolle anzuzeigen. Sie kö
 Führen Sie den folgenden REST-API-Aufruf zu einem Benutzerkonto erstellen aus. Die oben erstellte Rolle *dprole1* ist mit dem neuen Benutzer verknüpft.
 
 
-TIP: Sie können den Benutzer auch ohne Rolle einbeziehen. In diesem Fall müssen Sie den Benutzer ändern, um eine Rolle zuzuweisen.
+TIP: Sie können den Benutzer ohne Rolle erstellen. In diesem Fall wird dem Benutzer eine Standardrolle zugewiesen (entweder `admin` Oder `vsadmin`) Je nachdem, ob der Benutzer mit Cluster oder SVM-Umfang definiert ist. Sie müssen den Benutzer ändern, um eine andere Rolle zuzuweisen.
 
 .HTTP-Methode und -Endpunkt
 Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.
@@ -221,7 +221,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/accounts" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
