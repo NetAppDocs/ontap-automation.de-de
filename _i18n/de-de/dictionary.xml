@@ -1711,11 +1711,11 @@
   <block id="58bd5f4d333ce0475b1c1a65bffe5bda" category="sidebar">Erstellen von ONTAP-Berichten zulassen</block>
   <block id="0819bf309b404c2690cae22900701126" category="admonition">Sie können den Benutzer ohne Rolle erstellen. In diesem Fall wird dem Benutzer eine Standardrolle zugewiesen (entweder<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> Oder<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block>) Je nachdem, ob der Benutzer mit Cluster oder SVM-Umfang definiert ist. Sie müssen den Benutzer ändern, um eine andere Rolle zuzuweisen.</block>
   <block id="d5e0a7e21dd7c4bd9ee909a636487786" category="summary">Sie können die in Ihrem ONTAP-Cluster installierten Zertifikate auflisten. So können Sie prüfen, ob ein bestimmtes Zertifikat verfügbar ist, oder die ID eines bestimmten Zertifikats abrufen, um das gesamte Zertifikat abrufen zu können.</block>
-  <block id="85dc6bfe81f58a9d2d9fdae56a1e1032" category="doc">Listen Sie die Zertifikate auf</block>
   <block id="b6902213d797ad7a6157aee6a1fc91fb" category="paragraph">Sie können die in Ihrem ONTAP-Cluster installierten Zertifikate auflisten. Sie können damit überprüfen, ob ein bestimmtes Zertifikat verfügbar ist, oder um die ID eines bestimmten Zertifikats zu erhalten.</block>
   <block id="b98bcec013a122e0040cd6f6e8f3de6a" category="cell">/API/Security/Zertifikate</block>
   <block id="1f1b6cbe92673a03d06060259142dbc4" category="listing-title">Beispiel Curl: Geben Sie drei Zertifikate zurück</block>
   <block id="cf441294e2d78d04b4374f90141413f6" category="admonition">Sie sollten sicherstellen, dass Ihre ONTAP-Version alle API-Aufrufe in den Workflows unterstützt, die Sie verwenden möchten. Siehe <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="010b2cb4a9a7014437b7b05617f3e98e" category="sidebar">Zertifikate und Schlüssel</block>
   <block id="3002e63504efe4acf7cd736f92c22ec0" category="sidebar">Listen Sie Zertifikate auf</block>
+  <block id="b74cf40de9fee3f0ba4a3b37a59ed082" category="doc">Listen Sie die installierten Zertifikate auf</block>
 </blocks>
