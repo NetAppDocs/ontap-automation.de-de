@@ -26,6 +26,16 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 
 | GET | /API/Security/Zertifikate 
 |===
+.Zusätzliche Eingabeparameter für Curl-Beispiele
+Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schritt auch die folgenden Parameter im Curl-Beispiel verwendet.
+
+[cols="25,10,10,55"]
+|===
+| Parameter | Typ | Erforderlich | Beschreibung 
+
+
+| max_Datensätze | Abfrage | Nein | Geben Sie die Anzahl der Datensätze an, die zurückgegeben werden sollen. 
+|===
 .Beispiel Curl: Geben Sie drei Zertifikate zurück
 [source, curl]
 ----
