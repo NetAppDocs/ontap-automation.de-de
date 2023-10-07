@@ -8,6 +8,8 @@ entries:
   entries:
   - title: Listen Sie Zertifikate auf
     url: "/workflows/wf_cert_list_certificates.html"
+  - title: Zertifikat installieren
+    url: "/workflows/wf_cert_install_certificate.html"
 - title: Cluster
   entries:
   - title: Get Cluster-Konfiguration
