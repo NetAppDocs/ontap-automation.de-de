@@ -16,7 +16,7 @@ summary: Die über die ONTAP REST API verfügbaren Ressourcen sind nach Kategori
 [role="lead"]
 Die über die ONTAP REST API verfügbaren Ressourcen sind in Kategorien eingeteilt, wie sie in der Online-Dokumentation der ONTAP-API angezeigt werden. Eine kurze Beschreibung der einzelnen Ressourcen sowie ggf. zusätzliche Nutzungsüberlegungen;
 
-DIE IN dieser Zusammenfassung beschriebenen REST-Ressourcen basieren auf der neuesten Version des Produkts. Informationen zum Verständnis der Änderungen aus vorherigen Versionen finden Sie unter link:../rn/whats_new.html["Neuerungen bei der ONTAP REST API"] Sowie dem https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^].
+DIE IN dieser Zusammenfassung beschriebenen REST-Ressourcen basieren auf der neuesten Version des Produkts. Informationen zum Verständnis der Änderungen aus vorherigen Versionen finden Sie unter link:../whats_new.html["Neuerungen bei der ONTAP REST API"] Sowie dem https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^].
 
 
 TIP: Für viele DER REST-Endpunkte können Sie einen UUID-Schlüssel als Teil der Pfadzeichenfolge für den Zugriff auf eine bestimmte Objektinstanz enthalten. Sie können jedoch auch über einen Eigenschaftswert auf einen Abfrageparameter auf Objekte zugreifen.
