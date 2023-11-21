@@ -52,6 +52,7 @@ Die Dokumentationsseite für die ONTAP-API wird angezeigt, auf der die API-Aufru
 [role="lead"]
 Sie können über die unten angegebenen Links auf eine Kopie der Referenzdokumentation für die ONTAP REST-API zugreifen. Die API-Referenzdokumentation wird von der ONTAP Version gepflegt.
 
+* https://library.netapp.com/ecmdocs/ECMLP2886775/html/["ONTAP 9.14.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP2885799/html/["ONTAP 9.13.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP2884821/html/["ONTAP 9.12.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP2882307/html/["ONTAP 9.11.1"^]

@@ -80,20 +80,23 @@ NOTE: Der `return_timeout` Der Abfrageparameter ist mit asynchronen API-Aufrufen
 
 Die Sicherheit der REST-API basiert in erster Linie auf den vorhandenen Sicherheitsfunktionen von ONTAP. Die folgende Sicherheit wird von der API verwendet:
 
-* Sicherheit In Transportschicht
+Sicherheit In Transportschicht:: Der gesamte über das Netzwerk zwischen dem Client und der logischen Schnittstelle von ONTAP gesendete Datenverkehr wird basierend auf den ONTAP Konfigurationseinstellungen in der Regel mit TLS verschlüsselt.
+Client-Authentifizierung:: Die gleichen Authentifizierungsoptionen wie bei ONTAP System Manager und dem Network Manageability SDK können auch mit der ONTAP REST API verwendet werden.
+HTTP-Authentifizierung:: Auf HTTP-Ebene gibt es beispielsweise beim direkten Zugriff auf die ONTAP-REST-API zwei Authentifizierungsoptionen wie unten beschrieben. In jedem Fall müssen Sie einen HTTP-Autorisierungsheader erstellen und diesen bei jeder Anforderung einschließen.
 +
-Der gesamte über das Netzwerk zwischen der logischen Schnittstelle von ONTAP und dem Client gesendete Verkehr wird in der Regel basierend auf den ONTAP-Konfigurationseinstellungen mit TLS verschlüsselt.
+--
+[cols="25,75"]
+|===
+| Option | Beschreibung 
 
-* Client-Authentifizierung
-+
-Die gleichen Authentifizierungsoptionen wie bei ONTAP System Manager und dem Network Manageability SDK können auch mit der ONTAP REST API verwendet werden.
 
-* HTTP-Authentifizierung
-+
-Auf HTTP-Ebene wird die grundlegende Authentifizierung für die API-Transaktionen verwendet. Jeder Anforderung wird ein HTTP-Header mit dem Benutzernamen und Passwort in einem Base64-String hinzugefügt.
+| HTTP-Basisauthentifizierung | Der ONTAP-Benutzername und das Passwort sind mit einem Doppelpunkt verbunden. Der String wird in base64 konvertiert und in den Request Header aufgenommen. 
 
-* ONTAP-Autorisierung
-+
-ONTAP implementiert ein rollenbasiertes Autorisierungsmodell. Das Konto, das Sie für den Zugriff auf die ONTAP REST-API- oder API-Dokumentationsseite verwenden, sollte über die entsprechende Berechtigung verfügen.
 
+| OAuth 2.0 | Ab ONTAP 9.14 können Sie ein Zugriffstoken von einem externen Autorisierungsserver anfordern und es als Inhabertoken in den Anforderungsheader aufnehmen. 
+|===
+Weitere Informationen über OAuth 2.0 und die Implementierung in ONTAP finden Sie unter https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Überblick über die Implementierung von ONTAP OAuth 2.0"^]. Siehe auch link:../workflows/prepare_workflows.html["Die Nutzung der Workflows wird vorbereitet"] Unten auf dieser Website.
+
+--
+ONTAP-Autorisierung:: ONTAP implementiert ein rollenbasiertes Autorisierungsmodell. Das Konto, das Sie für den Zugriff auf die ONTAP REST-API- oder API-Dokumentationsseite verwenden, sollte über die entsprechende Berechtigung verfügen.
 

@@ -85,6 +85,9 @@ Die FPolicy-Engines ermöglichen es Ihnen, die externen Server zu identifizieren
 .FPolicy-Ereignisse
 Die Konfiguration bestimmt, wie der Dateizugriff überwacht wird und welche Ereignisse generiert werden. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Persistenter FPolicy-Speicher
+Sie können einen persistenten Speicher für die ONTAP FPolicy Konfiguration und Ereignisse konfigurieren und verwalten. Jede SVM kann über einen persistenten Speicher verfügen, der für mehrere Richtlinien in der SVM freigegeben wird. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt.
+
 .FPolicy-Richtlinien
 Ein Container für Elemente des FPolicy Framework, einschließlich FPolicy-Engines und Ereignissen. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 

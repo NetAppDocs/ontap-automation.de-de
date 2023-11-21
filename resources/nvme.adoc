@@ -20,13 +20,13 @@ Sie können diese API-Aufrufe verwenden, um Ressourcen zu verwalten, die NVMe (N
 Die Fibre Channel-Logins stellen Verbindungen dar, die von Fibre Channel-Initiatoren gebildet wurden, die bei ONTAP angemeldet sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
 .Namespaces
-Ein NVMe Namespace ist eine Sammlung adressierbarer logischer Blöcke, die Hosts verwendet werden, die über das NVMe over Fabrics-Protokoll mit der SVM verbunden sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
+Ein NVMe Namespace ist eine Sammlung adressierbarer logischer Blöcke, die Hosts verwendet werden, die über das NVMe over Fabrics-Protokoll mit der SVM verbunden sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert. Die Unterstützung für das Abrufen von Performance-Kennzahlen-Daten wurde mit ONTAP 9.14 hinzugefügt.
 
 .NVMe-Schnittstellen
 NVMe-Schnittstellen sind die Netzwerkschnittstellen, die für die Unterstützung des NVMe over Fabrics-Protokolls (NVMe-of) konfiguriert sind. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
 .NVMe-Services
-Ein NVMe-Service definiert die Eigenschaften des NVMe-Controller-Ziels für eine SVM. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+Ein NVMe-Service definiert die Eigenschaften des NVMe-Controller-Ziels für eine SVM. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert. Die Unterstützung für das Abrufen von Performance-Kennzahlen-Daten wurde mit ONTAP 9.14 hinzugefügt.
 
 .NVMe-Subsystem-Controller
 Die NVMe-Subsystem-Controller stellen dynamische Verbindungen zwischen Hosts und einer Storage-Lösung dar. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

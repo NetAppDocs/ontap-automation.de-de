@@ -46,6 +46,9 @@ Bei diesem Satz von API-Aufrufen können Sie Azure Schlüsselspeicher verwenden,
 .Zertifikate
 Mit den API-Aufrufen können von ONTAP verwendete Zertifikate installiert, angezeigt und gelöscht werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
+.Cisco Duo
+Duo bietet zwei-Faktor-Authentifizierung für SSH-Anmeldungen. Sie können Duo für den Betrieb auf ONTAP-Cluster- oder SVM-Ebene konfigurieren. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt.
+
 .Cluster-Sicherheit
 Sie können Details zur Cluster-weiten Sicherheit abrufen und bestimmte Parameter aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
 
@@ -71,7 +74,7 @@ Mit diesen Endpunkten können Sie die Konfigurationen für Schlüsselmanager abr
 Ein Schlüsselmanager erlaubt Client-Modulen innerhalb von ONTAP, sicher gespeicherte Schlüssel zu speichern. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und für ONTAP 9.7 aktualisiert. Ein weiteres Update mit ONTAP 9.12 zur Unterstützung der Authentifizierungsschlüssel war vorhanden. In ONTAP 9.13 wurde eine Wiederherstellungsfunktion hinzugefügt.
 
 .Schlüsselspeicher
-Ein Schlüsselspeicher beschreibt den Typ eines Schlüsselmanagers. Dieser Ressourcentyp ist neu in ONTAP 9.10.
+Ein Schlüsselspeicher beschreibt den Typ eines Schlüsselmanagers. Dieser Ressourcentyp ist neu in ONTAP 9.10. Weitere Endpunkte, die eine verbesserte Steuerung unterstützen, wurden mit ONTAP 9.14 hinzugefügt.
 
 .LDAP-Authentifizierung
 Diese API-Aufrufe werden zum Abrufen und Verwalten der Cluster-LDAP-Serverkonfiguration verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
@@ -91,6 +94,9 @@ Wenn mehrere Administratoren Zugriff genehmigen können, lässt sich die Sicherh
 
 .NIS-Authentifizierung
 Diese Einstellungen werden zum Abrufen und Verwalten der NIS-Serverkonfiguration des Clusters verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+
+.OAuth 2.0
+Open Authorization (OAuth 2.0) ist ein Token-basiertes Framework, mit dem der Zugriff auf Ihre ONTAP Storage-Ressourcen eingeschränkt werden kann. Sie können sie zusammen mit Clients verwenden, die über die REST-API auf ONTAP zugreifen. Die Konfiguration kann mit jeder der ONTAP-Administrationsschnittstellen, einschließlich der REST-API, durchgeführt werden. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt.
 
 .Passwortrauthentifizierung
 Dazu gehört auch der API-Aufruf, der zum Ändern des Kennworts eines Benutzerkontos verwendet wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

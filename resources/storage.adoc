@@ -55,6 +55,9 @@ Storage-Ports des Clusters. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt
 .QOS-Richtlinien (QOS
 Konfiguration von Richtlinien für die Servicequalität Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.QOS-Optionen
+Mithilfe von Endpunkten können Sie QOS-Optionen für das Cluster abrufen und festlegen. Sie können beispielsweise einen Prozentsatz der verfügbaren Systemverarbeitungsressourcen für Hintergrundaufgaben reservieren. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt.
+
 .QOS-Workloads
 EIN QOS-Workload ist ein Storage-Objekt, das DURCH QOS nachverfolgt wird. SIE können die QOS-Workflows abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
 

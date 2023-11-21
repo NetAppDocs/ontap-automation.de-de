@@ -109,7 +109,7 @@ Zuerst müssen Sie das Beispiel für die Wellung kopieren und in eine Klemmensch
 
 == Authentifizierungsoptionen
 
-Die primäre Authentifizierungsmethode, die über ONTAP 9.13.1 für die REST-API verfügbar ist, ist die grundlegende Authentifizierung.
+Die primäre für die REST-API verfügbare Authentifizierungsmethode ist die HTTP-Basisauthentifizierung. Ab ONTAP 9.14 haben Sie zudem die Möglichkeit, das Open Authorization (OAuth 2.0)-Framework mit Token-basierter Authentifizierung und Autorisierung zu verwenden.
 
 
 
@@ -142,6 +142,30 @@ Eine weitere Option bei der Verwendung von Curl ist, den Autorisierungskopf zu e
 `--user username:password`
 
 Sie müssen die entsprechenden Anmeldedaten für Ihre Umgebung ersetzen. Die Anmeldeinformationen sind in base64 nicht kodiert. Wenn Sie den Befehl curl mit diesem Parameter ausführen, wird der String codiert und der Autorisierungskopf für Sie generiert.
+
+
+
+=== OAuth 2.0
+
+Wenn Sie OAuth 2.0 verwenden, müssen Sie ein Zugriffstoken von einem externen Autorisierungsserver anfordern und diese bei jeder HTTP-Anforderung einschließen. Im Folgenden werden die grundlegenden übergeordneten Schritte beschrieben. Siehe auch https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Überblick über die Implementierung von ONTAP OAuth 2.0"^] Weitere Informationen zu OAuth 2.0 und zur Verwendung mit ONTAP.
+
+.Bereiten Sie Ihre ONTAP-Umgebung vor
+Bevor Sie die REST-API für den Zugriff auf ONTAP verwenden, müssen Sie die ONTAP-Umgebung vorbereiten und konfigurieren. Im allgemeinen sind die Schritte:
+
+* ONTAP geschützte Ressourcen und Clients ermitteln
+* Prüfen Sie die vorhandene ONTAP-REST-Rolle und Benutzerdefinitionen
+* Installieren und Konfigurieren des Autorisierungsservers
+* Entwerfen und Konfigurieren der Client-Autorisierungsdefinitionen
+* Konfigurieren Sie ONTAP, und aktivieren Sie OAuth 2.0
+
+
+.Fordern Sie ein Zugriffstoken an
+Mit ONTAP und dem definierten und aktiven Autorisierungsserver können Sie einen REST-API-Aufruf mit einem OAuth 2.0-Token erstellen. Der erste Schritt besteht darin, ein Zugriffstoken vom Autorisierungsserver anzufordern. Dies geschieht außerhalb von ONTAP mit einer von mehreren verschiedenen Techniken auf der Grundlage des Servers. ONTAP gibt keine Zugriffstoken aus und führt keine Umleitung durch.
+
+.Erstellen Sie den HTTP-Anforderungsheader
+Nachdem Sie ein Zugriffstoken erhalten haben, können Sie einen Autorisierungs-Header erstellen und ihn mit den HTTP-Anforderungen integrieren. Unabhängig davon, ob Sie Curl oder eine Programmiersprache für den Zugriff auf die REST-API verwenden, müssen Sie den Header bei jeder Client-Anforderung einschließen. Sie können die Kopfzeile wie folgt erstellen:
+
+`Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSld ...`
 
 
 

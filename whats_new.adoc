@@ -21,6 +21,19 @@ TIP: Lesen Sie auch die https://library.netapp.com/ecm/ecm_download_file/ECMLP24
 
 
 
+== ONTAP 9.14.1
+
+Die Version ONTAP 9.14.1 enthält mehr als drei Dutzend neue API-Aufrufe, die die Funktionen der ONTAP-REST-API weiter erweitern. Diese Endpunkte unterstützen mehrere neue ONTAP-Funktionen sowie Updates vorhandener Funktionen. Dieser Release konzentriert sich in erster Linie auf Sicherheitsverbesserungen, umfasst aber auch Verbesserungen bei NAS-, QOS- und Performance-Kennzahlen.
+
+Sicherheit:: Es gibt zwei wichtige Sicherheitsfunktionen, die mit ONTAP 9.14.1 eingeführt wurden. Open Authorization (OAuth 2.0) ist ein Token-basiertes Framework, mit dem der Zugriff auf Ihre ONTAP Storage-Ressourcen eingeschränkt werden kann. Sie können sie zusammen mit Clients verwenden, die über die REST-API auf ONTAP zugreifen. Die Konfiguration kann mit jeder der ONTAP-Administrationsschnittstellen, einschließlich der REST-API, durchgeführt werden. Die Version ONTAP 9.14.1 enthält zudem Unterstützung für Cisco Duo, das für die zwei-Faktor-Authentifizierung bei SSH-Anmeldungen sorgt. Sie können Duo für den Betrieb auf ONTAP-Cluster- oder SVM-Ebene konfigurieren. Zusätzlich zu diesen beiden neuen Funktionen wurden mehrere Endpunkte hinzugefügt, um die Kontrolle über Ihre Schlüsselspeicher zu verbessern.
+FPolicy-persistenter Storage:: FPolicy stellt eine Plattform für das ONTAP-Richtlinienmanagement bereit. Es stellt einen Container für die verschiedenen Komponenten oder Elemente, wie z. B. Ereignisse und die Richtlinien-Engine, bereit. Sie können jetzt mit der REST-API einen persistenten Speicher für die ONTAP FPolicy Konfiguration und Ereignisse konfigurieren und verwalten. Jede SVM kann über einen persistenten Speicher verfügen, der für mehrere Richtlinien in der SVM freigegeben wird.
+QOS-Optionen:: Es wurden zwei Endpunkte eingeführt, mit denen Sie QOS-Optionen für das Cluster abrufen und festlegen können. Sie können beispielsweise einen Prozentsatz der verfügbaren Systemverarbeitungsressourcen für Hintergrundaufgaben reservieren.
+Performance-Metriken:: ONTAP speichert statistische Informationen über die Betriebseigenschaften des Systems. Diese Informationen werden in einem Datenbankformat dargestellt, das aus Tabellen und Zeilen besteht. Mit ONTAP 9.14.1 werden zusätzliche metrische Daten in verschiedenen Ressourcenkategorien hinzugefügt, darunter Fibre Channel, iSCSI, LUNs und NVME. Durch diese zusätzlichen Kennzahlen rückt die ONTAP-REST-API weiterhin näher an die Parität mit der Data ONTAP-API (ONTAPI oder ZAPI) heran.
+Verschiedene Verbesserungen:: Es gibt mehrere weitere Verbesserungen, die in Abhängigkeit von Ihrer Umgebung hilfreich sein können. Diese neuen Endpunkte verbessern den Zugriff auf die SAN-Initiatoren, die Steuerung der Host-Cache-Einstellungen sowie den Zugriff auf einzelne AutoSupport-Nachrichten.
+
+
+
+
 == ONTAP 9.13.1
 
 Mit mehr als zwei Dutzend neuer API-Aufrufe erweitert ONTAP 9.13.1 weiterhin die Funktionen der ONTAP-REST-API. Diese Endpunkte unterstützen neue ONTAP-Funktionen sowie Verbesserungen vorhandener Funktionen. Dieser Release konzentriert sich auf Verbesserungen bei Sicherheit, Ressourcenmanagement, erweiterte SVM-Konfigurationsoptionen und Performance-Kennzahlen.
