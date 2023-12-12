@@ -69,7 +69,7 @@ Asynchrone Verarbeitung:: Wenn eine asynchrone Anforderung gültig ist, erstellt
 Anfragen, die die Methoden POST, PATCH und LÖSCHUNG verwenden, werden asynchron ausgeführt, wenn diese voraussichtlich mehr als zwei Sekunden dauern.
 
 
-NOTE: Der `return_timeout` Der Abfrageparameter ist mit asynchronen API-Aufrufen verfügbar und kann einen asynchronen Anruf synchron in den Abschluss konvertieren. Siehe `How asynchronous processing works using the Job object` Finden Sie weitere Informationen.
+NOTE: Der `return_timeout` Der Abfrageparameter ist mit asynchronen API-Aufrufen verfügbar und kann einen asynchronen Anruf synchron in den Abschluss konvertieren. Siehe link:../rest/asynchronous_processing.html["Asynchrone Verarbeitung mit dem Job-Objekt"] Finden Sie weitere Informationen.
 
 --
 

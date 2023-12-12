@@ -78,5 +78,6 @@ Sie können den folgenden grundlegenden Vorgang verwenden, um einen asynchronen 
 
 
 .Verwandte Informationen
-* link:../workflows/wf_cls_update_contact.html["Aktualisieren Sie den Cluster-Kontakt und bestätigen Sie den Jobstatus"]
+* link:../workflows/wf_cls_update_contact.html["Cluster-Kontakt aktualisieren"]
+* link:../workflows/wf_jobs_get_job.html["Job-Instanz abrufen"]
 
