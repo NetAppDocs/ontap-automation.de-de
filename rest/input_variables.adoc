@@ -108,9 +108,6 @@ Neben einer genauen Übereinstimmung stehen auch andere Operatoren zur Verfügun
 | >= | Größer oder gleich 
 
 
-| AKTUALISIERUNG | Oder 
-
-
 | ! | Nicht gleich 
 
 
