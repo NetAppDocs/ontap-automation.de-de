@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_stor_list_disks.html 
 keywords: workflow, storage, disks, list disks 
-summary:  
+summary: Sie können eine Liste der Festplatten im Cluster abrufen. Sie könnten dies tun, um eine oder mehrere Ersatzteile zu finden, die als Teil der Erstellung eines Aggregats verwendet werden. 
 ---
-= Festplatten auflisten
+= Listen Sie die Festplatten auf
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

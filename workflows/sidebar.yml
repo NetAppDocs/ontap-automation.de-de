@@ -18,6 +18,10 @@ entries:
     url: "/workflows/wf_net_list_ip_lifs.html"
 - title: Sicherheit
   entries:
+  - title: Konten
+    entries:
+    - title: Konten auflisten
+      url: "/workflows/wf_sec_list_accounts.html"
   - title: Zertifikate und Schlüssel
     entries:
     - title: Listen Sie Zertifikate auf
@@ -40,6 +44,8 @@ entries:
       url: "/workflows/wf_rbac_user_role.html"
 - title: Storage
   entries:
+  - title: Listen Sie Aggregate auf
+    url: "/workflows/wf_stor_list_aggrs.html"
   - title: Festplatten auflisten
     url: "/workflows/wf_stor_list_disks.html"
 - title: SVM

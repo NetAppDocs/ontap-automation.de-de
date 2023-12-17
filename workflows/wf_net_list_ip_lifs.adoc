@@ -4,7 +4,7 @@ permalink: workflows/wf_net_list_ip_lifs.html
 keywords: workflow, job, job state 
 summary:  
 ---
-= IP-Schnittstellen auflisten
+= Listen Sie die IP-Schnittstellen auf
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

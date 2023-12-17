@@ -32,6 +32,16 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 .Verarbeitungsart
 Synchron
 
+.Zusätzliche Eingabeparameter für die Curl-Beispiele
+Zusätzlich zu den Parametern, die bei allen REST-API-Aufrufen üblich sind, werden die folgenden Parameter auch in den Curl-Beispielen für diesen Schritt verwendet.
+
+[cols="25,10,10,55"]
+|===
+| Parameter | Typ | Erforderlich | Beschreibung 
+
+
+| US-DOLLAR JOB_ID | Pfad | Ja. | Erforderlich, um den angeforderten Job zu identifizieren. 
+|===
 .Beispiel für die Wellung
 [source, curl]
 ----

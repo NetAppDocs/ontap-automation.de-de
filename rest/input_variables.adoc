@@ -83,13 +83,28 @@ Der Inhalt der Anfraentext variiert je nach Anruf. Der HTTP-Request-Text besteht
 
 == Objekte filtern
 
-Wenn Sie einen API-Aufruf ausgeben, der GET verwendet, können Sie die zurückgegebenen Objekte anhand eines beliebigen Attributs einschränken oder filtern. Sie können beispielsweise einen genauen Wert angeben, der übereinstimmt:
+Wenn Sie einen API-Aufruf mit der GET-Methode ausgeben, können Sie die zurückgegebenen Objekte anhand eines beliebigen Attributs mithilfe eines Abfrageparameters einschränken oder filtern.
 
-`<field>=<query value>`
+.Analyse und Interpretation von Abfrageparametern
+Ein Satz von einem oder mehreren Parametern kann an die URL-Zeichenfolge angehängt werden, die nach dem beginnt `?` Zeichen. Wenn mehrere Parameter angegeben werden, werden die Abfrageparameter auf Basis des aufgeteilt `&` Zeichen. Jede Taste und jeder Wert im Parameter werden am geteilt `=` Zeichen.
 
-Neben einer genauen Übereinstimmung stehen auch andere Operatoren zur Verfügung, um einen Satz von Objekten über einen Wertebereich zurückzugeben. Die ONTAP REST API unterstützt die in der nachfolgenden Tabelle aufgeführten Filteroperatoren.
+Sie können beispielsweise einen exakten Wert angeben, der mit dem Gleichheitszeichen übereinstimmt:
+
+`<field>=<value>`
+
+Für eine komplexere Abfrage wird der zusätzliche Operator nach dem Gleichheitszeichen gesetzt. Um z. B. den Satz von Objekten auf der Grundlage eines bestimmten Felds auszuwählen, der größer oder gleich einem Wert ist, würde die Abfrage folgendermaßen lauten:
+
+`<field>\=>=<value>`
+
+.Filteroperatoren
+Zusätzlich zu den oben genannten Beispielen stehen weitere Operatoren zur Verfügung, um Objekte über einen Wertebereich zurückzugeben. Eine Zusammenfassung der von der ONTAP-REST-API unterstützten Filteroperatoren ist in der folgenden Tabelle aufgeführt.
+
+
+NOTE: Nicht festgelegte Felder werden in der Regel von übereinstimmenden Abfragen ausgeschlossen.
 
 |===
+
+
 | Operator | Beschreibung 
 
 
@@ -115,8 +130,14 @@ Neben einer genauen Übereinstimmung stehen auch andere Operatoren zur Verfügun
 |===
 Sie können auch eine Sammlung von Objekten zurückgeben, basierend darauf, ob ein bestimmtes Feld über die festgelegt wurde oder nicht `null` Stichwort oder Negation `!null` Als Teil der Abfrage.
 
+.Workflow-Beispiele
+Einige Beispiele aus den REST-API-Workflows auf dieser Site sind unten aufgeführt.
 
-NOTE: Nicht festgelegte Felder werden in der Regel von übereinstimmenden Abfragen ausgeschlossen.
+* link:../workflows/wf_stor_list_disks.html["Festplatten auflisten"]
++
+Filter basierend auf dem `state` Variable zur Auswahl der Ersatzfestplatten.
+
+
 
 
 
