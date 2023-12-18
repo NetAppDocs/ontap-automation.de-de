@@ -641,7 +641,6 @@
   <block id="15e78d6a83c3d71d5182a7da2df9e39e" category="section-title">Nativer Zugriff auf die ONTAP REST-API</block>
   <block id="ae77e4f93e27bd095e1158ccc1bb27f8" category="paragraph">Sie können über jede Programmiersprache, die einen REST-Client unterstützt, direkt auf die ONTAP REST-API zugreifen. Beliebte Sprachen sind Python, PowerShell und Java. Zunächst sollten Sie sich die gesamte Dokumentation auf dieser Site anzeigen lassen.</block>
   <block id="e0a486c1db61aeef50827b2a95dbb216" category="section-title">Legacy ONTAPI-Code zur Verwendung VON REST anpassen</block>
-  <block id="4c557aa1edc9db8b42f1265ae600f253" category="paragraph">Wenn Sie vorhandenen Code mit der ONTAPI API haben, bietet NetApp Unterstützung für die Konvertierung Ihres Codes in die neuere ONTAP REST API. Siehe<block ref="3f8b8a296b98a2427cd0fe076ddc5c7d" category="inline-link-rx"></block> Informationen zum Zuordnen der ONTAPI-Aufrufe zu den entsprechenden REST-API-Aufrufen.</block>
   <block id="8d7959a7c68ad22c23c0308240cea7ad" category="section-title">Mit der NetApp Python Client Library</block>
   <block id="5a0dcab393f624ccdcf664bede74e9b2" category="inline-link-macro">Python-Client-Bibliothek</block>
   <block id="7985c67b4ff49ccabd48db90e57852eb" category="paragraph">Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für den Zugriff auf die ONTAP REST-API verwendet werden kann. Es unterstützt mehrere zugrunde liegende Services, darunter Verbindungs-Management, asynchrone Anfragebearbeitung und Ausnahmebehandlung. Mithilfe der Python-Client-Bibliothek können Sie schnell robusten Code entwickeln, der Ihre ONTAP-Automatisierungsziele unterstützt. Sie sollten zunächst die Dokumentation auf dieser Site, einschließlich, überprüfen <block ref="a9a8739a57e07a475c98045ed71a9c60" category="inline-link-macro-rx"></block>.</block>
@@ -1801,4 +1800,5 @@
   <block id="b9fa03b6deb6ff800a98be430195fdf0" category="paragraph">Filter basierend auf dem<block ref="9ed39e2ea931586b6a985a6942ef573e" prefix=" " category="inline-code"></block> Variable zur Auswahl der Ersatzfestplatten.</block>
   <block id="a095881e994974280881b1e5dd2a89a9" category="sidebar">Konten auflisten</block>
   <block id="075cb19bc679ad9261b9031c5f0c7d2f" category="sidebar">Listen Sie Aggregate auf</block>
+  <block id="9cebbf9729f76658642974e19c057421" category="paragraph">Wenn Sie vorhandenen Code mit der ONTAPI API haben, bietet NetApp Unterstützung für die Konvertierung Ihres Codes in die neuere ONTAP REST API. Siehe <block ref="a60f928eab9c8ac4756a146853b7b27e" category="inline-link-macro-rx"></block> Informationen zum Zuordnen der ONTAPI-Aufrufe zu den entsprechenden REST-API-Aufrufen.</block>
 </blocks>

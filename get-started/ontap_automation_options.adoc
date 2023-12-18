@@ -29,7 +29,7 @@ Sie können über jede Programmiersprache, die einen REST-Client unterstützt, d
 
 == Legacy ONTAPI-Code zur Verwendung VON REST anpassen
 
-Wenn Sie vorhandenen Code mit der ONTAPI API haben, bietet NetApp Unterstützung für die Konvertierung Ihres Codes in die neuere ONTAP REST API. Siehe https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI to REST API Mapping-Informationen"^] Informationen zum Zuordnen der ONTAPI-Aufrufe zu den entsprechenden REST-API-Aufrufen.
+Wenn Sie vorhandenen Code mit der ONTAPI API haben, bietet NetApp Unterstützung für die Konvertierung Ihres Codes in die neuere ONTAP REST API. Siehe link:../migrate/mapping.html["ONTAPI-to-REST-API-Zuordnung"] Informationen zum Zuordnen der ONTAPI-Aufrufe zu den entsprechenden REST-API-Aufrufen.
 
 
 
