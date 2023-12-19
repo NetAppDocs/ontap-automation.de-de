@@ -14,8 +14,6 @@ entries:
     url: "/rest/interpret_api_response.html"
   - title: Asynchrone Verarbeitung mit dem Job-Objekt
     url: "/rest/asynchronous_processing.html"
-- title: Weitere Überlegungen
-  entries:
   - title: Objektreferenzen und -Zugriff
     url: "/rest/object_references_and_access.html"
   - title: Benutzer der ONTAPI API und ONTAP CLI

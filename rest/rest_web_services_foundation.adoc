@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest/rest_web_services_foundation.html 
-keywords: REST, web services 
-summary: 'Representational State Transfer (REST) ist ein Stil für die Erstellung von verteilten Web-Anwendungen. Die flexible Grundlage für die Administration von ONTAP Clustern bildet mit Mainstream-Protokollen und -Standards.' 
+keywords: REST, web services, transaction, API transaction, request, response 
+summary: 'Representational State Transfer (REST) ist ein Stil für die Erstellung von verteilten Web-Anwendungen. Bei der Anwendung auf das Design einer Web-Services-API stellt sie eine Reihe von Technologien her, mit denen Server-basierte Ressourcen offengelegt und deren Status verwaltet werden können. Die flexible Grundlage für die Administration von ONTAP Clustern bildet mit Mainstream-Protokollen und -Standards.' 
 ---
 = REST-Web-Services-Grundlage
 :hardbreaks:
@@ -52,3 +52,28 @@ Hypertext Transfer Protocol (HTTP) ist das Protokoll, das vom Webservice-Client 
 == JSON-Formatierung
 
 Obwohl Informationen auf verschiedene Weise zwischen einem Webservice-Client und Server strukturiert und übertragen werden können, ist die beliebteste Option JavaScript Object Notation (JSON). JSON ist ein Branchenstandard für die Darstellung einfacher Datenstrukturen im Klartext und wird zur Übertragung von Zustandsdaten zur Beschreibung der Ressourcen verwendet. Die ONTAP REST API verwendet JSON, um die Daten zu formatieren, die im Körper jeder HTTP-Anfrage und Antwort verwendet werden.
+
+
+
+== Typische REST API-Transaktion
+
+Jede API-Transaktion besteht aus einer HTTP-Anfrage und der zugehörigen Antwort. Diese Abbildung zeigt, wie Sie die Version der vom Cluster verwendeten ONTAP Software abrufen können.
+
+image:rest_call_01.png["Darstellung eines einfachen REST-API-Anrufs"]
+
+.HTTP-Anforderung
+Die vom Client an den Server gesendete Anforderung besteht aus folgenden Komponenten:
+
+* Verb
+* URL-Pfad für das Cluster
+* Abfrageparameter (Felder)
+* Kopfzeilen für Anfragen, einschließlich Autorisierung
+
+
+.HTTP-Antwort
+Die Antwort, die vom Server an den Client gesendet wird, besteht aus folgenden Komponenten:
+
+* Statuscode 200
+* Antwortkopfzeilen
+* Response Body mit der Cluster-Softwareversion
+
