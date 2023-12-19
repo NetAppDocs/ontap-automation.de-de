@@ -41,7 +41,7 @@ Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für
 
 == Ansible Verwenden
 
-Ansible ist ein Open-Source-Software-Tool, das Bereitstellung, Konfigurationsmanagement und Applikationseinsatz unterstützt. Seit der Veröffentlichung und der anschließenden Akquisition durch RedHat hat sich diese Beliebtheit stetig weiter entwickelt. NetApp bietet Ansible-zertifizierte Module, mit denen Kunden die Administration ihrer ONTAP Storage-Systeme automatisieren können. Sie sollten zunächst die Dokumentation auf dieser Site, einschließlich, überprüfen link:../automate/ontap_ansible.html["Automatisierung mit ONTAP und Ansible"].
+Ansible ist ein Open-Source-Software-Tool, das Bereitstellung, Konfigurationsmanagement und Applikationseinsatz unterstützt. Seit der Veröffentlichung und der anschließenden Akquisition durch RedHat hat sich diese Beliebtheit stetig weiter entwickelt. NetApp bietet Ansible-zertifizierte Module, mit denen Kunden die Administration ihrer ONTAP Storage-Systeme automatisieren können. Lesen Sie zunächst die Dokumentation auf dieser Website.
 
 
 
