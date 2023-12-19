@@ -51,5 +51,5 @@ Weitere Informationen finden Sie im https://library.netapp.com/ecm/ecm_download_
 
 .Verwandte Informationen
 * link:../rest/input_variables.html["Eingabevariablen, die eine API-Anforderung steuern"]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["ONTAPI to REST API Mapping-Informationen"^]
+* link:../migrate/mapping.html["ONTAPI-to-REST-API-Zuordnung"]
 
