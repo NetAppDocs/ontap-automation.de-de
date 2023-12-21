@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/overview.html 
-keywords: ONTAPI, migrate, migrate to REST API 
-summary: Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ONTAP REST API beginnen. 
+keywords: ONTAPI, ONTAPI disablement, migrate, migrate to REST API 
+summary: Die ONTAPI Schnittstelle wird in zukünftigen Versionen von ONTAP deaktiviert. Wenn Sie ONTAPI verwenden, sollten Sie die Migration zur ONTAP REST-API planen. 
 ---
 = ONTAPI Deaktivierung
 :hardbreaks:
@@ -14,11 +14,10 @@ summary: Wenn Sie die ONTAPI API verwenden, sollten Sie mit der Migration zur ON
 
 
 [role="lead"]
-Die ONTAPI (ZAPI) ist die ursprüngliche Gruppe proprietärer Aufrufe der NetApp ONTAP Software, um die Automatisierung von Storage-Administrations- und Managementaufgaben zu unterstützen. Die ONTAPI Schnittstelle wird in zukünftigen Versionen von ONTAP deaktiviert. Wenn Sie ONTAPI verwenden, sollten Sie die Migration zur ONTAP REST-API planen.
-
-Mit ONTAP 9.6 hat NetApp erstmals DIE REST API eingeführt. Seitdem hat sich die REST-API weiter erweitert und weiterentwickelt. Sie bietet jetzt die bevorzugte und strategische Option zur Automatisierung der Administration Ihrer ONTAP-Implementierungen. Zur Unterstützung der Migration stehen zahlreiche hilfreiche Ressourcen und Tools zur Verfügung.
+Die ONTAPI API (ZAPI) ist die ursprüngliche Gruppe proprietärer Aufrufe, die in der NetApp ONTAP Software enthalten sind. Die API wird über das Network Manageability SDK bereitgestellt und unterstützt die Automatisierung von Storage-Administrations- und Managementaufgaben. Die ONTAPI Schnittstelle wird in zukünftigen Versionen von ONTAP deaktiviert. Wenn Sie ONTAPI verwenden, sollten Sie die Migration zur ONTAP REST-API planen.
 
 .Verwandte Informationen
+* link:../get-started/ontap_automation_options.html["ONTAP-Automatisierungsoptionen"]
 * https://mysupport.netapp.com/info/communications/ECMLP2880232.html["Einstellung des Angebots für CPC-00410: ONTAPI"^]
 * https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["FAQs zur ZAPI-zu-ONTAP-REST-API-Transformation für CPC"^]
 
