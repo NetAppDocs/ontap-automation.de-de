@@ -48,26 +48,8 @@
   <block id="6f49384b8a99fec44a7cd1d6ed52add4" category="list-text"><block ref="6f49384b8a99fec44a7cd1d6ed52add4" category="inline-link-rx"></block></block>
   <block id="e27a275b9610ff6148df553179ccf77f" category="inline-link">Verwenden der privaten CLI-Passthrough mit der ONTAP REST API (für Versionen von ONTAP vor Version 9.9.1)</block>
   <block id="194ed1689d54a84f11e8266e9e92d197" category="list-text"><block ref="194ed1689d54a84f11e8266e9e92d197" category="inline-link-rx"></block></block>
-  <block id="ad9f7732b9d0e85f76fbaca84e9328ae" category="summary">Sie können die ONTAP EMS-Konfiguration über DIE REST API verwalten.</block>
-  <block id="5b4f03d6bb02bf1a4943d2fd721bca50" category="doc">Verwalten Sie EMS-Ereignisbenachrichtigungen mit der ONTAP REST API</block>
-  <block id="7ae7146ab14a911070a9b67bb88d3193" category="paragraph">Sie können die ONTAP REST API verwenden, um zu konfigurieren, wie wichtig Ereignis-Management-System (EMS) Ereignisbenachrichtigungen an Sie gesendet werden, sowie alle EMS-Nachrichten oder bestimmte Nachrichten mit bestimmten Attributen abzurufen. Sie können die REST-API verwenden, um EMS-bezogene Aufgaben zu automatisieren und so Zeit im Vergleich zu anderen Methoden der Arbeit mit EMS-Nachrichten zu sparen.</block>
-  <block id="619a84d9c14dd4e8431c29139707919c" category="paragraph">Die folgenden Beispiele zeigen Ihnen, wie Sie die ONTAP REST API zur Arbeit mit EMS-Nachrichten verwenden können. Stellen Sie in jedem Beispiel sicher, dass Sie Ihre Werte für Informationen in Klammern &lt;&gt; angeben. Sie können auch auf ein Beispiel verweisen<block ref="93282e4588c19699b4435477b6d0187b" category="inline-link-rx"></block> Das zeigt, wie eine Reihe von EMS-bezogenen Aktivitäten automatisiert werden kann.</block>
-  <block id="c25e3541a8e8d23fbd7bc417366e087a" category="section-title">Zeigen Sie bestimmte Ereignisprotokolle an</block>
-  <block id="53d5e5ab3f1018d37b93775c447bf8c5" category="paragraph">Verwenden der<block ref="b0729beeb13e35e0ad6ba485b92de2e9" prefix=" " category="inline-code"></block> API-Aufruf können Sie bestimmte Ereignismeldungen wie die letzte Meldung, Meldungen mit bestimmten Texten oder Meldungen mit einem bestimmten Schweregrad abrufen.</block>
-  <block id="f615b69d52993b779bce7b1c6728c21d" category="listing-title">Beispielanforderung: Aktuelle Nachricht abrufen</block>
-  <block id="ce82b9076790e11cac5d1aa3bcd41aa5" category="listing-title">Beispielanforderung: Abrufen einer Nachricht mit einem bestimmten Text und Schweregrad</block>
-  <block id="0cc4ccc760bba90b3392a98e6a6ec9e5" category="section-title">Die vorhandene EMS-Konfiguration anzeigen</block>
-  <block id="11bd634909ab0002d27896579c235553" category="paragraph">Verwenden der<block ref="e7caaebbd2515b7e56e7478ef2b93987" prefix=" " category="inline-code"></block> API-Aufruf, Sie können Informationen über die vorhandene EMS-Benachrichtigungskonfiguration abrufen.</block>
-  <block id="5415ddffb113099234fe3c0d76f7749a" category="section-title">Erstellen Sie eine neue EMS-Benachrichtigungskonfiguration</block>
-  <block id="9bf42ad17c089dd9891c431d5a1c5c2f" category="paragraph">Sie können mehrere API-Aufrufe zusammen verwenden, um eine neue EMS-Konfiguration zu erstellen, um die Art und Weise, wann Sie Nachrichten empfangen, anzupassen.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
-  <block id="2b24417cd71c7c073f9c43c6702b281e" category="list-text">Konfigurieren Sie die systemweiten E-Mail-Einstellungen. Beispiel:</block>
-  <block id="d6a7eb66a65f3937689937ed206de56a" category="list-text">Definieren Sie einen Filter, der bestimmte Regeln verwendet, um bestimmte Nachrichten zu erfüllen. Beispiel:</block>
-  <block id="4d3eb0a7fcad51868e2c47187c83128f" category="list-text">Erstellen Sie ein Ziel für die Meldungen. Beispiel:</block>
-  <block id="304905cae974c3b05217421398eee9f1" category="paragraph">Mit der ONTAP REST API lassen sich Workflows mit weniger Befehlen als die ONTAP CLI für viele Aufgaben automatisieren. Beispielsweise können Sie einen Filter mithilfe einer einzelnen POST-API-Methode erstellen, anstatt mehrere CLI-Befehle zu verwenden. Die folgende Tabelle zeigt die CLI-Befehle, die Sie zur Erledigung allgemeiner EMS-Aufgaben im Vergleich mit den entsprechenden REST-API-Aufrufen benötigen würden:</block>
-  <block id="2368af484e43b6e0fc7814eb71cba236" category="cell"><block ref="da7abcfccfd8f5465b37263afe3831d7" prefix="" category="inline-code"></block></block>
   <block id="8b64f73d0c930b953467d71771168fcb" category="cell"><block ref="e6d3e2b20641c094d3561900f189ee36" prefix="" category="inline-code"></block></block>
-  <block id="9f14a0e7f948d7c4687191b2963b4b88" category="cell"><block ref="1062b444cc77d8ad6e425665a210f471" prefix="" category="inline-code"></block></block>
   <block id="2130e4445c18121e61a0496381717d89" category="list-text"><block ref="11c37609eb90008bd36d83530ab47246" prefix="" category="inline-code"></block></block>
   <block id="b0f540062794ffac7297b2f00a005457" category="list-text"><block ref="64b1a654c15b96443ae00ee82d8ea7ad" prefix="" category="inline-code"></block></block>
   <block id="67263db3668d1ed303c86b613bbb802c" category="cell"><block ref="b0729beeb13e35e0ad6ba485b92de2e9" prefix="" category="inline-code"></block></block>
@@ -75,8 +57,6 @@
   <block id="7f1ea7967a4a624ec172c4dbad038d5a" category="cell"><block ref="c857cde9fce23600d47b90962ef51a19" prefix="" category="inline-code"></block></block>
   <block id="9b8f1b89d54261f317c44e8ccd1c91cd" category="list-text"><block ref="3ee92ad196ea0b8c0a0180545dd23671" prefix="" category="inline-code"></block></block>
   <block id="42d9b7d3455dfaa83fb3e81bad6cce7c" category="list-text"><block ref="919326d3777084e0f3855f9f03f93e3f" prefix="" category="inline-code"></block></block>
-  <block id="3b580ecb7e3414e24089f175032dabf3" category="inline-link">ONTAP REST API EMS, Beispiel Python-Skript</block>
-  <block id="acfce8bc71a552130aa0ccb8784fe895" category="list-text"><block ref="acfce8bc71a552130aa0ccb8784fe895" category="inline-link-rx"></block></block>
   <block id="04a23c4efdbd2046f23f7897eaf905ba" category="inline-link">ONTAP REST-APIs: Automatische Benachrichtigung über Ereignisse hoher Schweregrad</block>
   <block id="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="list-text"><block ref="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="inline-link-rx"></block></block>
   <block id="4561b01a73d4a9676d22f56757f49ab2" category="paragraph">Das CLI-Passthrough bietet eine Technik zum Ausführen von ONTAP-CLI-Befehlen unter Verwendung der REST-API.</block>
@@ -1057,7 +1037,6 @@
   <block id="98bf123aa3933daaa4019109c98c08eb" category="sidebar">ONTAP 9 Dokumentation</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">ONTAP Select Dokumentation</block>
   <block id="f543ca5c2e4e8371b14327b0c907dce3" category="sidebar">Management von ONTAP mit REST API</block>
-  <block id="f719347e95688149977dfc1399128cfd" category="sidebar">EMS-Ereignisbenachrichtigungen</block>
   <block id="31be5a65a5bd0c7e64b5cc0f6b8790c7" category="sidebar">DACL- und SACL-Berechtigungen</block>
   <block id="45cd4354f07a1ab359a1cc263ed79868" category="sidebar">So erhalten Sie Zugriff auf die REST API</block>
   <block id="a02956d1e8bd45f8818a7c63426eceba" category="sidebar">Eingabevariablen</block>
@@ -1782,4 +1761,52 @@
   <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="paragraph-title">Ansible</block>
   <block id="1654311dbef1756ea54a3a10080ed337" category="paragraph">Ansible ist ein Open-Source-Software-Tool, das Bereitstellung, Konfigurationsmanagement und Applikationseinsatz unterstützt. Seit der Veröffentlichung und der anschließenden Akquisition durch RedHat hat sich diese Beliebtheit stetig weiter entwickelt. NetApp bietet Ansible-zertifizierte Module, mit denen Kunden die Administration ihrer ONTAP Storage-Systeme automatisieren können. Siehe <block ref="c23236ff2a6fe1c72a62ffc77c7c00ed" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="74e4ec1fd7e7ec388822465aeff417c4" category="paragraph">Das NetApp<block ref="24f12c8cdb9e96aedf586081f8419901" category="inline-link-rx"></block> Ist über die BlueXP Web-Benutzeroberfläche verfügbar. Der Katalog bietet Zugriff auf Lösungspakete, mit deren Hilfe Sie die Implementierung und Integration von ONTAP in andere Produkte automatisieren können. Siehe<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> Für Dokumentation und weitere Informationen.</block>
+  <block id="6896ceb4698b2c86775b4d891be243d5" category="summary">Sie können die EMS-Verarbeitung (Event Management System) für einen ONTAP-Cluster konfigurieren und bei Bedarf EMS-Nachrichten abrufen.</block>
+  <block id="90aef0d7524722ffd0dc0cb8fa364d96" category="doc">Vorbereitung auf die Verwaltung der EMS-Support-Services</block>
+  <block id="af129edd8d2b529838378e328200ea64" category="paragraph">Es stehen verschiedene Beispiele für Workflows zur Verfügung, die die Nutzung der ONTAP EMS-Dienste veranschaulichen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>.</block>
+  <block id="f3bd9688dec070eec4b4332373791cf4" category="inline-link">events.py</block>
+  <block id="85215b1290359f4664d37f38216d2256" category="paragraph">Wenn Sie Python verwenden, sehen Sie auch den Scripy<block ref="643db497504332dea05c67888bb57b20" category="inline-link-rx"></block> Beispiele für die Automatisierung einiger EMS-bezogener Aktivitäten.</block>
+  <block id="e9e8fc0a404ed0a61c1fa104ebb28bf6" category="paragraph">Bei vielen Aufgaben erfordert die Verwendung der ONTAP REST-API weniger Aufrufe als die entsprechenden ONTAP CLI-Befehle. Die folgende Tabelle enthält eine Liste der API-Aufrufe und die entsprechenden CLI-Befehle, die für jede Aufgabe erforderlich sind.</block>
+  <block id="da7abcfccfd8f5465b37263afe3831d7" category="cell">/Support/ems ABRUFEN</block>
+  <block id="1062b444cc77d8ad6e425665a210f471" category="cell">POST /Support/ems/Destinations</block>
+  <block id="882aca4326d752010b772b8158e8baa0" category="inline-link">Python-Skript zur Darstellung von EMS</block>
+  <block id="cece6a40b70715f2a63bbd9c0b1372bd" category="list-text"><block ref="cece6a40b70715f2a63bbd9c0b1372bd" category="inline-link-rx"></block></block>
+  <block id="eb230b030eac22517ebd137fbd7025a9" category="summary">Sie können den folgenden Workflow verwenden, um ein neues EMS-Benachrichtigungsziel für den Empfang ausgewählter Ereignismeldungen zu erstellen.</block>
+  <block id="b4d8401916bcfe9d487b43317e141180" category="doc">Erstellen Sie eine EMS-Benachrichtigung</block>
+  <block id="4b6b43bf6462be74bc77a76514b73254" category="section-title">Schritt 1: Konfigurieren Sie die systemweiten E-Mail-Einstellungen</block>
+  <block id="1186c8ad3d5fa7fe5bc14196b7869208" category="paragraph">Sie können den folgenden API-Aufruf durchführen, um die systemweiten E-Mail-Einstellungen zu konfigurieren.</block>
+  <block id="ef891763ba7048887e2e72131878e76c" category="cell">/API/Support/ems</block>
+  <block id="9e35acb7edddb1772b2efd7d781ddcff" category="cell">Mail_von</block>
+  <block id="8a756bee0e76039a357517c3ec68baa8" category="cell">Legt den fest<block ref="d98a07f84921b24ee30f86fd8cd85c3c" prefix=" " category="inline-code"></block> In den Benachrichtigungs-E-Mail-Nachrichten.</block>
+  <block id="3a39d1bd30ebdc1346f3852bee919a32" category="cell">Mail_Server</block>
+  <block id="0e7ed5767e88d46eb334e785e803029a" category="cell">Konfiguriert den Ziel-SMTP-Mailserver.</block>
+  <block id="ca56c3d35b83a8f15d7479ec57deb841" category="section-title">Schritt 2: Definieren Sie einen Nachrichtenfilter</block>
+  <block id="1f3d6e417923726ce667adaba59cd9e5" category="paragraph">Sie können einen API-Aufruf ausgeben, um eine Filterregel zu definieren, die den Nachrichten entspricht.</block>
+  <block id="04ab7b0f96aa4ed5c4daa4003b776460" category="cell">/API/Support/ems/Filter</block>
+  <block id="d7778d0c64b6ba21494c97f77a66885a" category="cell">Filtern</block>
+  <block id="ac101b32dda4448cf13a93fe283dddd8" category="cell">Text</block>
+  <block id="eddb87129144f52bc2371d54624f3585" category="cell">Enthält die Werte für die Filterkonfiguration.</block>
+  <block id="03fc49787cddf4ed88e0caaf2007ff6d" category="section-title">Schritt 3: Erstellen Sie ein Nachrichtenziel</block>
+  <block id="13f2851313b707564d2819b992656595" category="paragraph">Sie können einen API-Aufruf ausgeben, um ein Nachrichtenziel zu erstellen.</block>
+  <block id="0221d81fa5719220847a0d6b07fa7833" category="cell">/API/Support/ems/Destinations</block>
+  <block id="5af5cc7f9522d6ed61830a95fdd63cae" category="cell">Zielkonfiguration</block>
+  <block id="cfbbc7b9438bc32708cb12da6986b172" category="cell">Enthält die Werte für das Ereignisziel.</block>
+  <block id="49d9b762ced33c4a64540c0502fa12ae" category="summary">Sie können die aktuelle EMS-Konfiguration für einen ONTAP-Cluster abrufen. Sie können dies tun, bevor Sie die Konfiguration aktualisieren oder eine neue EMS-Benachrichtigung erstellen.</block>
+  <block id="bf68501f440a0b26f1bce42df8f87f61" category="doc">Rufen Sie die EMS-Konfiguration ab</block>
+  <block id="321af4d0ee1843b9eb21c75179cd5a5a" category="summary">Sie können alle Ereignisbenachrichtigungen oder Meldungen mit bestimmten Merkmalen abrufen.</block>
+  <block id="13a19e32980ac43fd75e6a9645a8b411" category="doc">Listet die EMS-Protokollereignisse auf</block>
+  <block id="077c58e0d7282761a97c6c03fcd5f677" category="paragraph">Sie können alle Ereignisbenachrichtigungen oder nur Meldungen mit bestimmten Merkmalen abrufen.</block>
+  <block id="b098fa166f68e99b9f901b465347c595" category="cell">/API/Support/ems/Events</block>
+  <block id="51f996d6bdce27d5d9c364daf9452884" category="cell">Wird verwendet, um bestimmte Felder anzufordern, die in die Antwort aufgenommen werden sollen.</block>
+  <block id="f4abba9bb52bad37accc0150f9554249" category="cell">Kann verwendet werden, um die Anzahl der in einer einzelnen Anfrage zurückgegebenen Datensätze zu begrenzen.</block>
+  <block id="324ae438d51fef5c0ef842b1ae03b061" category="cell">Log_Message</block>
+  <block id="457f3ac0d864daefc37f956ecde87f36" category="cell">Wird verwendet, um nach einem bestimmten Textwert zu suchen und nur die übereinstimmenden Nachrichten zurückzugeben.</block>
+  <block id="4c171cc7d3dc158650998f518afaaf33" category="cell">message.severity</block>
+  <block id="e61413d2e7f87f9d206a86d29576165b" category="cell">Begrenzen Sie die zurückgegebenen Nachrichten auf solche mit einem bestimmten Schweregrad wie<block ref="7ed21143076d0cca420653d4345baa2f" prefix=" " category="inline-code"></block>.</block>
+  <block id="0525d9b2a094d7ff164a2c00a881e661" category="listing-title">Beispiel Curl: Gibt die letzte Nachricht und den Namenswert zurück</block>
+  <block id="385fbeb68ce09e6c918240872da38a13" category="listing-title">Beispiel für Curl: Gibt eine Nachricht zurück, die bestimmten Text und Schweregrad enthält</block>
+  <block id="20b8470cecac07ba9530bb746a9f64e4" category="sidebar">Bereiten Sie die Verwendung von EMS vor</block>
+  <block id="8d8818fd01745d22f1212838417a2a3f" category="sidebar">Protokollereignisse auflisten</block>
+  <block id="a518180b1666983f22dffbfc9e53cab8" category="sidebar">EMS-Konfiguration abrufen</block>
+  <block id="0e0109505c34b65099fc5f28788f80c2" category="sidebar">EMS-Benachrichtigung erstellen</block>
 </blocks>

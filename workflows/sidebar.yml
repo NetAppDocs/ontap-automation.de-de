@@ -48,6 +48,18 @@ entries:
     url: "/workflows/wf_stor_list_aggrs.html"
   - title: Festplatten auflisten
     url: "/workflows/wf_stor_list_disks.html"
+- title: Unterstützung
+  entries:
+  - title: EMS
+    entries:
+    - title: Bereiten Sie die Verwendung von EMS vor
+      url: "/workflows/wf_ems_prepare.html"
+    - title: Protokollereignisse auflisten
+      url: "/workflows/wf_ems_list_log_events.html"
+    - title: EMS-Konfiguration abrufen
+      url: "/workflows/wf_ems_get_configuration.html"
+    - title: EMS-Benachrichtigung erstellen
+      url: "/workflows/wf_ems_create_notification.html"
 - title: SVM
   entries:
   - title: Liste der SVMs
