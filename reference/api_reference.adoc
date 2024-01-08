@@ -23,7 +23,6 @@ NOTE: Die API-Referenzinhalte haben Zugriff auf den lokalen ONTAP-System oder au
 
 == Rufen Sie die Dokumentationsseite für die ONTAP-API auf
 
-[role="lead"]
 Die Online-Dokumentationsseite der ONTAP-API ist auf Ihrem lokalen ONTAP-System verfügbar.
 
 .Bevor Sie beginnen
@@ -49,7 +48,6 @@ Die Dokumentationsseite für die ONTAP-API wird angezeigt, auf der die API-Aufru
 
 == Greifen Sie auf eine Kopie der Referenzdokumentation für die ONTAP REST-API zu
 
-[role="lead"]
 Sie können über die unten angegebenen Links auf eine Kopie der Referenzdokumentation für die ONTAP REST-API zugreifen. Die API-Referenzdokumentation wird von der ONTAP Version gepflegt.
 
 * https://docs.netapp.com/us-en/ontap-restapi/["ONTAP 9.14.1"^]

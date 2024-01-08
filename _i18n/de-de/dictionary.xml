@@ -1536,9 +1536,7 @@
   <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">Siehe <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="9b516c95369c98e15389e58383128a9e" category="inline-link-macro">RBAC-Workflows</block>
   <block id="d0ae4474b926ded595a7a12cdb4fa9ca" category="admonition">Siehe <block ref="08b1cfcbf90aa340f0ccb33fbb4649b8" category="inline-link-macro-rx"></block> Beispiele für das Erstellen und Verwenden von Rollen mit der ONTAP-REST-API</block>
-  <block id="f561aaf6ef0bf14d4208bb46a4ccb3ad" category="summary">Xxx</block>
   <block id="e5811d257020368f5a717692e3698c8c" category="doc">Administration der Datensicherung</block>
-  <block id="869ae78f992efbe089f3f3904e3d608e" category="paragraph">In bestimmten Situationen möchten Sie einen Benutzer mit eingeschränkten Datensicherungsfunktionen versorgen.</block>
   <block id="a6812db2442ae325a9ccd39373bbd9dd" category="paragraph-title">Informationen zu diesem Workflow</block>
   <block id="daba4fa4643f88029966b062423e8d20" category="paragraph">Die traditionelle erstellte Rolle wird mit den folgenden Merkmalen definiert:</block>
   <block id="d48b8c7902dee00442e14d9b1af3af1b" category="cell">/API/Cluster</block>
@@ -1809,4 +1807,5 @@
   <block id="8d8818fd01745d22f1212838417a2a3f" category="sidebar">Protokollereignisse auflisten</block>
   <block id="a518180b1666983f22dffbfc9e53cab8" category="sidebar">EMS-Konfiguration abrufen</block>
   <block id="0e0109505c34b65099fc5f28788f80c2" category="sidebar">EMS-Benachrichtigung erstellen</block>
+  <block id="62e79f1e2a16917d7b811343757eede5" category="summary">Sie können einem Benutzer begrenzte Datensicherungsfunktionen zur Verfügung stellen.</block>
 </blocks>
