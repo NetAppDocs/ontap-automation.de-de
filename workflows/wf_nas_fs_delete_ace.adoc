@@ -18,7 +18,7 @@ Sie können einen vorhandenen ACE (Access Control Entry) aus einer bestimmten Da
 
 
 
-== Schritt 1: Die neuen Berechtigungen anwenden
+== Schritt 1: Löschen Sie ACE
 
 .HTTP-Methode und -Endpunkt
 Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.

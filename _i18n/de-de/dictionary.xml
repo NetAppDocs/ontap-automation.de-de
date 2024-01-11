@@ -1816,4 +1816,5 @@
   <block id="f520e25b29f7e72fdce54450ea759fc8" category="sidebar">Abrufen von Audit-Informationen</block>
   <block id="a0b064f87e86d15d09bd439eeac8859d" category="sidebar">Berechtigungen anwenden</block>
   <block id="982b873024de716ae33d5ad3f5fc8e1a" category="sidebar">Aktualisieren Sie einen Sicherheitsdeskriptor</block>
+  <block id="db5695cffdc658d54a90f935d7e8495e" category="section-title">Schritt 1: Löschen Sie ACE</block>
 </blocks>
