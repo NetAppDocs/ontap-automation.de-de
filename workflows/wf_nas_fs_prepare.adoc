@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_nas_fs_prepare.html 
+keywords: nas, file security, sacl, dacl, prepare 
+summary: Sie können die Berechtigungen und Audit-Richtlinien für Dateien managen, die über die SVMs innerhalb eines ONTAP Clusters verfügbar sind. 
+---
+= Bereiten Sie sich auf das Management von Dateisicherheits- und Audit-Richtlinien vor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Berechtigungen und Audit-Richtlinien für Dateien managen, die über die SVMs innerhalb eines ONTAP Clusters verfügbar sind.
+
+
+
+=== Überblick
+
+ONTAP weist Dateiobjekten mithilfe von System Access Control Lists (SACLs) und Ermessensary Access Control Lists (DACLs) Berechtigungen zu. Ab ONTAP 9.9 unterstützt die REST-API das Management der SACL- und DACL-Berechtigungen. Sie können die API verwenden, um die Administration der Dateisicherheitsberechtigungen zu automatisieren. In vielen Fällen können Sie einen einzelnen REST API-Aufruf anstelle mehrerer CLI-Befehle oder ONTAPI (ZAPI)-Aufrufe verwenden.
+
+
+NOTE: Bei ONTAP-Versionen vor 9.9 können Sie die Verwaltung der SACL- und DACL-Berechtigungen mithilfe der CLI-Passthrough-Funktion automatisieren. Siehe link:../migrate/migration-considerations.html["Überlegungen zur Migration"] Und https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["Verwenden des privaten CLI-Passthrough mit der ONTAP REST API"^] Finden Sie weitere Informationen.
+
+Es stehen verschiedene Beispiel-Workflows zur Verfügung, die veranschaulichen, wie Sie die ONTAP Dateisicherheitsdienste mithilfe der REST-API managen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen link:../workflows/prepare_workflows.html["Die Nutzung der Workflows wird vorbereitet"].
+
+Wenn Sie Python verwenden, lesen Sie auch das Skript https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/file_security_permissions.py["file_security_permissions.py"^] Beispiele für die Automatisierung einiger Dateisicherheitsaktivitäten.
+
+
+
+=== ONTAP REST API im Vergleich zu ONTAP-CLI-Befehlen
+
+Bei vielen Aufgaben erfordert die Verwendung der ONTAP REST-API weniger Aufrufe als die entsprechenden ONTAP CLI-Befehle oder ONTAPI (ZAPI)-Aufrufe. Die folgende Tabelle enthält eine Liste der API-Aufrufe und die entsprechenden CLI-Befehle, die für jede Aufgabe erforderlich sind.
+
+[cols="40,60"]
+|===
+| ONTAP REST API | CLI VON ONTAP 
+
+
+| `GET /protocols/file-security/effective-permissions/`  a| 
+`vserver security file-directory show-effective-permissions`
+
+
+
+| `POST /protocols/file-security/permissions/`  a| 
+. `vserver security file-directory ntfs create`
+. `vserver security file-directory ntfs dacl add`
+. `vserver security file-directory ntfs sacl add`
+. `vserver security file-directory policy create`
+. `vserver security file-directory policy task add`
+. `vserver security file-directory apply`
+
+
+
+
+| `PATCH /protocols/file-security/permissions/`  a| 
+`vserver security file-directory ntfs modify`
+
+
+
+| `DELETE /protocols/file-security/permissions/`  a| 
+. `vserver security file-directory ntfs dacl remove`
+. `vserver security file-directory ntfs sacl remove`
+
+
+|===
+.Verwandte Informationen
+* https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/file_security_permissions.py["Python-Skript zur Darstellung von Dateiberechtigungen"^]
+* https://netapp.io/2021/06/28/simplified-management-of-file-security-permissions-with-ontap-rest-apis/["Vereinfachtes Management von Dateisicherheitsberechtigungen mit ONTAP REST-APIs"^]
+* https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["Verwenden des privaten CLI-Passthrough mit der ONTAP REST API"^]
+

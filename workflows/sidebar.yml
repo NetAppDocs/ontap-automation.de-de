@@ -12,6 +12,22 @@ entries:
     url: "/workflows/wf_cls_update_contact.html"
   - title: Job-Instanz abrufen
     url: "/workflows/wf_jobs_get_job.html"
+- title: NAS
+  entries:
+  - title: Dateisicherheitsberechtigungen
+    entries:
+    - title: Bereiten Sie sich auf das Management der Dateisicherheit vor
+      url: "/workflows/wf_nas_fs_prepare.html"
+    - title: Erhalten Sie effektive Berechtigungen
+      url: "/workflows/wf_nas_fs_get_permissions.html"
+    - title: Abrufen von Audit-Informationen
+      url: "/workflows/wf_nas_fs_get_audit_info.html"
+    - title: Berechtigungen anwenden
+      url: "/workflows/wf_nas_fs_apply_permissions.html"
+    - title: Aktualisieren Sie einen Sicherheitsdeskriptor
+      url: "/workflows/wf_nas_fs_update_sd.html"
+    - title: Löschen eines Zugriffskontrolleintrags
+      url: "/workflows/wf_nas_fs_delete_ace.html"
 - title: Netzwerkbetrieb
   entries:
   - title: IP-Schnittstellen auflisten
