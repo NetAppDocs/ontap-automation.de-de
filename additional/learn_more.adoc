@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: additional/learn_more.html 
+keywords: learn, learn more, more information, additional resources 
+summary: Zudem stehen Ihnen mehrere weitere Ressourcen zur Verfügung, die Ihnen helfen. Dort erhalten Sie weitere Informationen zur Automatisierung der Implementierung und Administration Ihrer ONTAP Storage-Systeme. 
+---
+= Weitere Informationen .
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es stehen verschiedene zusätzliche Ressourcen zur Verfügung, die Sie bei der Automatisierung der Implementierung und Administration Ihrer ONTAP Storage-Systeme unterstützen.
+
+
+
+== Blog-Artikel
+
+* Eine gute Zusammenfassung der aktuellen Automatisierungstechnologien von ONTAP.
++
+https://www.netapp.com/blog/new-normal-for-automation["Neue Normalität für die Automatisierung"^]
+
+* Eine Einführung in den Zugriff auf und die Verwendung der Python Samples Skripte bei GitHub für die ONTAP REST API.
++
+https://netapp.io/2020/04/23/ontap-rest-apis["Erste Schritte mit Beispielskripten bei GitHub"^]
+
+* Das CLI-Passthrough bietet eine Technik zum Ausführen von ONTAP-CLI-Befehlen unter Verwendung der REST-API.
++
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api["Verwenden des privaten CLI-Passthrough mit der ONTAP REST API"^]
+
+* Neu bei Ansible zur ONTAP-Automatisierung:
++
+https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["Erste Schritte mit NetApp und Ansible – Installation von Ansible"^]
+
+* Entdecken Sie, wie Sie Dateisicherheit und -Berechtigungen mit der ONTAP REST-API managen.
++
+https://netapp.io/2021/06/28/simplified-management-of-file-security-permissions-with-ontap-rest-apis["Vereinfachtes Management von Dateisicherheitsberechtigungen mit ONTAP REST-APIs"^]
+
+* Sie können ONTAP-Ereignisse überwachen, um stets über die Systemaktivität informiert zu bleiben. Die Konfiguration und das Management dieser Ereignisse können mit der REST-API automatisiert werden.
++
+https://blog.netapp.com/ontap-rest-apis-automate-notification["ONTAP REST-APIs: Automatische Benachrichtigung über Ereignisse hoher Schweregrad"^]
+
+* Über die REST-API können Rollen und Zugriffsebenen als Teil einer RBAC-Sicherheitsumgebung konfiguriert werden.
++
+https://netapp.io/2022/06/26/rbac-using-ontap-rest-apis["Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) mit ONTAP REST-APIs"^]
+
+* NetApp bietet Python-Beispielskripte zur Verwendung der ONTAP-REST-API.
++
+https://netapp.io/2020/04/23/ontap-rest-apis["ONTAP REST API Python Beispielskripts jetzt auf GitHub verfügbar!"^]
+
+* Kaffeepausen mit RUHE (6 Episoden).
++
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-1-Basics-of-ONTAP-REST-APIs/m-p/167852["Grundlagen der ONTAP REST-APIs"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-2-Features-of-ONTAP-REST-APIs/m-p/168168/highlight/true#M208["Funktionen von ONTAP REST-APIs"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-3-Getting-Hands-on-with-ONTAP-REST-using-Postman/m-p/431965/highlight/true#M283["Praktische Erfahrungen mit ONTAP REST mit Postman"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-4-ONTAPI-ZAPI-Reporting-tool/m-p/433200["ONTAPI (ZAPI) Reporting-Tool"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-5-Private-CLI-Passthrough/m-p/435293["Private CLI-Passthrough"^]
+** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-6-5-magical-features-that-make-ONTAP-storage/m-p/435604["5 magische Funktionen, die die ONTAP Storage-Automatisierung vereinfachen!"^]
+
+
+
+
+
+
+== Videos
+
+* Eine gute Einführung in die NetApp Python Client Bibliothek und wie man mit dem Schreiben von Code über die Bibliothek beginnt.
++
+video::Wws3SB5d9Ss[youtube,width=848,height=480]
+* Ansible-zertifizierte Module:
++
+video::ZlmQ5IuVZD8[youtube,width=848,height=480]
++
+video::L5DZBV_Sg9E[youtube,width=848,height=480]
+* Eine Sammlung von Videos bei NetApp TechComm TV.
++
+https://www.youtube.com/playlist?list=PLHSh2r3A9gQRG1kkAcx1MmtVYPimyxOp_["Automatisieren Sie das NetApp ONTAP Management"^]
+
+
+
+
+
+== Technische Schulungen und Veranstaltungen
+
+* Insight 2022-Präsentation (26 Minuten)
++
+https://www.netapp.tv/details/29670["Modernisieren Sie Ihr ONTAP-Storage-Management mit der ONTAP-REST-API"^]
+
+* Insight 2021-Präsentation (31 Minuten)
++
+https://www.netapp.tv/details/28343["NetApp ONTAP: Zeitersparnis und Vereinfachung mit REST-APIs"^]
+
+* NetApp Learning Services:
++
+https://netapp.sabacloud.com/Saba/Web_spf/NA1PRD0047/app/shared;spf-url=common%2Fledetail%2FSTRSW-ILT-RSTAPI["Automatisieren Sie die Storage-Administration mit der ONTAP REST-API und Ansible"^]
+
+
+
+
+
+== NetApp Knowledge Base
+
+* Wenn Sie ein Problem mit der ONTAP REST-API haben, können Sie es NetApp melden.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_report_REST_API_and_NetApp_Python_Module_(REST_API_via_python_module)_issues["So melden Sie Probleme auf der ONTAP REST API und der ONTAP REST API Python Client-Bibliothek"^]
+
+* Wenn Sie eine funktionale Lücke in der ONTAP-REST-API identifizieren, können Sie eine neue Funktion für die API anfordern.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_request_a_feature_for_ONTAP_REST_API["Anfordern einer Funktion für die ONTAP-REST-API"^]
+
+

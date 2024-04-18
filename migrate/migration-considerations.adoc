@@ -57,3 +57,9 @@ Die SnapDiff API-Verfügbarkeit aller ONTAP-Versionen ist wie folgt definiert:
 
 
 Siehe auch https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^] Finden Sie weitere Informationen.
+
+
+
+== Übermitteln Sie Ihre ONTAPI-Lücken in der REST-API
+
+NetApp unterstützt unsere Kunden engagiert bei der Migration von ONTAP zur ONTAP REST-API. Wenn Sie etwas in der REST-API fehlt bemerken, lassen Sie es uns bitte wissen. Sie können diese Lücken und andere Ideen auf der einreichen https://forms.office.com/Pages/ResponsePage.aspx?id=oBEJS5uSFUeUS8A3RRZbOtlEKM3rNwBHjLH8dubcgOVURVM2UzIzTkQzSzdTU0pQRVFFRENZWlAxNi4u["ONTAPI FÜR REST-API"^] Seite.

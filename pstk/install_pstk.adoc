@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: pstk/install_pstk.html 
+keywords: install, powershell, powershell toolkit 
+summary:  
+---
+= Laden Sie das PowerShell Toolkit herunter, und installieren Sie es
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es stehen zwei Optionen zum Herunterladen und Installieren des NetApp ONTAP PowerShell Toolkits zur Verfügung.
+
+.NetApp Support
+Sie können das PowerShell Toolkit von der NetApp Support-Website herunterladen:
+
+https://mysupport.netapp.com/site/tools/tool-eula/ontap-powershell-toolkit[]
+
+.PowerShell Galerie
+Sie können das PowerShell Toolkit von der PowerShell Galerie herunterladen:
+
+https://www.powershellgallery.com/packages/NetApp.ONTAP/9.12.1.2302[]
