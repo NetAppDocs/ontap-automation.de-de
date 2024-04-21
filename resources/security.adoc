@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Diese API-Aufrufe können zum Management der Sicherheitseinstellungen für Cluster und SVM verwendet werden.
+Sie können diese API-Aufrufe verwenden, um die Sicherheitseinstellungen für das Cluster und SVM zu verwalten.
 
 .Konten
 Es gibt eine Sammlung von Benutzerkonten für das Cluster und SVMs. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

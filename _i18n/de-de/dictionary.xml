@@ -799,7 +799,6 @@
   <block id="611195abdbd7da41ddc1c888f9f1885e" category="paragraph">Eine Reihe von Attributen, mit denen die Verbindung zwischen ONTAP und einem externen Virus-Scan-Server verwaltet wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="c63c72a4f34ffdf5a780e1fc0e879ca8" category="paragraph">Der Status des externen Virus-Scan-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="32b84576655d77a2982c4f883d345014" category="summary">Sie können diese API-Aufrufe zur Verwaltung der NDMP-Services verwenden.</block>
-  <block id="ddcc73c0369a0b65c748dc3e5194759a" category="paragraph">Das Network Data Management Protocol bietet einen Standard für die Sicherung von NAS-Geräten. Sie können diese API-Aufrufe zur Verwaltung der NDMP-Services verwenden.</block>
   <block id="e78d7ab79adaa44183fd6bddec381b9e" category="paragraph">Der NDMP-Betriebsmodus kann vom Umfang der SVM oder vom Node festgelegt werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="e2c8cf4362fd8da934b960c0838f7f52" category="paragraph">Sie können die NDMP-Konfiguration der Nodes verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="9dfd95a51120838c5f0411955b6b8ee0" category="paragraph">Sie können NDMP-Sitzungsdetails für eine bestimmte SVM oder einen bestimmten Node abrufen und löschen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
@@ -870,7 +869,6 @@
   <block id="d82ec776cd833da582973d01b1875122" category="paragraph">Applikationen unterstützen Snapshot Kopien, die jederzeit erstellt oder wiederhergestellt werden können. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="6c5dba7ca23cbe6a8f7fba0f3ffae13c" category="paragraph">Die ONTAP-Applikationen werden nach Typ angeordnet. Diese umfassen Vorlagen, Applikationen, Komponenten und Snapshot Kopien. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="000c4dd933d539d502d855e482ad30ed" category="paragraph">Mit diesen Endpunkten können Snapshots für eine Konsistenzgruppe kopiert, erstellt, inventarisieren und wiederhergestellt werden. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.</block>
-  <block id="5b601547f8aa3a93b2be784742d56f50" category="paragraph">Diese API-Aufrufe können zum Management der Sicherheitseinstellungen für Cluster und SVM verwendet werden.</block>
   <block id="24e7cd4ec777036322f32b55a87d5bce" category="paragraph">Es gibt eine Sammlung von Benutzerkonten für das Cluster und SVMs. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="ec3e5f0707efe5d62c929bd9fd725078" category="paragraph">Konfiguration für ein Scoped-Benutzerkonto. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="5bfa71d20e72cfa3885c1399635e02fe" category="paragraph">Sie können die SVM-Kontoinformationen auf dem Active Directory-Server verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
@@ -926,11 +924,7 @@
   <block id="b26d022aeb288cb83538385118383ca5" category="paragraph">Sie können bestimmte SNMP-Trap-Hosts verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="c3b7775b2eccd350a3b590c2c1c7e7a3" category="paragraph">Sie können SNMP-Benutzer definieren und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="b6fc3f4cebfd4495ccd03b001112b524" category="paragraph">Sie können einen bestimmten SNMP-Benutzer verwalten, wobei die Engine-ID der administrativen SVM oder der Daten-SVM zugeordnet ist. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
-  <block id="1559c80340a3552e982d5443b26cb658" category="summary">Die über die ONTAP REST API verfügbaren Ressourcen sind nach Kategorien sortiert, die auf der Dokumentationsseite der ONTAP-API angezeigt werden.</block>
   <block id="4e04bad1fd3bbdb3c69e856ffc49ff73" category="doc">Übersicht der Ressourcenkategorien</block>
-  <block id="d828aac2af8d57c06b48e251182e288b" category="admonition">Für viele DER REST-Endpunkte können Sie einen UUID-Schlüssel als Teil der Pfadzeichenfolge für den Zugriff auf eine bestimmte Objektinstanz enthalten. Sie können jedoch auch über einen Eigenschaftswert auf einen Abfrageparameter auf Objekte zugreifen.</block>
-  <block id="35ddd64ed03dd1579ce39e6e82ff721f" category="inline-link-macro">Zusätzliche ÜBERLEGUNGEN ZU AUSRUHEN</block>
-  <block id="84cd295cbbbd691b40d7d06df51912a3" category="list-text"><block ref="84cd295cbbbd691b40d7d06df51912a3" category="inline-link-macro-rx"></block></block>
   <block id="10fd548eb0773eced2b1f8455835ae29" category="list-text"><block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block></block>
   <block id="0242de1421b2dbbb8285300eae69f9fc" category="summary">Diese API-Aufrufe können Sie für das Management von Ressourcen verwenden, die NVMe unterstützen.</block>
   <block id="26480427f609b5d339095df99aa09f7c" category="paragraph">Sie können diese API-Aufrufe verwenden, um Ressourcen zu verwalten, die NVMe (Non-Volatile Memory Express) unterstützen.</block>
@@ -940,7 +934,6 @@
   <block id="816c0720f92a2711cb0cd082d1076aa6" category="paragraph">Eine NVMe-Subsystemzuordnung ist eine Zuordnung eines NVMe Namespace zu einem NVMe-Subsystem. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="fb8f24dc4fe86e198d8b55ea44102fe4" category="paragraph">Ein NVMe-Subsystem behält bei einer Konfiguration und bei der Namespace-Zugriffssteuerung für einen Satz NVMe-verbundenen Hosts die Kontrolle. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.</block>
   <block id="50f3a24b94f9f178410d7708def5ebde" category="summary">Sie können diese API-Aufrufe zur Verwaltung der SnapLock-Funktion verwenden.</block>
-  <block id="b4ad45acb73dc252050e525d981a2d6d" category="paragraph">SnapLock ist eine Storage-basierte Implementierung der herkömmlichen optischen WORM-Lösung (Write Once, Read Many) und bietet die langfristige Aufbewahrung von Daten. Sie können diese API-Aufrufe zur Verwaltung der SnapLock-Funktion verwenden.</block>
   <block id="03aaf72a36d8a4b49208da200f94b4cf" category="paragraph">Die SnapLock-Protokollstruktur basiert auf Verzeichnissen und Dateien auf einem bestimmten Volume, das die Protokolldatensätze enthält. Log-Dateien werden entsprechend der maximalen Protokollgröße gefüllt und archiviert. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="02c81912a7634089043ac791429c0c06" category="paragraph">Die Compliance-Uhr bestimmt die Ablaufzeit der SnapLock-Objekte. Die Uhr muss außerhalb der REST-API initialisiert werden und kann nicht geändert werden. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
   <block id="21632c1548a44b25024b7b882a17cac7" category="paragraph">Mit der Funktion „SnapLock Event Based Retention“ (EBR) können Sie festlegen, wie lange eine Datei nach dem Auftreten eines Ereignisses aufbewahrt wird. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.</block>
@@ -1202,7 +1195,6 @@
   <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">Umwandlung Ihrer Automatisierung in eine ONTAP REST-API von ONTAPI</block>
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">Wechsel von ONTAPI mithilfe des ONTAPI Usage Reporting Tools</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">Ihr erster API-Aufruf</block>
-  <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">Die über die ONTAP REST API verfügbaren Ressourcen sind in Kategorien eingeteilt, wie sie in der Online-Dokumentation der ONTAP-API angezeigt werden. Eine kurze Beschreibung der einzelnen Ressourcen sowie ggf. zusätzliche Nutzungsüberlegungen;</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">Neuerungen bei der ONTAP REST API</block>
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">Damit CLI- und ONTAP-Benutzer die Transition auf die ONTAP REST API erleichtern, bietet ONTAP einen privaten REST-API-Endpunkt, über den auf jeden CLI-Befehl zugegriffen werden kann.</block>
   <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
@@ -1513,7 +1505,6 @@
   <block id="453c37c8e9a76deb2b13d5a2c2c4be7b" category="paragraph"><block ref="71e2add861ef98d4019f3cebd53921c4" prefix="" category="inline-code"></block></block>
   <block id="c22e9379c891fca636de58b50cf46bc3" category="paragraph"><block ref="e27598c7184d00cb3ee9f87da21a55c5" prefix="" category="inline-code"></block></block>
   <block id="adbde3ab61ea5b6041902022caaaeddc" category="paragraph"><block ref="c07b7bd445e059f84d0bc076867fcd31" prefix="" category="inline-code"></block></block>
-  <block id="3b4eb2c2464d0801cad28a2ce6319a1c" category="paragraph">DIE IN dieser Zusammenfassung beschriebenen REST-Ressourcen basieren auf der neuesten Version des Produkts. Informationen zum Verständnis der Änderungen aus vorherigen Versionen finden Sie unter <block ref="eea437b9922115b60f36debdfc0ed4d0" category="inline-link-macro-rx"></block> Sowie dem<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
   <block id="47c25bc89f41cb229d9f5a0f8cc43df0" category="admonition">Lesen Sie auch die<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> Für weitere Informationen, einschließlich bekannter Einschränkungen oder Probleme.</block>
   <block id="72679fae292d57bf767f718c146bf6a1" category="admonition">Die RBAC-Funktion von ONTAP wurde kontinuierlich erweitert und in ONTAP 9.11.1 (und nachfolgenden Versionen) deutlich verbessert. Siehe <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> Und <block ref="44134cd34c398895e571223ccabdd386" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="bfc2f11bae632428ff628103902f574d" category="inline-link">NetApp PCL-Dokumentation für 9.14.1</block>
@@ -1896,4 +1887,9 @@
   <block id="6c271a07c1fe500a9af8e4bb8e005441" category="sidebar">Migrieren Sie von ONTAPI zur REST-API</block>
   <block id="336165a88740b33476f13e8f41666771" category="sidebar">PowerShell Toolkit</block>
   <block id="326737de1766f7c8b80a5acde0f18651" category="sidebar">Herunterladen und installieren</block>
+  <block id="10c96e88b9c4e92d1c2ae63f9eade937" category="paragraph">Sie können diese API-Aufrufe verwenden, um die ONTAP SnapLock-Funktion zu verwalten.</block>
+  <block id="4e8316643e7aaa485e54110d73c76f12" category="paragraph">Die über die ONTAP REST-API verfügbaren Ressourcen sind in Kategorien organisiert. Jede der Ressourcenkategorien enthält eine kurze Beschreibung sowie ggf. weitere Überlegungen zur Nutzung.</block>
+  <block id="6bfd79fe477653dcbe9240cddc1bff7e" category="paragraph">Die in der Zusammenfassung beschriebenen REST-Ressourcen basieren auf der neuesten Version des Produkts. Weitere Informationen zu den in früheren Versionen vorgenommenen Änderungen finden Sie unter <block ref="eea437b9922115b60f36debdfc0ed4d0" category="inline-link-macro-rx"></block> Sowie dem<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
+  <block id="0ea16c1b878b2cbbbc3d0b12297d9b11" category="admonition">Für viele DER REST-Endpunkte können Sie einen UUID-Schlüssel als Teil der Pfadzeichenfolge für den Zugriff auf eine bestimmte Objektinstanz enthalten. In vielen Fällen können Sie jedoch auch über einen Eigenschaftswert eines Abfrageparameters auf Objekte zugreifen.</block>
+  <block id="72cb412397232628600f03c53da4faf9" category="paragraph">Sie können diese API-Aufrufe verwenden, um die Sicherheitseinstellungen für das Cluster und SVM zu verwalten.</block>
 </blocks>
