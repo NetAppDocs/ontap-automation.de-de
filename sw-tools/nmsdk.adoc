@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: sw-tools/nmsdk.html 
+keywords: netapp manageability sdk, oncommand workflow automation, oncommand wfa, ontapi, ontap rest api 
+summary: Das NetApp Manageability SDK bietet eine Reihe von ONTAPI-Aufrufen für die Entwicklung von Applikationen, um Ihren ONTAP Storage zu überwachen und zu managen. Zusammen mit dem OnCommand Workflow Automation-Paket unterstützt das SDK Ihre Bemühungen, das Management Ihrer ONTAP Systeme zu automatisieren. 
+---
+= NetApp Manageability SDK
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das NetApp Manageability SDK bietet eine Reihe von ONTAPI-Aufrufen für die Entwicklung von Applikationen, um Ihren ONTAP Storage zu überwachen und zu managen. Zusammen mit dem OnCommand Workflow Automation-Paket unterstützt das SDK Ihre Bemühungen, das Management Ihrer ONTAP Systeme zu automatisieren.
+
+
+NOTE: Während das NetApp Manageability SDK und die OnCommand Workflow Automation weiterhin unterstützt werden, ist die ONTAP REST API die bevorzugte und strategische Technologie für die Automatisierung Ihrer ONTAP Systeme. Siehe link:../migrate/ontapi_disablement.html["ONTAPI Deaktivierung"] Finden Sie weitere Informationen.
+
+.SDK herunterladen
+Sie können das NetApp Manageability SDK von der NetApp Support-Website herunterladen. Das SDK unterstützt mehrere Sprachen auf der Client-Seite, darunter: Python, PowerShell, C, C++, Java, C#, VB. NET und Ruby. Im Interoperabilitäts-Matrix-Tool finden Sie Informationen zum NetApp Manageability SDK und zur Unterstützung durch Ihre Version von ONTAP.
+
+.Verwenden Sie OnCommand Workflow Automation
+Sie können die mit dem SDK bereitgestellte API auch verwenden, um Managementaufgaben zu automatisieren, ohne Skripts schreiben zu müssen. OnCommand Workflow Automation (OnCommand WFA) bietet mehrere vorgefertigte Workflows für die Implementierung und Ausführung von Managementaufgaben. Sie können das OnCommand WFA Paket aus dem NetApp Storage Automation Store herunterladen.
+
+.Verwandte Informationen
+* https://mysupport.netapp.com/site/["NetApp Support Website"^]
+* https://www.netapp.com/company/interoperability/["NetApp Interoperabilitäts-Matrix-Tool"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63638&language=en-US["NetApp Manageability SDK-Dokumentation"^]
+* https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["OnCommand Workflow Automation Dokumentationsressourcen"^]
+* https://automationstore.netapp.com/home.shtml["NetApp Automation Store"^]
+

@@ -109,6 +109,9 @@ Die Konfigurationseinstellungen für eine Schnittstelle zu Kerberos. Dieser Ress
 .NFS Kerberos Bereiche
 Die Konfigurationseinstellungen für Kerberos-Bereiche. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.NFS über TLS
+Mit dieser Ressource können Sie die Schnittstellenkonfiguration abrufen und aktualisieren, wenn Sie NFS über TLS verwenden. Dieser Ressourcentyp wurde mit ONTAP 9.15 eingeführt.
+
 .NFS-Services
 Die Kernkonfiguration des NFS-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
 
