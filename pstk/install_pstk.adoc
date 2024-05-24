@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Es stehen zwei Optionen zum Herunterladen und Installieren des NetApp ONTAP PowerShell Toolkits zur Verfügung.
+Es gibt zwei Optionen zum Herunterladen und Installieren des NetApp ONTAP PowerShell Toolkits.
 
 .NetApp Support
 Sie können das PowerShell Toolkit von der NetApp Support-Website herunterladen:
