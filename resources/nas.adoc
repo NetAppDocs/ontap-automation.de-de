@@ -44,7 +44,7 @@ Der CIFS-Server kann lokale Gruppen zur Autorisierung bei der Festlegung von Zug
 Sie können Informationen zu den NetBIOS-Verbindungen für das Cluster anzeigen. Zu den Details gehören die IP-Adressen und registrierte NetBIOS-Namen. Diese Informationen können Ihnen bei der Behebung von Problemen mit der Namensauflösung helfen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
 
 .CIFS-Services
-Die Kernkonfiguration des CIFS-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 aktualisiert.
+Die Kernkonfiguration des CIFS-Servers. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.7 und 9.15 aktualisiert.
 
 .CIFS-Sitzungsdateien
 Sie können eine Liste der offenen Dateien für die CIFS-Sitzungen auf Grundlage verschiedener Filteroptionen abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.11.1 eingeführt.
