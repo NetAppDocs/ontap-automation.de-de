@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: new features, new in release 
 summary: NetApp aktualisiert regelmäßig das ONTAP REST API, um Ihnen neue Funktionen, Verbesserungen und Fehlerbehebungen zu bieten. 
 ---
-= Was ist neu mit der ONTAP REST API und Automatisierung
+= Neuerungen bei der ONTAP REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

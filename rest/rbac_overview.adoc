@@ -17,7 +17,7 @@ summary: 'ONTAP verfügt über eine robuste und erweiterbare Funktion zur rollen
 ONTAP verfügt über eine robuste und erweiterbare Funktion zur rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC). Sie können jedem Konto eine eigene Rolle zuweisen, um den Zugriff des Benutzers auf die Ressourcen zu kontrollieren, die über DIE REST-API und die Rest-CLI offengelegt werden. Die Rollen definieren für verschiedene ONTAP Benutzer verschiedene Zugriffsebenen.
 
 
-NOTE: Die RBAC-Funktion von ONTAP wurde kontinuierlich erweitert und in ONTAP 9.11.1 (und nachfolgenden Versionen) deutlich verbessert. Siehe link:../rest/rbac_overview.html#summary-of-rbac-evolution["Zusammenfassung der Entwicklung der RBAC"] Und link:../whats-new.html["Was ist neu mit der ONTAP REST API und Automatisierung"] Finden Sie weitere Informationen.
+NOTE: Die RBAC-Funktion von ONTAP wurde kontinuierlich erweitert und in ONTAP 9.11.1 (und nachfolgenden Versionen) deutlich verbessert. Weitere Informationen finden Sie unter link:../rest/rbac_overview.html#summary-of-rbac-evolution["Zusammenfassung der Entwicklung der RBAC"] und link:../whats-new.html["Neuerungen bei der ONTAP REST-API"] .
 
 
 

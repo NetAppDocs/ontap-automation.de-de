@@ -13,7 +13,7 @@ sidebar:
     url: "/index.html"
   - title: Was ist neu
     entries:
-    - title: Neuerungen bei der ONTAP REST-API
+    - title: Neuerungen bei der ONTAP REST API
       url: "/whats-new.html"
   - section: get-started
   - section: rest
