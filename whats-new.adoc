@@ -17,7 +17,7 @@ summary: NetApp aktualisiert regelmäßig das ONTAP REST API, um Ihnen neue Funk
 NetApp aktualisiert regelmäßig das ONTAP REST API, um Ihnen neue Funktionen, Verbesserungen und Fehlerbehebungen zu bieten.
 
 
-TIP: Lesen Sie auch die https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^] Für weitere Informationen, einschließlich bekannter Einschränkungen oder Probleme.
+TIP: Sie sollten auch die überprüfen https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Versionshinweise zu ONTAP"^] , um zusätzliche Informationen wie bekannte Einschränkungen oder Probleme zu finden. Finden Sie auch link:api-changes.html["Änderungen an ONTAP-REST-API-Aufrufen"] Informationen zu Änderungen, die sich auf Ihre Automatisierungssoftware auswirken könnten.
 
 
 
