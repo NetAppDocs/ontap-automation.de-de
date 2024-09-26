@@ -1890,7 +1890,6 @@
   <block id="d87719184e085166d3d845048810dd21" category="paragraph-title">SDK herunterladen</block>
   <block id="100168388acf5b00a071ca6e015323e0" category="paragraph">Sie können das NetApp Manageability SDK von der NetApp Support-Website herunterladen. Das SDK unterstützt mehrere Sprachen auf der Client-Seite, darunter: Python, PowerShell, C, C++, Java, C#, VB. NET und Ruby. Im Interoperabilitäts-Matrix-Tool finden Sie Informationen zum NetApp Manageability SDK und zur Unterstützung durch Ihre Version von ONTAP.</block>
   <block id="8a9c78330b74df288ffa23c3c916c9d4" category="paragraph-title">Verwenden Sie OnCommand Workflow Automation</block>
-  <block id="5e956e5c034d62bc54b3db5e88c7f216" category="paragraph">Sie können die mit dem SDK bereitgestellte API auch verwenden, um Managementaufgaben zu automatisieren, ohne Skripts schreiben zu müssen. OnCommand Workflow Automation (OnCommand WFA) bietet mehrere vorgefertigte Workflows für die Implementierung und Ausführung von Managementaufgaben. Sie können das OnCommand WFA Paket aus dem NetApp Storage Automation Store herunterladen.</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp Support Website</block>
   <block id="74ca9f2037f85f9bee172d20503c7375" category="list-text"><block ref="74ca9f2037f85f9bee172d20503c7375" category="inline-link-rx"></block></block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp Interoperabilitäts-Matrix-Tool</block>
@@ -1949,4 +1948,5 @@
   <block id="aa23dd032f1fc4a5a95d9eb732608f33" category="admonition">Sie sollten auch die überprüfen<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> , um zusätzliche Informationen wie bekannte Einschränkungen oder Probleme zu finden. Finden Sie auch <block ref="edc7b83fd666812e33623acd898a41ba" category="inline-link-macro-rx"></block> Informationen zu Änderungen, die sich auf Ihre Automatisierungssoftware auswirken könnten.</block>
   <block id="d22eb7366a95f4b359ba96e0653153f2" category="inline-link">CPC-00410 Deferral of ONTAPI (ZAPI) – Ankündigung der Einstellung des Service</block>
   <block id="ea53ecb52450e46f8a6a0fb33b6e191a" category="list-text"><block ref="ea53ecb52450e46f8a6a0fb33b6e191a" category="inline-link-rx"></block></block>
+  <block id="22c2d1f13363659c32e6085b79534d7a" category="paragraph">Sie können die mit dem SDK bereitgestellte API auch verwenden, um Managementaufgaben zu automatisieren, ohne Skripts schreiben zu müssen. OnCommand Workflow Automation (OnCommand WFA) bietet mehrere vorgefertigte Workflows für die Implementierung und Ausführung von Managementaufgaben.</block>
 </blocks>
