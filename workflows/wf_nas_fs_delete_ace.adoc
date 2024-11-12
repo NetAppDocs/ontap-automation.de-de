@@ -10,7 +10,7 @@ summary: 'Sie können einen vorhandenen Access-Cotrol-Eintrag (ACE) aus einer be
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

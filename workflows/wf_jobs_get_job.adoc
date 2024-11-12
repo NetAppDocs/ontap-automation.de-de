@@ -10,7 +10,7 @@ summary: Sie können die Instanz eines bestimmten ONTAP-Jobs abrufen. In der Reg
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

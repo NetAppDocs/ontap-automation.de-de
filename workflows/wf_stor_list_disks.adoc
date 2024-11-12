@@ -10,7 +10,7 @@ summary: Sie können eine Liste der Festplatten im Cluster abrufen. Sie könnten
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

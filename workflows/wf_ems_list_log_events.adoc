@@ -10,7 +10,7 @@ summary: Sie können alle Ereignisbenachrichtigungen oder Meldungen mit bestimmt
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

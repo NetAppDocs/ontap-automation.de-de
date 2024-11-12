@@ -10,7 +10,7 @@ summary: Sie können die aktuelle EMS-Konfiguration für einen ONTAP-Cluster abr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

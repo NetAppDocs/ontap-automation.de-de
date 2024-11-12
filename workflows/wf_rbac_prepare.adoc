@@ -10,7 +10,7 @@ summary: Je nach Umgebung können Sie die RBAC-Funktion von ONTAP auf unterschie
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

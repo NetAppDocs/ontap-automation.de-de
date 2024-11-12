@@ -10,7 +10,7 @@ summary: Sie können die Berechtigungen und Audit-Richtlinien für Dateien manag
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Sie können diesen Workflow verwenden, um einen Benutzer mit einer zuge
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

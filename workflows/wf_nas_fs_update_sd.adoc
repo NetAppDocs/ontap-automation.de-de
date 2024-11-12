@@ -10,7 +10,7 @@ summary: Sie können eine bestimmte Sicherheitsbeschreibung auf eine bestimmte D
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

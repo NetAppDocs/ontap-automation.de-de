@@ -10,7 +10,7 @@ summary: Sie können die Konfiguration für ein ONTAP Cluster einschließlich be
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

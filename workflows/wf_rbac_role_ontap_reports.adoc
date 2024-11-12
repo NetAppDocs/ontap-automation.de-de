@@ -10,7 +10,7 @@ summary: Sie können EINE REST-Rolle erstellen, um Benutzern die Möglichkeit zu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

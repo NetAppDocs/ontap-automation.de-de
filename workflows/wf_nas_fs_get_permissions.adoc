@@ -10,7 +10,7 @@ summary: Sie können die aktuellen effektiven Berechtigungen für eine bestimmte
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

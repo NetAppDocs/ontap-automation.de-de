@@ -10,7 +10,7 @@ summary: Sie sollten sich mit der Struktur und dem Format der ONTAP Workflows ve
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

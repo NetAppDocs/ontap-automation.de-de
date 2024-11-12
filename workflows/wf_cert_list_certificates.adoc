@@ -10,7 +10,7 @@ summary: Sie können die in Ihrem ONTAP-Cluster installierten Zertifikate auflis
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

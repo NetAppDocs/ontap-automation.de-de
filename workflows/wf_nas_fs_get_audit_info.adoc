@@ -10,7 +10,7 @@ summary: Sie können alle Überwachungsinformationen für eine bestimmte Datei o
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

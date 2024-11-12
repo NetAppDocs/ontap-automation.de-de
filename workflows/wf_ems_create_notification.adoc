@@ -10,7 +10,7 @@ summary: Sie können den folgenden Workflow verwenden, um ein neues EMS-Benachri
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Sie können eine neue Sicherheitsbeschreibung auf eine bestimmte Datei 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

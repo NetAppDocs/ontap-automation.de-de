@@ -10,7 +10,7 @@ summary: Die NetApp ONTAP Python Client Library ist ein Paket, mit dem Sie Skrip
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

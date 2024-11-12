@@ -10,7 +10,7 @@ summary: Sie können eine Rolle definieren, um die Storage-Volume-Administration
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

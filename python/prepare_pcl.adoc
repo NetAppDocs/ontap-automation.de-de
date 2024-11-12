@@ -10,7 +10,7 @@ summary: Sie sollten die lokale Laufzeitumgebung vorbereiten, bevor Sie die Pyth
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

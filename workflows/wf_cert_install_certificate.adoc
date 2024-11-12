@@ -10,7 +10,7 @@ summary: Sie können ein signiertes X.509-Zertifikat in Ihrem ONTAP-Cluster inst
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
