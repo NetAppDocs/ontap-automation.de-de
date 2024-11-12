@@ -26,7 +26,7 @@ Konfiguration für ein Scoped-Benutzerkonto. Dieser Ressourcentyp wurde mit ONTA
 Sie können die SVM-Kontoinformationen auf dem Active Directory-Server verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
 .Ransomware schützen
-ONTAP erkennt Dateien, die möglicherweise eine Ransomware-Bedrohung enthalten. Es gibt mehrere Endgeräte-Kategorien. Sie können eine Liste dieser verdächtigen Dateien abrufen oder von einem Volume entfernen. Dieser Ressourcentyp wurde mit ONTAP 9.10.1 eingeführt.
+ONTAP erkennt Dateien, die möglicherweise eine Ransomware-Bedrohung enthalten. Es gibt mehrere Endgeräte-Kategorien. Sie können eine Liste dieser verdächtigen Dateien abrufen oder von einem Volume entfernen. Dieser Ressourcentyp wurde mit ONTAP 9.10.1 eingeführt. Unterstützung für die Anzeige der Version und die Aktualisierung des Anti-Ransomware-Pakets wurde mit ONTAP 9.16 hinzugefügt.
 
 .Prüfung
 Die Einstellungen, die bestimmen, was in den Audit-Log-Dateien protokolliert wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
@@ -52,8 +52,17 @@ Duo bietet zwei-Faktor-Authentifizierung für SSH-Anmeldungen. Sie können Duo f
 .Cluster-Sicherheit
 Sie können Details zur Cluster-weiten Sicherheit abrufen und bestimmte Parameter aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.Externe Rollen
+Eine externe Rolle wird bei einem OAUTH 2.0-Ident-Provider definiert. Sie können Zuordnungsbeziehungen zwischen diesen externen Rollen und den ONTAP Rollen erstellen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.16 eingeführt.
+
 .GCP-KMS
 Mit diesem Satz von API-Aufrufen können Sie den Google Cloud Platform Key Management Service zum Speichern und Verwalten der ONTAP-Verschlüsselungsschlüssel verwenden. Dieser Ressourcentyp wurde zunächst mit der ONTAP 9.8 REST-API eingeführt. Diese Funktion wurde jedoch neu gestaltet und gilt bei neuen Ressourcentypen in ONTAP 9.9 als neu.
+
+.Gruppen
+Sie können Gruppenkonfigurationen verwalten, einschließlich Gruppen, die mit UUIDs dargestellt werden. Dieser Ressourcentyp wurde mit ONTAP 9.16 eingeführt.
+
+.Gruppenrollenzuordnungen
+Sie können Zuordnungsbeziehungen zwischen Gruppen und Rollen erstellen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.16 eingeführt.
 
 .IPsec
 Internet Protocol Security (IPSec) ist eine Protokollsuite, die Sicherheit zwischen zwei Endpunkten über ein zugrunde liegendes IP-Netzwerk bietet. Dieser Ressourcentyp ist neu in ONTAP 9.8.
@@ -96,7 +105,7 @@ Wenn mehrere Administratoren Zugriff genehmigen können, lässt sich die Sicherh
 Diese Einstellungen werden zum Abrufen und Verwalten der NIS-Serverkonfiguration des Clusters verwendet. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
 .OAuth 2.0
-Open Authorization (OAuth 2.0) ist ein Token-basiertes Framework, mit dem der Zugriff auf Ihre ONTAP Storage-Ressourcen eingeschränkt werden kann. Sie können sie zusammen mit Clients verwenden, die über die REST-API auf ONTAP zugreifen. Die Konfiguration kann mit jeder der ONTAP-Administrationsschnittstellen, einschließlich der REST-API, durchgeführt werden. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt.
+Open Authorization (OAuth 2.0) ist ein Token-basiertes Framework, mit dem der Zugriff auf Ihre ONTAP Storage-Ressourcen eingeschränkt werden kann. Sie können sie zusammen mit Clients verwenden, die über die REST-API auf ONTAP zugreifen. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt. Es wurde durch die Unterstützung des Microsoft Entra ID Autorisierungsservers (ehemals Azure AD) mit Standard-OAuth 2.0-Ansprüchen um ONTAP 9.16 erweitert. Darüber hinaus werden die Entra ID-Standardgruppen-Ansprüche auf Basis von UUID-Stilwerten durch neue Gruppen- und Rollenzuordnungsfunktionen unterstützt. Eine neue externe Rollenzuordnung wurde ebenfalls eingeführt. Siehe auch *Externe Rollen*, *Gruppen* und *Gruppen-Rollenzuordnungen*.
 
 .Passwortrauthentifizierung
 Dazu gehört auch der API-Aufruf, der zum Ändern des Kennworts eines Benutzerkontos verwendet wird. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
@@ -124,3 +133,6 @@ Mit diesen Endpunkten können Sie die SSH-Sicherheitskonfiguration für alle SVM
 
 .TOTPS
 Sie können die REST-API verwenden, um zeitbasierte TOTP-Profile (One-Time Password) für Konten zu konfigurieren, die sich über SSH anmelden und auf ONTAP zugreifen. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.
+
+.Web-Authentifizierung
+Web Authentication (WebAuthn) ist ein Webstandard für die sichere Authentifizierung von Benutzern basierend auf Public Key-Kryptographie. Mit ONTAP unterstützt es die Administration von Phishing-resistenten MFAs über System Manager und die ONTAP REST API. Diese Funktion wurde mit ONTAP 9.16 hinzugefügt.

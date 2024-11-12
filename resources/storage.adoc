@@ -62,7 +62,7 @@ Mithilfe von Endpunkten können Sie QOS-Optionen für das Cluster abrufen und fe
 EIN QOS-Workload ist ein Storage-Objekt, das DURCH QOS nachverfolgt wird. SIE können die QOS-Workflows abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
 
 .Qtrees
-Sie können diese API-Aufrufe zur Verwaltung von qtrees verwenden, einem Typ von logisch geteiltem Dateisystem. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+Sie können diese API-Aufrufe zur Verwaltung von qtrees verwenden, einem Typ von logisch geteiltem Dateisystem. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt. Die erweiterte Performance-Überwachungsfunktion durch qtree wurde mit ONTAP 9.16.1 hinzugefügt.
 
 .Kontingentberichte
 Berichte über Quoten, eine Technik zur Einschränkung oder Verfolgung von Dateien oder Platznutzung. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.

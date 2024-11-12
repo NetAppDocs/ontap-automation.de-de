@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: migrate/mapping.html 
-keywords: ONTAPI, REST API, mapping, mapping documentation 
-summary: NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu äquivalenten REST-API-Aufrufen beschreibt. 
+keywords: ontapi, rest api, mapping, mapping documentation, zapi 
+summary: Die ONTAP REST API umfasst Funktionen, die in den meisten Bereichen ONTAPI entsprechen. NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu äquivalenten REST-API-Aufrufen beschreibt. 
 ---
 = ONTAPI-to-REST-API-Zuordnung
 :hardbreaks:
@@ -16,14 +16,4 @@ summary: NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu �
 [role="lead"]
 Die ONTAP REST API umfasst Funktionen, die in den meisten Bereichen ONTAPI entsprechen. NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu äquivalenten REST-API-Aufrufen beschreibt.
 
-Die Dokumentation für die API-Zuordnung ist abhängig von der ONTAP Version:
-
-* https://docs.netapp.com/us-en/ontap-restmap["ONTAP 9.15.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9141["ONTAP 9.14.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9131["ONTAP 9.13.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9121["ONTAP 9.12.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9111["ONTAP 9.11.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-9101["ONTAP 9.10.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-991["ONTAP 9.9.1"^]
-* https://docs.netapp.com/us-en/ontap-restmap-98["ONTAP 9.8"^]
-
+Sie können online auf die aktuelle Dokumentation zugreifen https://docs.netapp.com/us-en/ontap-restmap/["ONTAP ONTAPI-to-REST-Zuordnung"^]. Es steht auch eine Versionsauswahl zur Verfügung, um auf frühere Versionen der Dokumentation basierend auf der ONTAP-Version zuzugreifen.

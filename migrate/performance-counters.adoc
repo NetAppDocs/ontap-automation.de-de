@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: migrate/performance-counters.html 
 keywords: performance, performance counters, mapping 
-summary: Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes ONTAP Systems. Es exportiert diese Daten als Performance-Zähler, mit denen Sie die Performance Ihres ONTAP Systems bewerten und Ihre Performance-Ziele erreichen können. 
+summary: Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes ONTAP Systems. Es exportiert diese Daten als eine Reihe von Performance-Zählern, mit denen Sie die Performance Ihres ONTAP-Systems bewerten und Ihre Performance-Ziele erreichen können. 
 ---
 = Performance-Zähler
 :hardbreaks:
@@ -98,14 +98,7 @@ Gibt eine bestimmte Zeile aus einer benannten Zählertabelle zurück.
 
 NetApp bietet umfassenden Support für die Migration Ihres Automatisierungscodes von ONTAPI auf die ONTAP REST API. Dazu gehört auch die Zuordnungsdokumentation zur Identifikation der äquivalenten Leistungstabelle, die in DER REST-API für ein bestimmtes ONTAPI-Objekt verfügbar ist.
 
-Finden Sie in der entsprechenden Dokumentation für die Zuordnung auf der Grundlage der ONTAP Version, die Sie verwenden:
-
-* https://docs.netapp.com/us-en/ontap-pcmap/["ONTAP 9.15.1 Performance Counter Mapping"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9141/["ONTAP 9.14.1 Performance Counter Mapping"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9131/["ONTAP 9.13.1 Performance Counter Mapping"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9121/["ONTAP 9.12.1 Zählerzuordnung der Performance"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9111/["ONTAP 9.11.1 Zählerzuordnung der Performance"^]
-
+Sie können online auf die aktuelle Dokumentation zugreifen https://docs.netapp.com/us-en/ontap-pcmap/["ONTAP-Performance-Zählerzuordnung"^]. Es steht auch eine Versionsauswahl zur Verfügung, um auf frühere Versionen der Dokumentation basierend auf der ONTAP-Version zuzugreifen.
 
 
 

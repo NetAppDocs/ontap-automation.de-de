@@ -19,6 +19,9 @@ summary: Über diese API-Aufrufe können Sie auf S3-basierten Objekt-Storage zug
 .Buckets
 Ein Bucket ist ein Container von Objekten und ist unter Verwendung eines Objektnamens-Speicherplatzes strukturiert. Jeder S3-Objektserver kann über mehrere Buckets verfügen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.Bucket-Snapshots
+Snapshots der S3 Buckets können erstellt und verwaltet werden. Diese Funktion wurde mit ONTAP 9.16.1 hinzugefügt.
+
 .Services
 Sie können die ONTAP S3-Konfiguration erstellen und managen, einschließlich Server- und Bucket-Konfigurationen. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt.
 
