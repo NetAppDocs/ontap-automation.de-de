@@ -29,5 +29,5 @@ Sie können die mit dem SDK bereitgestellte API auch verwenden, um Managementauf
 * https://mysupport.netapp.com/site/["NetApp Support Website"^]
 * https://www.netapp.com/company/interoperability/["NetApp Interoperabilitäts-Matrix-Tool"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63638&language=en-US["NetApp Manageability SDK-Dokumentation"^]
-* https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["OnCommand Workflow Automation Dokumentation"^]
+* https://docs.netapp.com/us-en/workflow-automation/["OnCommand Workflow Automation Dokumentation"^]
 
