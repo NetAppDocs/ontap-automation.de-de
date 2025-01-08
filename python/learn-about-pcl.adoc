@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: python/learn-about-pcl.html 
+keywords: learn about python client library, learn about pcl, pcl overview, pcl 
+summary: Die NetApp ONTAP Python Client-Bibliothek ist ein Paket, das Sie installieren und zum schnellen Schreiben von Skripts für den Zugriff auf die ONTAP REST-API verwenden können. Sie müssen die lokale Laufzeitumgebung vorbereiten, bevor Sie sie verwenden. 
+---
+= Erfahren Sie mehr über die ONTAP Python Client-Bibliothek
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die NetApp ONTAP Python Client-Bibliothek ist ein Paket, das Sie installieren und zum schnellen Schreiben von Skripts für den Zugriff auf die ONTAP REST-API verwenden können. Sie müssen die lokale Laufzeitumgebung vorbereiten, bevor Sie sie verwenden.
+
+.Vorteile und Funktionen
+Mit der Python Client Library können Sie schnell robusten Code entwickeln und so die Administration Ihrer ONTAP-Bereitstellungen automatisieren. Es bietet mehrere zugrunde liegende Services, einschließlich:
+
+* Verbindungsmanagement
+* Asynchrone Verarbeitung
+* Ausnahmebehandlung
+* Einheitliche Fehlermeldungen
+
+
+.Paketname und -Version
+Der Name des Python Client Library-Pakets ist *netapp-ontap*. Die mit dem Paket verknüpfte Version ist eine Kombination aus den ONTAP-Haupt- und Nebenversionsnummern, aus denen die Bibliothek erstellt wurde, sowie einer Nebenversion für die Client-Bibliothek in der ONTAP-Version. Gültige Versionsnummern sind beispielsweise 9.6.1, 9.6.2 und 9.7.1.
+
+.Installation
+Sie müssen das Dienstprogramm *Pip* verwenden, um das Paket NetApp_ONTAP von der Seite Python Package Index (PyPi) zu installieren.
+
+.Pakete und Dokumentation nach ONTAP Release
+Jede ONTAP-Version, die mit 9.6 beginnt, verfügt über ein PyPI-Paket und die zugehörige Dokumentation. Weitere Informationen finden Sie unter link:../python/packages.html["Pakete und Dokumentation"] . Die Installationsanforderungen sind in jedem Paket enthalten und geben verschiedene Versionen der folgenden an:
+
+* python
+* Anträge
+* Anforderungen-Werkzeuggürtel
+* marshmallow
+
+
+.Codebeispiele
+NetApp unterhält ein GitHub-Repository mit Codebeispielen und anderen hilfreichen Informationen. Sie können zum Ordner _examples_ navigieren, um mithilfe der Python-Client-Bibliothek auf Samples zuzugreifen. Weitere Informationen finden Sie an den folgenden Standorten auf GitHub:
+
+* https://github.com/NetApp/ontap-rest-python["ONTAP REST Python GitHub-Repository"^]
+* https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Beispiele für die ONTAP REST Python Client-Bibliothek"^]
+

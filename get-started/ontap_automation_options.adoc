@@ -35,7 +35,7 @@ Die ONTAPI API (Zephyr API oder ZAPI) ist die ursprüngliche Gruppe proprietäre
 NetApp bietet Client-Toolkits, die die ONTAP-REST-API abstrahieren und die Erstellung von Automatisierungscode vereinfachen. Sie sollten eine geeignete für Ihre Entwicklungssprache und -Umgebung wählen.
 
 .Python-Client-Bibliothek
-Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für den Zugriff auf die ONTAP REST-API verwendet werden kann. Es unterstützt mehrere zugrunde liegende Services, darunter Verbindungs-Management, asynchrone Anfragebearbeitung und Ausnahmebehandlung. Mithilfe der Python-Client-Bibliothek können Sie schnell robusten Code entwickeln, der Ihre ONTAP-Automatisierungsziele unterstützt. Siehe link:../python/overview_pcl.html["Python-Client-Bibliothek"] Finden Sie weitere Informationen.
+Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für den Zugriff auf die ONTAP REST-API verwendet werden kann. Es unterstützt mehrere zugrunde liegende Services, darunter Verbindungs-Management, asynchrone Anfragebearbeitung und Ausnahmebehandlung. Mithilfe der Python-Client-Bibliothek können Sie schnell robusten Code entwickeln, der Ihre ONTAP-Automatisierungsziele unterstützt. Weitere Informationen finden Sie unter link:../python/learn-about-pcl.html["Python-Client-Bibliothek"] .
 
 .PowerShell Toolkit
 Mit dem NetApp.ONTAP PowerShell Toolkit können Sie die Administration eines ONTAP Clusters von einem Windows Host aus automatisieren. Weitere Informationen finden Sie unter link:../pstk/overview_pstk.html["Überblick über das PowerShell Toolkit"] .

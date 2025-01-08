@@ -52,9 +52,7 @@ Eine Einführung zu dieser Funktion finden Sie unter link:../rest/access_ontap_c
 
 == Python-Client-Bibliothek
 
-Die Python-Client-Bibliothek ist ein Paket, das Sie installieren und verwenden können, um auf die ONTAP-REST-API mit Python zuzugreifen. Mit ihr können Sie schnell und robusten Code für die Automatisierung Ihrer ONTAP Implementierungen entwickeln.
-
-Eine Einführung in die Python Client-Bibliothek finden Sie unter link:../python/overview_pcl.html["Überblick über die Python Client Library"]. Für die Python-Beispiele siehe https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Beispiele für Python Client-Bibliotheken"^].
+Die Python-Client-Bibliothek ist ein Paket, das Sie installieren und verwenden können, um auf die ONTAP-REST-API mit Python zuzugreifen. Mit ihr können Sie schnell und robusten Code für die Automatisierung Ihrer ONTAP Implementierungen entwickeln. Weitere Informationen über die Python-Client-Bibliothek finden Sie unter link:../python/learn-about-pcl.html["Python-Client-Bibliothek"].
 
 
 
