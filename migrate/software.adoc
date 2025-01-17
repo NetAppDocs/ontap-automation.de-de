@@ -17,7 +17,7 @@ summary:
 NetApp bietet Beispiel-Python-Skripts und andere damit verbundene Software zur Unterstützung Ihrer Migration von ONTAP zur ONTAP REST-API. Die wichtigsten dieser Proben werden im Folgenden beschrieben.
 
 
-NOTE: Alle Python-Codebeispiele sind auf der verfügbar https://github.com/NetApp/ontap-rest-python["NetApp ONTAP REST Python"^] GitHub Repository:
+NOTE: Alle Python-Codebeispiele sind im GitHub-Repository verfügbar https://github.com/NetApp/ontap-rest-python["NetApp ONTAP REST Python"^]. Lesen Sie auch die Ressourcen, die in verfügbar sindlink:../additional/learn_more.html["Weitere Informationen zur REST-API von ONTAP"].
 
 
 
