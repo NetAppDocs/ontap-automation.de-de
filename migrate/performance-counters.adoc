@@ -4,7 +4,7 @@ permalink: migrate/performance-counters.html
 keywords: performance, performance counters, mapping 
 summary: Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes ONTAP Systems. Es exportiert diese Daten als eine Reihe von Performance-Zählern, mit denen Sie die Performance Ihres ONTAP-Systems bewerten und Ihre Performance-Ziele erreichen können. 
 ---
-= Performance-Zähler
+= Verwenden von Performance-Zählern mit der ONTAP REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

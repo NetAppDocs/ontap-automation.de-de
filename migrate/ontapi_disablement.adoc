@@ -4,7 +4,7 @@ permalink: migrate/ontapi_disablement.html
 keywords: ONTAPI, ONTAPI disablement, migrate, migrate to REST API 
 summary: Die ONTAPI Schnittstelle wird in zukünftigen Versionen von ONTAP deaktiviert. Wenn Sie ONTAPI verwenden, sollten Sie die Migration zur ONTAP REST-API planen. 
 ---
-= ONTAPI Deaktivierung
+= ONTAPI Deaktivierung und die ONTAP REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

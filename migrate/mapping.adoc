@@ -4,7 +4,7 @@ permalink: migrate/mapping.html
 keywords: ontapi, rest api, mapping, mapping documentation, zapi 
 summary: Die ONTAP REST API umfasst Funktionen, die in den meisten Bereichen ONTAPI entsprechen. NetApp bietet Dokumentation, die die Zuordnung von ONTAPI-Aufrufen zu äquivalenten REST-API-Aufrufen beschreibt. 
 ---
-= ONTAPI-to-REST-API-Zuordnung
+= REST-API-Zuordnung von ONTAPI zu ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
