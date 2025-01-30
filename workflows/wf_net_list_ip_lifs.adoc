@@ -4,7 +4,7 @@ permalink: workflows/wf_net_list_ip_lifs.html
 keywords: workflow, job, job state 
 summary:  
 ---
-= Listen Sie die IP-Schnittstellen auf
+= Führen Sie die IP-Schnittstellen mit der ONTAP REST API auf
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

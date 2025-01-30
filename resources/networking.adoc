@@ -4,7 +4,7 @@ permalink: resources/networking.html
 keywords: networking resources 
 summary: Mithilfe dieser API-Aufrufe können Sie die physischen und logischen Netzwerkressourcen verwalten, die mit dem Cluster verwendet werden. 
 ---
-= Netzwerkbetrieb
+= Netzwerkressourcen in der ONTAP-REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

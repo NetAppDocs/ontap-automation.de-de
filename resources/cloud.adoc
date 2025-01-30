@@ -4,7 +4,7 @@ permalink: resources/cloud.html
 keywords: cloud resources 
 summary: Diese API-Aufrufe können zum Managen von Verbindungen zu Objekt-Storage-Ressourcen in der Cloud verwendet werden. 
 ---
-= Cloud
+= Cloud-Ressourcen in der ONTAP REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

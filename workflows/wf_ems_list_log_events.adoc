@@ -4,7 +4,7 @@ permalink: workflows/wf_ems_list_log_events.html
 keywords: support, ems, event management system, get events, get notifications, retrieve events 
 summary: Sie können alle Ereignisbenachrichtigungen oder Meldungen mit bestimmten Merkmalen abrufen. 
 ---
-= Listet die EMS-Protokollereignisse auf
+= Führen Sie die EMS-Protokollereignisse mithilfe der REST-API von ONTAP auf
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

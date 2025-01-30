@@ -4,7 +4,7 @@ permalink: workflows/wf_rbac_user_role.html
 keywords:  
 summary: Sie können diesen Workflow verwenden, um einen Benutzer mit einer zugeordneten REST-Rolle zu erstellen. 
 ---
-= Erstellen Sie einen Benutzer mit einer Rolle
+= Erstellen Sie einen Benutzer mit einer Rolle mithilfe der ONTAP-REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

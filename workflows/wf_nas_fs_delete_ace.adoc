@@ -4,7 +4,7 @@ permalink: workflows/wf_nas_fs_delete_ace.html
 keywords: nas, file security, access control entry, ace, delete ace 
 summary: 'Sie können einen vorhandenen Access-Cotrol-Eintrag (ACE) aus einer bestimmten Datei oder einem bestimmten Ordner löschen. Die Änderung wird auf alle untergeordneten Objekte übertragen.' 
 ---
-= Löschen eines Zugriffskontrolleintrags
+= Löschen Sie einen Zugriffssteuerungseintrag über die ONTAP-REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

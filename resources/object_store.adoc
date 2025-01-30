@@ -4,7 +4,7 @@ permalink: resources/object_store.html
 keywords: object store resources 
 summary: Über diese API-Aufrufe können Sie auf S3-basierten Objekt-Storage zugreifen. 
 ---
-= Objektspeicher
+= Objektspeicher-Ressourcen in der REST-API von ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

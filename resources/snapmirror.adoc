@@ -4,7 +4,7 @@ permalink: resources/snapmirror.html
 keywords: snapmirror resources 
 summary: Mit diesen API-Aufrufen können Sie die SnapMirror Datensicherungstechnologie managen. 
 ---
-= SnapMirror
+= SnapMirror-Ressourcen in der ONTAP-REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

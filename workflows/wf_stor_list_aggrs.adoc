@@ -4,7 +4,7 @@ permalink: workflows/wf_stor_list_aggrs.html
 keywords: workflow, storage, aggregates, list aggregates 
 summary:  
 ---
-= Listen Sie die Aggregate auf
+= Erstellen Sie eine Liste der Aggregate mithilfe der ONTAP REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: resources/svm.html
 keywords:  
 summary:  
 ---
-= SVM
+= SVM-Ressourcen in der ONTAP-REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="7d986aa6827f53816cefdf1f0049c38b" category="section-title">Die Informationen zum Sicherheitsdeskriptor aktualisieren</block>
   <block id="411009bbd509e2b00a1f4543b3c1ca74" category="section-title">ONTAP REST API im Vergleich zu ONTAP-CLI-Befehlen</block>
   <block id="0ec641cfacd36c8e22a334135e2abdac" category="cell">ONTAP REST API</block>
   <block id="de134183bea5df515a6756a539ce6f18" category="cell">CLI VON ONTAP</block>
@@ -37,7 +36,6 @@
   <block id="554cfab3938e21d9270bd6b75931f96f" category="section-title">Videos</block>
   <block id="488449a83a7af94bacba6d31023a0ace" category="inline-link-macro">NetApp Ansible DevOps-Lösungen</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">Versionshinweise zu ONTAP</block>
-  <block id="7341eaad1796dcd6268b71a308240243" category="doc">Erstellen Sie einen Benutzer mit einer Rolle</block>
   <block id="379385ed06cff6b981e905026b8488d8" category="paragraph">Die ONTAP Version legt fest, welche REST-Endpunkte und RBAC-Funktionen verfügbar sind.</block>
   <block id="7a1d01c8bf21e8d2524e97aacc31c321" category="paragraph">Sie müssen die zu sichernden Ressourcen oder Befehle und den Umfang (Cluster oder SVM) festlegen.</block>
   <block id="6d1c7815a7f642c3359cf36570ffac64" category="paragraph">Nachdem Sie die Ressourcen und den Umfang ermittelt haben, müssen Sie die zuzugeteilte Zugriffsebene festlegen.</block>
@@ -502,7 +500,6 @@
   <block id="e96c6ce30fc02655f5156ad7f43abeb2" category="cell">PB (TB x 1024 Byte) oder Pebibyte</block>
   <block id="e393851263b97103e1b16673bad43724" category="inline-link-macro">Objektreferenzen und -Zugriff</block>
   <block id="4d89f3083454f3531f41ee418943d490" category="list-text"><block ref="4d89f3083454f3531f41ee418943d490" category="inline-link-macro-rx"></block></block>
-  <block id="6e4ad51ed0c9f59ca29ccce216f868b1" category="section-title">Beschränkung des Zugriffs auf SVM-Volume-Vorgänge</block>
   <block id="44b825cf5bc9349a15a7ed51954ce076" category="list-text">Alle CRUD Volume-Vorgänge einschließlich get, create, modify und delete</block>
   <block id="0a98788f622c9b8a786424f59d6f073f" category="list-text">Volume-Klon kann nicht erstellt werden</block>
   <block id="91b8fb1bf628880e8b9a3976c3a032ab" category="list-text">Es sind möglich, Snapshots zu erstellen und zu löschen und auch SnapMirror Beziehungen zu aktualisieren</block>
@@ -902,7 +899,6 @@
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Patente</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Eine aktuelle Liste der NetApp Patente finden Sie unter:</block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Datenschutzrichtlinie</block>
-  <block id="b4cd15e8e24635e4a72a8cce25d314ca" category="sidebar">ONTAP Dokumentation zur Automatisierung</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
   <block id="ec8bc6c5f8fe5dc6045b9edfffae614a" category="sidebar">Die Verwendung der REST-API wird vorbereitet</block>
   <block id="e78273b83daaaecb5744859fa531181b" category="sidebar">Einzelheiten zur REST-Implementierung</block>
@@ -1332,7 +1328,6 @@
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.</block>
   <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">Schritt 2: Rufen Sie den Status des Jobs ab</block>
   <block id="1e6808f43cf2da1acd44c6e982792490" category="summary">Sie können die in einem ONTAP Cluster definierten Storage Virtual Machines (SVMs) auflisten. Dies könnte dazu führen, dass Sie die Kennung für eine bestimmte SVM finden oder die Einmaligkeit des Namens sicherstellen, bevor Sie eine neue SVM erstellen.</block>
-  <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">Listen Sie die SVMs auf</block>
   <block id="a3d2e020750395446da7d89e6da9765d" category="summary">Sie können die Konfiguration für ein ONTAP Cluster einschließlich bestimmter Felder abrufen. Dies kann im Rahmen der Bewertung des Status des Clusters oder vor dem Aktualisieren der Konfiguration erfolgen.</block>
   <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">Zusätzliche Eingabeparameter für Curl-Beispiele</block>
   <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">Neben den bei allen REST API-Aufrufen üblichen Parametern werden in diesem Schritt auch die folgenden Parameter im Curl-Beispiel verwendet.</block>
@@ -1375,7 +1370,6 @@
   <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">Siehe <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="9b516c95369c98e15389e58383128a9e" category="inline-link-macro">RBAC-Workflows</block>
   <block id="d0ae4474b926ded595a7a12cdb4fa9ca" category="admonition">Siehe <block ref="08b1cfcbf90aa340f0ccb33fbb4649b8" category="inline-link-macro-rx"></block> Beispiele für das Erstellen und Verwenden von Rollen mit der ONTAP-REST-API</block>
-  <block id="e5811d257020368f5a717692e3698c8c" category="doc">Administration der Datensicherung</block>
   <block id="a6812db2442ae325a9ccd39373bbd9dd" category="paragraph-title">Informationen zu diesem Workflow</block>
   <block id="daba4fa4643f88029966b062423e8d20" category="paragraph">Die traditionelle erstellte Rolle wird mit den folgenden Merkmalen definiert:</block>
   <block id="d48b8c7902dee00442e14d9b1af3af1b" category="cell">/API/Cluster</block>
@@ -1393,7 +1387,6 @@
   <block id="18a5ea643c715c0e45aa53077e8f1429" category="cell">Der Name der Rolle in der zu aktualisierenden SVM</block>
   <block id="4fa346713b0e13aa5afd8dc51d0ddecb" category="section-title">Schritt 6: Erstellen Sie einen Benutzer</block>
   <block id="3c597ed3165c87f6539fd81a53a11876" category="paragraph">Führen Sie den folgenden REST-API-Aufruf zu einem Benutzerkonto erstellen aus. Die oben erstellte Rolle *dprole1* ist mit dem neuen Benutzer verknüpft.</block>
-  <block id="e3abdda2fcce71a97b7507b852418cf4" category="doc">Erstellung von ONTAP-Berichten zulassen</block>
   <block id="c6ef9b731f6fad8f77a915b2ed739e76" category="paragraph">Sie können EINE REST-Rolle erstellen, um Benutzern die Möglichkeit zu geben, ONTAP-Berichte zu generieren.</block>
   <block id="fddc78544f7292e6a6fd31d26110db0d" category="paragraph">Die erstellte Rolle wird mit folgenden Merkmalen definiert:</block>
   <block id="05da6cc99ce87a708e1db8445633412e" category="doc">Bereiten Sie die Verwendung von RBAC vor</block>
@@ -1426,7 +1419,6 @@
   <block id="f69688cd7802eb62a67f6a56384b3d93" category="cell">max_Datensätze</block>
   <block id="09548bddb5b6b060a8ff9db149caf9b5" category="cell">Geben Sie die Anzahl der Datensätze an, die zurückgegeben werden sollen.</block>
   <block id="b933168f11c5a1fef62b427e5c4faba9" category="summary">Sie können ein signiertes X.509-Zertifikat in Ihrem ONTAP-Cluster installieren. Dies kann im Rahmen der Konfiguration einer ONTAP-Funktion oder eines Protokolls erfolgen, für das eine starke Authentifizierung erforderlich ist.</block>
-  <block id="86ba127d49846ec207c19190730b16ac" category="doc">Installieren Sie ein Zertifikat</block>
   <block id="5c88f057b69ff938c461962eab9693dc" category="paragraph">Sie müssen über das Zertifikat verfügen, das Sie installieren möchten. Stellen Sie außerdem sicher, dass alle Zwischenzertifikate bei Bedarf installiert sind.</block>
   <block id="6a9cd64c223b26e7117c3bc5cd084d43" category="admonition">Bevor Sie die folgenden JSON-Eingabebeispiele verwenden, müssen Sie das aktualisieren<block ref="d73414ceb92d4d043000a5e640fd38a8" prefix=" " category="inline-code"></block> Wert mit dem Zertifikat für Ihre Umgebung.</block>
   <block id="bc81a95e520df56e073aa3da00713e6b" category="section-title">Schritt 1: Installieren Sie das Zertifikat</block>
@@ -1513,17 +1505,13 @@
   <block id="6e5a184a338e990223b90751d5dce3fa" category="cell">Kann verwendet werden, um die für neue Aggregate verfügbaren Ersatzfestplatten zu ermitteln.</block>
   <block id="9c049e1832aad88667dcc17e261acc9c" category="listing-title">Beispiel für Curl: Geben Sie alle Festplatten zurück</block>
   <block id="2f16f01d47fc5581920b2b69e5a6cdc2" category="listing-title">Beispiel für Curl: Ersatzfestplatten zurückgeben</block>
-  <block id="2a11f21f5d4741d58b7d14923d4e08f9" category="doc">Auflisten der Accounts</block>
   <block id="4394c7ebecc609175a50f72d74a0557f" category="paragraph">Sie können eine Liste der Konten abrufen. Sie können dies tun, um Ihre Sicherheitsumgebung zu bewerten oder bevor Sie ein neues Konto erstellen.</block>
-  <block id="47a8ff2921d745ff1e85c78a7811f188" category="doc">Listen Sie die Aggregate auf</block>
   <block id="490c2fcb0f7a2efc0e882e344265c316" category="paragraph">Sie können eine Liste der Aggregate im Cluster abrufen. Dies könnte Sie tun, um die Auslastung und die Performance zu beurteilen.</block>
   <block id="6edce6e6c5993cbcc3356de83eed68df" category="cell">node.name</block>
   <block id="586ba6b164fb68d2e277e5509c3d920e" category="cell">Kann verwendet werden, um den Node zu identifizieren, an den jedes Aggregat angeschlossen ist.</block>
   <block id="d77215a29f7c4c57074e8278a01cb44d" category="listing-title">Beispiel Curl: Gibt alle Aggregate mit den Standardkonfigurationswerten zurück</block>
   <block id="3d13cd0551da6b0edbb329a4192f28a3" category="listing-title">Curl Beispiel: Gibt alle Aggregate mit einem bestimmten Konfigurationswert zurück</block>
-  <block id="902758a99886ee9a4b12dd38cc667f95" category="doc">Listen Sie die IP-Schnittstellen auf</block>
   <block id="1220a442fc15fd5c171980b6a6315040" category="listing-title">Curl Beispiel: Gibt alle LIFs mit den Standardkonfigurationswerten zurück</block>
-  <block id="36e958b717916175c77e1c0a9bd8a51d" category="doc">Listen Sie die Festplatten auf</block>
   <block id="c4acc246007fa7e427ad78bab2246d93" category="cell">US-DOLLAR JOB_ID</block>
   <block id="e62ba1f7e88de861aba828d64f793b2f" category="cell">Erforderlich, um den angeforderten Job zu identifizieren.</block>
   <block id="542fcd84c10c6cf94d17a2aec683b3f3" category="paragraph">Wenn Sie einen API-Aufruf mit der GET-Methode ausgeben, können Sie die zurückgegebenen Objekte anhand eines beliebigen Attributs mithilfe eines Abfrageparameters einschränken oder filtern.</block>
@@ -1573,7 +1561,6 @@
   <block id="d51d5ee15f404c2f4f7863bebcde1fac" category="paragraph-title">Ansible</block>
   <block id="74e4ec1fd7e7ec388822465aeff417c4" category="paragraph">Das NetApp<block ref="24f12c8cdb9e96aedf586081f8419901" category="inline-link-rx"></block> Ist über die BlueXP Web-Benutzeroberfläche verfügbar. Der Katalog bietet Zugriff auf Lösungspakete, mit deren Hilfe Sie die Implementierung und Integration von ONTAP in andere Produkte automatisieren können. Siehe<block ref="f695c17dc058de697d44814f47eefe4f" category="inline-link-rx"></block> Für Dokumentation und weitere Informationen.</block>
   <block id="6896ceb4698b2c86775b4d891be243d5" category="summary">Sie können die EMS-Verarbeitung (Event Management System) für einen ONTAP-Cluster konfigurieren und bei Bedarf EMS-Nachrichten abrufen.</block>
-  <block id="90aef0d7524722ffd0dc0cb8fa364d96" category="doc">Vorbereitung auf die Verwaltung der EMS-Support-Services</block>
   <block id="af129edd8d2b529838378e328200ea64" category="paragraph">Es stehen verschiedene Beispiele für Workflows zur Verfügung, die die Nutzung der ONTAP EMS-Dienste veranschaulichen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>.</block>
   <block id="f3bd9688dec070eec4b4332373791cf4" category="inline-link">events.py</block>
   <block id="85215b1290359f4664d37f38216d2256" category="paragraph">Wenn Sie Python verwenden, sehen Sie auch den Scripy<block ref="643db497504332dea05c67888bb57b20" category="inline-link-rx"></block> Beispiele für die Automatisierung einiger EMS-bezogener Aktivitäten.</block>
@@ -1583,7 +1570,6 @@
   <block id="882aca4326d752010b772b8158e8baa0" category="inline-link">Python-Skript zur Darstellung von EMS</block>
   <block id="cece6a40b70715f2a63bbd9c0b1372bd" category="list-text"><block ref="cece6a40b70715f2a63bbd9c0b1372bd" category="inline-link-rx"></block></block>
   <block id="eb230b030eac22517ebd137fbd7025a9" category="summary">Sie können den folgenden Workflow verwenden, um ein neues EMS-Benachrichtigungsziel für den Empfang ausgewählter Ereignismeldungen zu erstellen.</block>
-  <block id="b4d8401916bcfe9d487b43317e141180" category="doc">Erstellen Sie eine EMS-Benachrichtigung</block>
   <block id="4b6b43bf6462be74bc77a76514b73254" category="section-title">Schritt 1: Konfigurieren Sie die systemweiten E-Mail-Einstellungen</block>
   <block id="1186c8ad3d5fa7fe5bc14196b7869208" category="paragraph">Sie können den folgenden API-Aufruf durchführen, um die systemweiten E-Mail-Einstellungen zu konfigurieren.</block>
   <block id="ef891763ba7048887e2e72131878e76c" category="cell">/API/Support/ems</block>
@@ -1603,9 +1589,7 @@
   <block id="5af5cc7f9522d6ed61830a95fdd63cae" category="cell">Zielkonfiguration</block>
   <block id="cfbbc7b9438bc32708cb12da6986b172" category="cell">Enthält die Werte für das Ereignisziel.</block>
   <block id="49d9b762ced33c4a64540c0502fa12ae" category="summary">Sie können die aktuelle EMS-Konfiguration für einen ONTAP-Cluster abrufen. Sie können dies tun, bevor Sie die Konfiguration aktualisieren oder eine neue EMS-Benachrichtigung erstellen.</block>
-  <block id="bf68501f440a0b26f1bce42df8f87f61" category="doc">Rufen Sie die EMS-Konfiguration ab</block>
   <block id="321af4d0ee1843b9eb21c75179cd5a5a" category="summary">Sie können alle Ereignisbenachrichtigungen oder Meldungen mit bestimmten Merkmalen abrufen.</block>
-  <block id="13a19e32980ac43fd75e6a9645a8b411" category="doc">Listet die EMS-Protokollereignisse auf</block>
   <block id="077c58e0d7282761a97c6c03fcd5f677" category="paragraph">Sie können alle Ereignisbenachrichtigungen oder nur Meldungen mit bestimmten Merkmalen abrufen.</block>
   <block id="b098fa166f68e99b9f901b465347c595" category="cell">/API/Support/ems/Events</block>
   <block id="51f996d6bdce27d5d9c364daf9452884" category="cell">Wird verwendet, um bestimmte Felder anzufordern, die in die Antwort aufgenommen werden sollen.</block>
@@ -1622,17 +1606,14 @@
   <block id="0e0109505c34b65099fc5f28788f80c2" category="sidebar">EMS-Benachrichtigung erstellen</block>
   <block id="62e79f1e2a16917d7b811343757eede5" category="summary">Sie können einem Benutzer begrenzte Datensicherungsfunktionen zur Verfügung stellen.</block>
   <block id="542f0dae2bb6d52eba2a6242f8f9bbb4" category="summary">Sie können die aktuellen effektiven Berechtigungen für eine bestimmte Datei oder einen bestimmten Ordner abrufen.</block>
-  <block id="ca8b310152c3cdbf0b209d0af018c2db" category="doc">Holen Sie sich die effektiven Berechtigungen für eine Datei</block>
   <block id="eb8b558a40765e93b8be653d5fb7656c" category="cell">/API/protocols/file-Security/effective-permissions/{svm.uuid}/} path{</block>
   <block id="d4f560c2cc4c11c467693af3a4c697fb" category="cell">Dies ist die UUID der SVM, die die Datei enthält.</block>
   <block id="a0da37dfc114065048cd3b5de2ff66a6" category="cell">PFAD FÜR DATEI</block>
   <block id="bae6d4bef4e1697b5dfae7f9202e2499" category="cell">Dies ist der Pfad zur Datei oder zum Ordner.</block>
   <block id="6abb58e21232fa67ee94875bd5f72d26" category="summary">Sie können eine neue Sicherheitsbeschreibung auf eine bestimmte Datei oder einen bestimmten Ordner anwenden.</block>
-  <block id="28a11b3673dcd0e091505156efd803f3" category="doc">Neue Berechtigungen auf eine Datei anwenden</block>
   <block id="350becfaa43a05e99267c2c4700bf2f4" category="section-title">Schritt 1: Die neuen Berechtigungen anwenden</block>
   <block id="a624b6656737d2c783691ba33fc23197" category="cell">/API/protocols/file-Security/permissions/{svm.uuid}/} path{</block>
   <block id="db7bd3219c8001e5e6cdbc7e71916c02" category="summary">Sie können alle Überwachungsinformationen für eine bestimmte Datei oder einen bestimmten Ordner abrufen.</block>
-  <block id="420c6b28da357f4a659ab47453e63f4e" category="doc">Rufen Sie die Auditinformationen für eine Datei ab</block>
   <block id="0751d56a6f57c4680d1dfea528fbf8d3" category="paragraph">Sie können die Überwachungsinformationen für eine bestimmte Datei oder einen bestimmten Ordner abrufen.</block>
   <block id="59acc03c473e764ed04cb83fde18f389" category="summary">Sie können einen vorhandenen Access-Cotrol-Eintrag (ACE) aus einer bestimmten Datei oder einem bestimmten Ordner löschen. Die Änderung wird auf alle untergeordneten Objekte übertragen.</block>
   <block id="3560dff4f0f31db694c608a2ebc06e85" category="doc">Löschen eines Zugriffskontrolleintrags</block>
@@ -1640,7 +1621,6 @@
   <block id="a2ec471f92f85173e4ba00d9da0db114" category="summary">Sie können eine bestimmte Sicherheitsbeschreibung auf eine bestimmte Datei oder einen bestimmten Ordner aktualisieren, einschließlich der primären Eigentümer-, Gruppen- oder Kontrollflags.</block>
   <block id="bb059379feb749c05906d3ac23b4816d" category="section-title">Schritt 1: Aktualisieren Sie die Sicherheitsbeschreibung</block>
   <block id="698f9eb192e6aa6224d8848f98d6a530" category="summary">Sie können die Berechtigungen und Audit-Richtlinien für Dateien managen, die über die SVMs innerhalb eines ONTAP Clusters verfügbar sind.</block>
-  <block id="09cd38efbd2c8fdbc8c6175ec9176ea8" category="doc">Bereiten Sie sich auf das Management von Dateisicherheits- und Audit-Richtlinien vor</block>
   <block id="7e2e1102b90cfd81da1a2e5002c37c9c" category="paragraph">ONTAP weist Dateiobjekten mithilfe von System Access Control Lists (SACLs) und Ermessensary Access Control Lists (DACLs) Berechtigungen zu. Ab ONTAP 9.9 unterstützt die REST-API das Management der SACL- und DACL-Berechtigungen. Sie können die API verwenden, um die Administration der Dateisicherheitsberechtigungen zu automatisieren. In vielen Fällen können Sie einen einzelnen REST API-Aufruf anstelle mehrerer CLI-Befehle oder ONTAPI (ZAPI)-Aufrufe verwenden.</block>
   <block id="3c4e118c8471cd86da2e54560f34234b" category="admonition">Bei ONTAP-Versionen vor 9.9 können Sie die Verwaltung der SACL- und DACL-Berechtigungen mithilfe der CLI-Passthrough-Funktion automatisieren. Siehe <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block> Und<block ref="cc458ed66c48b12b86281fe13e008c20" category="inline-link-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="5a4c76b14341d9a5432b024437f965d1" category="paragraph">Es stehen verschiedene Beispiel-Workflows zur Verfügung, die veranschaulichen, wie Sie die ONTAP Dateisicherheitsdienste mithilfe der REST-API managen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>.</block>
@@ -1800,7 +1780,6 @@
   <block id="f503cec406370353472f2af8bffc177d" category="list-text">Mit dieser Funktion stehen drei neue Endpunkte zur Verfügung. Sie können diese API-Aufrufe ausgeben, um alle NFS-over-TLS-Schnittstellen abzurufen, eine bestimmte Schnittstelle anhand der UUID abzurufen und die Konfigurationseigenschaften für eine TLS-Schnittstelle zu aktualisieren. Insgesamt bieten diese API-Aufrufe eine Entsprechung zum Satz von<block ref="e06252ee7104d7c63fe9612305d61ed2" prefix=" " category="inline-code"></block> CLI-Befehle.</block>
   <block id="9fca2ad29082aa8ea692f5764bcc5371" category="admonition">NFS über TLS ist in ONTAP 9.15.1 als öffentliche Vorschau verfügbar. Diese Funktion wird als Vorschauangebot für Produktions-Workloads mit ONTAP 9.15.1 nicht unterstützt.</block>
   <block id="b302321652be9f7bc5eab2d6b2eb58f6" category="sidebar">Sie können die Implementierung und Administration Ihrer ONTAP Storage-Systeme mit einer von mehreren verfügbaren Optionen automatisieren. Die ONTAP REST-API bietet die primäre Grundlage für die Automatisierungstechnologien.</block>
-  <block id="391aea2b8a642f755fa9fc56deaf7f9d" category="sidebar">ONTAP-Automatisierung</block>
   <block id="617c66d87497684f35f56ae2cec21d23" category="sidebar">Sie können die Implementierung und Administration Ihrer ONTAP Storage-Systeme mit einer von mehreren verfügbaren Optionen automatisieren.</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Versionshinweise</block>
   <block id="0c5518b5db3a9e2425db3b5de6d30634" category="sidebar">ONTAP Automatisierungsoptionen</block>
@@ -1960,4 +1939,45 @@
   <block id="98dce57b0664e78870d257a648e96612" category="doc">Arbeiten Sie mit Rollen und Benutzern in der ONTAP-REST-API</block>
   <block id="8e7104f8cdaf55507f25e0b9a816f34b" category="doc">Abrufen der Cluster-Konfiguration mit der ONTAP REST API</block>
   <block id="19ca54acf953a715866f203d447d92ef" category="sidebar">Betriebseigenschaften</block>
+  <block id="b4042b6243fb82748c12f0b5e64e126b" category="doc">Cloud-Ressourcen in der ONTAP REST-API</block>
+  <block id="43d680669ba6d4e64886d6e371703971" category="doc">Cluster-Ressourcen in der ONTAP-REST-API</block>
+  <block id="23e06eb64b67c34e02cdf1c333fb39e1" category="doc">Benennen Sie Serviceressourcen in der ONTAP-REST-API</block>
+  <block id="fbfe672bafe1799a64f8b844cbf51200" category="doc">NAS-Ressourcen in der ONTAP-REST-API</block>
+  <block id="bf96d7232b1569f7f974f84313712582" category="doc">NDMP-Ressourcen in der ONTAP-REST-API</block>
+  <block id="5bfb1971c3845672a0927996621ab7c8" category="doc">Netzwerkressourcen in der ONTAP-REST-API</block>
+  <block id="4da2072299f85c020ad205af08ed4d70" category="doc">NVMe Ressourcen der ONTAP-REST-API</block>
+  <block id="b85ca351f297a958cc3a56ffe6513379" category="doc">Objektspeicher-Ressourcen in der REST-API von ONTAP</block>
+  <block id="fcb3c24f0a82777a9189784dd009798e" category="doc">SAN-Ressourcen in der ONTAP-REST-API</block>
+  <block id="5becf2b8ac4936c5ba1447d230808356" category="doc">Sicherheitsressourcen in der ONTAP-REST-API</block>
+  <block id="c8cf67503220d2badea000e3d11e99b4" category="doc">SnapLock-Ressourcen in der ONTAP-REST-API</block>
+  <block id="c086e13d0bf1486e94e003705ba9c004" category="doc">SnapMirror-Ressourcen in der ONTAP-REST-API</block>
+  <block id="b9f209b0cb8741dc1516366752eeeb99" category="doc">Storage-Ressourcen in der ONTAP-REST-API</block>
+  <block id="49a1afb43fc7c1159041fb51ac2ca83d" category="doc">Support-Ressourcen in der ONTAP-REST-API</block>
+  <block id="115fa475ca65d7cc65ec0795dfa7f351" category="doc">SVM-Ressourcen in der ONTAP-REST-API</block>
+  <block id="fb388d9c8e5b3913e52ecd5af61590fa" category="doc">Installieren Sie ein Zertifikat mithilfe der ONTAP REST API</block>
+  <block id="5c1899ae11da3b65cc9747f3b5a0e3e6" category="doc">Führen Sie die installierten Zertifikate mithilfe der ONTAP REST API auf</block>
+  <block id="ff75e734b8e348f7fbc58a45a62c3d2a" category="doc">Aktualisieren Sie den Cluster-Kontakt über die ONTAP REST-API</block>
+  <block id="20b2b927bbd47b1299d71368f43a9c05" category="doc">Erstellen Sie eine EMS-Benachrichtigung mithilfe der REST-API von ONTAP</block>
+  <block id="382cc4ffaee151c9b027efc50735214d" category="doc">Rufen Sie die EMS-Konfiguration mit der ONTAP REST API AB</block>
+  <block id="16b8abca450f596dee5f67d45a9be46a" category="doc">Führen Sie die EMS-Protokollereignisse mithilfe der REST-API von ONTAP auf</block>
+  <block id="a859ee6e31a48c21f78b533bb9b22b91" category="doc">Bereiten Sie sich auf die Verwaltung der EMS-Support-Services mithilfe der ONTAP-REST-API vor</block>
+  <block id="8f6acc43151cdfde9ac685d19b85c9e4" category="doc">Abrufen der Job-Instanz mithilfe der ONTAP REST API</block>
+  <block id="d1464563dfce19f45744880723e72289" category="doc">Anwenden neuer Berechtigungen auf eine Datei mithilfe der ONTAP-REST-API</block>
+  <block id="08afd7b193f9841a00bc826625e9367e" category="doc">Löschen Sie einen Zugriffssteuerungseintrag über die ONTAP-REST-API</block>
+  <block id="5abfa0830c06ff193aad808d42a5ad6f" category="doc">Auditing-Informationen für eine Datei mithilfe der ONTAP REST API</block>
+  <block id="f38d0a3a68b1a29e0f8271bd663ce1c2" category="doc">Erhalten Sie die effektiven Berechtigungen für eine Datei mit der ONTAP REST-API</block>
+  <block id="24825bd5411d630c335647de8203bbeb" category="doc">Bereiten Sie sich auf das Management von Dateisicherheits- und Audit-Richtlinien mithilfe der ONTAP REST API vor</block>
+  <block id="304f7db2f7ba5f9087bf7857f5ef378d" category="doc">Aktualisieren Sie die Security Descriptor-Informationen mithilfe der ONTAP REST API</block>
+  <block id="df4c268dde27ccdcf1230d4e17c68985" category="doc">Führen Sie die IP-Schnittstellen mit der ONTAP REST API auf</block>
+  <block id="e6b44c79dfa7350257328764150e644b" category="doc">Bereiten Sie die Verwendung der RBAC mithilfe der ONTAP REST API vor</block>
+  <block id="e44265ccdfdc2f520b02d27496844c14" category="doc">Administration der Datensicherung über die ONTAP REST API aktivieren</block>
+  <block id="27ead5fadf54405407c84b4a439bfd72" category="doc">Beschränkung des Zugriffs auf SVM-Volume-Vorgänge mithilfe der ONTAP-REST-API</block>
+  <block id="be7e00cbd41a4e9dc719b0c8d1883009" category="doc">Ermöglichen Sie die Erstellung von ONTAP-Berichten über die ONTAP-REST-API</block>
+  <block id="efb197e274661cc09589a68cfb64ba0b" category="doc">Erstellen Sie einen Benutzer mit einer Rolle mithilfe der ONTAP-REST-API</block>
+  <block id="91af67596c66905a5013dd5a8db3f2d0" category="doc">Führen Sie die Konten auf, die die ONTAP REST-API verwenden</block>
+  <block id="cfe6eeb0469ddb026288aadf548610bd" category="doc">Erstellen Sie eine Liste der Aggregate mithilfe der ONTAP REST API</block>
+  <block id="a5bbc27835a218995809409c292f40ed" category="doc">Führen Sie die Festplatten mit der ONTAP REST API auf</block>
+  <block id="598efe1689990327c62503c7c48dbd74" category="doc">Führen Sie eine Liste der SVMs mit der ONTAP REST API auf</block>
+  <block id="3a77755c4eaf7897cda1f7db8e722428" category="sidebar">ONTAP-Automatisierung</block>
+  <block id="47ac2234b10a714bdea293d370ad2ce1" category="sidebar">Dokumentation zur ONTAP Automatisierung</block>
 </blocks>

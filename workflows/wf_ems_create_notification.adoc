@@ -4,7 +4,7 @@ permalink: workflows/wf_ems_create_notification.html
 keywords: support, ems, event management system, create ems, create ems notification 
 summary: Sie können den folgenden Workflow verwenden, um ein neues EMS-Benachrichtigungsziel für den Empfang ausgewählter Ereignismeldungen zu erstellen. 
 ---
-= Erstellen Sie eine EMS-Benachrichtigung
+= Erstellen Sie eine EMS-Benachrichtigung mithilfe der REST-API von ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
