@@ -6,17 +6,17 @@ entries:
   entries:
   - title: REST-Web-Services-Grundlage
     url: "/rest/rest_web_services_foundation.html"
-  - title: Grundlegende betriebliche Eigenschaften
+  - title: Betriebseigenschaften
     url: "/rest/operational_characteristics.html"
   - title: Eingabevariablen
     url: "/rest/input_variables.html"
   - title: Eine API-Antwort interpretieren
     url: "/rest/interpret_api_response.html"
-  - title: Asynchrone Verarbeitung mit dem Job-Objekt
+  - title: Asynchrone Verarbeitung
     url: "/rest/asynchronous_processing.html"
   - title: Objektreferenzen und -Zugriff
     url: "/rest/object_references_and_access.html"
-  - title: Performance-Metriken für Storage-Ressourcen
+  - title: Performance-Metriken
     url: "/rest/performance_metrics.html"
 - title: RBAC-Sicherheit
   entries:

@@ -4,7 +4,7 @@ permalink: rest/asynchronous_processing.html
 keywords: asynchronous, asynchronous processing, job, job object 
 summary: Nachdem eine API-Anfrage ausgegeben wurde, die für die asynchrone Ausführung ausgelegt ist, wird immer ein Jobobjekt erstellt und an den Anrufer zurückgegeben. Der Job beschreibt und Anker eine Hintergrundaufgabe, die die Anforderung verarbeitet. 
 ---
-= Asynchrone Verarbeitung mit dem Job-Objekt
+= Asynchrone Verarbeitung mit der REST-API von ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

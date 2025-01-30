@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: resources/application.html 
-keywords: application resources 
+keywords: rest, rest api, applications, application resources 
 summary: Sie können diese API-Aufrufe zur Verwaltung der ONTAP-Anwendungsressourcen verwenden. 
 ---
-= Applikation
+= Applikationsressourcen in der ONTAP-REST-API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

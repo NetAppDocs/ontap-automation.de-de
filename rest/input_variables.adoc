@@ -4,7 +4,7 @@ permalink: rest/input_variables.html
 keywords: variables, input, input variabls 
 summary: Sie können steuern, wie ein API-Aufruf über Parameter und Variablen verarbeitet wird, die in der HTTP-Anforderung festgelegt sind. 
 ---
-= Eingabevariablen, die eine API-Anforderung steuern
+= Eingabevariablen für eine ONTAP-REST-API-Anforderung
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
