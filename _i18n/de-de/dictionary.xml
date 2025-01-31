@@ -1683,10 +1683,8 @@
   <block id="5cd76801bc70b25fab5348133fbeaaff" category="list-text">Wenn Sie eine funktionale Lücke in der ONTAP-REST-API identifizieren, können Sie eine neue Funktion für die API anfordern.</block>
   <block id="2d808b90a1137a1a9fb1f2a6b8aab8eb" category="inline-link">Anfordern einer Funktion für die ONTAP-REST-API</block>
   <block id="2f25f340fb53d4017b182c6b51020451" category="paragraph"><block ref="2f25f340fb53d4017b182c6b51020451" category="inline-link-rx"></block></block>
-  <block id="f954d54d4b0a7e9ea5cf236808483a7c" category="summary">NetApp unterstützt die Verwendung von PowerShell für das Management von ONTAP Storage-Systemen.</block>
   <block id="c79fa3b95a882a4d5a7a0e5e00100e39" category="doc">Überblick über das PowerShell Toolkit</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="paragraph-title">PowerShell</block>
-  <block id="501fd8414e2cb7ea1f33c45defefd651" category="paragraph">PowerShell ist ein Programm von Microsoft, das Sie zur Aufgabenautomatisierung und zum Konfigurationsmanagement verwenden können. Es umfasst eine Kommandozeilen-Shell-Umgebung sowie eine Skriptsprache.</block>
   <block id="c714c2b9a4fb9d44e4562afa883f47ea" category="paragraph-title">NetApp ONTAP PowerShell Toolkit</block>
   <block id="0659d428df833a806e29e65e632d380a" category="paragraph-title">NetApp Support</block>
   <block id="abbe6086a8dd2213ec443ee7529470ed" category="paragraph">Sie können das PowerShell Toolkit von der NetApp Support-Website herunterladen:</block>
@@ -1800,7 +1798,6 @@
   <block id="f617bf9bf27979ddd862da656c1ac630" category="admonition">Die RBAC-Funktion von ONTAP wurde kontinuierlich erweitert und in ONTAP 9.11.1 (und nachfolgenden Versionen) deutlich verbessert. Weitere Informationen finden Sie unter <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> und <block ref="1d53a2f90038290ad464bebe3ee5abe5" category="inline-link-macro-rx"></block> .</block>
   <block id="fe6ccd0a0c871758ba9563377db86e13" category="doc">Ihr erster ONTAP REST API-Aufruf</block>
   <block id="e02870eb3d03aec6ab03fa4fa4f87b65" category="doc">ONTAP REST API Lab-Ressourcen</block>
-  <block id="b5ca69b3b3ee6f013fa4a87b8fdd4fb5" category="doc">Laden Sie das ONTAP PowerShell Toolkit herunter, und installieren Sie es</block>
   <block id="940f4511f0af1bd466600a8213691360" category="inline-link">NetApp: ONTAP PowerShell Toolkit</block>
   <block id="4028e751d6613e2ade147d59afdd8a50" category="paragraph"><block ref="4028e751d6613e2ade147d59afdd8a50" category="inline-link-rx"></block></block>
   <block id="0220d9b548f6fab03e4a4e2d9ca818fe" category="summary">NetApp verbessert und aktualisiert weiterhin die ONTAP-REST-API für jede wichtige Produktversion. Diese Aktualisierungen können gelegentlich Änderungen an bestehenden API-Aufrufen enthalten, wie z. B. die verwendeten Parameter und Standardwerte. Diese Änderungen können sich auf Software auswirken, die auf die REST-API zugreift.</block>
@@ -1980,4 +1977,9 @@
   <block id="598efe1689990327c62503c7c48dbd74" category="doc">Führen Sie eine Liste der SVMs mit der ONTAP REST API auf</block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="sidebar">ONTAP-Automatisierung</block>
   <block id="47ac2234b10a714bdea293d370ad2ce1" category="sidebar">Dokumentation zur ONTAP Automatisierung</block>
+  <block id="773636ecc39ec5e888c33fed3471ca6a" category="summary">NetApp bietet Unterstützung für PowerShell, mit dem Sie Ihre ONTAP Storage-Systeme verwalten können.</block>
+  <block id="2fa251c44aacb71e26d10444ef2c35d7" category="doc">Erfahren Sie mehr über das NetApp PowerShell Toolkit</block>
+  <block id="f1f7a58e7fbfd1ed521da099492f9928" category="paragraph">PowerShell ist eine weitere Option zur Automatisierung der Administration Ihrer ONTAP Cluster.</block>
+  <block id="a96db3613c36742398cc9d0c8e5e717a" category="paragraph">PowerShell ist eine Programmiersprache von Microsoft, die Sie zur Aufgabenautomatisierung und zum Konfigurationsmanagement verwenden können. Es umfasst eine Kommandozeilen-Shell-Umgebung sowie eine Skriptsprache.</block>
+  <block id="f8769a3b6c00e170fce8e2d7779f5f7c" category="doc">Erfahren Sie mehr über das NetApp Manageability SDK</block>
 </blocks>
