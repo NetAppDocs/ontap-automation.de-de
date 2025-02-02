@@ -1876,7 +1876,6 @@
   <block id="35a07dde4cdfcf3565f03875ee748ac6" category="list-text">Verbindungsmanagement</block>
   <block id="8fe3bb19a244ccfeddfe93062360622d" category="list-text">Ausnahmebehandlung</block>
   <block id="06856d0d21cf25fed37bf8f01dd8e070" category="list-text">Einheitliche Fehlermeldungen</block>
-  <block id="4eabbfd21dbe2c323da49bedb2a5c62c" category="paragraph">Der Name des Python Client Library-Pakets ist *netapp-ontap*. Die mit dem Paket verknüpfte Version ist eine Kombination aus den ONTAP-Haupt- und Nebenversionsnummern, aus denen die Bibliothek erstellt wurde, sowie einer Nebenversion für die Client-Bibliothek in der ONTAP-Version. Gültige Versionsnummern sind beispielsweise 9.6.1, 9.6.2 und 9.7.1.</block>
   <block id="05ccfbea6601dcca671775f24a6b14d3" category="paragraph-title">Codebeispiele</block>
   <block id="2284945e609b7e5c75ffeed3e93b30dc" category="paragraph">NetApp unterhält ein GitHub-Repository mit Codebeispielen und anderen hilfreichen Informationen. Sie können zum Ordner _examples_ navigieren, um mithilfe der Python-Client-Bibliothek auf Samples zuzugreifen. Weitere Informationen finden Sie an den folgenden Standorten auf GitHub:</block>
   <block id="a9672c1d2a17caa13c69c68927db925b" category="sidebar">Erfahren Sie mehr über die Python Client Library</block>
@@ -1968,11 +1967,11 @@
   <block id="a96db3613c36742398cc9d0c8e5e717a" category="paragraph">PowerShell ist eine Programmiersprache von Microsoft, die Sie zur Aufgabenautomatisierung und zum Konfigurationsmanagement verwenden können. Es umfasst eine Kommandozeilen-Shell-Umgebung sowie eine Skriptsprache.</block>
   <block id="f8769a3b6c00e170fce8e2d7779f5f7c" category="doc">Erfahren Sie mehr über das NetApp Manageability SDK</block>
   <block id="40165cda75e3c737682e919501eec98c" category="doc">Weitere Informationen zu REST-Webservices</block>
-  <block id="4c720a0398276ed3f84fdbaf97711b7d" category="summary">Die NetApp ONTAP Python Client-Bibliothek ist ein Paket, das Sie installieren und zum schnellen Schreiben von Skripts für den Zugriff auf die ONTAP REST-API verwenden können. Sie müssen die lokale Laufzeitumgebung vorbereiten, bevor Sie sie verwenden. Sie müssen das Dienstprogramm „_Pip_“ verwenden, um das Paket „NetApp_ONTAP“ von der Seite „Python Package Index“ (PyPi) zu installieren.</block>
   <block id="7bafad8d0c182e2b6b31ac4018784823" category="list-text"><block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>.</block>
   <block id="35ae08a314ffffc02580e3c3fbfad924" category="section-title">Funktionen und Vorteile</block>
-  <block id="b310094d4525ad8d1f7d1dab174a4148" category="section-title">Separate Pakete nach ONTAP-Version</block>
-  <block id="4411cc32563b58d1d479aff384140f24" category="paragraph">Jede ONTAP-Version, die mit 9.6 beginnt, verfügt über ein PyPI-Paket und die zugehörige Dokumentation. Installationsanforderungen sind in jedem Paket enthalten und geben verschiedene Versionen von: python, Requests, Requests-toolbelt und Marshmallow an.</block>
   <block id="075eb829f6ad7e0f3047f5e1b0db251b" category="example-title">Liste der Pakete und Dokumentation</block>
   <block id="04e844fe21e462953e1fe26128de4115" category="doc">Skript zum Abrufen der Clusterkonfiguration mithilfe der Python-Client-Bibliothek</block>
+  <block id="408720b5ef7b85489771db314855817a" category="summary">Die NetApp ONTAP Python Client-Bibliothek ist ein Paket, das Sie installieren und zum schnellen Schreiben von Skripts für den Zugriff auf die ONTAP REST-API verwenden können. Sie müssen die lokale Laufzeitumgebung vorbereiten, bevor Sie sie verwenden. Sie können das Dienstprogramm _Pip_ verwenden, um das Paket von der Python Package Index (PyPI)-Site zu installieren.</block>
+  <block id="45cbb31cae972c198bf60a227158efb0" category="paragraph">Der Name des Python-Client-Bibliothekspakets lautet _NetApp-ONTAP_. Die mit dem Paket verknüpfte Version ist eine Kombination aus den ONTAP-Haupt- und Nebenversionsnummern, aus denen die Bibliothek erstellt wurde, sowie einer Nebenversion für die Client-Bibliothek in der ONTAP-Version. Gültige Versionsnummern sind beispielsweise 9.6.1, 9.6.2 und 9.7.1.</block>
+  <block id="cfa5daa2060894d0e2b77ee5e70e0e94" category="paragraph">Jede ONTAP-Version, die mit 9.6 beginnt, verfügt über ein PyPI-Paket mit der zugehörigen Dokumentation. Installationsanforderungen sind in jedem Paket enthalten und geben Versionen der unterstützenden Bibliotheken wie Python, Requests, Requests-Toolbelt und Marshmallow an.</block>
 </blocks>
