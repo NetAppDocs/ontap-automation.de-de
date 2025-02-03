@@ -26,7 +26,7 @@ Ab ONTAP 9.6 bietet ONTAP eine umfassende REST-API, die die Grundlage für die A
 Sie können über jede Programmiersprache, die einen REST-Client unterstützt, direkt auf die ONTAP REST-API zugreifen. Beliebte Sprachen sind Python, PowerShell und Java.
 
 .Migration von veraltetem ONTAPI Code zur Nutzung von REST
-Die ONTAPI API (Zephyr API oder ZAPI) ist die ursprüngliche Gruppe proprietärer Aufrufe, die in der NetApp ONTAP Software enthalten sind, um die Automatisierung Ihrer Storage-Administrations- und Management-Aufgaben zu unterstützen. Die API ist Teil der link:../sw-tools/nmsdk.html["NetApp Manageability SDK"]. Es wird erwartet, dass die ONTAPI Schnittstelle in zukünftigen Versionen von ONTAP deaktiviert wird. Wenn Sie bereits über Code verfügen, der die ONTAPI API verwendet, sollten Sie eine Migration von ONTAPI planen. NetApp bietet Unterstützung für die Konvertierung Ihres Codes zur Verwendung der neueren ONTAP-REST-API. Siehe link:../migrate/ontapi_disablement.html["Migrieren Sie von ONTAPI zur REST-API"] Finden Sie weitere Informationen.
+Die ONTAPI API (Zephyr API oder ZAPI) ist die ursprüngliche Gruppe proprietärer Aufrufe, die in der NetApp ONTAP Software enthalten sind, um die Automatisierung Ihrer Storage-Administrations- und Management-Aufgaben zu unterstützen. Die API ist Teil der link:../sw-tools/learn-about-nmsdk.html["NetApp Manageability SDK"]. Es wird erwartet, dass die ONTAPI Schnittstelle in zukünftigen Versionen von ONTAP deaktiviert wird. Wenn Sie bereits über Code verfügen, der die ONTAPI API verwendet, sollten Sie eine Migration von ONTAPI planen. NetApp bietet Unterstützung für die Konvertierung Ihres Codes zur Verwendung der neueren ONTAP-REST-API. Weitere Informationen finden Sie unter link:../migrate/ontapi_disablement.html["Migrieren Sie von ONTAPI zur REST-API"] .
 
 
 
@@ -38,7 +38,7 @@ NetApp bietet Client-Toolkits, die die ONTAP-REST-API abstrahieren und die Erste
 Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für den Zugriff auf die ONTAP REST-API verwendet werden kann. Es unterstützt mehrere zugrunde liegende Services, darunter Verbindungs-Management, asynchrone Anfragebearbeitung und Ausnahmebehandlung. Mithilfe der Python-Client-Bibliothek können Sie schnell robusten Code entwickeln, der Ihre ONTAP-Automatisierungsziele unterstützt. Weitere Informationen finden Sie unter link:../python/learn-about-pcl.html["Python-Client-Bibliothek"] .
 
 .PowerShell Toolkit
-Mit dem NetApp.ONTAP PowerShell Toolkit können Sie die Administration eines ONTAP Clusters von einem Windows Host aus automatisieren. Weitere Informationen finden Sie unter link:../pstk/overview_pstk.html["Überblick über das PowerShell Toolkit"] .
+Mit dem NetApp.ONTAP PowerShell Toolkit können Sie die Administration eines ONTAP Clusters von einem Windows Host aus automatisieren. Weitere Informationen finden Sie unter link:../pstk/learn-about-pstk.html["Erfahren Sie mehr über das NetApp PowerShell Toolkit"] .
 
 
 

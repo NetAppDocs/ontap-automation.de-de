@@ -58,4 +58,4 @@ Die Python-Client-Bibliothek ist ein Paket, das Sie installieren und verwenden k
 
 == ONTAP PowerShell Toolkit
 
-Das NetApp.ONTAP PowerShell Toolkit erweitert Ihre lokale PowerShell Umgebung um ein Modul mit mehr als 2,400 Commandlets. Damit können Sie schnell Code für Ihren Windows-Host entwickeln und die ONTAP-Bereitstellungen automatisieren. Weitere Informationen finden Sie unter link:../pstk/overview_pstk.html["Überblick über das PowerShell Toolkit"].
+Das NetApp.ONTAP PowerShell Toolkit erweitert Ihre lokale PowerShell Umgebung um ein Modul mit mehr als 2,400 Commandlets. Damit können Sie schnell Code für Ihren Windows-Host entwickeln und die ONTAP-Bereitstellungen automatisieren. Weitere Informationen finden Sie unter link:../pstk/learn-about-pstk.html["Erfahren Sie mehr über das NetApp PowerShell Toolkit"].
