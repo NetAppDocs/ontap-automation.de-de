@@ -1808,7 +1808,6 @@
   <block id="68d26d1aac1d90ae670aa8a5fe3415f3" category="summary">Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes ONTAP Systems. Es exportiert diese Daten als eine Reihe von Performance-Zählern, mit denen Sie die Performance Ihres ONTAP-Systems bewerten und Ihre Performance-Ziele erreichen können.</block>
   <block id="08d2a25d52e092c6c253545968ce5bb5" category="inline-link">ONTAP-Performance-Zählerzuordnung</block>
   <block id="91b54891dd280b62b83af7ec4c8e3979" category="paragraph">Sie können online auf die aktuelle Dokumentation zugreifen<block ref="9d8aae4b84eb6e74ade1e0afd2ee1664" category="inline-link-rx"></block>. Es steht auch eine Versionsauswahl zur Verfügung, um auf frühere Versionen der Dokumentation basierend auf der ONTAP-Version zuzugreifen.</block>
-  <block id="d9c24a6b276d26b3ed8aa4df515da6c8" category="paragraph"><block ref="d9c24a6b276d26b3ed8aa4df515da6c8" category="inline-link-rx"></block></block>
   <block id="31272abf1c9209ab4acd0bf10f129338" category="list-title">ONTAP 9.16.1</block>
   <block id="0c06f2efbe678ca8c3e4cd68189cf2ae" category="inline-link">PyPI: NetApp ONTAP 9.16.1</block>
   <block id="8f3ad8f9a04fe39c8fd1b3e0ba9e3dd2" category="list-text"><block ref="8f3ad8f9a04fe39c8fd1b3e0ba9e3dd2" category="inline-link-rx"></block></block>
@@ -1973,4 +1972,5 @@
   <block id="094ae048e28df3a12a5e4fedaf56a886" category="paragraph">Mit dem NetApp.ONTAP PowerShell Toolkit können Sie die Administration eines ONTAP Clusters von einem Windows Host aus automatisieren. Weitere Informationen finden Sie unter <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block> .</block>
   <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">Das NetApp.ONTAP PowerShell Toolkit erweitert Ihre lokale PowerShell Umgebung um ein Modul mit mehr als 2,400 Commandlets. Damit können Sie schnell Code für Ihren Windows-Host entwickeln und die ONTAP-Bereitstellungen automatisieren. Weitere Informationen finden Sie unter <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>.</block>
   <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">Die Unterstützung wurde an verschiedenen Punkten in jeder Veröffentlichung zurückgezogen. Dazu gehören ONTAP 9.10.1 P11 und höher, 9.11.1 P7 und höher sowie 9.12.1 GA und höher. <block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>Weitere Informationen finden Sie im.</block>
+  <block id="2d173dfa208c5028d536c08827a33be8" category="paragraph"><block ref="2d173dfa208c5028d536c08827a33be8" category="inline-link-rx"></block></block>
 </blocks>
