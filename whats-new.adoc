@@ -21,6 +21,18 @@ TIP: Sie sollten das überprüfen https://library.netapp.com/ecm/ecm_download_fi
 
 
 
+== ONTAP 9.17.1
+
+Die ONTAP 9.17.1-Version erweitert die Funktionen der ONTAP REST API um fast zwei Dutzend neue API-Aufrufe. Der Schwerpunkt dieser Version liegt auf Sicherheitsverbesserungen mit zusätzlichen Updates für die Mediator-Verarbeitung, NMVe-Subsysteme und Anwendungscontainer.
+
+Sicherheit:: Mit der ONTAP 9.17.1 REST API wurden vier wichtige Sicherheitsfunktionen eingeführt. Die Just-in-Time (JIT)-Berechtigungserweiterung von ONTAP ist eine Erweiterung der rollenbasierten Zugriffskontrolle (RBAC). Cluster-Administratoren können eine temporäre Erhöhung einer bestehenden Rolle anfordern, die Zugriff auf privilegierte Befehle ermöglicht. Die Funktion umfasst umfangreiche Konfigurationsoptionen. Unterstützung für den OpenStack Barbican Key Manager wurde hinzugefügt. Dieses KMS dient zur Verwaltung der Schlüssel für NetApp Volume Encryption (NVE). Autonomous Ransomware Protection (ARP) für SAN-Volumes ist in ONTAP 9.17.1 enthalten. Detaillierte ARP-Entropiestatistiken sind über die REST API verfügbar. Außerdem wurden mehrere API-Aufrufe hinzugefügt, um die SAML-Standard-Metadatenkonfiguration für einen Cluster zu verwalten.
+Clustermediatoren:: Sie können den BlueXP Cloud-Dienst über die ONTAP REST API anpingen. Sie können die Konfiguration eines bestimmten Mediators auch mit der PATCH-Methode mit einem vorhandenen Endpunkt ändern.
+NVMe:: NVMe-Subsysteme verwalten den Konfigurationsstatus und die Namespace-Zugriffskontrolle für eine Reihe von NVMe-verbundenen Hosts. Mit ONTAP 9.17.1 können Sie ein NVMe-Subsystem mit der PATCH-Methode an einem vorhandenen Endpunkt ändern.
+Anwendungscontainer:: Anwendungscontainer sind neu in ONTAP 9.17.1 und ermöglichen die Bereitstellung eines oder mehrerer Speicherobjekte. Sie können die erforderlichen Richtlinien und Regeln für den Clientzugriff auf den Speicher konfigurieren. Auch FlexCache -Volumes können bereitgestellt werden.
+
+
+
+
 == ONTAP 9.16.1
 
 ONTAP 9.16.1 enthält mehr als zwei Dutzend neue API-Aufrufe, die die Funktionen der ONTAP-REST-API weiter erweitern. Diese Verbesserungen konzentrieren sich hauptsächlich auf die Sicherheit, beinhalten aber auch Verbesserungen in der Kennzahlen- und Bucket-Administration.

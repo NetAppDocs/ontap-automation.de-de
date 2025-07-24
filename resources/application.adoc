@@ -16,6 +16,9 @@ summary: Sie können diese API-Aufrufe zur Verwaltung der ONTAP-Anwendungsressou
 [role="lead"]
 Sie können diese API-Aufrufe zur Verwaltung der ONTAP-Anwendungsressourcen verwenden.
 
+.Anwendungscontainer
+Mit einem Anwendungscontainer können Sie ein oder mehrere Speicherobjekte bereitstellen. Dieser Ressourcentyp wurde mit ONTAP 9.17.1 eingeführt.
+
 .Applikations-Snapshots
 Applikationen unterstützen Snapshot Kopien, die jederzeit erstellt oder wiederhergestellt werden können. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 

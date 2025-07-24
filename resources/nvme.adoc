@@ -35,4 +35,4 @@ Die NVMe-Subsystem-Controller stellen dynamische Verbindungen zwischen Hosts und
 Eine NVMe-Subsystemzuordnung ist eine Zuordnung eines NVMe Namespace zu einem NVMe-Subsystem. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
 .NVMe-Subsysteme
-Ein NVMe-Subsystem behält bei einer Konfiguration und bei der Namespace-Zugriffssteuerung für einen Satz NVMe-verbundenen Hosts die Kontrolle. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+Ein NVMe-Subsystem verwaltet den Konfigurationsstatus und die Namespace-Zugriffskontrolle für eine Reihe von NVMe-verbundenen Hosts. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit 9.17.1 aktualisiert.

@@ -43,8 +43,11 @@ Sie können Konfiguration und andere Informationen zu jeder Lizenz-Manager-Insta
 .Lizenzen Zu Haben
 Die Lizenzen ermöglichen es Ihnen, spezifische ONTAP Funktionen und Features zu implementieren. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
 
+.Mediator-Ping
+Sie können den BlueXP Cloud-Dienst anpingen. Dieser Ressourcentyp ist neu in ONTAP 9.17.1.
+
 .Mediatoren
-Sie können den mit MetroCluster verknüpften Mediator verwalten, einschließlich Hinzufügen oder Entfernen der Mediatorinstanz. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+Sie können den mit MetroCluster verknüpften Mediator verwalten und die Mediatorinstanz hinzufügen oder entfernen. Dieser Ressourcentyp ist neu in ONTAP 9.8 und wurde mit 9.17.1 aktualisiert.
 
 .MetroCluster
 Sie können eine MetroCluster Implementierung erstellen und managen, einschließlich dem Ausführen von Switchover- oder Switchback-Vorgängen. Dieser Ressourcentyp ist neu in ONTAP 9.8 und aktualisiert mit 9.11.
