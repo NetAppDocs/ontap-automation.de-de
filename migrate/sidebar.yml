@@ -2,8 +2,6 @@
 section: migrate
 title: Migrieren Sie von ONTAPI zur REST-API
 entries:
-- title: ONTAPI Deaktivierung
-  url: "/migrate/ontapi_disablement.html"
 - title: Überlegungen zur Migration
   url: "/migrate/migration-considerations.html"
 - title: ONTAPI für REST-Zuordnung
