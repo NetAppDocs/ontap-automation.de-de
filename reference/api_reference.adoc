@@ -23,7 +23,7 @@ NOTE: Die REST-API-Referenzdokumentation ist an mehreren Standorten verfügbar, 
 
 == Die Referenzdokumentation zur ONTAP API ist online verfügbar
 
-Sie können online auf die aktuelle Dokumentation zugreifen https://docs.netapp.com/us-en/ontap-restapi/ontap/getting_started_with_the_ontap_rest_api.html["ONTAP REST API Referenz"^]. Es steht auch eine Versionsauswahl zur Verfügung, um auf frühere Versionen der Dokumentation basierend auf der ONTAP-Version zuzugreifen.
+Sie können auf die aktuelle https://docs.netapp.com/us-en/ontap-restapi/getting_started_with_the_ontap_rest_api.html["ONTAP REST API Referenz"^] Dokumentation online. Es steht auch ein Versionswähler zur Verfügung, um auf frühere Versionen der Dokumentation basierend auf der ONTAP Version zuzugreifen.
 
 
 
