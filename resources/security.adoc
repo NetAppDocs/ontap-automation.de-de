@@ -55,6 +55,9 @@ Mit den API-Aufrufen können von ONTAP verwendete Zertifikate installiert, angez
 .Cisco Duo
 Duo bietet zwei-Faktor-Authentifizierung für SSH-Anmeldungen. Sie können Duo für den Betrieb auf ONTAP-Cluster- oder SVM-Ebene konfigurieren. Dieser Ressourcentyp wurde mit ONTAP 9.14 eingeführt.
 
+.Cluster-Netzwerksicherheit
+Sie können die Sicherheitskonfiguration des Clusternetzwerks einschließlich der Zertifikate abrufen und aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.18 eingeführt.
+
 .Cluster-Sicherheit
 Sie können Details zur Cluster-weiten Sicherheit abrufen und bestimmte Parameter aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.7 eingeführt und mit ONTAP 9.8 aktualisiert.
 
@@ -69,6 +72,9 @@ Sie können Gruppenkonfigurationen verwalten, einschließlich Gruppen, die mit U
 
 .Gruppenrollenzuordnungen
 Sie können Zuordnungsbeziehungen zwischen Gruppen und Rollen erstellen und verwalten. Dieser Ressourcentyp wurde mit ONTAP 9.16 eingeführt.
+
+.HA-Netzwerksicherheit
+Sie können die HA-Netzwerksicherheitskonfiguration abrufen und aktualisieren. Dieser Ressourcentyp wurde mit ONTAP 9.18 eingeführt.
 
 .IPsec
 Internet Protocol Security (IPSec) ist eine Protokollsuite, die Sicherheit zwischen zwei Endpunkten über ein zugrunde liegendes IP-Netzwerk bietet. Dieser Ressourcentyp ist neu in ONTAP 9.8.

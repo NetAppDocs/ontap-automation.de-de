@@ -40,6 +40,9 @@ Mithilfe dieser Endpunkte können Dateiklone erstellt, der Split-Status abgerufe
 .FlexCache
 Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.8 aktualisiert.
 
+.FlexCache -Verbindungsstatus
+Sie können den FlexCache Verbindungsstatus abrufen. Dieser Ressourcentyp wurde mit ONTAP 9.18 eingeführt.
+
 .Ursprünge von FlexCache
 FlexCache ist ein persistenter Cache eines Ursprungs-Volume. Dieser Ressourcentyp wurde ursprünglich mit ONTAP 9.6 eingeführt. Die Unterstützung wurde durch die ONTAP 9.9 REST API verbessert, um Änderungen über die HTTP-PATCH-Methode zu unterstützen.
 
