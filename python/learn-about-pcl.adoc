@@ -43,6 +43,11 @@ Jede ONTAP-Version, die mit 9.6 beginnt, verfügt über ein PyPI-Paket mit der z
 .Liste der Pakete und Dokumentation
 [%collapsible]
 ====
+.ONTAP 9.17.1
+* https://pypi.org/project/netapp-ontap/9.17.1.0/["PyPI: NetApp ONTAP 9.17.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP3351667/html/index.html["NetApp PCL-Dokumentation für Version 9.17.1"^]
+
+
 .ONTAP 9.16.1
 * https://pypi.org/project/netapp-ontap/9.16.1.0/["PyPI: NetApp ONTAP 9.16.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP3331665/html/index.html["NetApp PCL-Dokumentation für 9.16.1"^]

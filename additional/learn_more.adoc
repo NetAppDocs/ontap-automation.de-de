@@ -30,9 +30,7 @@ Die Blog-Artikel sind in mehreren Abschnitten auf der Grundlage des Themas angeo
 +
 https://www.netapp.com/blog/new-normal-for-automation["Neue Normalität für die Automatisierung"^]
 
-* Neu bei Ansible zur ONTAP-Automatisierung:
-+
-https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["Erste Schritte mit NetApp und Ansible – Installation von Ansible"^]
+
 
 * Entdecken Sie, wie Sie Dateisicherheit und -Berechtigungen mit der ONTAP REST-API managen.
 +

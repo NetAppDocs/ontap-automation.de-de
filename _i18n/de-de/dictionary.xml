@@ -32,7 +32,6 @@
   <block id="42d9b7d3455dfaa83fb3e81bad6cce7c" category="list-text"><block ref="919326d3777084e0f3855f9f03f93e3f" prefix="" category="inline-code"></block></block>
   <block id="04a23c4efdbd2046f23f7897eaf905ba" category="inline-link">ONTAP REST-APIs: Automatische Benachrichtigung über Ereignisse hoher Schweregrad</block>
   <block id="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="list-text"><block ref="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="inline-link-rx"></block></block>
-  <block id="3232acac3eec8e3d87880c5b41ab690d" category="paragraph">Neu bei Ansible zur ONTAP-Automatisierung:</block>
   <block id="554cfab3938e21d9270bd6b75931f96f" category="section-title">Videos</block>
   <block id="488449a83a7af94bacba6d31023a0ace" category="inline-link-macro">NetApp Ansible DevOps-Lösungen</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">Versionshinweise zu ONTAP</block>
@@ -1115,7 +1114,6 @@
   <block id="8acc0dc5cdc4a547b0826578b2a98b48" category="paragraph-title">S3-Gruppen</block>
   <block id="29c67008363344d9ca92cd75f29fe2c9" category="paragraph-title">S3-Richtlinien</block>
   <block id="bc00f7a5406f8f98848784d25ca2e573" category="paragraph-title">Verwenden des privaten CLI-Passthrough mit der ONTAP REST API</block>
-  <block id="f4a4d3f8e378d11233851c0c7c1aeda7" category="paragraph-title">Erste Schritte mit NetApp und Ansible – Installation von Ansible</block>
   <block id="34aebac80a78170f96dfd325c4320501" category="paragraph-title">HTTP-Anforderung</block>
   <block id="0d5a371e0c92f43305354a7ca5481105" category="paragraph-title">HTTP-Antwort</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
@@ -1526,7 +1524,6 @@
   <block id="8cdc96bc9ea6b47bb91dc9a53923dd2c" category="list-text">Um Sie bei der Aktualisierung Ihrer ONTAPI-Automatisierung zu unterstützen, bietet NetApp eine Liste von ONTAPI-Aufrufen, die einen oder mehrere Eingabeparameter benötigen, und eine Zuordnung dieser Aufrufe zu dem entsprechenden ONTAP 9 REST API-Aufruf. Siehe <block ref="9a78e4571d9a7f8312d61713dd66ccf3" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="a45cab230f2297dd4eb30fef224dd154" category="section-title">Typische REST API-Transaktion</block>
   <block id="f53d66bdb1fa04bbb3f2f929505e7427" category="paragraph">Es stehen verschiedene zusätzliche Ressourcen zur Verfügung, die Sie bei der Automatisierung der Implementierung und Administration Ihrer ONTAP Storage-Systeme unterstützen.</block>
-  <block id="940b33dd3ba3d167b07b98a018af32be" category="paragraph"><block ref="940b33dd3ba3d167b07b98a018af32be" category="inline-link-rx"></block></block>
   <block id="0937dacc143a9ef9a8e961bb05d706cb" category="list-text">Eine gute Einführung in die NetApp Python Client Bibliothek und wie man mit dem Schreiben von Code über die Bibliothek beginnt.</block>
   <block id="c481c55f899fe826c43a53c975e485f0" category="list-text">Ansible-zertifizierte Module:</block>
   <block id="80ea4b005fd9d89a5db44b1a4c02962a" category="inline-link">FAQs zur ZAPI-zu-ONTAP-REST-API-Transformation für CPC</block>
@@ -1996,4 +1993,8 @@
   <block id="98480199e938c1b0182ce374c8874655" category="paragraph">Mit der ONTAP Version 9.18.1 werden die Funktionen der ONTAP REST API um elf neue API-Aufrufe erweitert. Die Verbesserungen konzentrieren sich in erster Linie auf die Sicherheit, beinhalten aber auch eine Optimierung im Bereich der Speicherverwaltung.</block>
   <block id="d36ba93814bec12a880acf6b6dbf29e3" category="list-text">Mit der ONTAP 9.18.1 REST-API wurden zwei wichtige Sicherheitsverbesserungen eingeführt. Sie können die neuen Cluster-Netzwerk-API-Endpunkte verwenden, um die Cluster-Netzwerksicherheitskonfiguration anzuzeigen und zu aktualisieren. Eine robuste Unterstützung für die Zertifikatsverwaltung im Clusternetzwerk ist integriert. Darüber hinaus können Sie die Sicherheitskonfiguration des HA-Netzwerks für NVLog-Datenverkehr anzeigen und aktualisieren.</block>
   <block id="c7358a24d3b2dba34beefab7cc925d5d" category="list-text">NetApp FlexCache ist ein persistenter Cache eines Ursprungsvolumes. Es unterstützt Fan-Out, sodass aus einem einzigen Ursprungsvolume mehrere FlexCache erstellt werden können. Die REST-API beinhaltet Unterstützung für den Abruf des Verbindungsstatus zwischen den Cache-Instanzen und den Ursprungsvolumes.</block>
+  <block id="7b650aee25731b28a4a26e1237de6717" category="inline-link">PyPI: NetApp ONTAP 9.17.1</block>
+  <block id="5ebb87aae4f7e8c0fda80f126a8bf511" category="list-text"><block ref="5ebb87aae4f7e8c0fda80f126a8bf511" category="inline-link-rx"></block></block>
+  <block id="75b2bbb70260967ef570af8d23db0285" category="inline-link">NetApp PCL-Dokumentation für Version 9.17.1</block>
+  <block id="d086e4fa900ed41930da384119898669" category="list-text"><block ref="d086e4fa900ed41930da384119898669" category="inline-link-rx"></block></block>
 </blocks>
