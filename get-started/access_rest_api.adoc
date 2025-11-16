@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/access_rest_api.html 
-keywords: accessing the rest api, lif 
+keywords: access rest api, lif, cluster lif, svm lif, node lif 
 summary: Sie können auf die ONTAP REST API auf unterschiedliche Weise zugreifen. 
 ---
 = So erhalten Sie Zugriff auf die ONTAP REST API
@@ -20,17 +20,14 @@ Sie können auf die ONTAP REST API auf unterschiedliche Weise zugreifen.
 
 == Netzwerküberlegungen
 
-Sie können über folgende Schnittstellen eine Verbindung zur REST API herstellen:
+Sie können über verschiedene Schnittstellentypen eine Verbindung zur ONTAP REST API herstellen. Die von Ihnen gewählte LIF muss so konfiguriert sein, dass sie das HTTPS-Managementprotokoll unterstützt. Außerdem muss die Firewall-Konfiguration in Ihrem Netzwerk den HTTPS-Datenverkehr zulassen. Folgende Schnittstellen werden unterstützt:
 
 * Cluster-Management-LIF
 * Node Management-LIF
 * SVM-Management-LIF
 
 
-Die logische Schnittstelle, die Sie verwenden möchten, muss zur Unterstützung des HTTPS-Managementprotokolls konfiguriert sein. Außerdem muss die Firewall-Konfiguration in Ihrem Netzwerk den HTTPS-Datenverkehr ermöglichen.
-
-
-TIP: Sie sollten immer eine Cluster-Management-LIF verwenden. Dadurch werden die API-Anforderungen über alle Nodes verteilt und Knoten, die offline sind oder Konnektivitätsprobleme haben, werden vermieden. Wenn Sie mehrere Cluster-Management-LIFs konfiguriert haben, entsprechen diese alle dem Zugriff auf die REST-API.
+Obwohl Sie jeden dieser LIFs verwenden können, empfiehlt sich die Verwendung des Cluster-Management-LIF. Dadurch kann der Cluster als eine einzige logische Einheit adressiert werden und bietet ein Höchstmaß an Ausfallsicherheit und Lastverteilung. Ein Cluster-LIF kann bei Bedarf innerhalb des Clusters verschoben werden, um geplante Upgrades, Quorum-Ereignisse und andere Verbindungsprobleme zu bewältigen. Wenn Sie mehrere Cluster-Management-LIFs konfiguriert haben, sind diese alle hinsichtlich des Zugriffs auf die REST-API gleichwertig. Die SVM-Management-LIFs sind ebenfalls lastverteilt, Anfragen an LIFs auf Knotenebene werden jedoch lokal bearbeitet.
 
 
 
