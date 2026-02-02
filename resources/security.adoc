@@ -28,6 +28,9 @@ Sie können die SVM-Kontoinformationen auf dem Active Directory-Server verwalten
 .Ransomware schützen
 ONTAP erkennt Dateien, die möglicherweise eine Ransomware-Bedrohung enthalten. Es gibt mehrere Endgeräte-Kategorien. Sie können eine Liste dieser verdächtigen Dateien abrufen oder von einem Volume entfernen. Dieser Ressourcentyp wurde mit ONTAP 9.10.1 eingeführt. Unterstützung für die Anzeige der Version und die Aktualisierung des Anti-Ransomware-Pakets wurde mit ONTAP 9.16 hinzugefügt.
 
+.Aktivierung von Anti-Ransomware
+Sie können die Funktionsweise der Aktivierung des Autonomous Ransomware Protection (ARP) steuern. Dies umfasst das Abrufen und Ändern der Konfigurationseinstellungen. Dieser Ressourcentyp wurde mit ONTAP 9.18.1 eingeführt.
+
 .Anti-Ransomware-Entropie-Statistiken
 Für den Betrieb der Funktion „Autonomous Ransomware Protection“ (ARP) stehen detaillierte Entropiestatistiken zur Verfügung. Dieser Ressourcentyp wurde mit ONTAP 9.17.1 hinzugefügt.
 
