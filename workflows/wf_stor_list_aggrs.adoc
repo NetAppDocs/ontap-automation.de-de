@@ -24,7 +24,7 @@ Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt
 | HTTP-Methode | Pfad 
 
 
-| GET | /API/Storage/Festplatten 
+| GET | /api/storage/aggregates 
 |===
 .Verarbeitungsart
 Synchron
