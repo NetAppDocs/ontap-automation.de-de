@@ -2,7 +2,7 @@
 permalink: api-changes.html 
 sidebar: sidebar 
 keywords: rest api, api changes, parameters, default values, breaking changes, documentation errors 
-summary: NetApp verbessert und aktualisiert weiterhin die ONTAP-REST-API für jede wichtige Produktversion. Diese Aktualisierungen können gelegentlich Änderungen an bestehenden API-Aufrufen enthalten, wie z. B. die verwendeten Parameter und Standardwerte. Diese Änderungen können sich auf Software auswirken, die auf die REST-API zugreift. 
+summary: NetApp verbessert und aktualisiert die ONTAP REST API kontinuierlich mit jeder größeren Produktversion. Diese Aktualisierungen können gelegentlich Änderungen an bestehenden API-Aufrufen beinhalten, die den Zugriff auf ONTAP-Funktionalität beeinträchtigen. Es gibt außerdem zusätzliche Aspekte bei der Verwendung der API sowie einige Dokumentationsfehler. 
 ---
 = Änderungen an ONTAP-REST-API-Aufrufen
 :hardbreaks:
@@ -14,17 +14,20 @@ summary: NetApp verbessert und aktualisiert weiterhin die ONTAP-REST-API für je
 
 
 [role="lead"]
-NetApp verbessert und aktualisiert weiterhin die ONTAP-REST-API für jede wichtige Produktversion. Diese Aktualisierungen können gelegentlich Änderungen an bestehenden API-Aufrufen enthalten, wie z. B. die verwendeten Parameter und Standardwerte. Diese Änderungen können sich auf Software auswirken, die auf die REST-API zugreift.
+NetApp verbessert und aktualisiert die ONTAP REST API kontinuierlich mit jeder größeren Produktversion. Diese Aktualisierungen können gelegentlich Änderungen an bestehenden API-Aufrufen beinhalten, die den Zugriff auf ONTAP-Funktionalität beeinträchtigen. Es gibt außerdem zusätzliche Aspekte bei der Verwendung der API sowie einige Dokumentationsfehler.
 
 
 
 == Änderungen an bestehenden ONTAP-REST-API-Aufrufen
 
-Alle Änderungen an den bestehenden API-Aufrufen können sich auf Software auswirken, die auf die REST-API zugreift. Überprüfen Sie die Liste der Änderungen in der folgenden Tabelle, um festzustellen, ob es Auswirkungen auf Ihre ONTAP Automatisierungsumgebung hat. Jeder Eintrag enthält den entsprechenden API-Endpunkt, eine Beschreibung der Änderung und die eingeführte ONTAP-Version.
+Änderungen an den bestehenden ONTAP REST API-Aufrufen, wie Endpunkten und Parametern, können Software beeinflussen, die die API verwendet. In den meisten Situationen gelten diese je nach Ihrer Umgebung als _breaking changes_. Sie sollten die Liste in der untenstehenden Tabelle überprüfen, um festzustellen, ob Ihre Automatisierungsumgebung betroffen ist. Jeder Eintrag enthält den zutreffenden API-Endpunkt oder Bereich, eine Beschreibung der Änderung und die ONTAP-Version, in der sie eingeführt wurde.
 
 [cols="40%,50%,10%"]
 |===
-| Endpunkt | Beschreibung der Änderung | Version von ONTAP 
+| API-Endpunkt oder Bereich | Verhaltensbeschreibung | Version von ONTAP 
+
+
+| Azure Key Vault | Der REST-API-Endpunkt zum Aktivieren und Deaktivieren von Azure Key Vault (AKV) wird nun asynchron statt synchron ausgeführt. Dies betrifft die POST-Operation zum Aktivieren von AKV und die DELETE-Operation zum Deaktivieren. Clients, die diese API-Aufrufe verwenden, sollten ihren Code aktualisieren, um die asynchronen Antworten zu verarbeiten, was das Prüfen des Auftragsstatus anstelle des HTTP-Statuscodes beinhaltet. Diese Änderung betrifft hauptsächlich Azure NetApp Files (ANF)-Umgebungen, die Azure Key Vault-Konfigurationen über die ONTAP REST API verwalten. | 9.19.1 
 
 
 | `/security/authentication/duo/groups`
@@ -32,15 +35,29 @@ Alle Änderungen an den bestehenden API-Aufrufen können sich auf Software auswi
 |===
 
 
-== Fehler in der ONTAP REST API Referenzdokumentation
+== Weitere Überlegungen zur Nutzung der REST API
 
-Wenn NetApp die ONTAP-REST-API verbessert und aktualisiert, können gelegentlich auch Fehler in der Online-Referenzdokumentation erwähnt werden. Diese Fehler können bei der Verwendung der API zu Verwirrung führen, jedoch beeinträchtigen oder unterbrechen Sie in der Regel Ihre ONTAP Automatisierungs-Software oder -Umgebung nicht.
-
-Sie sollten die Fehlerliste in der folgenden Tabelle überprüfen. Dies hilft Ihnen, die ONTAP REST API Referenzdokumentation besser zu verstehen und darin zu navigieren. Jeder Eintrag enthält den entsprechenden API-Endpunkt, eine Fehlerbeschreibung und die neu eingeführte ONTAP-Version.
+Neben potenziell störenden oder inkompatiblen Änderungen sind bei der Verwendung der ONTAP REST API weitere Aspekte zu beachten. Es gibt verschiedene Arten von Problemen, darunter die Einführung neuer oder alternativer API-Aufrufe sowie Änderungen an der internen Verarbeitung von ONTAP. Jeder Eintrag enthält den entsprechenden API-Endpunkt oder -Bereich, eine Beschreibung des Verhaltens und die ONTAP Version, in der sie eingeführt wurde.
 
 [cols="40%,50%,10%"]
 |===
-| Endpunkt | Beschreibung der Änderung | Version von ONTAP 
+| API-Endpunkt oder Bereich | Verhaltensbeschreibung | Version von ONTAP 
+
+
+| `/api/application/containers` | Der Endpunkt zur Erstellung von Containern wurde erweitert, um mehrere Volume-Konfigurationsparameter zu unterstützen, die zuvor nur über  `/api/storage/volumes` verfügbar waren. Dies ermöglicht es Kunden, insbesondere solchen, die NetApp Trident für die Kubernetes-Speicherorchestrierung verwenden, die Balanced-Placement-Funktion von ONTAP beim Bereitstellen persistenter Volumes zu nutzen. Volumes können automatisch auf Clusterknoten verteilt werden, um optimale Leistung und Kapazitätsauslastung zu erreichen. Sie sollten den aktualisierten Endpunkt verwenden, wenn Sie containerisierte Anwendungen bereitstellen, die eine feingranulare Kontrolle über die Volume-Platzierung, QoS-Richtlinien oder das Kapazitätsmanagement erfordern. Dies ist besonders hilfreich in groß angelegten Kubernetes-Umgebungen, in denen ein automatischer Lastausgleich über Speicherressourcen hinweg entscheidend ist. | 9.19.1 
+
+
+| `/api/cluster/licensing/licenses` | Beim Abrufen von Lizenzinformationen über die REST-API für sehr große ONTAP Cluster (32 Knoten oder mehr) kann es zu langen Antwortzeiten kommen. Dieses Problem betrifft die Lizenzierungsregisterkarten im System Manager sowie automatisierte Workflows, die alle Lizenzen gleichzeitig abfragen. Um die Auswirkungen zu minimieren, können Sie Lizenzen für bestimmte Funktionen einzeln mithilfe von Abfrageparametern abrufen oder die CLI mit dem Befehl `system license show` verwenden, anstatt alle Lizenzen mit einem einzigen API-Aufruf abzurufen. | 9.19.1 
+|===
+
+
+== Fehler in der ONTAP REST API Referenzdokumentation
+
+Da NetApp die ONTAP REST API erweitert und aktualisiert, können manchmal Fehler in der Online-Referenzdokumentation auftreten. Diese Fehler können bei der Verwendung der API zu Verwirrung führen, beeinträchtigen aber in der Regel nicht Ihre ONTAP-Automatisierungssoftware oder -umgebung. Sie sollten die Liste der Fehler in der untenstehenden Tabelle überprüfen. Dies hilft Ihnen, die ONTAP REST API-Referenzdokumentation besser zu verstehen und darin zu navigieren. Jeder Eintrag enthält den entsprechenden API-Endpunkt oder -Bereich, eine Beschreibung des Fehlers und die ONTAP-Version, in der er eingeführt wurde.
+
+[cols="40%,50%,10%"]
+|===
+| API-Endpunkt oder Bereich | Beschreibung der Änderung | Version von ONTAP 
 
 
 | `/storage/quota/reports` | Die REST API-Dokumentation für den Endpunkt zeigt an, dass *specifier* ein gültiges Feld ist. Der Quota-Spezifikator wird jedoch von diesem Endpunkt nicht unterstützt. Es gibt keine empfohlene Maßnahme oder Problemumgehung für den Kunden. Dieses Feld wird in einer zukünftigen ONTAP-Version aus der API-Dokumentation entfernt. | 9.6 

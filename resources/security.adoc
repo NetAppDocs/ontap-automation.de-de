@@ -156,4 +156,7 @@ Mit diesen Endpunkten können Sie die SSH-Sicherheitskonfiguration für alle SVM
 Sie können die REST-API verwenden, um zeitbasierte TOTP-Profile (One-Time Password) für Konten zu konfigurieren, die sich über SSH anmelden und auf ONTAP zugreifen. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.
 
 .Web-Authentifizierung
-Web Authentication (WebAuthn) ist ein Webstandard für die sichere Authentifizierung von Benutzern basierend auf Public Key-Kryptographie. Mit ONTAP unterstützt es die Administration von Phishing-resistenten MFAs über System Manager und die ONTAP REST API. Diese Funktion wurde mit ONTAP 9.16 hinzugefügt.
+Web-Authentifizierung (WebAuthn) ist ein Webstandard zur sicheren Authentifizierung von Benutzern auf Basis von Public-Key-Kryptografie. Mit ONTAP unterstützt sie die Verwaltung von phishing-resistenten MFAs über System Manager und die ONTAP REST API. Diese Funktion wurde mit ONTAP 9.16 eingeführt und mit ONTAP 9.19.1 aktualisiert.
+
+.Whoami
+Es steht ein Endpunkt zur Verfügung, der die Details des authentifizierten Benutzers anzeigt, einschließlich Benutzername, Rolle und Berechtigungen. Dieser Ressourcentyp wurde mit ONTAP 9.19.1 eingeführt.

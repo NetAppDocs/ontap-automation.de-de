@@ -46,7 +46,7 @@ Eine iSCSI-Sitzung ist eine oder mehrere TCP-Verbindungen, die einen iSCSI-Initi
 LUN-Attribute sind aufruferdefinierte Name-/Wertpaare, die optional mit einer LUN gespeichert werden können. Diese Attribute können zur Speicherung kleiner Mengen applikationsspezifischer Metadaten verwendet und werden nicht von ONTAP interpretiert. Mit den Endpunkten können Sie Attribute für eine LUN erstellen, aktualisieren, löschen und erkennen. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
 
 .LUN-Zuordnungen
-Eine LUN-Zuordnung ist eine Zuordnung zwischen einer LUN und einer Initiatorgruppe. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt.
+Eine LUN-Zuordnung ist eine Verknüpfung zwischen einer LUN und einer Initiatorgruppe. Dieser Ressourcentyp wurde mit ONTAP 9.6 eingeführt und mit ONTAP 9.19.1 aktualisiert.
 
 .LUN ordnet den Knoten für die Berichterstellung zu
 Die Knoten zur Berichterstellung sind die Cluster Nodes, von denen Netzwerkpfade zu einer zugeordneten LUN mithilfe der SAN-Protokolle als Teil der Selective LUN Map (SLM)-Funktion von ONTAP angekündigt werden. Mit den neuen Endpunkten können die Reporting-Nodes einer LUN-Zuordnung hinzugefügt, entfernt und ermittelt werden. Dieser Ressourcentyp wurde mit ONTAP 9.10 eingeführt.
