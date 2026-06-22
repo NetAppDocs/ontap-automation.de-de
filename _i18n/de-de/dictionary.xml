@@ -19,8 +19,6 @@
   <block id="9a85c4ed4aea58b5cf2264e55823074c" category="list-text"><block ref="32b478a260a90a0150f84bc469ac640b" prefix="" category="inline-code"></block></block>
   <block id="7faf05b9e4d90529c54562f216bfb2d6" category="list-text"><block ref="8f7088b1308a9efa94a1fadb415a83fe" prefix="" category="inline-code"></block></block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">Verwandte Informationen</block>
-  <block id="673cd1c7bc219dafd3ab44f7789c7963" category="inline-link">Vereinfachtes Management von Dateisicherheitsberechtigungen mit ONTAP REST-APIs</block>
-  <block id="6f49384b8a99fec44a7cd1d6ed52add4" category="list-text"><block ref="6f49384b8a99fec44a7cd1d6ed52add4" category="inline-link-rx"></block></block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
   <block id="8b64f73d0c930b953467d71771168fcb" category="cell"><block ref="e6d3e2b20641c094d3561900f189ee36" prefix="" category="inline-code"></block></block>
   <block id="2130e4445c18121e61a0496381717d89" category="list-text"><block ref="11c37609eb90008bd36d83530ab47246" prefix="" category="inline-code"></block></block>
@@ -1108,7 +1106,6 @@
   <block id="bd96d411ebb8705b0ef857c4d7b8c9c9" category="paragraph-title">Service-Buckets</block>
   <block id="8acc0dc5cdc4a547b0826578b2a98b48" category="paragraph-title">S3-Gruppen</block>
   <block id="29c67008363344d9ca92cd75f29fe2c9" category="paragraph-title">S3-Richtlinien</block>
-  <block id="bc00f7a5406f8f98848784d25ca2e573" category="paragraph-title">Verwenden des privaten CLI-Passthrough mit der ONTAP REST API</block>
   <block id="34aebac80a78170f96dfd325c4320501" category="paragraph-title">HTTP-Anforderung</block>
   <block id="0d5a371e0c92f43305354a7ca5481105" category="paragraph-title">HTTP-Antwort</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
@@ -1598,14 +1595,12 @@
   <block id="bb059379feb749c05906d3ac23b4816d" category="section-title">Schritt 1: Aktualisieren Sie die Sicherheitsbeschreibung</block>
   <block id="698f9eb192e6aa6224d8848f98d6a530" category="summary">Sie können die Berechtigungen und Audit-Richtlinien für Dateien managen, die über die SVMs innerhalb eines ONTAP Clusters verfügbar sind.</block>
   <block id="7e2e1102b90cfd81da1a2e5002c37c9c" category="paragraph">ONTAP weist Dateiobjekten mithilfe von System Access Control Lists (SACLs) und Ermessensary Access Control Lists (DACLs) Berechtigungen zu. Ab ONTAP 9.9 unterstützt die REST-API das Management der SACL- und DACL-Berechtigungen. Sie können die API verwenden, um die Administration der Dateisicherheitsberechtigungen zu automatisieren. In vielen Fällen können Sie einen einzelnen REST API-Aufruf anstelle mehrerer CLI-Befehle oder ONTAPI (ZAPI)-Aufrufe verwenden.</block>
-  <block id="3c4e118c8471cd86da2e54560f34234b" category="admonition">Bei ONTAP-Versionen vor 9.9 können Sie die Verwaltung der SACL- und DACL-Berechtigungen mithilfe der CLI-Passthrough-Funktion automatisieren. Siehe <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block> Und<block ref="cc458ed66c48b12b86281fe13e008c20" category="inline-link-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="5a4c76b14341d9a5432b024437f965d1" category="paragraph">Es stehen verschiedene Beispiel-Workflows zur Verfügung, die veranschaulichen, wie Sie die ONTAP Dateisicherheitsdienste mithilfe der REST-API managen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>.</block>
   <block id="f13ddbbf96dbd385b6b39bedaac4e6f7" category="inline-link">file_security_permissions.py</block>
   <block id="b3b08c8a5c5a09ffbe1430bb1e019e74" category="paragraph">Wenn Sie Python verwenden, lesen Sie auch das Skript<block ref="3ccddfdb1872f5bc3b7f054cd270fc1b" category="inline-link-rx"></block> Beispiele für die Automatisierung einiger Dateisicherheitsaktivitäten.</block>
   <block id="0207c62847caaa4c5ffaeaf4b00552d6" category="paragraph">Bei vielen Aufgaben erfordert die Verwendung der ONTAP REST-API weniger Aufrufe als die entsprechenden ONTAP CLI-Befehle oder ONTAPI (ZAPI)-Aufrufe. Die folgende Tabelle enthält eine Liste der API-Aufrufe und die entsprechenden CLI-Befehle, die für jede Aufgabe erforderlich sind.</block>
   <block id="3d1a91a3f9c08c95df6cb1eff36db464" category="inline-link">Python-Skript zur Darstellung von Dateiberechtigungen</block>
   <block id="bd9e252fe191d999eeb79daa2d91b6a8" category="list-text"><block ref="bd9e252fe191d999eeb79daa2d91b6a8" category="inline-link-rx"></block></block>
-  <block id="0c30cc0a8be3231b1496649b8f111c07" category="list-text"><block ref="0c30cc0a8be3231b1496649b8f111c07" category="inline-link-rx"></block></block>
   <block id="a58cf8beb5e4ede8e197f2cc371725fe" category="sidebar">Bereiten Sie sich auf das Management der Dateisicherheit vor</block>
   <block id="22b4fdae10b975d500f499f9cd7d2659" category="sidebar">Erhalten Sie effektive Berechtigungen</block>
   <block id="f520e25b29f7e72fdce54450ea759fc8" category="sidebar">Abrufen von Audit-Informationen</block>
@@ -1987,4 +1982,5 @@
   <block id="7c152b2ce344c1d6fc432fba33fc71cf" category="list-text">Eine neue <block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block>Funktion wurde hinzugefügt, um Benutzername, Rolle und Berechtigungsinformationen des angemeldeten Benutzers abzurufen. Die Web-Authentifizierung (WebAuthn) wurde ebenfalls verbessert.</block>
   <block id="50627d24ccfbf3209a01226c32f4208c" category="list-text">Die LUN-Map-Verwaltung wurde mit einer verbesserten Aktualisierungsfunktion aktualisiert.</block>
   <block id="92d15479dd92b1e555eec98a86d59c71" category="sidebar">ONTAP REST API-Änderungen und Überlegungen</block>
+  <block id="5c7f695288b6d2a3f37f4f2e098cf200" category="admonition">Für ONTAP Versionen vor 9.9.1 lässt sich die Verwaltung der SACL und DACL Berechtigungen mithilfe der CLI Passthrough Funktion automatisieren. Weitere Informationen finden Sie unter <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block>.</block>
 </blocks>
