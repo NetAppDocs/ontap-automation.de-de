@@ -18,6 +18,7 @@ Es stehen verschiedene Optionen zur Verfügung, um die Implementierung und Admin
 
 
 
+[[ontap-rest-api]]
 == ONTAP REST API
 
 Ab ONTAP 9.6 enthält ONTAP eine robuste REST-API, die die Grundlage für die Automatisierung der Bereitstellung und Verwaltung Ihrer Speichersysteme bietet.  Seitdem wurde die REST-API kontinuierlich erweitert und weiterentwickelt.  Es bietet jetzt die bevorzugte und strategische Option zur Automatisierung der Verwaltung Ihrer ONTAP Bereitstellungen.
@@ -30,6 +31,7 @@ Die ONTAPI-API (Zephyr-API oder ZAPI) ist der ursprüngliche Satz proprietärer 
 
 
 
+[[client-software-toolkits]]
 == Toolkits für Clientsoftware
 
 NetApp bietet Client-Toolkits, die die ONTAP-REST-API abstrahieren und die Erstellung von Automatisierungscode vereinfachen. Sie sollten eine geeignete für Ihre Entwicklungssprache und -Umgebung wählen.
@@ -42,6 +44,7 @@ Mit dem NetApp.ONTAP PowerShell Toolkit können Sie die Administration eines ONT
 
 
 
+[[automation-frameworks]]
 == Automatisierungs-Frameworks
 
 Sie können Automatisierungscode mithilfe eines von mehreren Frameworks erstellen und bereitstellen.

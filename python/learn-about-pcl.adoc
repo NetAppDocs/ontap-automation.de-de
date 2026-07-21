@@ -22,6 +22,7 @@ Die NetApp ONTAP Python Client-Bibliothek ist ein Paket, das Sie installieren un
 
 
 
+[[features-and-benefits]]
 == Funktionen und Vorteile
 
 Mit der Python Client Library können Sie schnell robusten Code entwickeln und so die Administration Ihrer ONTAP-Bereitstellungen automatisieren. Es bietet mehrere zugrunde liegende Services, einschließlich:
@@ -34,6 +35,7 @@ Mit der Python Client Library können Sie schnell robusten Code entwickeln und s
 
 
 
+[[packages-and-documentation]]
 == Pakete und Dokumentation
 
 Der Name des Python-Client-Bibliothekspakets lautet _NetApp-ONTAP_. Die mit dem Paket verknüpfte Version ist eine Kombination aus den ONTAP-Haupt- und Nebenversionsnummern, aus denen die Bibliothek erstellt wurde, sowie einer Nebenversion für die Client-Bibliothek in der ONTAP-Version. Gültige Versionsnummern sind beispielsweise 9.6.1, 9.6.2 und 9.7.1.
@@ -43,8 +45,13 @@ Jede ONTAP-Version, die mit 9.6 beginnt, verfügt über ein PyPI-Paket mit der z
 .Liste der Pakete und Dokumentation
 [%collapsible]
 ====
+.ONTAP 9.19.1
+* https://pypi.org/project/netapp-ontap/["PyPI: NetApp ONTAP 9.19.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP3383665/html/index.html["NetApp PCL Dokumentation für 9.19.1"^]
+
+
 .ONTAP 9.18.1
-* https://pypi.org/project/netapp-ontap/["PyPI: NetApp ONTAP 9.18.1"^]
+* https://pypi.org/project/netapp-ontap/9.18.1.0["PyPI: NetApp ONTAP 9.18.1"^]
 * https://library.netapp.com/ecmdocs/ECMLP3364865/html/index.html["NetApp PCL-Dokumentation für 9.18.1"^]
 
 
@@ -111,6 +118,7 @@ Jede ONTAP-Version, die mit 9.6 beginnt, verfügt über ein PyPI-Paket mit der z
 ====
 
 
+[[code-samples]]
 == Codebeispiele
 
 NetApp unterhält ein GitHub-Repository mit Codebeispielen und anderen hilfreichen Informationen. Sie können zum Ordner _examples_ navigieren, um mithilfe der Python-Client-Bibliothek auf Samples zuzugreifen. Weitere Informationen finden Sie an den folgenden Standorten auf GitHub:

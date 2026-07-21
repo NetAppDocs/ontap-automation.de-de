@@ -18,6 +18,7 @@ Sie können die EMS-Verarbeitung (Event Management System) für einen ONTAP-Clus
 
 
 
+[[overview]]
 === Überblick
 
 Es stehen verschiedene Beispiele für Workflows zur Verfügung, die die Nutzung der ONTAP EMS-Dienste veranschaulichen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen link:../workflows/prepare_workflows.html["Die Nutzung der Workflows wird vorbereitet"].
@@ -26,6 +27,7 @@ Wenn Sie Python verwenden, sehen Sie auch den Scripy https://github.com/NetApp/o
 
 
 
+[[ontap-rest-api-versus-ontap-cli-commands]]
 === ONTAP REST API im Vergleich zu ONTAP-CLI-Befehlen
 
 Bei vielen Aufgaben erfordert die Verwendung der ONTAP REST-API weniger Aufrufe als die entsprechenden ONTAP CLI-Befehle. Die folgende Tabelle enthält eine Liste der API-Aufrufe und die entsprechenden CLI-Befehle, die für jede Aufgabe erforderlich sind.

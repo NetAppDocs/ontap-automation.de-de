@@ -18,6 +18,7 @@ NetApp verbessert und aktualisiert die ONTAP REST API kontinuierlich mit jeder g
 
 
 
+[[changes-to-existing-ontap-rest-api-calls]]
 == Änderungen an bestehenden ONTAP-REST-API-Aufrufen
 
 Änderungen an den bestehenden ONTAP REST API-Aufrufen, wie Endpunkten und Parametern, können Software beeinflussen, die die API verwendet. In den meisten Situationen gelten diese je nach Ihrer Umgebung als _breaking changes_. Sie sollten die Liste in der untenstehenden Tabelle überprüfen, um festzustellen, ob Ihre Automatisierungsumgebung betroffen ist. Jeder Eintrag enthält den zutreffenden API-Endpunkt oder Bereich, eine Beschreibung der Änderung und die ONTAP-Version, in der sie eingeführt wurde.
@@ -35,6 +36,7 @@ NetApp verbessert und aktualisiert die ONTAP REST API kontinuierlich mit jeder g
 |===
 
 
+[[additional-rest-api-usage-considerations]]
 == Weitere Überlegungen zur Nutzung der REST API
 
 Neben potenziell störenden oder inkompatiblen Änderungen sind bei der Verwendung der ONTAP REST API weitere Aspekte zu beachten. Es gibt verschiedene Arten von Problemen, darunter die Einführung neuer oder alternativer API-Aufrufe sowie Änderungen an der internen Verarbeitung von ONTAP. Jeder Eintrag enthält den entsprechenden API-Endpunkt oder -Bereich, eine Beschreibung des Verhaltens und die ONTAP Version, in der sie eingeführt wurde.
@@ -51,6 +53,7 @@ Neben potenziell störenden oder inkompatiblen Änderungen sind bei der Verwendu
 |===
 
 
+[[ontap-rest-api-reference-documentation-errors]]
 == Fehler in der ONTAP REST API Referenzdokumentation
 
 Da NetApp die ONTAP REST API erweitert und aktualisiert, können manchmal Fehler in der Online-Referenzdokumentation auftreten. Diese Fehler können bei der Verwendung der API zu Verwirrung führen, beeinträchtigen aber in der Regel nicht Ihre ONTAP-Automatisierungssoftware oder -umgebung. Sie sollten die Liste der Fehler in der untenstehenden Tabelle überprüfen. Dies hilft Ihnen, die ONTAP REST API-Referenzdokumentation besser zu verstehen und darin zu navigieren. Jeder Eintrag enthält den entsprechenden API-Endpunkt oder -Bereich, eine Beschreibung des Fehlers und die ONTAP-Version, in der er eingeführt wurde.

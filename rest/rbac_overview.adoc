@@ -21,12 +21,14 @@ NOTE: Die RBAC-Funktion von ONTAP wurde kontinuierlich erweitert und in ONTAP 9.
 
 
 
+[[ontap-roles]]
 == ONTAP Rollen
 
 Eine Rolle ist eine Reihe von Berechtigungen, die kollektiv definieren, welche Aktionen der Benutzer ergreifen kann. Jede Berechtigung identifiziert einen bestimmten Zugriffspfad und die zugehörige Zugriffsebene. Rollen werden Benutzerkonten zugewiesen und von ONTAP bei Zugriffskontrollentscheidungen angewendet.
 
 
 
+[[types-of-roles]]
 === Rollentypen
 
 Es gibt zwei Arten von Rollen. Sie wurden mit der Weiterentwicklung von ONTAP auf verschiedene Umgebungen eingeführt und angepasst.
@@ -46,6 +48,7 @@ NOTE: Bei der Verwendung jeder Rollenart gibt es vor- und Nachteile. Siehe link:
 |===
 
 
+[[scope]]
 === Umfang
 
 Jede Rolle hat einen Umfang oder Kontext, in dem sie definiert und angewendet wird. Der Umfang legt fest, wo und wie eine bestimmte Rolle verwendet wird.
@@ -65,6 +68,7 @@ NOTE: ONTAP-Benutzerkonten haben einen ähnlichen Umfang und bestimmen, wie ein 
 |===
 
 
+[[source-of-the-role-definitions]]
 === Quelle der Rollendefinitionen
 
 Es gibt zwei Möglichkeiten, wie eine ONTAP-Rolle definiert werden kann.
@@ -81,6 +85,7 @@ Es gibt zwei Möglichkeiten, wie eine ONTAP-Rolle definiert werden kann.
 |===
 
 
+[[role-mapping-and-ontap-processing]]
 == Rollenzuordnung und ONTAP-Verarbeitung
 
 Abhängig von der verwendeten ONTAP Version werden alle oder fast alle REST-API-Aufrufe einem oder mehreren CLI-Befehlen zugeordnet. Wenn Sie eine RUDERROLLE erstellen, wird auch eine traditionelle oder ältere Rolle erstellt. Diese traditionelle *Mapping* Rolle basiert auf den entsprechenden CLI Befehlen und kann nicht manipuliert oder verändert werden.
@@ -90,6 +95,7 @@ NOTE: Reverse Role Mapping wird nicht unterstützt. Das heißt, die Schaffung ei
 
 
 
+[[summary-of-rbac-evolution]]
 == Zusammenfassung der Entwicklung der RBAC
 
 Die herkömmlichen Rollen sind bei allen Versionen von ONTAP 9 enthalten. DIE RESTLICHEN Rollen wurden später eingeführt und haben sich wie unten beschrieben weiterentwickelt.

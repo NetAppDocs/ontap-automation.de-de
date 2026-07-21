@@ -86,10 +86,10 @@ Internet Protocol Security (IPSec) ist eine Protokollsuite, die Sicherheit zwisc
 Sie können IPSec-CA-Zertifikate hinzufügen, entfernen und abrufen. Dieser Ressourcentyp ist neu in ONTAP 9.10.
 
 .IPsec-Richtlinien
-Mit diesem Satz von API-Aufrufen können Sie die für eine IPSec-Bereitstellung geltenden Richtlinien verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+Mit diesem Satz von API-Aufrufen lassen sich die für eine IPSec-Bereitstellung geltenden Richtlinien verwalten. Dieser Ressourcentyp ist neu mit ONTAP 9.8. Mit 9.19 wurden sie aktualisiert, um die für das Clusternetzwerk verwendeten Richtlinien abzurufen.
 
 .IPsec-Sicherheitszuordnungen
-Sie können diesen Satz von API-Aufrufen verwenden, um die für eine IPSec-Bereitstellung relevanten Sicherheitszuordnungen zu verwalten. Dieser Ressourcentyp ist neu in ONTAP 9.8.
+Mithilfe dieses Satzes von API-Aufrufen lassen sich die für eine IPSec-Bereitstellung geltenden Sicherheitszuordnungen verwalten. Dieser Ressourcentyp ist neu mit ONTAP 9.8. Mit 9.19 wurden sie aktualisiert, um die für das Clusternetzwerk verwendeten Sicherheitszuordnungen abzurufen.
 
 .Just-in-Time-Berechtigungserweiterung (JIT)
 Die (JIT)-Berechtigungserhöhung ist eine Erweiterung der rollenbasierten Zugriffskontrolle (RBAC). Clusteradministratoren können eine temporäre Erhöhung einer bestehenden Rolle anfordern. Dieser Ressourcentyp wurde mit ONTAP 9.17.1 hinzugefügt.
@@ -156,7 +156,7 @@ Mit diesen Endpunkten können Sie die SSH-Sicherheitskonfiguration für alle SVM
 Sie können die REST-API verwenden, um zeitbasierte TOTP-Profile (One-Time Password) für Konten zu konfigurieren, die sich über SSH anmelden und auf ONTAP zugreifen. Dieser Ressourcentyp wurde mit ONTAP 9.13 eingeführt.
 
 .Web-Authentifizierung
-Web-Authentifizierung (WebAuthn) ist ein Webstandard zur sicheren Authentifizierung von Benutzern auf Basis von Public-Key-Kryptografie. Mit ONTAP unterstützt sie die Verwaltung von phishing-resistenten MFAs über System Manager und die ONTAP REST API. Diese Funktion wurde mit ONTAP 9.16 eingeführt und mit ONTAP 9.19.1 aktualisiert.
+Web-Authentifizierung (WebAuthn) ist ein Webstandard zur sicheren Authentifizierung von Benutzern auf Basis von Public-Key-Kryptografie. Mit ONTAP wird die Verwaltung von phishing-resistenten MFAs über System Manager und die ONTAP REST API unterstützt. Diese Funktion wurde mit ONTAP 9.16 hinzugefügt und mit ONTAP 9.19 aktualisiert.
 
 .Whoami
-Es steht ein Endpunkt zur Verfügung, der die Details des authentifizierten Benutzers anzeigt, einschließlich Benutzername, Rolle und Berechtigungen. Dieser Ressourcentyp wurde mit ONTAP 9.19.1 eingeführt.
+Es steht ein Endpunkt zur Verfügung, der die Details des authentifizierten Benutzers anzeigt, einschließlich Benutzername, Rolle und Berechtigungen. Dieser Ressourcentyp wurde mit ONTAP 9.19 eingeführt.

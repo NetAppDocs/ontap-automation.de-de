@@ -21,6 +21,7 @@ TIP: Sie sollten sicherstellen, dass Ihre ONTAP-Version alle API-Aufrufe in den 
 
 
 
+[[introduction]]
 == Einführung
 
 Ein _Workflow_ ist eine Sequenz aus einem oder mehreren Schritten, die zum Erreichen einer bestimmten administrativen Aufgabe oder eines bestimmten Ziels erforderlich sind. Die ONTAP Workflows beinhalten die wichtigsten Schritte und Parameter, die Sie für jede Aufgabe benötigen. Sie dienen als Ausgangspunkt für die Anpassung Ihrer ONTAP Automatisierungsumgebung.
@@ -41,12 +42,14 @@ Ein Workflow kann nur einen Schritt enthalten. Diese _einstufigen Workflows_ wer
 
 
 
+[[input-variables]]
 == Eingabevariablen
 
 Die Workflows sind so allgemein wie möglich ausgelegt, sodass sie in jeder ONTAP Umgebung eingesetzt werden können. Vor diesem Hintergrund verwenden die REST-API-Aufrufe Variablen in den Curl-Beispielen und andere Eingaben. Die REST-API-Aufrufe können dann problemlos an verschiedene ONTAP-Umgebungen angepasst werden.
 
 
 
+[[base-url-format]]
 === Basis-URL-Format
 
 Sie können die ONTAP-REST-API direkt über Curl oder eine Programmiersprache aufrufen. In diesem Fall unterscheidet sich die Basis-URL von der URL, die Sie für den Zugriff auf die ONTAP Online-Dokumentation oder den System Manager verwenden.
@@ -59,6 +62,7 @@ Siehe link:../get-started/access_rest_api.html["So erhalten Sie Zugriff auf die 
 
 
 
+[[common-input-parameters]]
 === Allgemeine Eingabeparameter
 
 Es gibt mehrere Eingabeparameter, die häufig bei den meisten REST-API-Aufrufen verwendet werden. Diese Parameter werden in der Regel nicht in den einzelnen Workflows beschrieben. Sie sollten mit den Parametern vertraut sein. Siehe link:../rest/input_variables.html["Eingabevariablen, die eine API-Anforderung steuern"] Finden Sie weitere Informationen.
@@ -67,6 +71,7 @@ Wenn für einen bestimmten REST API-Aufruf zusätzliche Parameter benötigt werd
 
 
 
+[[variable-format]]
 === Variablenformat
 
 Die ID-Werte und andere Variablen, die mit den Workflow-Beispielen verwendet werden, sind undurchsichtig und können mit jedem ONTAP-Cluster variieren. Um die Lesbarkeit der Beispiele zu verbessern, werden keine Istwerte verwendet. Variablen werden stattdessen verwendet. Dieser Ansatz basiert auf einem konsistenten Format und einem Satz reservierter Namen und bietet mehrere Vorteile, darunter:
@@ -95,6 +100,7 @@ Hier sind einige der häufigsten Variablen Schlüsselwörter. Diese Liste ist ni
 |===
 
 
+[[json-input-examples]]
 === Beispiele für JSON-Eingaben
 
 Einige REST-API-Aufrufe, z. B. die, die POST oder PATCH verwenden, erfordern JSON-Eingaben im Körper der Anforderung. Zur Übersichtlichkeit werden die JSON-Eingabebeispiele getrennt von den Curl-Beispielen dargestellt. Sie können die JSON-Eingabebeispiele mit einer der unten beschriebenen Techniken verwenden.
@@ -107,12 +113,14 @@ Zuerst müssen Sie das Beispiel für die Wellung kopieren und in eine Klemmensch
 
 
 
+[[authentication-options]]
 == Authentifizierungsoptionen
 
 Die primäre für die REST-API verfügbare Authentifizierungsmethode ist die HTTP-Basisauthentifizierung. Ab ONTAP 9.14 haben Sie zudem die Möglichkeit, das Open Authorization (OAuth 2.0)-Framework mit Token-basierter Authentifizierung und Autorisierung zu verwenden.
 
 
 
+[[http-basic-authentication]]
 === HTTP-Basisauthentifizierung
 
 Bei der Verwendung der grundlegenden Authentifizierung müssen die Benutzeranmeldeinformationen in jede HTTP-Anforderung einbezogen werden. Es gibt zwei Optionen zum Senden der Anmeldeinformationen.
@@ -145,6 +153,7 @@ Sie müssen die entsprechenden Anmeldedaten für Ihre Umgebung ersetzen. Die Anm
 
 
 
+[[oauth-2-0]]
 === OAuth 2.0
 
 Wenn Sie OAuth 2.0 verwenden, müssen Sie ein Zugriffstoken von einem externen Autorisierungsserver anfordern und diese bei jeder HTTP-Anforderung einschließen. Im Folgenden werden die grundlegenden übergeordneten Schritte beschrieben. Siehe auch https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Überblick über die Implementierung von ONTAP OAuth 2.0"^] Weitere Informationen zu OAuth 2.0 und zur Verwendung mit ONTAP.
@@ -169,6 +178,7 @@ Nachdem Sie ein Zugriffstoken erhalten haben, können Sie einen Autorisierungs-H
 
 
 
+[[using-the-examples-with-bash]]
 == Verwenden der Beispiele mit Bash
 
 Wenn Sie die Workflow-Curl-Beispiele direkt verwenden, müssen Sie die darin enthaltenen Variablen mit Werten aktualisieren, die für Ihre Umgebung geeignet sind. Sie können die Beispiele manuell bearbeiten oder sich darauf verlassen, dass die Bash-Shell die Ersetzung für Sie wie unten beschrieben durchsetzt.

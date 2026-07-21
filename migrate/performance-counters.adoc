@@ -18,6 +18,7 @@ Der ONTAP Zählermanager enthält umfassende Informationen zur Performance jedes
 
 
 
+[[access-the-ontap-performance-counters]]
 == Greifen Sie auf die ONTAP-Leistungszähler zu
 
 Sie können über zwei verschiedene APIs sowie über die ONTAP-Befehlszeilenschnittstelle auf die ONTAP-Leistungszähler zugreifen.
@@ -27,6 +28,7 @@ NOTE: Die ONTAP REST-API ist die bevorzugte und strategische Option für die Aut
 
 
 
+[[ontapi-api]]
 === ONTAPI API
 
 Die ONTAPI ist mit dem NetApp Network Manageability SDK verfügbar. Bei Verwendung von ONTAPI werden die Leistungsindikatoren in einer Sammlung von Objekten definiert. Jedes Objekt entspricht einer physischen oder virtuellen Komponente des Systems. Basierend auf der Systemkonfiguration kann ein oder mehrere Instanzen jedes Objekts vorhanden sein.
@@ -35,6 +37,7 @@ Wenn Ihr ONTAP-System beispielsweise vier physische Festplatten hat, gibt es vie
 
 
 
+[[ontap-rest-api]]
 === ONTAP REST API
 
 Ab ONTAP 9.11.1 können Sie auch über DIE REST-API auf die Performance-Daten zugreifen. In diesem Fall sind die Leistungszähler in Tabellen organisiert, die den ONTAPI-Objekten entsprechen. Jede Tabellenzeile entspricht einer Instanz eines ONTAPI-Objekts.
@@ -43,12 +46,14 @@ Wenn Ihr ONTAP-System beispielsweise vier physische Festplatten hat, wird der an
 
 
 
+[[prepare-to-use-the-rest-api]]
 == Die Verwendung der REST-API wird vorbereitet
 
 Sie sollten sich vor der Verwendung der ONTAP REST API vorbereiten, um auf die Performance-Zähler zuzugreifen.
 
 
 
+[[performance-counters-organized-in-tables]]
 === Leistungszähler sind in Tabellen organisiert
 
 Eine Untergruppe der ONTAPI Objekte ist über die ONTAP REST API verfügbar und als Tabellen dargestellt. Zum Beispiel wird das ONTAPI *hostadapter*-Objekt über DIE REST-API als *Host_adpater*-Tabelle dargestellt. Jeder Host Adapter im System ist eine Reihe mit eigenen Performance-Zählern.
@@ -67,6 +72,8 @@ Eine Untergruppe der ONTAPI Objekte ist über die ONTAP REST API verfügbar und 
 |===
 
 
+[[summary-of-the-rest-endpoints]]
+[[eps]]
 === Zusammenfassung der REST-Endpunkte
 
 Für den Zugriff auf die ONTAP-Leistungszähler und zugehörige Tabellen stehen vier Hauptendpunkte zur Verfügung.
@@ -94,6 +101,7 @@ Gibt eine bestimmte Zeile aus einer benannten Zählertabelle zurück.
 
 
 
+[[migrating-from-ontapi-to-the-rest-api]]
 === Migration von ONTAPI zu REST API
 
 NetApp bietet umfassenden Support für die Migration Ihres Automatisierungscodes von ONTAPI auf die ONTAP REST API. Dazu gehört auch die Zuordnungsdokumentation zur Identifikation der äquivalenten Leistungstabelle, die in DER REST-API für ein bestimmtes ONTAPI-Objekt verfügbar ist.
@@ -102,12 +110,14 @@ Sie können online auf die aktuelle Dokumentation zugreifen https://docs.netapp.
 
 
 
+[[get-started-with-the-ontap-rest-api]]
 == Erste Schritte mit der ONTAP REST API
 
 Die folgenden Beispiele veranschaulichen die Verwendung DER REST-API für den Zugriff auf die ONTAP-Performance-Zähler. Dazu gehört das Abrufen einer Liste der verfügbaren Tabellen und das Erforschen der Tabellenstruktur.
 
 
 
+[[before-you-begin]]
 === Bevor Sie beginnen
 
 Lesen Sie die folgenden Informationen durch, bevor Sie die Beispiele verwenden.
@@ -129,6 +139,7 @@ Die nachfolgende Beispielsequenz zeigt, wie die RESTLICHEN Endpunkte zum Abrufen
 
 
 
+[[example-1-all-performance-counter-tables]]
 === Beispiel 1: Alle Performance-Zählertabellen
 
 Sie können diesen REST-API-Aufruf verwenden, um alle verfügbaren Zählermanager-Tabellen zu ermitteln.
@@ -728,6 +739,7 @@ curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/clust
 ====
 
 
+[[example-2-high-level-information-about-a-specific-table]]
 === Beispiel 2: Allgemeine Informationen zu einer bestimmten Tabelle
 
 Sie können diesen REST-API-Aufruf verwenden, um die Beschreibung und Metadaten für eine bestimmte Tabelle anzuzeigen. Die Ausgabe enthält den Zweck der Tabelle und welche Art von Daten jeder Performance-Zähler enthält. In diesem Beispiel wird die Tabelle *Host_Adapter* verwendet.
@@ -802,6 +814,7 @@ curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/clust
 ====
 
 
+[[example-3-all-rows-in-a-specific-table]]
 === Beispiel 3: Alle Zeilen in einer bestimmten Tabelle
 
 Mit diesem REST-API-Aufruf können Sie alle Zeilen in einer Tabelle anzeigen. Dies gibt an, welche Instanzen der Counter Manager-Objekte vorhanden sind.
@@ -849,6 +862,7 @@ curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/clust
 ====
 
 
+[[example-4-single-row-in-a-specific-table]]
 === Beispiel 4: Einzelne Zeile in einer bestimmten Tabelle
 
 Mit diesem REST-API-Aufruf können Sie Performance-Zählerwerte für eine bestimmte Zählermanager-Instanz in der Tabelle anzeigen. In diesem Beispiel werden die Performance-Daten für einen der Host-Adapter angefordert.

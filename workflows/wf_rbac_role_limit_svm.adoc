@@ -27,6 +27,7 @@ Sie können dann optional die Rolle nach Bedarf aktualisieren. In diesem Workflo
 
 
 
+[[step-1-create-the-role]]
 == Schritt 1: Erstellen Sie die Rolle
 
 Sie können einen API-Aufruf ausgeben, um die RBAC-Rolle zu erstellen.
@@ -68,6 +69,7 @@ curl --request POST \
 ----
 
 
+[[step-2-update-the-role]]
 == Schritt 2: Aktualisieren Sie die Rolle
 
 Sie können einen API-Aufruf ausgeben, um die vorhandene Rolle zu aktualisieren.

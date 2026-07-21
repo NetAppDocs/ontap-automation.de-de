@@ -18,6 +18,7 @@ Sie können eine bestimmte Sicherheitsbeschreibung auf eine bestimmte Datei oder
 
 
 
+[[step-1-update-the-security-descriptor]]
 == Schritt 1: Aktualisieren Sie die Sicherheitsbeschreibung
 
 .HTTP-Methode und -Endpunkt
@@ -67,6 +68,7 @@ curl --request POST --location "https://$FQDN_IP/api/protocols/file-security/per
 ----
 
 
+[[step-2-retrieve-the-status-of-the-job]]
 == Schritt 2: Rufen Sie den Status des Jobs ab
 
 Führen Sie den Workflow aus link:../workflows/wf_jobs_get_job.html["Job-Instanz abrufen"] Und bestätigen Sie die `state` Wert ist `success`.

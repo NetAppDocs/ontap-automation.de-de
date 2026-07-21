@@ -18,6 +18,7 @@ Sie können steuern, wie ein API-Aufruf über Parameter und Variablen verarbeite
 
 
 
+[[http-methods]]
 == HTTP-Methoden
 
 Die von der ONTAP REST API unterstützte HTTP-Methoden sind in der folgenden Tabelle aufgeführt.
@@ -49,12 +50,14 @@ NOTE: Nicht alle HTTP-Methoden sind an jedem REST-Endpunkt verfügbar. AUSSERDEM
 |===
 
 
+[[path-variables]]
 == Pfadvariablen
 
 Der bei jedem REST-API-Aufruf verwendete Endpunktpfad kann verschiedene Kennungen enthalten. Jede ID entspricht einer bestimmten Ressourceninstanz. Beispiele sind Cluster-IDs und SVM-IDs.
 
 
 
+[[request-headers]]
 == Anfragekopfzeilen
 
 Sie müssen mehrere Header in die HTTP-Anfrage aufnehmen.
@@ -71,6 +74,7 @@ Autorisierung:: Die grundlegende Authentifizierung muss mit dem Benutzernamen un
 
 
 
+[[request-body]]
 == Text anfordern
 
 Der Inhalt der Anfraentext variiert je nach Anruf. Der HTTP-Request-Text besteht aus einem der folgenden Elemente:
@@ -81,6 +85,7 @@ Der Inhalt der Anfraentext variiert je nach Anruf. Der HTTP-Request-Text besteht
 
 
 
+[[filtering-objects]]
 == Objekte filtern
 
 Wenn Sie einen API-Aufruf mit der GET-Methode ausgeben, können Sie die zurückgegebenen Objekte anhand eines beliebigen Attributs mithilfe eines Abfrageparameters einschränken oder filtern.
@@ -141,6 +146,7 @@ Filter basierend auf dem `state` Variable zur Auswahl der Ersatzfestplatten.
 
 
 
+[[requesting-specific-object-fields]]
 == Es werden bestimmte Objektfelder angefordert
 
 Standardmäßig gibt die Ausgabe eines API-Aufrufs mit GET nur die Attribute zurück, die das Objekt oder die Objekte eindeutig identifizieren, zusammen mit einer HAL-Selbstverknüpfung. Dieser minimale Feldsatz dient als Schlüssel für jedes Objekt und variiert je nach Objekttyp. Sie können zusätzliche Objekteigenschaften mithilfe der auswählen `fields` Abfrageparameter auf folgende Weise:
@@ -165,6 +171,7 @@ TIP: Als Best Practice sollten Sie immer die gewünschten Felder identifizieren.
 
 
 
+[[sorting-objects-in-the-output-set]]
 == Sortieren von Objekten im Ausgabungsset
 
 Die Datensätze in einer Ressourcensammlung werden in der vom Objekt definierten Standardreihenfolge zurückgegeben. Sie können die Bestellung über ändern `order_by` Abfrage-Parameter mit Feldname und Sortierrichtung wie folgt:
@@ -183,6 +190,7 @@ Beachten Sie Folgendes:
 
 
 
+[[pagination-when-retrieving-objects-in-a-collection]]
 == Paginierung beim Abrufen von Objekten in einer Sammlung
 
 Wenn ein API-Aufruf über GET auf eine Sammlung von Objekten desselben Typs zugreifen soll, versucht ONTAP, auf der Grundlage von zwei Einschränkungen so viele Objekte wie möglich zurückzugeben. Mit zusätzlichen Abfrageparametern auf der Anforderung können Sie jede dieser Einschränkungen steuern. Die erste Bedingung, die für eine bestimmte GET-Anforderung erreicht wurde, beendet die Anforderung und begrenzt damit die Anzahl der zurückgegebenen Datensätze.
@@ -218,6 +226,7 @@ Sie können mehrere Anfragen zur Seite durch die Objekte ausgeben. Jeder nachfol
 
 
 
+[[size-properties]]
 == Größeneigenschaften
 
 Die bei einigen API-Aufrufen verwendeten Eingabewerte sowie bestimmte Abfrageparameter sind numerisch. Anstatt eine ganze Zahl in Byte bereitzustellen, können Sie optional ein Suffix wie in der folgenden Tabelle aufgeführt verwenden.

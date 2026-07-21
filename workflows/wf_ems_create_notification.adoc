@@ -18,6 +18,7 @@ Sie können den folgenden Workflow verwenden, um ein neues EMS-Benachrichtigungs
 
 
 
+[[step-1-configure-the-system-wide-email-settings]]
 == Schritt 1: Konfigurieren Sie die systemweiten E-Mail-Einstellungen
 
 Sie können den folgenden API-Aufruf durchführen, um die systemweiten E-Mail-Einstellungen zu konfigurieren.
@@ -59,6 +60,7 @@ curl --request PATCH \
 ----
 
 
+[[step-2-define-a-message-filter]]
 == Schritt 2: Definieren Sie einen Nachrichtenfilter
 
 Sie können einen API-Aufruf ausgeben, um eine Filterregel zu definieren, die den Nachrichten entspricht.
@@ -107,6 +109,7 @@ curl --request POST \
 ----
 
 
+[[step-3-create-a-message-destination]]
 == Schritt 3: Erstellen Sie ein Nachrichtenziel
 
 Sie können einen API-Aufruf ausgeben, um ein Nachrichtenziel zu erstellen.

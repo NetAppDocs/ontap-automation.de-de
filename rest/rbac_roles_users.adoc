@@ -21,12 +21,14 @@ NOTE: Siehe link:../workflows/wf_rbac_prepare.html["RBAC-Workflows"] Beispiele f
 
 
 
+[[administrative-access]]
 == Administrativen Zugriff
 
 Sie können die ONTAP Rollen über DIE REST-API oder die Befehlszeilenschnittstelle erstellen und managen. Die Zugriffsdetails sind unten beschrieben.
 
 
 
+[[rest-api]]
 === REST API
 
 Es gibt verschiedene Endpunkte, die bei der Arbeit mit RBAC-Rollen und Benutzerkonten verwendet werden können. Die ersten vier in der Tabelle werden zum Erstellen und Verwalten der Rollen verwendet. Die letzten beiden werden zum Erstellen und Verwalten von Benutzerkonten verwendet.
@@ -58,6 +60,7 @@ TIP: Sie können online auf das ONTAP zugreifen link:../reference/api_reference.
 |===
 
 
+[[command-line-interface]]
 === Befehlszeilenschnittstelle
 
 Die entsprechenden ONTAP CLI Befehle werden im Folgenden beschrieben. Auf alle Befehle wird auf der Cluster-Ebene über ein Administratorkonto zugegriffen.
@@ -77,6 +80,7 @@ Die entsprechenden ONTAP CLI Befehle werden im Folgenden beschrieben. Auf alle B
 |===
 
 
+[[role-definitions]]
 == Rollendefinitionen
 
 DIE REST- und traditionellen Rollen werden durch eine Reihe von Attributen definiert.
@@ -95,12 +99,14 @@ Jede Rolle enthält einen Satz von mindestens einer Berechtigung. Jede Berechtig
 
 
 
+[[privileges]]
 == Berechtigungen
 
 Eine Rolle kann eine oder mehrere Berechtigungen enthalten. Jede Berechtigungsdefinition ist ein Tupel und legt die Zugriffsebene für eine bestimmte Ressource oder Operation fest.
 
 
 
+[[resource-path]]
 === Ressourcenpfad
 
 Der Ressourcenpfad wird entweder als REST-Endpunkt oder als CLI-Befehl-/Befehlsverzeichnispfad identifiziert.
@@ -113,6 +119,7 @@ Ein CLI-Befehl gibt das Ziel für eine herkömmliche Rolle an. Es kann auch ein 
 
 
 
+[[access-level]]
 === Zugangsstufe
 
 Die Zugriffsebene definiert den Zugriffstyp, den die Rolle zum spezifischen Ressourcenpfad oder Befehl hat. Die Zugriffsebenen werden durch eine Reihe vordefinierter Schlüsselwörter identifiziert. Mit ONTAP 9.6 wurden drei Zugriffsebenen eingeführt. Sie können sowohl für traditionelle als auch FÜR REST-Rollen verwendet werden. Darüber hinaus haben ONTAP 9.11.1 drei neue Zugriffsebenen hinzugefügt. Diese neuen Zugriffsebenen können nur mit REST-Rollen verwendet werden.
@@ -144,18 +151,21 @@ NOTE: Die Zugriffsebenen folgen dem CRUD-Modell. Bei REST basiert dies auf den p
 |===
 
 
+[[optional-query]]
 === Optionale Abfrage
 
 Beim Erstellen einer traditionellen Rolle können Sie optional einen *query*-Wert angeben, um die Teilmenge der für das Befehlsverzeichnis oder das Befehlsverzeichnis relevanten Objekte zu identifizieren.
 
 
 
+[[summary-of-the-built-in-roles]]
 == Zusammenfassung der integrierten Rollen
 
 ONTAP enthält verschiedene vordefinierte Rollen, die Sie auf Cluster- oder SVM-Ebene verwenden können.
 
 
 
+[[cluster-scoped-roles]]
 === Cluster-Scoped-Rollen
 
 Im Umfang des Clusters sind verschiedene integrierte Rollen verfügbar.
@@ -186,6 +196,7 @@ Siehe https://docs.netapp.com/us-en/ontap/authentication/predefined-roles-cluste
 |===
 
 
+[[svm-scoped-roles]]
 === SVM-Scoped-Rollen
 
 Im Umfang der SVM sind verschiedene integrierte Rollen verfügbar. Der *vsadmin* bietet Zugriff auf die allgemeinsten und leistungsfähigsten Funktionen. Es gibt verschiedene zusätzliche Rollen, die auf bestimmte administrative Aufgaben zugeschnitten sind. Dazu zählen:
@@ -201,6 +212,7 @@ Siehe https://docs.netapp.com/us-en/ontap/authentication/predefined-roles-svm-ad
 
 
 
+[[comparing-the-role-types]]
 == Vergleichen der Rollentypen
 
 Bevor Sie eine *REST*-Rolle oder *traditionelle*-Rolle auswählen, sollten Sie sich der Unterschiede bewusst sein. Im Folgenden werden einige Möglichkeiten beschrieben, wie die beiden Rollentypen verglichen werden können.
@@ -210,6 +222,7 @@ NOTE: Für erweiterte oder komplexere RBAC-Anwendungsfälle sollten Sie normaler
 
 
 
+[[how-the-user-accesses-ontap]]
 === Wie der Benutzer auf ONTAP zugreift
 
 Vor dem Erstellen einer Rolle ist es wichtig zu wissen, wie der Benutzer auf das ONTAP-System zugreifen kann. Auf dieser Grundlage kann ein Rollentyp ermittelt werden.
@@ -229,6 +242,7 @@ Vor dem Erstellen einer Rolle ist es wichtig zu wissen, wie der Benutzer auf das
 |===
 
 
+[[precision-of-the-access-path]]
 === Präzision des Zugriffspfads
 
 Der für eine REST-Rolle definierte Zugriffspfad basiert auf einem REST-Endpunkt. Der Zugriffspfad für eine herkömmliche Rolle basiert auf einem CLI-Befehl oder einem Befehlsverzeichnis. Darüber hinaus können Sie einen optionalen Abfrageparameter mit einer traditionellen Rolle hinzufügen, um den Zugriff anhand der Befehlsparameter-Werte weiter zu beschränken.
