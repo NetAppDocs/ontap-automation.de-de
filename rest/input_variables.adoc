@@ -193,10 +193,10 @@ Beachten Sie Folgendes:
 [[pagination-when-retrieving-objects-in-a-collection]]
 == Paginierung beim Abrufen von Objekten in einer Sammlung
 
-Wenn ein API-Aufruf über GET auf eine Sammlung von Objekten desselben Typs zugreifen soll, versucht ONTAP, auf der Grundlage von zwei Einschränkungen so viele Objekte wie möglich zurückzugeben. Mit zusätzlichen Abfrageparametern auf der Anforderung können Sie jede dieser Einschränkungen steuern. Die erste Bedingung, die für eine bestimmte GET-Anforderung erreicht wurde, beendet die Anforderung und begrenzt damit die Anzahl der zurückgegebenen Datensätze.
+Bei einem API-Aufruf mit GET zum Zugriff auf eine Sammlung von Objekten desselben Typs versucht ONTAP, basierend auf zwei Einschränkungen (maximale Anzahl von Objekten, Zeitaufwand für den Abruf der Objekte), so viele Objekte wie möglich zurückzugeben. Jede dieser Einschränkungen lässt sich mithilfe zusätzlicher Abfrageparameter in der Anfrage steuern. Die zuerst erreichte Einschränkung bei einer bestimmten GET-Anfrage beendet die Anfrage und begrenzt somit die Anzahl der zurückgegebenen Datensätze. Wenn eine Anfrage endet, bevor alle Objekte durchlaufen wurden, enthält die Antwort den Link, der zum Abrufen des nächsten Satzes von Datensätzen erforderlich ist.
 
 
-NOTE: Wenn eine Anfrage endet, bevor sie alle Objekte anführt, enthält die Antwort den Link, der zum Abrufen des nächsten Stapels von Datensätzen benötigt wird.
+TIP: Wenn für einen API-Aufruf null Datensätze zurückgegeben werden und kein Next-Link vorhanden ist, kann dies darauf hinweisen, dass eine Zeitüberschreitung aufgetreten ist, bevor Datensätze abgerufen werden konnten. In diesem Fall kann die Anfrage mit einem größeren `return_timeout` Wert oder einem kleineren `max_records` Wert (oder beidem) erneut gestellt werden.
 
 Die Anzahl der Objekte wird begrenzt:: Standardmäßig gibt ONTAP maximal 10,000 Objekte für EINE GET-Anforderung aus. Sie können diese Begrenzung mit dem ändern `max_records` Abfrageparameter. Beispiel:
 +
