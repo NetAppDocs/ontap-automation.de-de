@@ -4,7 +4,7 @@ permalink: pstk/learn-about-pstk.html
 keywords: overview, powershell, powershell toolkit, install powershell toolkit 
 summary: NetApp stellt ein Toolkit für PowerShell Applikationen bereit, mit dem Sie Ihre ONTAP Storage-Systeme verwalten können. Das Toolkit wurde von Entwicklern von NetApp erstellt und wird von der Kunden-Community unterstützt. 
 ---
-= Erfahren Sie mehr über das NetApp PowerShell Toolkit
+= Informationen zum NetApp ONTAP PowerShell Toolkit
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

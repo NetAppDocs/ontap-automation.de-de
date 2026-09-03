@@ -40,7 +40,7 @@ NetApp bietet Client-Toolkits, die die ONTAP-REST-API abstrahieren und die Erste
 Die Python-Client-Bibliothek ist ein Paket, das beim Schreiben von Skripten für den Zugriff auf die ONTAP REST-API verwendet werden kann. Es unterstützt mehrere zugrunde liegende Services, darunter Verbindungs-Management, asynchrone Anfragebearbeitung und Ausnahmebehandlung. Mithilfe der Python-Client-Bibliothek können Sie schnell robusten Code entwickeln, der Ihre ONTAP-Automatisierungsziele unterstützt. Weitere Informationen finden Sie unter link:../python/learn-about-pcl.html["Python-Client-Bibliothek"] .
 
 .PowerShell Toolkit
-Mit dem NetApp.ONTAP PowerShell Toolkit können Sie die Administration eines ONTAP Clusters von einem Windows Host aus automatisieren. Weitere Informationen finden Sie unter link:../pstk/learn-about-pstk.html["Erfahren Sie mehr über das NetApp PowerShell Toolkit"] .
+Das NetApp ONTAP PowerShell Toolkit kann zur Automatisierung der Administration eines ONTAP Clusters von einem Windows Host verwendet werden. Weitere Informationen sind unter link:../pstk/learn-about-pstk.html["Informationen zum NetApp ONTAP PowerShell Toolkit"] verfügbar.
 
 
 
