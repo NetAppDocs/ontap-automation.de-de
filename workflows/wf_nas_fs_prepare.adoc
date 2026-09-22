@@ -24,7 +24,7 @@ Sie können die Berechtigungen und Audit-Richtlinien für Dateien managen, die �
 ONTAP weist Dateiobjekten mithilfe von System Access Control Lists (SACLs) und Ermessensary Access Control Lists (DACLs) Berechtigungen zu. Ab ONTAP 9.9 unterstützt die REST-API das Management der SACL- und DACL-Berechtigungen. Sie können die API verwenden, um die Administration der Dateisicherheitsberechtigungen zu automatisieren. In vielen Fällen können Sie einen einzelnen REST API-Aufruf anstelle mehrerer CLI-Befehle oder ONTAPI (ZAPI)-Aufrufe verwenden.
 
 
-NOTE: Für ONTAP Versionen vor 9.9.1 lässt sich die Verwaltung der SACL und DACL Berechtigungen mithilfe der CLI Passthrough Funktion automatisieren. Weitere Informationen finden Sie unter link:../migrate/migration-considerations.html["Überlegungen zur Migration"].
+NOTE: Für ONTAP Versionen vor 9.9.1 lässt sich die Verwaltung der SACL und DACL Berechtigungen mithilfe der CLI Passthrough Funktion automatisieren. Siehe link:../migrate/migration-considerations.html["Migrieren Sie von ONTAPI zur REST-API"] für weitere Informationen.
 
 Es stehen verschiedene Beispiel-Workflows zur Verfügung, die veranschaulichen, wie Sie die ONTAP Dateisicherheitsdienste mithilfe der REST-API managen. Bevor Sie die Workflows verwenden und einen der REST-API-Aufrufe ausgeben, müssen Sie diese überprüfen link:../workflows/prepare_workflows.html["Die Nutzung der Workflows wird vorbereitet"].
 
