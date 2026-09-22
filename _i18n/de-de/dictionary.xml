@@ -883,7 +883,6 @@
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
   <block id="ec8bc6c5f8fe5dc6045b9edfffae614a" category="sidebar">Die Verwendung der REST-API wird vorbereitet</block>
   <block id="e78273b83daaaecb5744859fa531181b" category="sidebar">Einzelheiten zur REST-Implementierung</block>
-  <block id="45cd4354f07a1ab359a1cc263ed79868" category="sidebar">So erhalten Sie Zugriff auf die REST API</block>
   <block id="a02956d1e8bd45f8818a7c63426eceba" category="sidebar">Eingabevariablen</block>
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="sidebar">Eine API-Antwort interpretieren</block>
   <block id="80164c28762060fa56d042df66e7553d" category="sidebar">Benutzer mit einer Rolle erstellen</block>
@@ -1513,7 +1512,6 @@
   <block id="ef3f9b4af9353a465dd6a94d006c73a7" category="sidebar">Software-Tools</block>
   <block id="e22a3298a5f97f4069fc3abbf0054a78" category="list-text"><block ref="e22a3298a5f97f4069fc3abbf0054a78" category="inline-link-macro-rx"></block></block>
   <block id="e6a021828131c610a8d1434615483b06" category="summary">Vor der Migration zur ONTAP-REST-API von entweder der ONTAPI (ZAPI) oder der ONTAP-CLI sollten Sie mehrere Probleme in Betracht ziehen.</block>
-  <block id="f130aae767c73fd9684158ccdddb8f15" category="doc">Überlegungen zur Migration</block>
   <block id="b7c1ba4e54d3934ebbbfba6a29963dbe" category="paragraph">Die ONTAP REST API und die Befehlszeilenschnittstelle haben ein grundlegend anderes Design. Die CLI-Befehle und -Parameter werden den REST-API-Aufrufen nicht direkt zugeordnet. Und auch wenn es eine Ähnlichkeit geben könnte, können die Details der Eingabeparameter unterschiedlich sein. Beispielsweise können numerische Einheiten in Byte oder mit einem Suffix (z. B. KB) angegeben werden. Siehe <block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block> Und <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> Finden Sie weitere Informationen.</block>
   <block id="359aa321b2af8c1841936c471ac5028a" category="paragraph">ONTAP bietet einen REST-Endpunkt für den Zugriff auf die ONTAP-CLI, um die ONTAPI und CLI-Benutzer bei der Transition zur ONTAP-REST-API zu unterstützen. Sie können diese Passthrough-Funktion verwenden, um jeden CLI-Befehl auszuführen.  Die Nutzung des REST-Endpunkts wird in den AutoSupport-Daten zurückgegeben, damit NetApp Lücken in der REST-API identifizieren und in künftigen ONTAP-Versionen Verbesserungen vornehmen kann.</block>
   <block id="74b014305892305348ed02c92ab2a761" category="paragraph">Um einen CLI-Befehl auszustellen, müssen Sie einen REST API-Aufruf machen, der ordnungsgemäß basierend auf Regeln bezüglich folgender Punkte gebildet wird:</block>
@@ -1988,4 +1986,8 @@
   <block id="b6d0a2a842f978459f1bd6e49da11974" category="doc">Informationen zur Migration zur ONTAP REST API</block>
   <block id="249dde32b5b3415eea7043c85ab74e06" category="admonition">Für ONTAP Versionen vor 9.9.1 lässt sich die Verwaltung der SACL und DACL Berechtigungen mithilfe der CLI Passthrough Funktion automatisieren. Siehe <block ref="4cdee464b402508aee95b27a583991b8" category="inline-link-macro-rx"></block> für weitere Informationen.</block>
   <block id="76372f20d2a63611bf93c8514dcab6f2" category="sidebar">Informationen zur Migration</block>
+  <block id="2bba6f8cd1f39e40fa1f0d47e2b47620" category="doc">Möglichkeiten zum Zugriff auf die ONTAP REST API</block>
+  <block id="3c3bee5464454cc8c3e907834e3d4fda" category="doc">Ihren ersten ONTAP REST API-Aufruf durchführen</block>
+  <block id="bda838b652b88a842b6842d75ef9fd57" category="sidebar">Möglichkeiten zum Zugriff auf die REST API</block>
+  <block id="fe0515a8af283239225745febd13b5b5" category="sidebar">Informationen zur Migration</block>
 </blocks>
