@@ -1990,4 +1990,5 @@
   <block id="3c3bee5464454cc8c3e907834e3d4fda" category="doc">Ihren ersten ONTAP REST API-Aufruf durchführen</block>
   <block id="bda838b652b88a842b6842d75ef9fd57" category="sidebar">Möglichkeiten zum Zugriff auf die REST API</block>
   <block id="fe0515a8af283239225745febd13b5b5" category="sidebar">Informationen zur Migration</block>
+  <block id="f84e398074d51e73de507e79d4754e19" category="doc">Zusätzliche Ressourcen für die ONTAP REST API</block>
 </blocks>
